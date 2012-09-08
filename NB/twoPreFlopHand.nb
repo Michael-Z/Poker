@@ -1,0 +1,1781 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     80161,       1772]
+NotebookOptionsPosition[     79430,       1743]
+NotebookOutlinePosition[     79864,       1761]
+CellTagsIndexPosition[     79821,       1758]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[StyleBox["Manipulate Command (One Cell)",
+ FontSize->14]], "Subsection",
+ CellFrame->{{0, 0}, {0, 0.5}},
+ CellChangeTimes->{{3.555692369900028*^9, 3.555692380130302*^9}, 
+   3.555860192719411*^9, 3.555860291936125*^9, 3.555860329546563*^9, 
+   3.555860395289393*^9, 3.555861219798011*^9}],
+
+Cell[BoxData[
+ RowBox[{"manipulateOutput", "=", 
+  RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"enpf2ht", ",", "pf2ht"}], "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"!", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"f1", "\[Equal]", "f2"}], " ", "&&", " ", 
+             RowBox[{"t1", "\[Equal]", "\"\<s\>\""}]}], ")"}], "||", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"f3", "\[Equal]", "f4"}], " ", "&&", " ", 
+             RowBox[{"t2", "\[Equal]", "\"\<s\>\""}]}], ")"}]}], ")"}]}], ",",
+         "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"pf2ht", "=", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"f1", ",", "f2", ",", "t1"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"f3", ",", "f4", ",", "t2"}], "}"}]}], "}"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"enpf2ht", "=", 
+          RowBox[{"First", "@", 
+           RowBox[{"extract", "[", 
+            RowBox[{"order", "[", "pf2ht", "]"}], "]"}]}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"format", "[", "enpf2ht", "]"}]}]}], "\[IndentingNewLine]", 
+       "]"}]}], "\[IndentingNewLine]", "]"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"Text", "@", 
+     RowBox[{"Style", "[", 
+      RowBox[{"\"\<First PreFlop Hand\\n\>\"", ",", "11", ",", "Bold"}], 
+      "]"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"f1", ",", "1", ",", "\"\<First face\>\""}], "}"}], ",", 
+      "faceChoice"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"f2", ",", "1", ",", "\"\<Second face\>\""}], "}"}], ",", 
+      "faceChoice"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"t1", ",", "\"\<o\>\"", ",", "\"\<Type\>\""}], "}"}], ",", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"f1", "!=", "f2"}], ",", "suitChoice", ",", "suitNoChoice"}], 
+       "]"}]}], "}"}], ",", "\[IndentingNewLine]", "Delimiter", ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Text", "@", 
+     RowBox[{"Style", "[", 
+      RowBox[{"\"\<Second PreFlop Hand\\n\>\"", ",", "11", ",", "Bold"}], 
+      "]"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"f3", ",", "1", ",", "\"\<First face\>\""}], "}"}], ",", 
+      "faceChoice"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"f4", ",", "1", ",", "\"\<Second face\>\""}], "}"}], ",", 
+      "faceChoice"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"t2", ",", "\"\<o\>\"", ",", "\"\<Type\>\""}], "}"}], ",", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"f3", "!=", "f4"}], ",", "suitChoice", ",", "suitNoChoice"}], 
+       "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"ControlPlacement", "\[Rule]", "Top"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"ControlType", "\[Rule]", "SetterBar"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"ContentSize", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"750", ",", "850"}], "}"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"SynchronousInitialization", "\[Rule]", "False"}], ",", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"Initialization", "\[RuleDelayed]", 
+     RowBox[{"(", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"allPreFlop2HandEquity", "=", 
+        RowBox[{"Map", "[", 
+         RowBox[{"ToExpression", ",", 
+          RowBox[{
+          "Import", "[", 
+           
+           "\"\<https://raw.github.com/oscar6echo/Poker-Probabilities/master/\
+Tables/allPreFlop2HandEquity.csv\>\"", "]"}], ",", 
+          RowBox[{"{", "2", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"allPreFlop2Hand", "=", 
+        RowBox[{"Map", "[", 
+         RowBox[{"ToExpression", ",", 
+          RowBox[{
+          "Import", "[", 
+           "\"\<https://raw.github.com/oscar6echo/Poker-Probabilities/master/\
+Tables/allPreFlop2Hand.csv\>\"", "]"}], ",", 
+          RowBox[{"{", "2", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"deckCardFace", "=", 
+        RowBox[{"{", 
+         RowBox[{
+         "1", ",", "1", ",", "1", ",", "1", ",", "2", ",", "2", ",", "2", ",",
+           "2", ",", "3", ",", "3", ",", "3", ",", "3", ",", "4", ",", "4", 
+          ",", "4", ",", "4", ",", "5", ",", "5", ",", "5", ",", "5", ",", 
+          "6", ",", "6", ",", "6", ",", "6", ",", "7", ",", "7", ",", "7", 
+          ",", "7", ",", "8", ",", "8", ",", "8", ",", "8", ",", "9", ",", 
+          "9", ",", "9", ",", "9", ",", "10", ",", "10", ",", "10", ",", "10",
+           ",", "11", ",", "11", ",", "11", ",", "11", ",", "12", ",", "12", 
+          ",", "12", ",", "12", ",", "13", ",", "13", ",", "13", ",", "13"}], 
+         "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"deckCardId", "=", 
+        RowBox[{"{", 
+         RowBox[{
+          
+          TemplateBox[{
+           "2",StyleBox[
+            "\[ClubSuit]", StripOnInput -> False, LineColor -> GrayLevel[0], 
+             FrontFaceColor -> GrayLevel[0], BackFaceColor -> GrayLevel[0], 
+             GraphicsColor -> GrayLevel[0], FontSize -> Larger, FontColor -> 
+             GrayLevel[0], $CellContext`BackFaceColor -> GrayLevel[0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "2",StyleBox[
+            "\:2666", StripOnInput -> False, LineColor -> RGBColor[1, 0, 0], 
+             FrontFaceColor -> RGBColor[1, 0, 0], BackFaceColor -> 
+             RGBColor[1, 0, 0], GraphicsColor -> RGBColor[1, 0, 0], FontColor -> 
+             RGBColor[1, 0, 0], $CellContext`BackFaceColor -> 
+             RGBColor[1, 0, 0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "2",StyleBox[
+            "\:2665", StripOnInput -> False, LineColor -> RGBColor[1, 0, 0], 
+             FrontFaceColor -> RGBColor[1, 0, 0], BackFaceColor -> 
+             RGBColor[1, 0, 0], GraphicsColor -> RGBColor[1, 0, 0], FontColor -> 
+             RGBColor[1, 0, 0], $CellContext`BackFaceColor -> 
+             RGBColor[1, 0, 0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "2",StyleBox[
+            "\[SpadeSuit]", StripOnInput -> False, LineColor -> GrayLevel[0], 
+             FrontFaceColor -> GrayLevel[0], BackFaceColor -> GrayLevel[0], 
+             GraphicsColor -> GrayLevel[0], FontSize -> Larger, FontColor -> 
+             GrayLevel[0], $CellContext`BackFaceColor -> GrayLevel[0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "3",StyleBox[
+            "\[ClubSuit]", StripOnInput -> False, LineColor -> GrayLevel[0], 
+             FrontFaceColor -> GrayLevel[0], BackFaceColor -> GrayLevel[0], 
+             GraphicsColor -> GrayLevel[0], FontSize -> Larger, FontColor -> 
+             GrayLevel[0], $CellContext`BackFaceColor -> GrayLevel[0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "3",StyleBox[
+            "\:2666", StripOnInput -> False, LineColor -> RGBColor[1, 0, 0], 
+             FrontFaceColor -> RGBColor[1, 0, 0], BackFaceColor -> 
+             RGBColor[1, 0, 0], GraphicsColor -> RGBColor[1, 0, 0], FontColor -> 
+             RGBColor[1, 0, 0], $CellContext`BackFaceColor -> 
+             RGBColor[1, 0, 0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "3",StyleBox[
+            "\:2665", StripOnInput -> False, LineColor -> RGBColor[1, 0, 0], 
+             FrontFaceColor -> RGBColor[1, 0, 0], BackFaceColor -> 
+             RGBColor[1, 0, 0], GraphicsColor -> RGBColor[1, 0, 0], FontColor -> 
+             RGBColor[1, 0, 0], $CellContext`BackFaceColor -> 
+             RGBColor[1, 0, 0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "3",StyleBox[
+            "\[SpadeSuit]", StripOnInput -> False, LineColor -> GrayLevel[0], 
+             FrontFaceColor -> GrayLevel[0], BackFaceColor -> GrayLevel[0], 
+             GraphicsColor -> GrayLevel[0], FontSize -> Larger, FontColor -> 
+             GrayLevel[0], $CellContext`BackFaceColor -> GrayLevel[0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "4",StyleBox[
+            "\[ClubSuit]", StripOnInput -> False, LineColor -> GrayLevel[0], 
+             FrontFaceColor -> GrayLevel[0], BackFaceColor -> GrayLevel[0], 
+             GraphicsColor -> GrayLevel[0], FontSize -> Larger, FontColor -> 
+             GrayLevel[0], $CellContext`BackFaceColor -> GrayLevel[0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "4",StyleBox[
+            "\:2666", StripOnInput -> False, LineColor -> RGBColor[1, 0, 0], 
+             FrontFaceColor -> RGBColor[1, 0, 0], BackFaceColor -> 
+             RGBColor[1, 0, 0], GraphicsColor -> RGBColor[1, 0, 0], FontColor -> 
+             RGBColor[1, 0, 0], $CellContext`BackFaceColor -> 
+             RGBColor[1, 0, 0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "4",StyleBox[
+            "\:2665", StripOnInput -> False, LineColor -> RGBColor[1, 0, 0], 
+             FrontFaceColor -> RGBColor[1, 0, 0], BackFaceColor -> 
+             RGBColor[1, 0, 0], GraphicsColor -> RGBColor[1, 0, 0], FontColor -> 
+             RGBColor[1, 0, 0], $CellContext`BackFaceColor -> 
+             RGBColor[1, 0, 0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "4",StyleBox[
+            "\[SpadeSuit]", StripOnInput -> False, LineColor -> GrayLevel[0], 
+             FrontFaceColor -> GrayLevel[0], BackFaceColor -> GrayLevel[0], 
+             GraphicsColor -> GrayLevel[0], FontSize -> Larger, FontColor -> 
+             GrayLevel[0], $CellContext`BackFaceColor -> GrayLevel[0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "5",StyleBox[
+            "\[ClubSuit]", StripOnInput -> False, LineColor -> GrayLevel[0], 
+             FrontFaceColor -> GrayLevel[0], BackFaceColor -> GrayLevel[0], 
+             GraphicsColor -> GrayLevel[0], FontSize -> Larger, FontColor -> 
+             GrayLevel[0], $CellContext`BackFaceColor -> GrayLevel[0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "5",StyleBox[
+            "\:2666", StripOnInput -> False, LineColor -> RGBColor[1, 0, 0], 
+             FrontFaceColor -> RGBColor[1, 0, 0], BackFaceColor -> 
+             RGBColor[1, 0, 0], GraphicsColor -> RGBColor[1, 0, 0], FontColor -> 
+             RGBColor[1, 0, 0], $CellContext`BackFaceColor -> 
+             RGBColor[1, 0, 0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "5",StyleBox[
+            "\:2665", StripOnInput -> False, LineColor -> RGBColor[1, 0, 0], 
+             FrontFaceColor -> RGBColor[1, 0, 0], BackFaceColor -> 
+             RGBColor[1, 0, 0], GraphicsColor -> RGBColor[1, 0, 0], FontColor -> 
+             RGBColor[1, 0, 0], $CellContext`BackFaceColor -> 
+             RGBColor[1, 0, 0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "5",StyleBox[
+            "\[SpadeSuit]", StripOnInput -> False, LineColor -> GrayLevel[0], 
+             FrontFaceColor -> GrayLevel[0], BackFaceColor -> GrayLevel[0], 
+             GraphicsColor -> GrayLevel[0], FontSize -> Larger, FontColor -> 
+             GrayLevel[0], $CellContext`BackFaceColor -> GrayLevel[0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "6",StyleBox[
+            "\[ClubSuit]", StripOnInput -> False, LineColor -> GrayLevel[0], 
+             FrontFaceColor -> GrayLevel[0], BackFaceColor -> GrayLevel[0], 
+             GraphicsColor -> GrayLevel[0], FontSize -> Larger, FontColor -> 
+             GrayLevel[0], $CellContext`BackFaceColor -> GrayLevel[0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "6",StyleBox[
+            "\:2666", StripOnInput -> False, LineColor -> RGBColor[1, 0, 0], 
+             FrontFaceColor -> RGBColor[1, 0, 0], BackFaceColor -> 
+             RGBColor[1, 0, 0], GraphicsColor -> RGBColor[1, 0, 0], FontColor -> 
+             RGBColor[1, 0, 0], $CellContext`BackFaceColor -> 
+             RGBColor[1, 0, 0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "6",StyleBox[
+            "\:2665", StripOnInput -> False, LineColor -> RGBColor[1, 0, 0], 
+             FrontFaceColor -> RGBColor[1, 0, 0], BackFaceColor -> 
+             RGBColor[1, 0, 0], GraphicsColor -> RGBColor[1, 0, 0], FontColor -> 
+             RGBColor[1, 0, 0], $CellContext`BackFaceColor -> 
+             RGBColor[1, 0, 0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          TemplateBox[{
+           "6",StyleBox[
+            "\[SpadeSuit]", StripOnInput -> False, LineColor -> GrayLevel[0], 
+             FrontFaceColor -> GrayLevel[0], BackFaceColor -> GrayLevel[0], 
+             GraphicsColor -> GrayLevel[0], FontSize -> Larger, FontColor -> 
+             GrayLevel[0], $CellContext`BackFaceColor -> GrayLevel[0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "7",StyleBox[
+            "\[ClubSuit]", StripOnInput -> False, LineColor -> GrayLevel[0], 
+             FrontFaceColor -> GrayLevel[0], BackFaceColor -> GrayLevel[0], 
+             GraphicsColor -> GrayLevel[0], FontSize -> Larger, FontColor -> 
+             GrayLevel[0], $CellContext`BackFaceColor -> GrayLevel[0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "7",StyleBox[
+            "\:2666", StripOnInput -> False, LineColor -> RGBColor[1, 0, 0], 
+             FrontFaceColor -> RGBColor[1, 0, 0], BackFaceColor -> 
+             RGBColor[1, 0, 0], GraphicsColor -> RGBColor[1, 0, 0], FontColor -> 
+             RGBColor[1, 0, 0], $CellContext`BackFaceColor -> 
+             RGBColor[1, 0, 0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "7",StyleBox[
+            "\:2665", StripOnInput -> False, LineColor -> RGBColor[1, 0, 0], 
+             FrontFaceColor -> RGBColor[1, 0, 0], BackFaceColor -> 
+             RGBColor[1, 0, 0], GraphicsColor -> RGBColor[1, 0, 0], FontColor -> 
+             RGBColor[1, 0, 0], $CellContext`BackFaceColor -> 
+             RGBColor[1, 0, 0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "7",StyleBox[
+            "\[SpadeSuit]", StripOnInput -> False, LineColor -> GrayLevel[0], 
+             FrontFaceColor -> GrayLevel[0], BackFaceColor -> GrayLevel[0], 
+             GraphicsColor -> GrayLevel[0], FontSize -> Larger, FontColor -> 
+             GrayLevel[0], $CellContext`BackFaceColor -> GrayLevel[0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "8",StyleBox[
+            "\[ClubSuit]", StripOnInput -> False, LineColor -> GrayLevel[0], 
+             FrontFaceColor -> GrayLevel[0], BackFaceColor -> GrayLevel[0], 
+             GraphicsColor -> GrayLevel[0], FontSize -> Larger, FontColor -> 
+             GrayLevel[0], $CellContext`BackFaceColor -> GrayLevel[0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "8",StyleBox[
+            "\:2666", StripOnInput -> False, LineColor -> RGBColor[1, 0, 0], 
+             FrontFaceColor -> RGBColor[1, 0, 0], BackFaceColor -> 
+             RGBColor[1, 0, 0], GraphicsColor -> RGBColor[1, 0, 0], FontColor -> 
+             RGBColor[1, 0, 0], $CellContext`BackFaceColor -> 
+             RGBColor[1, 0, 0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "8",StyleBox[
+            "\:2665", StripOnInput -> False, LineColor -> RGBColor[1, 0, 0], 
+             FrontFaceColor -> RGBColor[1, 0, 0], BackFaceColor -> 
+             RGBColor[1, 0, 0], GraphicsColor -> RGBColor[1, 0, 0], FontColor -> 
+             RGBColor[1, 0, 0], $CellContext`BackFaceColor -> 
+             RGBColor[1, 0, 0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "8",StyleBox[
+            "\[SpadeSuit]", StripOnInput -> False, LineColor -> GrayLevel[0], 
+             FrontFaceColor -> GrayLevel[0], BackFaceColor -> GrayLevel[0], 
+             GraphicsColor -> GrayLevel[0], FontSize -> Larger, FontColor -> 
+             GrayLevel[0], $CellContext`BackFaceColor -> GrayLevel[0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "9",StyleBox[
+            "\[ClubSuit]", StripOnInput -> False, LineColor -> GrayLevel[0], 
+             FrontFaceColor -> GrayLevel[0], BackFaceColor -> GrayLevel[0], 
+             GraphicsColor -> GrayLevel[0], FontSize -> Larger, FontColor -> 
+             GrayLevel[0], $CellContext`BackFaceColor -> GrayLevel[0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "9",StyleBox[
+            "\:2666", StripOnInput -> False, LineColor -> RGBColor[1, 0, 0], 
+             FrontFaceColor -> RGBColor[1, 0, 0], BackFaceColor -> 
+             RGBColor[1, 0, 0], GraphicsColor -> RGBColor[1, 0, 0], FontColor -> 
+             RGBColor[1, 0, 0], $CellContext`BackFaceColor -> 
+             RGBColor[1, 0, 0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "9",StyleBox[
+            "\:2665", StripOnInput -> False, LineColor -> RGBColor[1, 0, 0], 
+             FrontFaceColor -> RGBColor[1, 0, 0], BackFaceColor -> 
+             RGBColor[1, 0, 0], GraphicsColor -> RGBColor[1, 0, 0], FontColor -> 
+             RGBColor[1, 0, 0], $CellContext`BackFaceColor -> 
+             RGBColor[1, 0, 0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "9",StyleBox[
+            "\[SpadeSuit]", StripOnInput -> False, LineColor -> GrayLevel[0], 
+             FrontFaceColor -> GrayLevel[0], BackFaceColor -> GrayLevel[0], 
+             GraphicsColor -> GrayLevel[0], FontSize -> Larger, FontColor -> 
+             GrayLevel[0], $CellContext`BackFaceColor -> GrayLevel[0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "T",StyleBox[
+            "\[ClubSuit]", StripOnInput -> False, LineColor -> GrayLevel[0], 
+             FrontFaceColor -> GrayLevel[0], BackFaceColor -> GrayLevel[0], 
+             GraphicsColor -> GrayLevel[0], FontSize -> Larger, FontColor -> 
+             GrayLevel[0], $CellContext`BackFaceColor -> GrayLevel[0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "T",StyleBox[
+            "\:2666", StripOnInput -> False, LineColor -> RGBColor[1, 0, 0], 
+             FrontFaceColor -> RGBColor[1, 0, 0], BackFaceColor -> 
+             RGBColor[1, 0, 0], GraphicsColor -> RGBColor[1, 0, 0], FontColor -> 
+             RGBColor[1, 0, 0], $CellContext`BackFaceColor -> 
+             RGBColor[1, 0, 0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "T",StyleBox[
+            "\:2665", StripOnInput -> False, LineColor -> RGBColor[1, 0, 0], 
+             FrontFaceColor -> RGBColor[1, 0, 0], BackFaceColor -> 
+             RGBColor[1, 0, 0], GraphicsColor -> RGBColor[1, 0, 0], FontColor -> 
+             RGBColor[1, 0, 0], $CellContext`BackFaceColor -> 
+             RGBColor[1, 0, 0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "T",StyleBox[
+            "\[SpadeSuit]", StripOnInput -> False, LineColor -> GrayLevel[0], 
+             FrontFaceColor -> GrayLevel[0], BackFaceColor -> GrayLevel[0], 
+             GraphicsColor -> GrayLevel[0], FontSize -> Larger, FontColor -> 
+             GrayLevel[0], $CellContext`BackFaceColor -> GrayLevel[0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "J",StyleBox[
+            "\[ClubSuit]", StripOnInput -> False, LineColor -> GrayLevel[0], 
+             FrontFaceColor -> GrayLevel[0], BackFaceColor -> GrayLevel[0], 
+             GraphicsColor -> GrayLevel[0], FontSize -> Larger, FontColor -> 
+             GrayLevel[0], $CellContext`BackFaceColor -> GrayLevel[0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "J",StyleBox[
+            "\:2666", StripOnInput -> False, LineColor -> RGBColor[1, 0, 0], 
+             FrontFaceColor -> RGBColor[1, 0, 0], BackFaceColor -> 
+             RGBColor[1, 0, 0], GraphicsColor -> RGBColor[1, 0, 0], FontColor -> 
+             RGBColor[1, 0, 0], $CellContext`BackFaceColor -> 
+             RGBColor[1, 0, 0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "J",StyleBox[
+            "\:2665", StripOnInput -> False, LineColor -> RGBColor[1, 0, 0], 
+             FrontFaceColor -> RGBColor[1, 0, 0], BackFaceColor -> 
+             RGBColor[1, 0, 0], GraphicsColor -> RGBColor[1, 0, 0], FontColor -> 
+             RGBColor[1, 0, 0], $CellContext`BackFaceColor -> 
+             RGBColor[1, 0, 0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "J",StyleBox[
+            "\[SpadeSuit]", StripOnInput -> False, LineColor -> GrayLevel[0], 
+             FrontFaceColor -> GrayLevel[0], BackFaceColor -> GrayLevel[0], 
+             GraphicsColor -> GrayLevel[0], FontSize -> Larger, FontColor -> 
+             GrayLevel[0], $CellContext`BackFaceColor -> GrayLevel[0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "Q",StyleBox[
+            "\[ClubSuit]", StripOnInput -> False, LineColor -> GrayLevel[0], 
+             FrontFaceColor -> GrayLevel[0], BackFaceColor -> GrayLevel[0], 
+             GraphicsColor -> GrayLevel[0], FontSize -> Larger, FontColor -> 
+             GrayLevel[0], $CellContext`BackFaceColor -> GrayLevel[0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "Q",StyleBox[
+            "\:2666", StripOnInput -> False, LineColor -> RGBColor[1, 0, 0], 
+             FrontFaceColor -> RGBColor[1, 0, 0], BackFaceColor -> 
+             RGBColor[1, 0, 0], GraphicsColor -> RGBColor[1, 0, 0], FontColor -> 
+             RGBColor[1, 0, 0], $CellContext`BackFaceColor -> 
+             RGBColor[1, 0, 0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "Q",StyleBox[
+            "\:2665", StripOnInput -> False, LineColor -> RGBColor[1, 0, 0], 
+             FrontFaceColor -> RGBColor[1, 0, 0], BackFaceColor -> 
+             RGBColor[1, 0, 0], GraphicsColor -> RGBColor[1, 0, 0], FontColor -> 
+             RGBColor[1, 0, 0], $CellContext`BackFaceColor -> 
+             RGBColor[1, 0, 0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "Q",StyleBox[
+            "\[SpadeSuit]", StripOnInput -> False, LineColor -> GrayLevel[0], 
+             FrontFaceColor -> GrayLevel[0], BackFaceColor -> GrayLevel[0], 
+             GraphicsColor -> GrayLevel[0], FontSize -> Larger, FontColor -> 
+             GrayLevel[0], $CellContext`BackFaceColor -> GrayLevel[0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          TemplateBox[{
+           "K",StyleBox[
+            "\[ClubSuit]", StripOnInput -> False, LineColor -> GrayLevel[0], 
+             FrontFaceColor -> GrayLevel[0], BackFaceColor -> GrayLevel[0], 
+             GraphicsColor -> GrayLevel[0], FontSize -> Larger, FontColor -> 
+             GrayLevel[0], $CellContext`BackFaceColor -> GrayLevel[0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "K",StyleBox[
+            "\:2666", StripOnInput -> False, LineColor -> RGBColor[1, 0, 0], 
+             FrontFaceColor -> RGBColor[1, 0, 0], BackFaceColor -> 
+             RGBColor[1, 0, 0], GraphicsColor -> RGBColor[1, 0, 0], FontColor -> 
+             RGBColor[1, 0, 0], $CellContext`BackFaceColor -> 
+             RGBColor[1, 0, 0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "K",StyleBox[
+            "\:2665", StripOnInput -> False, LineColor -> RGBColor[1, 0, 0], 
+             FrontFaceColor -> RGBColor[1, 0, 0], BackFaceColor -> 
+             RGBColor[1, 0, 0], GraphicsColor -> RGBColor[1, 0, 0], FontColor -> 
+             RGBColor[1, 0, 0], $CellContext`BackFaceColor -> 
+             RGBColor[1, 0, 0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "K",StyleBox[
+            "\[SpadeSuit]", StripOnInput -> False, LineColor -> GrayLevel[0], 
+             FrontFaceColor -> GrayLevel[0], BackFaceColor -> GrayLevel[0], 
+             GraphicsColor -> GrayLevel[0], FontSize -> Larger, FontColor -> 
+             GrayLevel[0], $CellContext`BackFaceColor -> GrayLevel[0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "A",StyleBox[
+            "\[ClubSuit]", StripOnInput -> False, LineColor -> GrayLevel[0], 
+             FrontFaceColor -> GrayLevel[0], BackFaceColor -> GrayLevel[0], 
+             GraphicsColor -> GrayLevel[0], FontSize -> Larger, FontColor -> 
+             GrayLevel[0], $CellContext`BackFaceColor -> GrayLevel[0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "A",StyleBox[
+            "\:2666", StripOnInput -> False, LineColor -> RGBColor[1, 0, 0], 
+             FrontFaceColor -> RGBColor[1, 0, 0], BackFaceColor -> 
+             RGBColor[1, 0, 0], GraphicsColor -> RGBColor[1, 0, 0], FontColor -> 
+             RGBColor[1, 0, 0], $CellContext`BackFaceColor -> 
+             RGBColor[1, 0, 0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "A",StyleBox[
+            "\:2665", StripOnInput -> False, LineColor -> RGBColor[1, 0, 0], 
+             FrontFaceColor -> RGBColor[1, 0, 0], BackFaceColor -> 
+             RGBColor[1, 0, 0], GraphicsColor -> RGBColor[1, 0, 0], FontColor -> 
+             RGBColor[1, 0, 0], $CellContext`BackFaceColor -> 
+             RGBColor[1, 0, 0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )], ",", 
+          
+          TemplateBox[{
+           "A",StyleBox[
+            "\[SpadeSuit]", StripOnInput -> False, LineColor -> GrayLevel[0], 
+             FrontFaceColor -> GrayLevel[0], BackFaceColor -> GrayLevel[0], 
+             GraphicsColor -> GrayLevel[0], FontSize -> Larger, FontColor -> 
+             GrayLevel[0], $CellContext`BackFaceColor -> GrayLevel[0]]},
+           "Row",
+           DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+           InterpretationFunction->(RowBox[{"Row", "[", 
+              RowBox[{"{", 
+                RowBox[{#, ",", #2}], "}"}], "]"}]& )]}], "}"}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"preFlop2HandTable", "=", 
+        RowBox[{"Module", "[", 
+         RowBox[{
+          RowBox[{"{", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"apf2h", "=", "allPreFlop2Hand"}], ",", 
+            "\[IndentingNewLine]", "pf2hTable", ",", "\[IndentingNewLine]", 
+            RowBox[{"len", "=", "0"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"p", "=", "1"}]}], "\[IndentingNewLine]", "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"Do", "[", 
+            RowBox[{
+             RowBox[{"Do", "[", "\[IndentingNewLine]", 
+              RowBox[{
+               RowBox[{"If", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"Length", "[", 
+                   RowBox[{"apf2h", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "j"}], "]"}], "]"}], "]"}], ">", "0"}], 
+                 ",", 
+                 RowBox[{"len", "++"}]}], "]"}], ",", "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"j", ",", 
+                 RowBox[{"Length", "[", 
+                  RowBox[{"apf2h", "[", 
+                   RowBox[{"[", "i", "]"}], "]"}], "]"}]}], "}"}]}], "]"}], 
+             ",", 
+             RowBox[{"{", 
+              RowBox[{"i", ",", 
+               RowBox[{"Length", "[", "apf2h", "]"}]}], "}"}]}], "]"}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"(*", 
+            RowBox[{
+             RowBox[{"Print", "[", 
+              RowBox[{
+              "\"\<Number of 2-face suited/offsuited vs 2-face \
+suited/offsuited = \>\"", ",", "len"}], "]"}], ";"}], "*)"}], 
+           "\[IndentingNewLine]", 
+           RowBox[{"pf2hTable", "=", 
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{"{", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"0", ",", "0", ",", "\"\< \>\""}], "}"}], ",", 
+                RowBox[{"(*", 
+                 RowBox[{"{", 
+                  RowBox[{"face1", ",", "face2", ",", 
+                   RowBox[{"s", "/", "o"}]}], "}"}], "*)"}], 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"0", ",", "0", ",", "\"\< \>\""}], "}"}], ",", 
+                RowBox[{"(*", 
+                 RowBox[{"{", 
+                  RowBox[{"face3", ",", "face4", ",", 
+                   RowBox[{"s", "/", "o"}]}], "}"}], "*)"}], 
+                "\[IndentingNewLine]", 
+                RowBox[{"Table", "[", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\"\< \>\"", ",", "\"\< \>\""}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\"\< \>\"", ",", "\"\< \>\""}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}]}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"j", ",", "7"}], "}"}]}], "]"}], ","}], 
+               "\[IndentingNewLine]", 
+               RowBox[{"(*", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"card1", ",", "card2"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"id1", ",", "id2"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"card3", ",", "card4"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"id3", ",", "id4"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"nbWinA", ",", "nbWinB", ",", "nbTie"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"eqtyA", ",", "eqtyB"}], "}"}]}], "*)"}], 
+               "\[IndentingNewLine]", "}"}], ",", 
+              RowBox[{"{", "len", "}"}]}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"Do", "[", 
+            RowBox[{
+             RowBox[{"Do", "[", "\[IndentingNewLine]", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"If", "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"Length", "[", 
+                    RowBox[{"apf2h", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "j"}], "]"}], "]"}], "]"}], ">", "0"}], 
+                  ",", "\[IndentingNewLine]", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"pf2hTable", "[", 
+                    RowBox[{"[", "p", "]"}], "]"}], "=", 
+                    RowBox[{"{", "\[IndentingNewLine]", 
+                    RowBox[{
+                    RowBox[{"Flatten", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Map", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"deckCardFace", "[", 
+                    RowBox[{"[", "#", "]"}], "]"}], "&"}], ",", 
+                    RowBox[{"apf2h", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "j", ",", "1", ",", "1"}], "]"}], "]"}],
+                     ",", 
+                    RowBox[{"{", "1", "}"}]}], "]"}], ",", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"j", "\[Equal]", "1"}], "||", 
+                    RowBox[{"j", "\[Equal]", "2"}]}], ",", "\"\<s\>\"", ",", 
+                    "\"\<o\>\""}], "]"}]}], "}"}], "]"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"Flatten", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Map", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"deckCardFace", "[", 
+                    RowBox[{"[", "#", "]"}], "]"}], "&"}], ",", 
+                    RowBox[{"apf2h", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "j", ",", "1", ",", "2"}], "]"}], "]"}],
+                     ",", 
+                    RowBox[{"{", "1", "}"}]}], "]"}], ",", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"j", "\[Equal]", "1"}], "||", 
+                    RowBox[{"j", "\[Equal]", "3"}]}], ",", "\"\<s\>\"", ",", 
+                    "\"\<o\>\""}], "]"}]}], "}"}], "]"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"{", "\[IndentingNewLine]", 
+                    RowBox[{
+                    RowBox[{"apf2h", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "j", ",", "k", ",", "1"}], "]"}], "]"}],
+                     ",", "\[IndentingNewLine]", 
+                    RowBox[{"Map", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"deckCardId", "[", 
+                    RowBox[{"[", "#", "]"}], "]"}], "&"}], ",", 
+                    RowBox[{"apf2h", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "j", ",", "k", ",", "1"}], "]"}], "]"}],
+                     ",", 
+                    RowBox[{"{", "1", "}"}]}], "]"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"apf2h", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "j", ",", "k", ",", "2"}], "]"}], "]"}],
+                     ",", "\[IndentingNewLine]", 
+                    RowBox[{"Map", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"deckCardId", "[", 
+                    RowBox[{"[", "#", "]"}], "]"}], "&"}], ",", 
+                    RowBox[{"apf2h", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "j", ",", "k", ",", "2"}], "]"}], "]"}],
+                     ",", 
+                    RowBox[{"{", "1", "}"}]}], "]"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"allPreFlop2HandEquity", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "j", ",", "k"}], "]"}], "]"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "+", 
+                    RowBox[{"0.5", 
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "3", "]"}], "]"}]}]}], ")"}], "/", 
+                    RowBox[{"Total", "[", "#", "]"}]}], ")"}], "&"}], "[", 
+                    RowBox[{"allPreFlop2HandEquity", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "j", ",", "k"}], "]"}], "]"}], "]"}], 
+                    ",", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], "+", 
+                    RowBox[{"0.5", 
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "3", "]"}], "]"}]}]}], ")"}], "/", 
+                    RowBox[{"Total", "[", "#", "]"}]}], ")"}], "&"}], "[", 
+                    RowBox[{"allPreFlop2HandEquity", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "j", ",", "k"}], "]"}], "]"}], "]"}]}], 
+                    "}"}]}], "\[IndentingNewLine]", "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"k", ",", 
+                    RowBox[{"Length", "[", 
+                    RowBox[{"apf2h", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "j"}], "]"}], "]"}], "]"}]}], "}"}]}], 
+                    "]"}]}], "\[IndentingNewLine]", "}"}]}], ";", 
+                   "\[IndentingNewLine]", 
+                   RowBox[{"p", "++"}]}]}], "]"}], ";"}], 
+               "\[IndentingNewLine]", ",", 
+               RowBox[{"{", 
+                RowBox[{"j", ",", 
+                 RowBox[{"Length", "[", 
+                  RowBox[{"apf2h", "[", 
+                   RowBox[{"[", "i", "]"}], "]"}], "]"}]}], "}"}]}], "]"}], 
+             ",", 
+             RowBox[{"{", 
+              RowBox[{"i", ",", 
+               RowBox[{"Length", "[", "apf2h", "]"}]}], "}"}]}], "]"}], ";", 
+           "\[IndentingNewLine]", "pf2hTable"}]}], "\[IndentingNewLine]", 
+         "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"face", "=", 
+        RowBox[{"face", "=", 
+         RowBox[{"{", 
+          RowBox[{
+          "2", ",", "3", ",", "4", ",", "5", ",", "6", ",", "7", ",", "8", 
+           ",", "9", ",", "T", ",", "J", ",", "Q", ",", "K", ",", "A"}], 
+          "}"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"faceChoice", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"i", "\[Rule]", 
+           RowBox[{"face", "[", 
+            RowBox[{"[", "i", "]"}], "]"}]}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", 
+            RowBox[{"Length", "[", "face", "]"}]}], "}"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"faceChoiceRev", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"face", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], "->", "i"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", 
+            RowBox[{"Length", "[", "face", "]"}]}], "}"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"suitChoice", "=", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"\"\<s\>\"", "\[Rule]", "\"\<suited\>\""}], ",", 
+          RowBox[{"\"\<o\>\"", "\[Rule]", "\"\<off-suited\>\""}]}], "}"}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"suitNoChoice", "=", 
+        RowBox[{"{", 
+         RowBox[{"\"\<o\>\"", "\[Rule]", "\"\<off-suited\>\""}], "}"}]}], ";",
+        "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"order", "[", "preFlop2HandTarget_", "]"}], ":=", 
+        RowBox[{"Module", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"hf1", "=", 
+             RowBox[{"Take", "[", 
+              RowBox[{
+               RowBox[{"preFlop2HandTarget", "[", 
+                RowBox[{"[", "1", "]"}], "]"}], ",", "2"}], "]"}]}], ",", 
+            RowBox[{"hf2", "=", 
+             RowBox[{"Take", "[", 
+              RowBox[{
+               RowBox[{"preFlop2HandTarget", "[", 
+                RowBox[{"[", "2", "]"}], "]"}], ",", "2"}], "]"}]}], ",", 
+            "shf1", ",", "shf2"}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"shf1", "=", 
+           RowBox[{"Reverse", "[", 
+            RowBox[{"Sort", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Append", "[", 
+                RowBox[{
+                 RowBox[{"Reverse", "@", 
+                  RowBox[{"Sort", "[", "hf1", "]"}]}], ",", 
+                 RowBox[{"preFlop2HandTarget", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"1", ",", "3"}], "]"}], "]"}]}], "]"}], ",", 
+               RowBox[{"Append", "[", 
+                RowBox[{
+                 RowBox[{"Reverse", "@", 
+                  RowBox[{"Sort", "[", "hf2", "]"}]}], ",", 
+                 RowBox[{"preFlop2HandTarget", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"2", ",", "3"}], "]"}], "]"}]}], "]"}]}], "}"}], 
+             "]"}], "]"}]}]}], "\[IndentingNewLine]", "]"}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"extract", "[", "preFlop2HandTarget_", "]"}], ":=", 
+        RowBox[{"Module", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"pf2ht", "=", "preFlop2HandTarget"}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Select", "[", 
+           RowBox[{"preFlop2HandTable", ",", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"#", "[", 
+                 RowBox[{"[", "1", "]"}], "]"}], "\[Equal]", 
+                RowBox[{"pf2ht", "[", 
+                 RowBox[{"[", "1", "]"}], "]"}]}], " ", "&&", " ", 
+               RowBox[{
+                RowBox[{"#", "[", 
+                 RowBox[{"[", "2", "]"}], "]"}], "==", 
+                RowBox[{"pf2ht", "[", 
+                 RowBox[{"[", "2", "]"}], "]"}]}]}], ")"}], "&"}]}], "]"}]}], 
+         "\[IndentingNewLine]", "]"}]}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"oneWay", "[", "input_", "]"}], ":=", 
+        RowBox[{"Module", "[", 
+         RowBox[{
+          RowBox[{"{", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"h1", "=", 
+             RowBox[{"input", "[", 
+              RowBox[{"[", "1", "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"h2", "=", 
+             RowBox[{"input", "[", 
+              RowBox[{"[", "2", "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"eqty", "=", 
+             RowBox[{"input", "[", 
+              RowBox[{"[", 
+               RowBox[{"3", ",", "All", ",", "6"}], "]"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", "len", ",", "ow", ",", "own", ",", "i"}], 
+           "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"len", "=", 
+            RowBox[{"Length", "[", "eqty", "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"i", "=", "1"}], ";", "\[IndentingNewLine]", 
+           RowBox[{"ow", "=", 
+            RowBox[{"Which", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"eqty", "[", 
+                RowBox[{"[", 
+                 RowBox[{"i", ",", "1"}], "]"}], "]"}], ">", 
+               RowBox[{"eqty", "[", 
+                RowBox[{"[", 
+                 RowBox[{"i", ",", "2"}], "]"}], "]"}]}], ",", "1", ",", 
+              RowBox[{
+               RowBox[{"eqty", "[", 
+                RowBox[{"[", 
+                 RowBox[{"i", ",", "1"}], "]"}], "]"}], "<", 
+               RowBox[{"eqty", "[", 
+                RowBox[{"[", 
+                 RowBox[{"i", ",", "2"}], "]"}], "]"}]}], ",", "2", ",", 
+              RowBox[{
+               RowBox[{"eqty", "[", 
+                RowBox[{"[", 
+                 RowBox[{"i", ",", "1"}], "]"}], "]"}], "==", 
+               RowBox[{"eqty", "[", 
+                RowBox[{"[", 
+                 RowBox[{"i", ",", "2"}], "]"}], "]"}]}], ",", "3"}], "]"}]}],
+            ";", "\[IndentingNewLine]", 
+           RowBox[{"Do", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"own", "=", 
+               RowBox[{"Which", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"eqty", "[", 
+                   RowBox[{"[", 
+                    RowBox[{"i", ",", "1"}], "]"}], "]"}], ">", 
+                  RowBox[{"eqty", "[", 
+                   RowBox[{"[", 
+                    RowBox[{"i", ",", "2"}], "]"}], "]"}]}], ",", "1", ",", 
+                 RowBox[{
+                  RowBox[{"eqty", "[", 
+                   RowBox[{"[", 
+                    RowBox[{"i", ",", "1"}], "]"}], "]"}], "<", 
+                  RowBox[{"eqty", "[", 
+                   RowBox[{"[", 
+                    RowBox[{"i", ",", "2"}], "]"}], "]"}]}], ",", "2", ",", 
+                 RowBox[{
+                  RowBox[{"eqty", "[", 
+                   RowBox[{"[", 
+                    RowBox[{"i", ",", "1"}], "]"}], "]"}], "==", 
+                  RowBox[{"eqty", "[", 
+                   RowBox[{"[", 
+                    RowBox[{"i", ",", "2"}], "]"}], "]"}]}], ",", "3"}], 
+                "]"}]}], ";", "\[IndentingNewLine]", 
+              RowBox[{"ow", "=", 
+               RowBox[{"If", "[", 
+                RowBox[{
+                 RowBox[{"own", "\[Equal]", "ow"}], ",", "ow", ",", "0"}], 
+                "]"}]}]}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{"i", ",", "2", ",", "len"}], "}"}]}], "]"}], ";", 
+           "\[IndentingNewLine]", "ow"}]}], "\[IndentingNewLine]", "]"}]}], 
+       ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"comment", "[", "input_", "]"}], ":=", 
+        RowBox[{"Module", "[", 
+         RowBox[{
+          RowBox[{"{", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"h1", "=", 
+             RowBox[{"input", "[", 
+              RowBox[{"[", "1", "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"h2", "=", 
+             RowBox[{"input", "[", 
+              RowBox[{"[", "2", "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"ow", "=", 
+             RowBox[{"oneWay", "[", "input", "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"len", "=", 
+             RowBox[{"Length", "[", 
+              RowBox[{"input", "[", 
+               RowBox[{"[", 
+                RowBox[{"3", ",", "All", ",", "6"}], "]"}], "]"}], "]"}]}]}], 
+           "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"Which", "[", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"ow", "\[Equal]", "1"}], ",", 
+            RowBox[{"Row", "[", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Preflop Hand A \>\"", ",", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                 RowBox[{"Row", "[", " ", 
+                  RowBox[{"h1", "/.", "faceChoice"}], "]"}], ",", "Bold", ",",
+                  "Red"}], "]"}], ",", 
+               "\"\< has more equity than Preflop Hand B \>\"", ",", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                 RowBox[{"Row", "[", " ", 
+                  RowBox[{"h2", "/.", "faceChoice"}], "]"}], ",", "Bold", ",",
+                  "Red"}], "]"}], ",", "\"\< over the \>\"", ",", "len", ",", 
+               "\"\< combination(s) of card suits across both hands\>\""}], 
+              "}"}], "]"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"ow", "\[Equal]", "2"}], ",", 
+            RowBox[{"Row", "[", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Preflop Hand A \>\"", ",", " ", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                 RowBox[{"Row", "[", " ", 
+                  RowBox[{"h1", "/.", "faceChoice"}], "]"}], ",", "Bold", ",",
+                  "Red"}], "]"}], ",", 
+               "\"\< has less equity than Preflop Hand B \>\"", ",", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                 RowBox[{"Row", "[", " ", 
+                  RowBox[{"h2", "/.", "faceChoice"}], "]"}], ",", "Bold", ",",
+                  "Red"}], "]"}], ",", "\"\< over the \>\"", ",", "len", ",", 
+               "\"\< combination(s) of card suits across both hands\>\""}], 
+              "}"}], "]"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"ow", "\[Equal]", "3"}], ",", 
+            RowBox[{"Row", "[", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Preflop Hand A \>\"", ",", " ", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                 RowBox[{"Row", "[", " ", 
+                  RowBox[{"h1", "/.", "faceChoice"}], "]"}], ",", "Bold", ",",
+                  "Red"}], "]"}], ",", 
+               "\"\< has the same equity as Preflop Hand B \>\"", ",", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                 RowBox[{"Row", "[", " ", 
+                  RowBox[{"h2", "/.", "faceChoice"}], "]"}], ",", "Bold", ",",
+                  "Red"}], "]"}], ",", "\"\< over the \>\"", ",", "len", ",", 
+               "\"\< combination(s) of card suits across both hands\>\""}], 
+              "}"}], "]"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"ow", "\[Equal]", "0"}], ",", 
+            RowBox[{"Row", "[", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Preflop Hand A \>\"", ",", " ", 
+               RowBox[{"h1", "/.", 
+                RowBox[{"Join", "[", 
+                 RowBox[{"{", 
+                  RowBox[{"faceChoice", ",", "suitChoice"}], "}"}], "]"}]}], 
+               ",", "\"\< has more/less/the same equity than/as Preflop Hand \
+B \>\"", ",", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                 RowBox[{"Row", "[", " ", 
+                  RowBox[{"h2", "/.", "faceChoice"}], "]"}], ",", "Bold", ",",
+                  "Red"}], "]"}], ",", 
+               "\"\< depending on the combination of card suits (among \>\"", 
+               ",", "len", ",", "\"\< possible) across both hands\>\""}], 
+              "}"}], "]"}]}], "\[IndentingNewLine]", "]"}]}], 
+         "\[IndentingNewLine]", "]"}]}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"format", "[", "input_", "]"}], ":=", 
+        RowBox[{"Module", "[", 
+         RowBox[{
+          RowBox[{"{", "table", "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"table", "=", 
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{"{", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"Text", "@", 
+                 RowBox[{"Row", "[", 
+                  RowBox[{"input", "[", 
+                   RowBox[{"[", 
+                    RowBox[{"3", ",", "i", ",", "2"}], "]"}], "]"}], "]"}]}], 
+                ",", "\[IndentingNewLine]", 
+                RowBox[{"Text", "@", 
+                 RowBox[{"NumberForm", "[", 
+                  RowBox[{
+                   RowBox[{"100", "*", 
+                    RowBox[{"input", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"3", ",", "i", ",", "6", ",", "1"}], "]"}], 
+                    "]"}]}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"5", ",", "3"}], "}"}]}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"Column", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"Text", "@", 
+                    RowBox[{"NumberForm", "[", 
+                    RowBox[{
+                    RowBox[{"input", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"3", ",", "i", ",", "5", ",", "1"}], "]"}], "]"}],
+                     ",", 
+                    RowBox[{"DigitBlock", "\[Rule]", "3"}]}], "]"}]}], ",", 
+                   RowBox[{"Text", "@", 
+                    RowBox[{"NumberForm", "[", 
+                    RowBox[{
+                    RowBox[{"N", "[", 
+                    RowBox[{"100", "*", 
+                    RowBox[{
+                    RowBox[{"input", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"3", ",", "i", ",", "5", ",", "1"}], "]"}], "]"}],
+                     "/", 
+                    RowBox[{"Total", "[", 
+                    RowBox[{"input", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"3", ",", "i", ",", "5"}], "]"}], "]"}], 
+                    "]"}]}]}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", "3"}], "}"}]}], "]"}]}]}], "}"}], "]"}],
+                 ",", "\[IndentingNewLine]", 
+                RowBox[{"Column", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"Text", "@", 
+                    RowBox[{"NumberForm", "[", 
+                    RowBox[{
+                    RowBox[{"input", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"3", ",", "i", ",", "5", ",", "3"}], "]"}], "]"}],
+                     ",", 
+                    RowBox[{"DigitBlock", "\[Rule]", "3"}]}], "]"}]}], ",", 
+                   RowBox[{"Text", "@", 
+                    RowBox[{"NumberForm", "[", 
+                    RowBox[{
+                    RowBox[{"N", "[", 
+                    RowBox[{"100", "*", 
+                    RowBox[{
+                    RowBox[{"input", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"3", ",", "i", ",", "5", ",", "3"}], "]"}], "]"}],
+                     "/", 
+                    RowBox[{"Total", "[", 
+                    RowBox[{"input", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"3", ",", "i", ",", "5"}], "]"}], "]"}], 
+                    "]"}]}]}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", "3"}], "}"}]}], "]"}]}]}], "}"}], "]"}],
+                 ",", "\[IndentingNewLine]", 
+                RowBox[{"Column", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"Text", "@", 
+                    RowBox[{"NumberForm", "[", 
+                    RowBox[{
+                    RowBox[{"input", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"3", ",", "i", ",", "5", ",", "2"}], "]"}], "]"}],
+                     ",", 
+                    RowBox[{"DigitBlock", "\[Rule]", "3"}]}], "]"}]}], ",", 
+                   RowBox[{"Text", "@", 
+                    RowBox[{"NumberForm", "[", 
+                    RowBox[{
+                    RowBox[{"N", "[", 
+                    RowBox[{"100", "*", 
+                    RowBox[{
+                    RowBox[{"input", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"3", ",", "i", ",", "5", ",", "2"}], "]"}], "]"}],
+                     "/", 
+                    RowBox[{"Total", "[", 
+                    RowBox[{"input", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"3", ",", "i", ",", "5"}], "]"}], "]"}], 
+                    "]"}]}]}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", "3"}], "}"}]}], "]"}]}]}], "}"}], "]"}],
+                 ",", "\[IndentingNewLine]", 
+                RowBox[{"Text", "@", 
+                 RowBox[{"NumberForm", "[", 
+                  RowBox[{
+                   RowBox[{"100", "*", 
+                    RowBox[{"input", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"3", ",", "i", ",", "6", ",", "2"}], "]"}], 
+                    "]"}]}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"5", ",", "3"}], "}"}]}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"Text", "@", 
+                 RowBox[{"Row", "[", 
+                  RowBox[{"input", "[", 
+                   RowBox[{"[", 
+                    RowBox[{"3", ",", "i", ",", "4"}], "]"}], "]"}], "]"}]}], 
+                ",", "\[IndentingNewLine]", 
+                RowBox[{"BarChart", "[", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"input", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"3", ",", "i", ",", "5", ",", "1"}], "]"}], "]"}],
+                     ",", 
+                    RowBox[{"input", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"3", ",", "i", ",", "5", ",", "3"}], "]"}], "]"}],
+                     ",", 
+                    RowBox[{"input", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"3", ",", "i", ",", "5", ",", "2"}], "]"}], 
+                    "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"ChartLegends", "\[Rule]", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    "\"\<Hand A Wins\>\"", ",", "\"\<Ties\>\"", ",", 
+                    "\"\<Hand B Wins\>\""}], " ", "}"}]}], ",", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{"ChartStyle", "\[Rule]", "\"\<DarkBands\>\""}], ",",
+                   "\[IndentingNewLine]", 
+                  RowBox[{"LabelingFunction", "\[Rule]", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Placed", "[", 
+                    RowBox[{
+                    RowBox[{"Column", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"NumberForm", "[", 
+                    RowBox[{
+                    RowBox[{"100", "*", 
+                    RowBox[{"N", "[", 
+                    RowBox[{"#", "/", 
+                    RowBox[{"Total", "[", 
+                    RowBox[{"input", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"3", ",", "i", ",", "5"}], "]"}], "]"}], "]"}]}], 
+                    "]"}]}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", "2"}], "}"}]}], "]"}], "\"\<%\>\""}], 
+                    ",", "#"}], "}"}], "]"}], ",", "Above"}], "]"}], "&"}], 
+                    ")"}]}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"Axes", "\[Rule]", 
+                   RowBox[{"{", 
+                    RowBox[{"True", ",", "False"}], "}"}]}], ",", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{"ImageSize", "\[Rule]", "200"}], ",", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{"AspectRatio", "\[Rule]", 
+                   RowBox[{"1", "/", "3"}]}]}], "\[IndentingNewLine]", 
+                 "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{"i", ",", 
+                RowBox[{"Length", "[", 
+                 RowBox[{"input", "[", 
+                  RowBox[{"[", "3", "]"}], "]"}], "]"}]}], "}"}]}], "]"}]}], 
+           ";", "\[IndentingNewLine]", 
+           RowBox[{"Column", "[", 
+            RowBox[{
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+               RowBox[{"Text", "@", 
+                RowBox[{"Style", "[", 
+                 RowBox[{
+                 "\"\<One-To-One Equity Distribution for a 2 PreFlop \
+Hands\>\"", ",", "Larger", ",", "Bold"}], "]"}]}], ",", 
+               "\[IndentingNewLine]", "\"\<\\n\>\"", ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"TableForm", "[", 
+                RowBox[{"table", ",", "\[IndentingNewLine]", 
+                 RowBox[{"TableAlignments", "\[Rule]", "Center"}], ",", 
+                 "\[IndentingNewLine]", 
+                 RowBox[{"TableSpacing", "\[Rule]", 
+                  RowBox[{"{", 
+                   RowBox[{"0.75", ",", "0.75"}], "}"}]}], ",", 
+                 "\[IndentingNewLine]", 
+                 RowBox[{"TableHeadings", "\[Rule]", 
+                  RowBox[{"{", 
+                   RowBox[{"None", ",", 
+                    RowBox[{"Text", "/@", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    "\"\<Hand A\>\"", ",", "\"\<Equity\>\"", ",", 
+                    "\"\<Wins(Nb/%)\>\"", ",", "\"\<Ties(Nb/%)\>\"", ",", 
+                    "\"\<Wins(Nb/%)\>\"", ",", "\"\<Equity\>\"", ",", 
+                    "\"\<Hand B\>\""}], "}"}]}]}], "}"}]}]}], 
+                "\[IndentingNewLine]", "]"}], ",", "\[IndentingNewLine]", 
+               "\"\<\\n\>\"", ",", "\[IndentingNewLine]", 
+               RowBox[{"Text", "@", 
+                RowBox[{"comment", "[", "input", "]"}]}]}], 
+              "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
+             "Center"}], "]"}]}]}], "\[IndentingNewLine]", "]"}]}], ";"}], 
+      "\[IndentingNewLine]", ")"}]}]}], "\[IndentingNewLine]", 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.556039438857438*^9, 3.556039487957818*^9}, {
+   3.556039583825673*^9, 3.556039607001339*^9}, {3.556039643415856*^9, 
+   3.55603969558401*^9}, {3.55603973301742*^9, 3.55603979789247*^9}, {
+   3.5560398323359203`*^9, 3.556039885094523*^9}, {3.556041013721724*^9, 
+   3.556041022301602*^9}, {3.556041161343607*^9, 3.556041189050674*^9}, {
+   3.5560412792202797`*^9, 3.556041299267878*^9}, {3.556041457669737*^9, 
+   3.5560414597215433`*^9}, {3.556041506869931*^9, 3.556041582428397*^9}, {
+   3.556041696877524*^9, 3.556041724389408*^9}, 3.556041969999728*^9, {
+   3.556042730446508*^9, 3.556042774921623*^9}, {3.556042816836522*^9, 
+   3.5560428290078697`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Create CDF",
+ FontSize->14]], "Subsection",
+ CellFrame->{{0, 0}, {0, 0.5}},
+ CellChangeTimes->{{3.555692369900028*^9, 3.555692380130302*^9}, {
+   3.555692430844801*^9, 3.5556924449312153`*^9}, {3.5556975322898693`*^9, 
+   3.555697544343995*^9}, 3.55586019273348*^9, 3.555860291946311*^9, 
+   3.555860329556773*^9, 3.555860395307447*^9, 3.555861219815419*^9, {
+   3.5558625363000507`*^9, 3.55586254058667*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"nbToExportAsCDF", "=", 
+   RowBox[{"CreateDocument", "[", "\[IndentingNewLine]", 
+    RowBox[{"manipulateOutput", ",", "\[IndentingNewLine]", 
+     RowBox[{
+     "WindowTitle", "\[Rule]", 
+      "\"\<One-To-One Equity Distribution for a 2 PreFlop Hands\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"WindowSize", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"All", ",", "All"}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"WindowMargins", "\[Rule]", "Automatic"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"WindowElements", "\[Rule]", 
+      RowBox[{"{", "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"WindowFrameElements", "\[Rule]", 
+      RowBox[{"{", "\"\<CloseBox\>\"", "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"ShowCellBracket", "\[Rule]", "False"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"CellMargins", "\[Rule]", "0"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Deployed", "\[Rule]", "True"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Editable", "\[Rule]", "False"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Saveable", "\[Rule]", "False"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Visible", "\[Rule]", "False"}]}], "\[IndentingNewLine]", 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"cdfInfo", "=", 
+  RowBox[{"CDFInformation", "[", "nbToExportAsCDF", "]"}]}]}], "Input",
+ CellChangeTimes->{{3.555694123453436*^9, 3.555694163556838*^9}, 
+   3.555697830463256*^9, 3.555697875062749*^9, {3.555697907350932*^9, 
+   3.555697921190097*^9}, 3.5558601927341843`*^9, 3.5558602919468203`*^9, 
+   3.555860329557281*^9, 3.555860395308362*^9, 3.555861219816496*^9, {
+   3.55586277105694*^9, 3.555862775751853*^9}, {3.555865388840107*^9, 
+   3.555865390487307*^9}, {3.555866112572465*^9, 3.555866112964573*^9}, {
+   3.556035407151464*^9, 3.556035444213889*^9}, 3.5560568291999397`*^9, {
+   3.556056912887912*^9, 3.5560569313192377`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Export CDF, CDF preview, NB to GitHub local repo",
+ FontSize->14]], "Subsection",
+ CellFrame->{{0, 0}, {0, 0.5}},
+ CellChangeTimes->{{3.555692369900028*^9, 3.555692380130302*^9}, {
+   3.555692430844801*^9, 3.5556924449312153`*^9}, {3.5556975322898693`*^9, 
+   3.555697544343995*^9}, {3.555698692266656*^9, 3.555698698674325*^9}, 
+   3.55586019273463*^9, 3.55586029194726*^9, 3.555860329557722*^9, 
+   3.555860395309059*^9, 3.5558612198172007`*^9, {3.555862546003208*^9, 
+   3.555862549555197*^9}, {3.5558626587253513`*^9, 3.555862668925728*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"SetOptions", "[", 
+     RowBox[{
+      RowBox[{"EvaluationNotebook", "[", "]"}], ",", 
+      RowBox[{"NotebookEventActions", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"\"\<WindowClose\>\"", "\[RuleDelayed]", 
+         RowBox[{"FrontEndExecute", "[", 
+          RowBox[{"FrontEndToken", "[", "\"\<DeleteGeneratedCells\>\"", "]"}],
+           "]"}]}], "}"}]}]}], "]"}], ";"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"NotebookInformation", "[", 
+     RowBox[{"SelectedNotebook", "[", "]"}], "]"}], "//", "Column"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Options", "[", 
+     RowBox[{"SelectedNotebook", "[", "]"}], "]"}], "//", "Column"}], 
+   "*)"}]}]], "Input",
+ CellChangeTimes->{{3.555700085084764*^9, 3.555700085088874*^9}, 
+   3.555700438198511*^9, 3.555860192734806*^9, 3.555860291947433*^9, 
+   3.5558603295578938`*^9, 3.555860395309334*^9, 3.555861219817484*^9, {
+   3.556035484588235*^9, 3.55603548951698*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"FrontEndTokenExecute", "[", "\"\<DeleteGeneratedCells\>\"", "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{3.556124991647987*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"name", "=", "\"\<twoPreFlopHand\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"repoDir", "=", 
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+     "$InitialDirectory", ",", "\"\<Dropbox\>\"", ",", "\"\<Archives\>\"", 
+      ",", "\"\<GitHub\>\"", ",", "\"\<Poker\>\""}], "}"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{"repoDir", ",", "\"\<CDF\>\"", ",", 
+       RowBox[{"name", "<>", "\"\<.cdf\>\""}]}], "}"}], "]"}], ",", 
+    "nbToExportAsCDF", ",", "\"\<CDF\>\""}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"NotebookClose", "[", "nbToExportAsCDF", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{}], "\[IndentingNewLine]", 
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"Export", "[", 
+    RowBox[{
+     RowBox[{"FileNameJoin", "[", 
+      RowBox[{"{", 
+       RowBox[{"repoDir", ",", "\"\<CDF-Preview\>\"", ",", 
+        RowBox[{"name", "<>", "\"\<.png\>\""}]}], "}"}], "]"}], ",", 
+     "manipulateOutput", ",", "\"\<PNG\>\""}], "]"}], ";"}], 
+  "*)"}], "\[IndentingNewLine]", 
+ RowBox[{}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SetOptions", "[", 
+   RowBox[{
+    RowBox[{"SelectedNotebook", "[", "]"}], ",", 
+    RowBox[{"PrivateNotebookOptions", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<FileOutlineCache\>\"", "\[Rule]", "False"}], "}"}]}]}], 
+   "]"}], ";", 
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{"repoDir", ",", "\"\<NB\>\"", ",", 
+       RowBox[{"name", "<>", "\"\<.nb\>\""}]}], "}"}], "]"}], ",", 
+    RowBox[{"EvaluationNotebook", "[", "]"}], ",", "\"\<NB\>\""}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SetOptions", "[", 
+   RowBox[{
+    RowBox[{"SelectedNotebook", "[", "]"}], ",", 
+    RowBox[{"PrivateNotebookOptions", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<FileOutlineCache\>\"", "\[Rule]", "Automatic"}], "}"}]}]}],
+    "]"}], ";"}]}], "Input",
+ CellChangeTimes->{
+  3.5558625781088457`*^9, {3.555862679725438*^9, 3.555862680582274*^9}, 
+   3.555862713160735*^9, {3.5558627502472067`*^9, 3.555862754359941*^9}, {
+   3.555862788705677*^9, 3.555862816912328*^9}, {3.555862892514326*^9, 
+   3.555862893056941*^9}, {3.5558660250375566`*^9, 3.555866028085747*^9}, {
+   3.555866132711671*^9, 3.55586615131142*^9}, {3.555870906989159*^9, 
+   3.555870916804551*^9}, {3.555950669455865*^9, 3.555950669870875*^9}, {
+   3.5559507729063597`*^9, 3.555950775519906*^9}, {3.556035524666976*^9, 
+   3.556035532289064*^9}, 3.5560362294385233`*^9, 3.5560363491947393`*^9, {
+   3.556036753429654*^9, 3.556036754667284*^9}, {3.556042945711144*^9, 
+   3.556042949423079*^9}, {3.556124983128014*^9, 3.556124987979207*^9}}]
+}, Open  ]]
+},
+WindowSize->{1178, 1161},
+WindowMargins->{{100, Automatic}, {Automatic, 40}},
+PrivateNotebookOptions->{"FileOutlineCache"->False},
+CellContext->Notebook,
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (October 5, \
+2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 302, 5, 70, "Subsection"],
+Cell[884, 29, 71405, 1542, 70, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[72326, 1576, 433, 7, 70, "Subsection"],
+Cell[72762, 1585, 1938, 35, 70, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[74737, 1625, 569, 8, 70, "Subsection"],
+Cell[75309, 1635, 1063, 26, 70, "Input"],
+Cell[76375, 1663, 163, 4, 70, "Input"],
+Cell[76541, 1669, 2873, 71, 70, "Input"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

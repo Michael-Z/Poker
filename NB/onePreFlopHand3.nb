@@ -1,0 +1,1174 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     50685,       1165]
+NotebookOptionsPosition[     49957,       1136]
+NotebookOutlinePosition[     50391,       1154]
+CellTagsIndexPosition[     50348,       1151]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[StyleBox["Manipulate Command (One Cell)",
+ FontSize->14]], "Subsection",
+ CellFrame->{{0, 0}, {0, 0.5}},
+ CellChangeTimes->{{3.555692369900028*^9, 3.555692380130302*^9}, 
+   3.555860192719411*^9, 3.555860291936125*^9, 3.555860329546563*^9, 
+   3.555860395289393*^9, 3.555861219798011*^9}],
+
+Cell[BoxData[
+ RowBox[{"manipulateOutput", "=", 
+  RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"handRankPoint", ",", "handRankBin", ",", "handRank"}], "}"}], 
+      ",", "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"!", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"f1", "\[Equal]", "f2"}], " ", "&&", " ", 
+           RowBox[{"t", "\[Equal]", "\"\<s\>\""}]}], ")"}]}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"handRank", "=", 
+          RowBox[{"allPreFlopHandRank", "[", 
+           RowBox[{"[", 
+            RowBox[{"convert", "[", 
+             RowBox[{"{", 
+              RowBox[{"f1", ",", "f2", ",", "t"}], "}"}], "]"}], "]"}], 
+           "]"}]}], ";", "\[IndentingNewLine]", 
+         RowBox[{"handRankPoint", "=", 
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"i", ",", 
+              RowBox[{"handRank", "[", 
+               RowBox[{"[", "i", "]"}], "]"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"i", ",", 
+              RowBox[{"Length", "[", "handRank", "]"}]}], "}"}]}], "]"}]}], 
+         ";", "\[IndentingNewLine]", 
+         RowBox[{"handRankBin", "=", 
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"Select", "[", 
+             RowBox[{
+              RowBox[{"Take", "[", 
+               RowBox[{"handRankPoint", ",", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"handRankLimit", "[", 
+                   RowBox[{"[", "i", "]"}], "]"}], "+", "1"}], ";;", 
+                 RowBox[{"handRankLimit", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"i", "+", "1"}], "]"}], "]"}]}]}], "]"}], ",", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"#", "[", 
+                 RowBox[{"[", "2", "]"}], "]"}], ">", "0"}], "&"}]}], "]"}], 
+            ",", 
+            RowBox[{"{", 
+             RowBox[{"i", ",", "9"}], "}"}]}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Column", "[", 
+          RowBox[{
+           RowBox[{"{", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"Text", "@", 
+              RowBox[{"Style", "[", 
+               RowBox[{
+               "\"\<Number of Hands per Hand Rank\>\"", ",", "Larger", ",", 
+                "Bold"}], "]"}]}], ",", "\[IndentingNewLine]", "\"\<\\n\>\"", 
+             ",", "\[IndentingNewLine]", 
+             RowBox[{"tableRangePreFlopHand", "[", 
+              RowBox[{"handRank", ",", 
+               RowBox[{"{", 
+                RowBox[{"hmin", ",", 
+                 RowBox[{"Min", "[", 
+                  RowBox[{"nh", ",", 
+                   RowBox[{"7462", "-", "hmin"}]}], "]"}]}], "}"}]}], "]"}]}],
+             "\[IndentingNewLine]", "}"}], ",", "Center"}], "]"}]}]}], 
+       "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}], ",", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"Text", "@", 
+     RowBox[{"Style", "[", 
+      RowBox[{"\"\<First PreFlop Hand\\n\>\"", ",", "11", ",", "Bold"}], 
+      "]"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"f1", ",", "7", ",", "\"\<First face\>\""}], "}"}], ",", 
+      "faceChoice", ",", 
+      RowBox[{"ControlType", "\[Rule]", "SetterBar"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"f2", ",", "6", ",", "\"\<Second face\>\""}], "}"}], ",", 
+      "faceChoice", ",", 
+      RowBox[{"ControlType", "\[Rule]", "SetterBar"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"t", ",", "\"\<o\>\"", ",", "\"\<Type\>\""}], "}"}], ",", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"f1", "!=", "f2"}], ",", "suitChoice", ",", "suitNoChoice"}], 
+       "]"}], ",", 
+      RowBox[{"ControlType", "\[Rule]", "SetterBar"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", "Delimiter", ",", "\[IndentingNewLine]", 
+    RowBox[{"Style", "[", 
+     RowBox[{"\"\<Selection of Hand Ranks\>\"", ",", "11", ",", "Bold"}], 
+     "]"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "hmin", ",", "3501", ",", "\"\<Lowest Hand Rank displayed\>\""}], 
+       "}"}], ",", "1", ",", "7452", ",", "1", ",", 
+      RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "nh", ",", "5", ",", "\"\<Number of Hand Ranks displayed\>\""}], "}"}],
+       ",", "1", ",", "30", ",", "1", ",", 
+      RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"ControlPlacement", "\[Rule]", "Top"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"ContentSize", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"400", ",", "300"}], "}"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"SynchronousInitialization", "\[Rule]", "False"}], ",", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"Initialization", "\[RuleDelayed]", 
+     RowBox[{"(", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"faceEq", "=", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"1", "\[Rule]", "2"}], ",", 
+          RowBox[{"2", "\[Rule]", "3"}], ",", 
+          RowBox[{"3", "\[Rule]", "4"}], ",", 
+          RowBox[{"4", "\[Rule]", "5"}], ",", 
+          RowBox[{"5", "\[Rule]", "6"}], ",", 
+          RowBox[{"6", "\[Rule]", "7"}], ",", 
+          RowBox[{"7", "\[Rule]", "8"}], ",", 
+          RowBox[{"8", "\[Rule]", "9"}], ",", 
+          RowBox[{"9", "\[Rule]", "T"}], ",", 
+          RowBox[{"10", "\[Rule]", "J"}], ",", 
+          RowBox[{"11", "\[Rule]", "Q"}], ",", 
+          RowBox[{"12", "\[Rule]", "K"}], ",", 
+          RowBox[{"13", "\[Rule]", "A"}]}], "}"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"face", "=", 
+        RowBox[{"{", 
+         RowBox[{
+         "2", ",", "3", ",", "4", ",", "5", ",", "6", ",", "7", ",", "8", ",",
+           "9", ",", "T", ",", "J", ",", "Q", ",", "K", ",", "A"}], "}"}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"deckCardNo", "[", 
+         RowBox[{"deckCardFace_", ",", " ", "deckCardSuit_"}], "]"}], ":=", 
+        RowBox[{"1", "+", 
+         RowBox[{"4", "*", 
+          RowBox[{"(", 
+           RowBox[{"deckCardFace", "-", "1"}], ")"}]}], "+", 
+         RowBox[{"(", 
+          RowBox[{"deckCardSuit", "-", "1"}], ")"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"allPreFlopHand", " ", "=", " ", 
+        RowBox[{"Flatten", "[", 
+         RowBox[{
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"If", "[", 
+             RowBox[{
+              RowBox[{"f1", ">", "f2"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"deckCardNo", "[", 
+                 RowBox[{"f1", ",", "4"}], "]"}], ",", 
+                RowBox[{"deckCardNo", "[", 
+                 RowBox[{"f2", ",", "4"}], "]"}]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"deckCardNo", "[", 
+                 RowBox[{"f1", ",", "4"}], "]"}], ",", 
+                RowBox[{"deckCardNo", "[", 
+                 RowBox[{"f2", ",", "3"}], "]"}]}], "}"}]}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"f1", ",", "13", ",", "1", ",", 
+              RowBox[{"-", "1"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"f2", ",", "13", ",", "1", ",", 
+              RowBox[{"-", "1"}]}], "}"}]}], "]"}], ",", "1"}], "]"}]}], ";", 
+       
+       RowBox[{"nameHand", "=", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<Total\>\"", ",", "\"\<High Card\>\"", ",", "\"\<One Pair\>\"", 
+          ",", "\"\<Two Pairs\>\"", ",", "\"\<Three of a kind\>\"", ",", 
+          "\"\<Straight\>\"", ",", "\"\<Flush\>\"", ",", "\"\<Full House\>\"",
+           ",", "\"\<Four of a kind\>\"", ",", "\"\<Straight Flush\>\""}], 
+         "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"nbDistinctHand", "=", 
+        RowBox[{"{", 
+         RowBox[{
+         "7462", ",", "1277", ",", "2860", ",", "858", ",", "858", ",", "10", 
+          ",", "1277", ",", "156", ",", "156", ",", "10"}], "}"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"cumulUpNbDistinctHand", "=", 
+        RowBox[{"{", 
+         RowBox[{
+         "1277", ",", "4137", ",", "4995", ",", "5853", ",", "5863", ",", 
+          "7140", ",", "7296", ",", "7452", ",", "7462"}], "}"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"handRankLimit", "=", 
+        RowBox[{"{", 
+         RowBox[{
+         "0", ",", "1277", ",", "4137", ",", "4995", ",", "5853", ",", "5863",
+           ",", "7140", ",", "7296", ",", "7452", ",", "7462"}], "}"}]}], ";",
+        "\[IndentingNewLine]", 
+       RowBox[{"allPreFlopHandRank", "=", 
+        RowBox[{
+        "Import", "[", 
+         "\"\<https://raw.github.com/oscar6echo/Poker-Probabilities/master/\
+Tables/allPreFlopHandRank.csv\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"handFaceFiveSorted", "=", 
+        RowBox[{
+        "Import", "[", 
+         "\"\<https://raw.github.com/oscar6echo/Poker-Probabilities/master/\
+Tables/handFaceFive.csv\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"tableTypeHand", "[", "handRankBin_", "]"}], ":=", 
+        RowBox[{"Module", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"nbTypeHand", ",", "perCentTypeHand"}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"nbTypeHand", "=", 
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{"Total", "[", 
+               RowBox[{
+                RowBox[{"handRankBin", "[", 
+                 RowBox[{"[", "i", "]"}], "]"}], "[", 
+                RowBox[{"[", 
+                 RowBox[{"All", ",", "2"}], "]"}], "]"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"i", ",", "9"}], "}"}]}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"perCentTypeHand", "=", 
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"N", "[", 
+                RowBox[{"100", "*", 
+                 RowBox[{"nbTypeHand", "[", 
+                  RowBox[{"[", "i", "]"}], "]"}]}], "]"}], "/", 
+               RowBox[{"Total", "[", "nbTypeHand", "]"}]}], ",", 
+              RowBox[{"{", 
+               RowBox[{"i", ",", "9"}], "}"}]}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"TableForm", "[", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"Map", "[", "\[IndentingNewLine]", 
+              RowBox[{"Text", ",", "\[IndentingNewLine]", 
+               RowBox[{"Append", "[", "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"Table", "[", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"nameHand", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"1", "+", "i"}], "]"}], "]"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"NumberForm", "[", 
+                    RowBox[{
+                    RowBox[{"nbTypeHand", "[", 
+                    RowBox[{"[", "i", "]"}], "]"}], ",", 
+                    RowBox[{"DigitBlock", "\[Rule]", "3"}]}], "]"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"NumberForm", "[", 
+                    RowBox[{
+                    RowBox[{"perCentTypeHand", "[", 
+                    RowBox[{"[", "i", "]"}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", "3"}], "}"}]}], "]"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"nbDistinctHand", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", "+", "1"}], "]"}], "]"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"cumulUpNbDistinctHand", "[", 
+                    RowBox[{"[", "i", "]"}], "]"}]}], "}"}], ",", 
+                   "\[IndentingNewLine]", 
+                   RowBox[{"{", 
+                    RowBox[{"i", ",", "9", ",", "1", ",", 
+                    RowBox[{"-", "1"}]}], "}"}]}], "\[IndentingNewLine]", 
+                  "]"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"nameHand", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], ",", 
+                   "\[IndentingNewLine]", 
+                   RowBox[{"NumberForm", "[", 
+                    RowBox[{
+                    RowBox[{"Total", "[", "nbTypeHand", "]"}], ",", 
+                    RowBox[{"DigitBlock", "\[Rule]", "3"}]}], "]"}], ",", 
+                   "\[IndentingNewLine]", 
+                   RowBox[{"NumberForm", "[", 
+                    RowBox[{
+                    RowBox[{"Total", "[", "perCentTypeHand", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", "3"}], "}"}]}], "]"}], ",", 
+                   "\[IndentingNewLine]", " ", 
+                   RowBox[{"Total", "[", 
+                    RowBox[{"nbDistinctHand", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"2", ";;"}], "]"}], "]"}], "]"}], ",", 
+                   "\"\<N/A\>\""}], "}"}]}], "\[IndentingNewLine]", "]"}], 
+               ",", 
+               RowBox[{"{", "2", "}"}]}], "\[IndentingNewLine]", "]"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"TableAlignments", "\[Rule]", "Right"}], ",", 
+             "\[IndentingNewLine]", " ", 
+             RowBox[{"TableHeadings", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"None", ",", 
+                RowBox[{"Text", "/@", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<Hand Name\>\"", ",", "\"\<Nb of Hands\>\"", ",", 
+                   "\"\<% of Hands\>\"", ",", " ", 
+                   "\"\<Nb Distinctly Ranked Hands\>\"", ",", " ", 
+                   "\"\<Nb Cumulative Up\>\""}], "}"}]}]}], "}"}]}]}], 
+            "\[IndentingNewLine]", "]"}]}]}], "\[IndentingNewLine]", "]"}]}], 
+       ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"rectChartPreFlopHand", "[", 
+         RowBox[{"handRankPoint_", ",", "nbHandRankBucket_"}], "]"}], ":=", 
+        RowBox[{"Module", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+           "width", ",", "handRankLimitBucket", ",", "handRankBin", ",", 
+            "nbHand", ",", "nbAllHand", ",", "dataRect", ",", "color", ",", 
+            "colorList", ",", "tooltipLabel"}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"width", "=", 
+            RowBox[{"Round", "[", 
+             RowBox[{"7462", "/", "nbHandRankBucket"}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"handRankLimitBucket", "=", 
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{"DeleteDuplicates", "[", 
+               RowBox[{"Append", "[", 
+                RowBox[{
+                 RowBox[{"Range", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"handRankLimit", "[", 
+                    RowBox[{"[", "i", "]"}], "]"}], "+", "0"}], ",", 
+                   RowBox[{"handRankLimit", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", "+", "1"}], "]"}], "]"}], ",", "width"}], 
+                  "]"}], ",", 
+                 RowBox[{"handRankLimit", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"i", "+", "1"}], "]"}], "]"}]}], "]"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"i", ",", "9"}], "}"}]}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"handRankBin", "=", 
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{"Table", "[", 
+               RowBox[{
+                RowBox[{"Take", "[", 
+                 RowBox[{"handRankPoint", ",", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"handRankLimitBucket", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "j"}], "]"}], "]"}], "+", "1"}], ";;", 
+                   RowBox[{"handRankLimitBucket", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", 
+                    RowBox[{"j", "+", "1"}]}], "]"}], "]"}]}]}], "]"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"j", ",", 
+                  RowBox[{
+                   RowBox[{"Length", "[", 
+                    RowBox[{"handRankLimitBucket", "[", 
+                    RowBox[{"[", "i", "]"}], "]"}], "]"}], "-", "1"}]}], 
+                 "}"}]}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"i", ",", 
+                RowBox[{"Length", "[", "handRankLimitBucket", "]"}]}], 
+               "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"nbHand", "=", 
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{"Table", "[", 
+               RowBox[{
+                RowBox[{"Total", "[", 
+                 RowBox[{
+                  RowBox[{"handRankBin", "[", 
+                   RowBox[{"[", 
+                    RowBox[{"i", ",", "j"}], "]"}], "]"}], "[", 
+                  RowBox[{"[", 
+                   RowBox[{"All", ",", "2"}], "]"}], "]"}], "]"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"j", ",", 
+                  RowBox[{
+                   RowBox[{"Length", "[", 
+                    RowBox[{"handRankLimitBucket", "[", 
+                    RowBox[{"[", "i", "]"}], "]"}], "]"}], "-", "1"}]}], 
+                 "}"}]}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"i", ",", 
+                RowBox[{"Length", "[", "handRankLimitBucket", "]"}]}], 
+               "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"nbAllHand", "=", 
+            RowBox[{"Total", "[", 
+             RowBox[{"nbHand", ",", "2"}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"dataRect", "=", 
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{"Table", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"nbHandRankBucket", ",", 
+                  RowBox[{"nbHand", "[", 
+                   RowBox[{"[", 
+                    RowBox[{"i", ",", "j"}], "]"}], "]"}]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"j", ",", 
+                  RowBox[{
+                   RowBox[{"Length", "[", 
+                    RowBox[{"handRankLimitBucket", "[", 
+                    RowBox[{"[", "i", "]"}], "]"}], "]"}], "-", "1"}]}], 
+                 "}"}]}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"i", ",", 
+                RowBox[{"Length", "[", "handRankLimitBucket", "]"}]}], 
+               "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"color", "=", 
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"ColorData", "[", "\"\<DarkBands\>\"", "]"}], "[", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"i", "-", "1"}], ")"}], "/", "8"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"i", ",", "9"}], "}"}]}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"colorList", "=", 
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{"color", "[", 
+               RowBox[{"[", "i", "]"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"i", ",", "9"}], "}"}]}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"tooltipLabel", "[", 
+             RowBox[{"v_", ",", 
+              RowBox[{"{", 
+               RowBox[{"r_", ",", "c_"}], "}"}], ",", "___"}], "]"}], ":=", 
+            RowBox[{"Placed", "[", 
+             RowBox[{
+              RowBox[{"Grid", "[", 
+               RowBox[{
+                RowBox[{"{", "\[IndentingNewLine]", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{"\"\<Hand Ranks from \>\"", ",", 
+                    RowBox[{"handRankLimitBucket", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"r", ",", "c"}], "]"}], "]"}], ",", "\"\<to\>\"", 
+                    ",", 
+                    RowBox[{"handRankLimitBucket", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"r", ",", 
+                    RowBox[{"c", "+", "1"}]}], "]"}], "]"}]}], " ", "}"}], 
+                  ",", "\[IndentingNewLine]", 
+                  RowBox[{"{", 
+                   RowBox[{"\"\<Number of Hands =\>\"", ",", 
+                    RowBox[{"v", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], ",", "\"\< / \>\"", ",", 
+                    "nbAllHand"}], " ", "}"}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"{", 
+                   RowBox[{"\"\<Fraction (%) =\>\"", ",", 
+                    RowBox[{"NumberForm", "[", 
+                    RowBox[{
+                    RowBox[{"N", "[", 
+                    RowBox[{"100", "*", 
+                    RowBox[{
+                    RowBox[{"v", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], "/", "nbAllHand"}]}], 
+                    "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", "3"}], "}"}]}], "]"}]}], "}"}]}], "}"}],
+                 ",", "\[IndentingNewLine]", 
+                RowBox[{"Alignment", "\[Rule]", "Left"}]}], "]"}], ",", 
+              "Tooltip"}], "\[IndentingNewLine]", "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"RectangleChart", "[", 
+            RowBox[{"dataRect", ",", "\[IndentingNewLine]", 
+             RowBox[{"ChartLegends", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"nameHand", "[", 
+                 RowBox[{"[", 
+                  RowBox[{"2", ";;", "10"}], "]"}], "]"}], ",", "None"}], 
+               "}"}]}], ",", "\[IndentingNewLine]", 
+             RowBox[{"ChartStyle", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"colorList", ",", "None"}], "}"}]}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"AxesLabel", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Hand Rank\>\"", ",", "\"\<Nb Hands\>\""}], " ", 
+               "}"}]}], ",", "\[IndentingNewLine]", 
+             RowBox[{"LabelingFunction", "\[Rule]", "tooltipLabel"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"ImagePadding", "\[Rule]", "Automatic"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"ImageSize", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"600", ",", "500"}], "}"}]}]}], "\[IndentingNewLine]", 
+            "]"}]}]}], "\[IndentingNewLine]", "]"}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"tableMostFreqPreFlopHand", "[", 
+         RowBox[{"handRank_", ",", "nbHighRank_"}], "]"}], ":=", 
+        RowBox[{"Module", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"mostFreqPreFlopHand", ",", "table"}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"mostFreqPreFlopHand", "=", 
+            RowBox[{"Flatten", "[", 
+             RowBox[{"Table", "[", 
+              RowBox[{
+               RowBox[{"Position", "[", 
+                RowBox[{"handRank", ",", " ", 
+                 RowBox[{"RankedMax", "[", 
+                  RowBox[{"handRank", ",", "i"}], "]"}]}], "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"i", ",", "nbHighRank"}], "}"}]}], "]"}], "]"}]}], 
+           ";", "\[IndentingNewLine]", 
+           RowBox[{"table", "=", 
+            RowBox[{"Map", "[", 
+             RowBox[{"Text", ",", "\[IndentingNewLine]", 
+              RowBox[{"Table", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"mostFreqPreFlopHand", "[", 
+                   RowBox[{"[", "i", "]"}], "]"}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"handRank", "[", 
+                   RowBox[{"[", 
+                    RowBox[{"mostFreqPreFlopHand", "[", 
+                    RowBox[{"[", "i", "]"}], "]"}], "]"}], "]"}], ",", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{"Row", "[", 
+                   RowBox[{
+                    RowBox[{"handFaceFiveSorted", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"mostFreqPreFlopHand", "[", 
+                    RowBox[{"[", "i", "]"}], "]"}], "]"}], "]"}], "/.", 
+                    "faceEq"}], "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"i", ",", 
+                  RowBox[{"Length", "[", "mostFreqPreFlopHand", "]"}]}], 
+                 "}"}]}], "\[IndentingNewLine]", "]"}], ",", 
+              RowBox[{"{", "2", "}"}]}], "\[IndentingNewLine]", "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"TableForm", "[", 
+            RowBox[{"table", ",", 
+             RowBox[{"TableHeadings", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"Automatic", ",", 
+                RowBox[{"Text", "/@", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<Hand Rank\>\"", ",", "\"\<Nb Hands\>\"", ",", 
+                   "\"\<Hand Faces\>\""}], "}"}]}]}], "}"}]}]}], "]"}]}]}], 
+         "\[IndentingNewLine]", "]"}]}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"listPlotHandRank", "[", 
+         RowBox[{
+         "handRankBin_", ",", "hmin_", ",", "hmax_", ",", "xmin_", ",", 
+          "xmax_", ",", "ymax_"}], "]"}], ":=", 
+        RowBox[{"Module", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"handRankBinAdj", "=", 
+             RowBox[{"handRankBin", " ", "/.", " ", 
+              RowBox[{
+               RowBox[{"{", "}"}], "\[Rule]", 
+               RowBox[{"{", "0", "}"}]}]}]}], ",", "color", ",", 
+            "colorList"}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"color", "=", 
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"ColorData", "[", "\"\<DarkBands\>\"", "]"}], "[", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"i", "-", "1"}], ")"}], "/", "8"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"i", ",", "9"}], "}"}]}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"colorList", "=", 
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{"color", "[", 
+               RowBox[{"[", "i", "]"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"i", ",", "9"}], "}"}]}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"ListPlot", "[", 
+            RowBox[{
+             RowBox[{"handRankBinAdj", "[", 
+              RowBox[{"[", 
+               RowBox[{"hmin", ";;", "hmax"}], "]"}], "]"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"AspectRatio", "\[Rule]", 
+              RowBox[{"1", "/", "2"}]}], ",", "\[IndentingNewLine]", 
+             RowBox[{"AxesLabel", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Hand rank\>\"", ",", "\"\<Nb of hands\>\""}], 
+               "}"}]}], ",", "\[IndentingNewLine]", 
+             RowBox[{"AxesOrigin", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"xmin", ",", "0"}], "}"}]}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"Ticks", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"Range", "[", 
+                 RowBox[{"xmin", ",", "xmax", ",", 
+                  RowBox[{"Round", "[", 
+                   RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"xmax", "-", "xmin"}], ")"}], "/", "7"}], "]"}]}],
+                  "]"}], ",", "Automatic"}], "}"}]}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"PlotRange", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"xmin", ",", "xmax"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"0", ",", "ymax"}], "}"}]}], "}"}]}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"PlotStyle", "\[Rule]", "colorList"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"Filling", "\[Rule]", "Axis"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"FillingStyle", "\[Rule]", "Automatic"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"ImageSize", "\[Rule]", "800"}]}], "]"}]}]}], 
+         "\[IndentingNewLine]", "]"}]}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"handType", "[", "oneHandRank_", "]"}], ":=", 
+        RowBox[{"Which", "[", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"oneHandRank", "\[LessEqual]", 
+           RowBox[{"handRankLimit", "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}], ",", 
+          RowBox[{"nameHand", "[", 
+           RowBox[{"[", "2", "]"}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"oneHandRank", "\[LessEqual]", 
+           RowBox[{"handRankLimit", "[", 
+            RowBox[{"[", "3", "]"}], "]"}]}], ",", 
+          RowBox[{"nameHand", "[", 
+           RowBox[{"[", "3", "]"}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"oneHandRank", "\[LessEqual]", 
+           RowBox[{"handRankLimit", "[", 
+            RowBox[{"[", "4", "]"}], "]"}]}], ",", 
+          RowBox[{"nameHand", "[", 
+           RowBox[{"[", "4", "]"}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"oneHandRank", "\[LessEqual]", 
+           RowBox[{"handRankLimit", "[", 
+            RowBox[{"[", "5", "]"}], "]"}]}], ",", 
+          RowBox[{"nameHand", "[", 
+           RowBox[{"[", "5", "]"}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"oneHandRank", "\[LessEqual]", 
+           RowBox[{"handRankLimit", "[", 
+            RowBox[{"[", "6", "]"}], "]"}]}], ",", 
+          RowBox[{"nameHand", "[", 
+           RowBox[{"[", "6", "]"}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"oneHandRank", "\[LessEqual]", 
+           RowBox[{"handRankLimit", "[", 
+            RowBox[{"[", "7", "]"}], "]"}]}], ",", 
+          RowBox[{"nameHand", "[", 
+           RowBox[{"[", "7", "]"}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"oneHandRank", "\[LessEqual]", 
+           RowBox[{"handRankLimit", "[", 
+            RowBox[{"[", "8", "]"}], "]"}]}], ",", 
+          RowBox[{"nameHand", "[", 
+           RowBox[{"[", "8", "]"}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"oneHandRank", "\[LessEqual]", 
+           RowBox[{"handRankLimit", "[", 
+            RowBox[{"[", "9", "]"}], "]"}]}], ",", 
+          RowBox[{"nameHand", "[", 
+           RowBox[{"[", "9", "]"}], "]"}]}], "\[IndentingNewLine]", "]"}]}], 
+       ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"tableRangePreFlopHand", "[", 
+         RowBox[{"handRank_", ",", "rangePreFlopHand_"}], "]"}], ":=", 
+        RowBox[{"Module", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"preFlopHand", ",", "table"}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"preFlopHand", "=", 
+            RowBox[{"Table", "[", 
+             RowBox[{"i", ",", 
+              RowBox[{"{", 
+               RowBox[{"i", ",", 
+                RowBox[{"rangePreFlopHand", "[", 
+                 RowBox[{"[", "1", "]"}], "]"}], ",", 
+                RowBox[{
+                 RowBox[{"rangePreFlopHand", "[", 
+                  RowBox[{"[", "1", "]"}], "]"}], "+", 
+                 RowBox[{"rangePreFlopHand", "[", 
+                  RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}]}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"table", "=", 
+            RowBox[{"Map", "[", "\[IndentingNewLine]", 
+             RowBox[{"Text", ",", "\[IndentingNewLine]", 
+              RowBox[{"Table", "[", 
+               RowBox[{
+                RowBox[{"{", "\[IndentingNewLine]", 
+                 RowBox[{
+                  RowBox[{"preFlopHand", "[", 
+                   RowBox[{"[", "i", "]"}], "]"}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"handRank", "[", 
+                   RowBox[{"[", 
+                    RowBox[{"preFlopHand", "[", 
+                    RowBox[{"[", "i", "]"}], "]"}], "]"}], "]"}], ",", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{"Row", "[", 
+                   RowBox[{
+                    RowBox[{"handFaceFiveSorted", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"preFlopHand", "[", 
+                    RowBox[{"[", "i", "]"}], "]"}], "]"}], "]"}], "/.", 
+                    "faceEq"}], "]"}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"handType", "[", 
+                   RowBox[{"preFlopHand", "[", 
+                    RowBox[{"[", "i", "]"}], "]"}], "]"}]}], 
+                 "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"i", ",", 
+                  RowBox[{"Length", "[", "preFlopHand", "]"}]}], "}"}]}], 
+               "\[IndentingNewLine]", "]"}], ",", 
+              RowBox[{"{", "2", "}"}]}], "\[IndentingNewLine]", "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"TableForm", "[", 
+            RowBox[{"table", ",", 
+             RowBox[{"TableHeadings", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"Automatic", ",", 
+                RowBox[{"Text", "/@", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<Hand Rank\>\"", ",", "\"\<Nb Hands\>\"", ",", 
+                   "\"\<Hand Faces\>\"", ",", "\"\<Hand Type\>\""}], 
+                  "}"}]}]}], "}"}]}]}], "]"}]}]}], "\[IndentingNewLine]", 
+         "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"faceChoice", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"i", "\[Rule]", 
+           RowBox[{"face", "[", 
+            RowBox[{"[", "i", "]"}], "]"}]}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", 
+            RowBox[{"Length", "[", "face", "]"}]}], "}"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"faceChoiceRev", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"face", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], "->", "i"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", 
+            RowBox[{"Length", "[", "face", "]"}]}], "}"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"suitChoice", "=", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"\"\<s\>\"", "\[Rule]", "\"\<suited\>\""}], ",", 
+          RowBox[{"\"\<o\>\"", "\[Rule]", "\"\<off-suited\>\""}]}], "}"}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"suitNoChoice", "=", 
+        RowBox[{"{", 
+         RowBox[{"\"\<o\>\"", "\[Rule]", "\"\<off-suited\>\""}], "}"}]}], ";",
+        "\[IndentingNewLine]", 
+       RowBox[{"nameHandChoice", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"i", "->", 
+           RowBox[{
+            RowBox[{"nameHand", "[", 
+             RowBox[{"[", 
+              RowBox[{"2", ";;"}], "]"}], "]"}], "[", 
+            RowBox[{"[", "i", "]"}], "]"}]}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", "9"}], "}"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"convert", "[", "pfh_", "]"}], ":=", 
+        RowBox[{"Module", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"f1", ",", "f2", ",", "t", ",", "max", ",", "min", ",", 
+            RowBox[{"pfh1", "=", 
+             RowBox[{"Table", "[", 
+              RowBox[{"0", ",", 
+               RowBox[{"{", "2", "}"}]}], "]"}]}]}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"f1", "=", 
+            RowBox[{
+             RowBox[{"pfh", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "/.", "faceChoiceRev"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"f2", "=", 
+            RowBox[{
+             RowBox[{"pfh", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], "/.", "faceChoiceRev"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{"f1", ">", "f2"}], ",", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"max", "=", "f1"}], ";", 
+              RowBox[{"min", "=", "f2"}]}], ",", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"max", "=", "f2"}], ";", 
+              RowBox[{"min", "=", "f1"}]}]}], "\[IndentingNewLine]", "]"}], 
+           ";", "\[IndentingNewLine]", 
+           RowBox[{"t", "=", 
+            RowBox[{"pfh", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{"t", "\[Equal]", "\"\<s\>\""}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"pfh1", "=", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"deckCardNo", "[", 
+                 RowBox[{"max", ",", "4"}], "]"}], ",", 
+                RowBox[{"deckCardNo", "[", 
+                 RowBox[{"min", ",", "4"}], "]"}]}], "}"}]}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"(*", "else", "*)"}], "\[IndentingNewLine]", 
+             RowBox[{"pfh1", "=", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"deckCardNo", "[", 
+                 RowBox[{"min", ",", "4"}], "]"}], ",", 
+                RowBox[{"deckCardNo", "[", 
+                 RowBox[{"max", ",", "3"}], "]"}]}], "}"}]}]}], 
+            "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+           RowBox[{"First", "@", 
+            RowBox[{"First", "@", 
+             RowBox[{"Position", "[", 
+              RowBox[{"allPreFlopHand", ",", "pfh1"}], "]"}]}]}]}]}], 
+         "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]", 
+      ")"}]}]}], "\[IndentingNewLine]", "]"}]}]], "Input",
+ CellChangeTimes->{
+  3.551367750126402*^9, 3.551367863512809*^9, {3.5513679049456253`*^9, 
+   3.551367906823159*^9}, {3.551368309595365*^9, 3.551368336323443*^9}, {
+   3.5513684365431128`*^9, 3.55136848517341*^9}, {3.551368565136574*^9, 
+   3.5513686173777027`*^9}, {3.551368674832692*^9, 3.551368757869484*^9}, {
+   3.551368804981072*^9, 3.5513689818817453`*^9}, {3.5513690421258183`*^9, 
+   3.551369121771447*^9}, {3.551369702961762*^9, 3.5513697219894037`*^9}, 
+   3.551369772035623*^9, {3.5513699607508907`*^9, 3.551370022819591*^9}, {
+   3.551370077419849*^9, 3.551370078794097*^9}, {3.551370111123014*^9, 
+   3.551370123426591*^9}, {3.551370184534555*^9, 3.551370206356873*^9}, {
+   3.551370420792439*^9, 3.551370433241899*^9}, 3.55137059239189*^9, {
+   3.551370627408966*^9, 3.551370629482192*^9}, {3.551370715554943*^9, 
+   3.551370740780081*^9}, {3.551371164400764*^9, 3.551371224890606*^9}, {
+   3.5513712921123533`*^9, 3.551371335576941*^9}, {3.551371445244937*^9, 
+   3.5513714863348827`*^9}, {3.551371517568204*^9, 3.551371523617401*^9}, {
+   3.551371859496805*^9, 3.551371870527585*^9}, {3.5513719010313473`*^9, 
+   3.551371936192342*^9}, {3.551371979085647*^9, 3.5513719797401648`*^9}, {
+   3.551372081776669*^9, 3.551372082160658*^9}, {3.551372454590001*^9, 
+   3.5513724558837337`*^9}, {3.551372916469174*^9, 3.551372917252502*^9}, {
+   3.551372987048967*^9, 3.551372987456884*^9}, {3.551373098490633*^9, 
+   3.5513731247281857`*^9}, 3.551373294621149*^9, {3.551373364477747*^9, 
+   3.551373376781991*^9}, {3.5513734688867283`*^9, 3.5513734780385523`*^9}, {
+   3.551373508967154*^9, 3.5513735265214653`*^9}, {3.551373602220088*^9, 
+   3.551373640058198*^9}, {3.5513737612843647`*^9, 3.5513737660266542`*^9}, 
+   3.5513737975413027`*^9, 3.551373839720681*^9, 3.551373893905292*^9, {
+   3.551374357632474*^9, 3.551374357784094*^9}, {3.551375565941607*^9, 
+   3.5513755691468773`*^9}, {3.551375751304035*^9, 3.551375759669327*^9}, {
+   3.5513759708656807`*^9, 3.5513760951030407`*^9}, {3.551376125354985*^9, 
+   3.5513761470023212`*^9}, {3.551376450605857*^9, 3.551376456589024*^9}, {
+   3.553968240512308*^9, 3.5539682447817383`*^9}, {3.556032605668391*^9, 
+   3.556032613821854*^9}, 3.556033310754476*^9, {3.5560334225562267`*^9, 
+   3.5560334263221283`*^9}, {3.5560334640850487`*^9, 3.556033494506933*^9}, {
+   3.5560335675624943`*^9, 3.556033604879463*^9}, {3.5560337425536003`*^9, 
+   3.5560337741586733`*^9}, {3.556033817334834*^9, 3.556033832199431*^9}, {
+   3.556033906074926*^9, 3.5560339133322973`*^9}, {3.556033995089306*^9, 
+   3.556033997050453*^9}, {3.556034029755125*^9, 3.556034030195139*^9}, {
+   3.556034108260276*^9, 3.556034120117641*^9}, {3.556034231821397*^9, 
+   3.556034231957078*^9}, {3.556034309666504*^9, 3.556034326303998*^9}, {
+   3.556034460637566*^9, 3.556034483991208*^9}, {3.556034528998497*^9, 
+   3.556034549128983*^9}, {3.5560347134427843`*^9, 3.556034727767939*^9}, 
+   3.556034982215996*^9, {3.5560352843659563`*^9, 3.556035286442936*^9}, {
+   3.556035562339571*^9, 3.5560355669009657`*^9}, 3.556036050813424*^9, 
+   3.556036146596156*^9, {3.556036783456759*^9, 3.5560368048455963`*^9}, {
+   3.556045159815756*^9, 3.556045173852976*^9}, {3.556045205286542*^9, 
+   3.556045215714299*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Create CDF",
+ FontSize->14]], "Subsection",
+ CellFrame->{{0, 0}, {0, 0.5}},
+ CellChangeTimes->{{3.555692369900028*^9, 3.555692380130302*^9}, {
+   3.555692430844801*^9, 3.5556924449312153`*^9}, {3.5556975322898693`*^9, 
+   3.555697544343995*^9}, 3.55586019273348*^9, 3.555860291946311*^9, 
+   3.555860329556773*^9, 3.555860395307447*^9, 3.555861219815419*^9, {
+   3.5558625363000507`*^9, 3.55586254058667*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"nbToExportAsCDF", "=", 
+   RowBox[{"CreateDocument", "[", "\[IndentingNewLine]", 
+    RowBox[{"manipulateOutput", ",", "\[IndentingNewLine]", 
+     RowBox[{
+     "WindowTitle", "\[Rule]", 
+      "\"\<Distribution of 5-card Hands For One PreFlop Hand\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"WindowSize", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"All", ",", "All"}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"WindowMargins", "\[Rule]", "Automatic"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"WindowElements", "\[Rule]", 
+      RowBox[{"{", "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"WindowFrameElements", "\[Rule]", 
+      RowBox[{"{", "\"\<CloseBox\>\"", "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"ShowCellBracket", "\[Rule]", "False"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"CellMargins", "\[Rule]", "0"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Deployed", "\[Rule]", "True"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Editable", "\[Rule]", "False"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Saveable", "\[Rule]", "False"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Visible", "\[Rule]", "False"}]}], "\[IndentingNewLine]", 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"cdfInfo", "=", 
+  RowBox[{"CDFInformation", "[", "nbToExportAsCDF", "]"}]}]}], "Input",
+ CellChangeTimes->{{3.555694123453436*^9, 3.555694163556838*^9}, 
+   3.555697830463256*^9, 3.555697875062749*^9, {3.555697907350932*^9, 
+   3.555697921190097*^9}, 3.5558601927341843`*^9, 3.5558602919468203`*^9, 
+   3.555860329557281*^9, 3.555860395308362*^9, 3.555861219816496*^9, {
+   3.55586277105694*^9, 3.555862775751853*^9}, {3.555865388840107*^9, 
+   3.555865390487307*^9}, {3.555866112572465*^9, 3.555866112964573*^9}, {
+   3.556035407151464*^9, 3.556035444213889*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Export CDF, CDF preview, NB to GitHub local repo",
+ FontSize->14]], "Subsection",
+ CellFrame->{{0, 0}, {0, 0.5}},
+ CellChangeTimes->{{3.555692369900028*^9, 3.555692380130302*^9}, {
+   3.555692430844801*^9, 3.5556924449312153`*^9}, {3.5556975322898693`*^9, 
+   3.555697544343995*^9}, {3.555698692266656*^9, 3.555698698674325*^9}, 
+   3.55586019273463*^9, 3.55586029194726*^9, 3.555860329557722*^9, 
+   3.555860395309059*^9, 3.5558612198172007`*^9, {3.555862546003208*^9, 
+   3.555862549555197*^9}, {3.5558626587253513`*^9, 3.555862668925728*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"SetOptions", "[", 
+     RowBox[{
+      RowBox[{"EvaluationNotebook", "[", "]"}], ",", 
+      RowBox[{"NotebookEventActions", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"\"\<WindowClose\>\"", "\[RuleDelayed]", 
+         RowBox[{"FrontEndExecute", "[", 
+          RowBox[{"FrontEndToken", "[", "\"\<DeleteGeneratedCells\>\"", "]"}],
+           "]"}]}], "}"}]}]}], "]"}], ";"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"NotebookInformation", "[", 
+     RowBox[{"SelectedNotebook", "[", "]"}], "]"}], "//", "Column"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Options", "[", 
+     RowBox[{"SelectedNotebook", "[", "]"}], "]"}], "//", "Column"}], 
+   "*)"}]}]], "Input",
+ CellChangeTimes->{{3.555700085084764*^9, 3.555700085088874*^9}, 
+   3.555700438198511*^9, 3.555860192734806*^9, 3.555860291947433*^9, 
+   3.5558603295578938`*^9, 3.555860395309334*^9, 3.555861219817484*^9, {
+   3.556035484588235*^9, 3.55603548951698*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"FrontEndTokenExecute", "[", "\"\<DeleteGeneratedCells\>\"", "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{3.556125113657011*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"name", "=", "\"\<onePreFlopHand3\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"repoDir", "=", 
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+     "$InitialDirectory", ",", "\"\<Dropbox\>\"", ",", "\"\<Archives\>\"", 
+      ",", "\"\<GitHub\>\"", ",", "\"\<Poker\>\""}], "}"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{"repoDir", ",", "\"\<CDF\>\"", ",", 
+       RowBox[{"name", "<>", "\"\<.cdf\>\""}]}], "}"}], "]"}], ",", 
+    "nbToExportAsCDF", ",", "\"\<CDF\>\""}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"NotebookClose", "[", "nbToExportAsCDF", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{}], "\[IndentingNewLine]", 
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"Export", "[", 
+    RowBox[{
+     RowBox[{"FileNameJoin", "[", 
+      RowBox[{"{", 
+       RowBox[{"repoDir", ",", "\"\<CDF-Preview\>\"", ",", 
+        RowBox[{"name", "<>", "\"\<.png\>\""}]}], "}"}], "]"}], ",", 
+     "manipulateOutput", ",", "\"\<PNG\>\""}], "]"}], ";"}], 
+  "*)"}], "\[IndentingNewLine]", 
+ RowBox[{}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SetOptions", "[", 
+   RowBox[{
+    RowBox[{"SelectedNotebook", "[", "]"}], ",", 
+    RowBox[{"PrivateNotebookOptions", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<FileOutlineCache\>\"", "\[Rule]", "False"}], "}"}]}]}], 
+   "]"}], ";", 
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{"repoDir", ",", "\"\<NB\>\"", ",", 
+       RowBox[{"name", "<>", "\"\<.nb\>\""}]}], "}"}], "]"}], ",", 
+    RowBox[{"EvaluationNotebook", "[", "]"}], ",", "\"\<NB\>\""}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SetOptions", "[", 
+   RowBox[{
+    RowBox[{"SelectedNotebook", "[", "]"}], ",", 
+    RowBox[{"PrivateNotebookOptions", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<FileOutlineCache\>\"", "\[Rule]", "Automatic"}], "}"}]}]}],
+    "]"}], ";"}]}], "Input",
+ CellChangeTimes->{
+  3.5558625781088457`*^9, {3.555862679725438*^9, 3.555862680582274*^9}, 
+   3.555862713160735*^9, {3.5558627502472067`*^9, 3.555862754359941*^9}, {
+   3.555862788705677*^9, 3.555862816912328*^9}, {3.555862892514326*^9, 
+   3.555862893056941*^9}, {3.5558660250375566`*^9, 3.555866028085747*^9}, {
+   3.555866132711671*^9, 3.55586615131142*^9}, {3.555870906989159*^9, 
+   3.555870916804551*^9}, {3.555950669455865*^9, 3.555950669870875*^9}, {
+   3.5559507729063597`*^9, 3.555950775519906*^9}, {3.556035524666976*^9, 
+   3.556035532289064*^9}, 3.5560362294385233`*^9, 3.5560363491947393`*^9, {
+   3.556036753429654*^9, 3.556036754667284*^9}, {3.55612510590088*^9, 
+   3.5561251105160303`*^9}}]
+}, Open  ]]
+},
+WindowSize->{1075, 1163},
+WindowMargins->{{100, Automatic}, {Automatic, 40}},
+PrivateNotebookOptions->{"FileOutlineCache"->False},
+CellContext->Notebook,
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (October 5, \
+2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 302, 5, 70, "Subsection"],
+Cell[884, 29, 42055, 936, 70, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[42976, 970, 433, 7, 70, "Subsection"],
+Cell[43412, 979, 1859, 34, 70, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[45308, 1018, 569, 8, 70, "Subsection"],
+Cell[45880, 1028, 1063, 26, 70, "Input"],
+Cell[46946, 1056, 163, 4, 70, "Input"],
+Cell[47112, 1062, 2829, 71, 70, "Input"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

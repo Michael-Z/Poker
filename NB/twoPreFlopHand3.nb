@@ -1,0 +1,443 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     17615,        434]
+NotebookOptionsPosition[     16894,        405]
+NotebookOutlinePosition[     17327,        423]
+CellTagsIndexPosition[     17284,        420]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[StyleBox["Manipulate Command (One Cell)",
+ FontSize->14]], "Subsection",
+ CellFrame->{{0, 0}, {0, 0.5}},
+ CellChangeTimes->{{3.555692369900028*^9, 3.555692380130302*^9}, 
+   3.555860192719411*^9, 3.555860291936125*^9, 3.555860329546563*^9, 
+   3.555860395289393*^9, 3.555861219798011*^9}],
+
+Cell[BoxData[
+ RowBox[{"manipulateOutput", "=", 
+  RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"pfh", ",", "i", ",", "vector"}], "}"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"!", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"f1", "\[Equal]", "f2"}], " ", "&&", " ", 
+           RowBox[{"t", "\[Equal]", "\"\<s\>\""}]}], ")"}]}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"pfh", "=", 
+          RowBox[{
+           RowBox[{"order2", "[", 
+            RowBox[{"{", 
+             RowBox[{"f1", ",", "f2", ",", "t"}], "}"}], "]"}], "/.", 
+           "faceChoiceRev"}]}], ";", "\[IndentingNewLine]", 
+         RowBox[{"i", "=", 
+          RowBox[{"First", "@", 
+           RowBox[{"First", "@", 
+            RowBox[{"Position", "[", 
+             RowBox[{"preFlopHandList", ",", "pfh"}], "]"}]}]}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"vector", "=", 
+          RowBox[{"preFlopHandMatrix", "[", 
+           RowBox[{"[", 
+            RowBox[{"i", ",", "All"}], "]"}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Column", "[", 
+          RowBox[{
+           RowBox[{"{", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"Text", "@", 
+              RowBox[{"Style", "[", 
+               RowBox[{
+               "\"\<One PreFlopHand vs. All Other PreFlopHands\>\"", ",", 
+                "Larger", ",", "Bold"}], "]"}]}], ",", "\[IndentingNewLine]", 
+             "\"\<\\n\>\"", ",", "\[IndentingNewLine]", 
+             RowBox[{"ListPlot", "[", 
+              RowBox[{
+               RowBox[{"Table", "[", 
+                RowBox[{
+                 RowBox[{"Tooltip", "[", 
+                  RowBox[{
+                   RowBox[{"vector", "[", 
+                    RowBox[{"[", "k", "]"}], "]"}], ",", 
+                   RowBox[{"toolTipFunction", "[", 
+                    RowBox[{"k", ",", "vector"}], "]"}]}], "]"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"k", ",", 
+                   RowBox[{"Length", "[", "vector", "]"}]}], "}"}]}], "]"}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{"PlotRange", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"Automatic", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"ImageSize", "\[Rule]", "500"}]}], 
+              "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "}"}], 
+           ",", "\[IndentingNewLine]", "Center"}], "]"}]}]}], 
+       "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}], ",", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"Text", "@", 
+     RowBox[{"Style", "[", 
+      RowBox[{"\"\<PreFlop Hand\\n\>\"", ",", "11", ",", "Bold"}], "]"}]}], 
+    ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"f1", ",", "7", ",", "\"\<First face\>\""}], "}"}], ",", 
+      "faceChoice"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"f2", ",", "6", ",", "\"\<Second face\>\""}], "}"}], ",", 
+      "faceChoice"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"t", ",", "\"\<o\>\"", ",", "\"\<Type\>\""}], "}"}], ",", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"f1", "!=", "f2"}], ",", "suitChoice", ",", "suitNoChoice"}], 
+       "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"ControlPlacement", "\[Rule]", "Top"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"ControlType", "\[Rule]", "SetterBar"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"ContentSize", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"600", ",", "400"}], "}"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"SynchronousInitialization", "\[Rule]", "False"}], ",", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"Initialization", "\[RuleDelayed]", 
+     RowBox[{"(", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"faceChoice", "=", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"1", "\[Rule]", "2"}], ",", 
+          RowBox[{"2", "\[Rule]", "3"}], ",", 
+          RowBox[{"3", "\[Rule]", "4"}], ",", 
+          RowBox[{"4", "\[Rule]", "5"}], ",", 
+          RowBox[{"5", "\[Rule]", "6"}], ",", 
+          RowBox[{"6", "\[Rule]", "7"}], ",", 
+          RowBox[{"7", "\[Rule]", "8"}], ",", 
+          RowBox[{"8", "\[Rule]", "9"}], ",", 
+          RowBox[{"9", "\[Rule]", "T"}], ",", 
+          RowBox[{"10", "\[Rule]", "J"}], ",", 
+          RowBox[{"11", "\[Rule]", "Q"}], ",", 
+          RowBox[{"12", "\[Rule]", "K"}], ",", 
+          RowBox[{"13", "\[Rule]", "A"}]}], "}"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"faceChoiceRev", "=", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"2", "\[Rule]", "1"}], ",", 
+          RowBox[{"3", "\[Rule]", "2"}], ",", 
+          RowBox[{"4", "\[Rule]", "3"}], ",", 
+          RowBox[{"5", "\[Rule]", "4"}], ",", 
+          RowBox[{"6", "\[Rule]", "5"}], ",", 
+          RowBox[{"7", "\[Rule]", "6"}], ",", 
+          RowBox[{"8", "\[Rule]", "7"}], ",", 
+          RowBox[{"9", "\[Rule]", "8"}], ",", 
+          RowBox[{"T", "\[Rule]", "9"}], ",", 
+          RowBox[{"J", "\[Rule]", "10"}], ",", 
+          RowBox[{"Q", "\[Rule]", "11"}], ",", 
+          RowBox[{"K", "\[Rule]", "12"}], ",", 
+          RowBox[{"A", "\[Rule]", "13"}]}], "}"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"preFlopHandMatrix", "=", 
+        RowBox[{"ToExpression", "[", 
+         RowBox[{
+         "Import", "[", 
+          "\"\<https://raw.github.com/oscar6echo/Poker-Probabilities/master/\
+Tables/preFlopHandMatrix.csv\>\"", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"preFlopHandList", "=", 
+        RowBox[{
+        "Import", "[", 
+         "\"\<https://raw.github.com/oscar6echo/Poker-Probabilities/master/\
+Tables/preFlopHandList.csv\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"toolTipFunction", "[", 
+         RowBox[{"i_", ",", "vector_"}], "]"}], ":=", 
+        RowBox[{"Column", "[", 
+         RowBox[{"{", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"Text", "@", 
+            RowBox[{"NumberForm", "[", 
+             RowBox[{
+              RowBox[{"100", "*", 
+               RowBox[{"vector", "[", 
+                RowBox[{"[", "i", "]"}], "]"}], "\"\<%\>\""}], ",", 
+              RowBox[{"{", 
+               RowBox[{"5", ",", "2"}], "}"}]}], "]"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"Text", "@", 
+             RowBox[{"Row", "[", 
+              RowBox[{"preFlopHandList", "[", 
+               RowBox[{"[", "i", "]"}], "]"}], "]"}]}], "/.", "faceChoice"}], 
+           ",", "\[IndentingNewLine]", 
+           RowBox[{"Text", "@", "i"}]}], "\[IndentingNewLine]", "}"}], 
+         "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"order2", "[", "pfh_", "]"}], ":=", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"pfh", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "<", 
+           RowBox[{"pfh", "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"pfh", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], ",", 
+            RowBox[{"pfh", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], ",", 
+            RowBox[{"pfh", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", "pfh"}], "\[IndentingNewLine]", "]"}]}], 
+       ";"}], "\[IndentingNewLine]", ")"}]}]}], "\[IndentingNewLine]", 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.556043564959766*^9, 3.556043575296727*^9}, {
+   3.556043647239613*^9, 3.5560436588537607`*^9}, {3.556043728541494*^9, 
+   3.556043728905465*^9}, {3.556043764859231*^9, 3.5560437695213346`*^9}, {
+   3.556043805884104*^9, 3.5560438293473177`*^9}, {3.556043868220834*^9, 
+   3.55604389311213*^9}, {3.556043946748569*^9, 3.556043946879829*^9}, {
+   3.556044019357317*^9, 3.556044024773241*^9}, {3.556044327796418*^9, 
+   3.5560443547745247`*^9}, {3.55604438655173*^9, 3.556044387999737*^9}, {
+   3.556046275350369*^9, 3.556046323145927*^9}, {3.5560464466839952`*^9, 
+   3.5560464555498857`*^9}, 3.556046495590398*^9, {3.556046681860256*^9, 
+   3.556046696289119*^9}, {3.5560468769367657`*^9, 3.5560468964643173`*^9}, {
+   3.556046937667419*^9, 3.5560469982008343`*^9}, {3.556047061981318*^9, 
+   3.5560470838704023`*^9}, {3.55604720880131*^9, 3.556047217739938*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Create CDF",
+ FontSize->14]], "Subsection",
+ CellFrame->{{0, 0}, {0, 0.5}},
+ CellChangeTimes->{{3.555692369900028*^9, 3.555692380130302*^9}, {
+   3.555692430844801*^9, 3.5556924449312153`*^9}, {3.5556975322898693`*^9, 
+   3.555697544343995*^9}, 3.55586019273348*^9, 3.555860291946311*^9, 
+   3.555860329556773*^9, 3.555860395307447*^9, 3.555861219815419*^9, {
+   3.5558625363000507`*^9, 3.55586254058667*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"nbToExportAsCDF", "=", 
+   RowBox[{"CreateDocument", "[", "\[IndentingNewLine]", 
+    RowBox[{"manipulateOutput", ",", "\[IndentingNewLine]", 
+     RowBox[{
+     "WindowTitle", "\[Rule]", 
+      "\"\<One-To-One Equity Distribution for a 2 PreFlop Hands\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"WindowSize", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"All", ",", "All"}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"WindowMargins", "\[Rule]", "Automatic"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"WindowElements", "\[Rule]", 
+      RowBox[{"{", "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"WindowFrameElements", "\[Rule]", 
+      RowBox[{"{", "\"\<CloseBox\>\"", "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"ShowCellBracket", "\[Rule]", "False"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"CellMargins", "\[Rule]", "0"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Deployed", "\[Rule]", "True"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Editable", "\[Rule]", "False"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Saveable", "\[Rule]", "False"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Visible", "\[Rule]", "False"}]}], "\[IndentingNewLine]", 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"cdfInfo", "=", 
+  RowBox[{"CDFInformation", "[", "nbToExportAsCDF", "]"}]}]}], "Input",
+ CellChangeTimes->{{3.555694123453436*^9, 3.555694163556838*^9}, 
+   3.555697830463256*^9, 3.555697875062749*^9, {3.555697907350932*^9, 
+   3.555697921190097*^9}, 3.5558601927341843`*^9, 3.5558602919468203`*^9, 
+   3.555860329557281*^9, 3.555860395308362*^9, 3.555861219816496*^9, {
+   3.55586277105694*^9, 3.555862775751853*^9}, {3.555865388840107*^9, 
+   3.555865390487307*^9}, {3.555866112572465*^9, 3.555866112964573*^9}, {
+   3.556035407151464*^9, 3.556035444213889*^9}, 3.556057024522781*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Export CDF, CDF preview, NB to GitHub local repo",
+ FontSize->14]], "Subsection",
+ CellFrame->{{0, 0}, {0, 0.5}},
+ CellChangeTimes->{{3.555692369900028*^9, 3.555692380130302*^9}, {
+   3.555692430844801*^9, 3.5556924449312153`*^9}, {3.5556975322898693`*^9, 
+   3.555697544343995*^9}, {3.555698692266656*^9, 3.555698698674325*^9}, 
+   3.55586019273463*^9, 3.55586029194726*^9, 3.555860329557722*^9, 
+   3.555860395309059*^9, 3.5558612198172007`*^9, {3.555862546003208*^9, 
+   3.555862549555197*^9}, {3.5558626587253513`*^9, 3.555862668925728*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"SetOptions", "[", 
+     RowBox[{
+      RowBox[{"EvaluationNotebook", "[", "]"}], ",", 
+      RowBox[{"NotebookEventActions", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"\"\<WindowClose\>\"", "\[RuleDelayed]", 
+         RowBox[{"FrontEndExecute", "[", 
+          RowBox[{"FrontEndToken", "[", "\"\<DeleteGeneratedCells\>\"", "]"}],
+           "]"}]}], "}"}]}]}], "]"}], ";"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"NotebookInformation", "[", 
+     RowBox[{"SelectedNotebook", "[", "]"}], "]"}], "//", "Column"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Options", "[", 
+     RowBox[{"SelectedNotebook", "[", "]"}], "]"}], "//", "Column"}], 
+   "*)"}]}]], "Input",
+ CellChangeTimes->{{3.555700085084764*^9, 3.555700085088874*^9}, 
+   3.555700438198511*^9, 3.555860192734806*^9, 3.555860291947433*^9, 
+   3.5558603295578938`*^9, 3.555860395309334*^9, 3.555861219817484*^9, {
+   3.556035484588235*^9, 3.55603548951698*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"FrontEndTokenExecute", "[", "\"\<DeleteGeneratedCells\>\"", "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{3.556124842318726*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"name", "=", "\"\<twoPreFlopHand3\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"repoDir", "=", 
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+     "$InitialDirectory", ",", "\"\<Dropbox\>\"", ",", "\"\<Archives\>\"", 
+      ",", "\"\<GitHub\>\"", ",", "\"\<Poker\>\""}], "}"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{"repoDir", ",", "\"\<CDF\>\"", ",", 
+       RowBox[{"name", "<>", "\"\<.cdf\>\""}]}], "}"}], "]"}], ",", 
+    "nbToExportAsCDF", ",", "\"\<CDF\>\""}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"NotebookClose", "[", "nbToExportAsCDF", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{}], "\[IndentingNewLine]", 
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"Export", "[", 
+    RowBox[{
+     RowBox[{"FileNameJoin", "[", 
+      RowBox[{"{", 
+       RowBox[{"repoDir", ",", "\"\<CDF-Preview\>\"", ",", 
+        RowBox[{"name", "<>", "\"\<.png\>\""}]}], "}"}], "]"}], ",", 
+     "manipulateOutput", ",", "\"\<PNG\>\""}], "]"}], ";"}], 
+  "*)"}], "\[IndentingNewLine]", 
+ RowBox[{}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SetOptions", "[", 
+   RowBox[{
+    RowBox[{"SelectedNotebook", "[", "]"}], ",", 
+    RowBox[{"PrivateNotebookOptions", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<FileOutlineCache\>\"", "\[Rule]", "False"}], "}"}]}]}], 
+   "]"}], ";", 
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{"repoDir", ",", "\"\<NB\>\"", ",", 
+       RowBox[{"name", "<>", "\"\<.nb\>\""}]}], "}"}], "]"}], ",", 
+    RowBox[{"EvaluationNotebook", "[", "]"}], ",", "\"\<NB\>\""}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SetOptions", "[", 
+   RowBox[{
+    RowBox[{"SelectedNotebook", "[", "]"}], ",", 
+    RowBox[{"PrivateNotebookOptions", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<FileOutlineCache\>\"", "\[Rule]", "Automatic"}], "}"}]}]}],
+    "]"}], ";"}]}], "Input",
+ CellChangeTimes->{
+  3.5558625781088457`*^9, {3.555862679725438*^9, 3.555862680582274*^9}, 
+   3.555862713160735*^9, {3.5558627502472067`*^9, 3.555862754359941*^9}, {
+   3.555862788705677*^9, 3.555862816912328*^9}, {3.555862892514326*^9, 
+   3.555862893056941*^9}, {3.5558660250375566`*^9, 3.555866028085747*^9}, {
+   3.555866132711671*^9, 3.55586615131142*^9}, {3.555870906989159*^9, 
+   3.555870916804551*^9}, {3.555950669455865*^9, 3.555950669870875*^9}, {
+   3.5559507729063597`*^9, 3.555950775519906*^9}, {3.556035524666976*^9, 
+   3.556035532289064*^9}, 3.5560362294385233`*^9, 3.5560363491947393`*^9, {
+   3.556036753429654*^9, 3.556036754667284*^9}, {3.556042945711144*^9, 
+   3.556042949423079*^9}, 3.556044098498137*^9, {3.556046993044366*^9, 
+   3.556046993185913*^9}, {3.556124826289145*^9, 3.556124838697691*^9}}]
+}, Open  ]]
+},
+WindowSize->{1178, 1161},
+WindowMargins->{{79, Automatic}, {Automatic, 36}},
+PrivateNotebookOptions->{"FileOutlineCache"->False},
+CellContext->Notebook,
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (October 5, \
+2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 302, 5, 70, "Subsection"],
+Cell[884, 29, 8850, 204, 70, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9771, 238, 433, 7, 70, "Subsection"],
+Cell[10207, 247, 1884, 34, 70, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12128, 286, 569, 8, 70, "Subsection"],
+Cell[12700, 296, 1063, 26, 70, "Input"],
+Cell[13766, 324, 163, 4, 70, "Input"],
+Cell[13932, 330, 2946, 72, 70, "Input"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,460 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     20734,        451]
+NotebookOptionsPosition[     20011,        422]
+NotebookOutlinePosition[     20444,        440]
+CellTagsIndexPosition[     20401,        437]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[StyleBox["Manipulate Command (One Cell)",
+ FontSize->14]], "Subsection",
+ CellFrame->{{0, 0}, {0, 0.5}},
+ CellChangeTimes->{{3.555692369900028*^9, 3.555692380130302*^9}, 
+   3.555860192719411*^9, 3.555860291936125*^9, 3.555860329546563*^9, 
+   3.555860395289393*^9, 3.555861219798011*^9}],
+
+Cell[BoxData[
+ RowBox[{"manipulateOutput", "=", 
+  RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Column", "[", 
+     RowBox[{
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Text", "@", 
+         RowBox[{"Style", "[", 
+          RowBox[{
+          "\"\<PreFlop Hand Equity (Win+Tie) Table in 3D\>\"", ",", "Larger", 
+           ",", "Bold"}], "]"}]}], ",", "\[IndentingNewLine]", "\"\<\\n\>\"", 
+        ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{
+         "equityPreFlopMonteCarloLastDisplay", "[", 
+          "equityPreFlopMonteCarloLast", "]"}], "[", 
+         RowBox[{"[", "1", "]"}], "]"}], ",", "\[IndentingNewLine]", 
+        "\"\<\\n\>\"", ",", "\[IndentingNewLine]", 
+        RowBox[{"Text", "@", 
+         RowBox[{"Style", "[", 
+          RowBox[{
+          "\"\<PreFlop Hand Equity (Win+Tie) Times Individual Bet Table in 3D\
+\>\"", ",", "Larger", ",", "Bold"}], "]"}]}], ",", "\[IndentingNewLine]", 
+        "\"\<\\n\>\"", ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{
+         "equityPreFlopMonteCarloLastDisplay", "[", 
+          "equityPreFlopMonteCarloLast", "]"}], "[", 
+         RowBox[{"[", "2", "]"}], "]"}]}], "\[IndentingNewLine]", "}"}], ",", 
+      "Center"}], "]"}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"ControlType", "\[Rule]", "None"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"ContentSize", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"700", ",", "1100"}], "}"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"SynchronousInitialization", "\[Rule]", "False"}], ",", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"Initialization", "\[RuleDelayed]", 
+     RowBox[{"(", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"allPreFlopHandList", "=", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<AAo\>\"", ",", "\"\<AKs\>\"", ",", "\"\<AQs\>\"", ",", 
+          "\"\<AJs\>\"", ",", "\"\<ATs\>\"", ",", "\"\<A9s\>\"", ",", 
+          "\"\<A8s\>\"", ",", "\"\<A7s\>\"", ",", "\"\<A6s\>\"", ",", 
+          "\"\<A5s\>\"", ",", "\"\<A4s\>\"", ",", "\"\<A3s\>\"", ",", 
+          "\"\<A2s\>\"", ",", "\"\<KAo\>\"", ",", "\"\<KKo\>\"", ",", 
+          "\"\<KQs\>\"", ",", "\"\<KJs\>\"", ",", "\"\<KTs\>\"", ",", 
+          "\"\<K9s\>\"", ",", "\"\<K8s\>\"", ",", "\"\<K7s\>\"", ",", 
+          "\"\<K6s\>\"", ",", "\"\<K5s\>\"", ",", "\"\<K4s\>\"", ",", 
+          "\"\<K3s\>\"", ",", "\"\<K2s\>\"", ",", "\"\<QAo\>\"", ",", 
+          "\"\<QKo\>\"", ",", "\"\<QQo\>\"", ",", "\"\<QJs\>\"", ",", 
+          "\"\<QTs\>\"", ",", "\"\<Q9s\>\"", ",", "\"\<Q8s\>\"", ",", 
+          "\"\<Q7s\>\"", ",", "\"\<Q6s\>\"", ",", "\"\<Q5s\>\"", ",", 
+          "\"\<Q4s\>\"", ",", "\"\<Q3s\>\"", ",", "\"\<Q2s\>\"", ",", 
+          "\"\<JAo\>\"", ",", "\"\<JKo\>\"", ",", "\"\<JQo\>\"", ",", 
+          "\"\<JJo\>\"", ",", "\"\<JTs\>\"", ",", "\"\<J9s\>\"", ",", 
+          "\"\<J8s\>\"", ",", "\"\<J7s\>\"", ",", "\"\<J6s\>\"", ",", 
+          "\"\<J5s\>\"", ",", "\"\<J4s\>\"", ",", "\"\<J3s\>\"", ",", 
+          "\"\<J2s\>\"", ",", "\"\<TAo\>\"", ",", "\"\<TKo\>\"", ",", 
+          "\"\<TQo\>\"", ",", "\"\<TJo\>\"", ",", "\"\<TTo\>\"", ",", 
+          "\"\<T9s\>\"", ",", "\"\<T8s\>\"", ",", "\"\<T7s\>\"", ",", 
+          "\"\<T6s\>\"", ",", "\"\<T5s\>\"", ",", "\"\<T4s\>\"", ",", 
+          "\"\<T3s\>\"", ",", "\"\<T2s\>\"", ",", "\"\<9Ao\>\"", ",", 
+          "\"\<9Ko\>\"", ",", "\"\<9Qo\>\"", ",", "\"\<9Jo\>\"", ",", 
+          "\"\<9To\>\"", ",", "\"\<99o\>\"", ",", "\"\<98s\>\"", ",", 
+          "\"\<97s\>\"", ",", "\"\<96s\>\"", ",", "\"\<95s\>\"", ",", 
+          "\"\<94s\>\"", ",", "\"\<93s\>\"", ",", "\"\<92s\>\"", ",", 
+          "\"\<8Ao\>\"", ",", "\"\<8Ko\>\"", ",", "\"\<8Qo\>\"", ",", 
+          "\"\<8Jo\>\"", ",", "\"\<8To\>\"", ",", "\"\<89o\>\"", ",", 
+          "\"\<88o\>\"", ",", "\"\<87s\>\"", ",", "\"\<86s\>\"", ",", 
+          "\"\<85s\>\"", ",", "\"\<84s\>\"", ",", "\"\<83s\>\"", ",", 
+          "\"\<82s\>\"", ",", "\"\<7Ao\>\"", ",", "\"\<7Ko\>\"", ",", 
+          "\"\<7Qo\>\"", ",", "\"\<7Jo\>\"", ",", "\"\<7To\>\"", ",", 
+          "\"\<79o\>\"", ",", "\"\<78o\>\"", ",", "\"\<77o\>\"", ",", 
+          "\"\<76s\>\"", ",", "\"\<75s\>\"", ",", "\"\<74s\>\"", ",", 
+          "\"\<73s\>\"", ",", "\"\<72s\>\"", ",", "\"\<6Ao\>\"", ",", 
+          "\"\<6Ko\>\"", ",", "\"\<6Qo\>\"", ",", "\"\<6Jo\>\"", ",", 
+          "\"\<6To\>\"", ",", "\"\<69o\>\"", ",", "\"\<68o\>\"", ",", 
+          "\"\<67o\>\"", ",", "\"\<66o\>\"", ",", "\"\<65s\>\"", ",", 
+          "\"\<64s\>\"", ",", "\"\<63s\>\"", ",", "\"\<62s\>\"", ",", 
+          "\"\<5Ao\>\"", ",", "\"\<5Ko\>\"", ",", "\"\<5Qo\>\"", ",", 
+          "\"\<5Jo\>\"", ",", "\"\<5To\>\"", ",", "\"\<59o\>\"", ",", 
+          "\"\<58o\>\"", ",", "\"\<57o\>\"", ",", "\"\<56o\>\"", ",", 
+          "\"\<55o\>\"", ",", "\"\<54s\>\"", ",", "\"\<53s\>\"", ",", 
+          "\"\<52s\>\"", ",", "\"\<4Ao\>\"", ",", "\"\<4Ko\>\"", ",", 
+          "\"\<4Qo\>\"", ",", "\"\<4Jo\>\"", ",", "\"\<4To\>\"", ",", 
+          "\"\<49o\>\"", ",", "\"\<48o\>\"", ",", "\"\<47o\>\"", ",", 
+          "\"\<46o\>\"", ",", "\"\<45o\>\"", ",", "\"\<44o\>\"", ",", 
+          "\"\<43s\>\"", ",", "\"\<42s\>\"", ",", "\"\<3Ao\>\"", ",", 
+          "\"\<3Ko\>\"", ",", "\"\<3Qo\>\"", ",", "\"\<3Jo\>\"", ",", 
+          "\"\<3To\>\"", ",", "\"\<39o\>\"", ",", "\"\<38o\>\"", ",", 
+          "\"\<37o\>\"", ",", "\"\<36o\>\"", ",", "\"\<35o\>\"", ",", 
+          "\"\<34o\>\"", ",", "\"\<33o\>\"", ",", "\"\<32s\>\"", ",", 
+          "\"\<2Ao\>\"", ",", "\"\<2Ko\>\"", ",", "\"\<2Qo\>\"", ",", 
+          "\"\<2Jo\>\"", ",", "\"\<2To\>\"", ",", "\"\<29o\>\"", ",", 
+          "\"\<28o\>\"", ",", "\"\<27o\>\"", ",", "\"\<26o\>\"", ",", 
+          "\"\<25o\>\"", ",", "\"\<24o\>\"", ",", "\"\<23o\>\"", ",", 
+          "\"\<22o\>\""}], "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"equityPreFlopMonteCarloLast", "=", 
+        RowBox[{
+         RowBox[{"ToExpression", "[", 
+          RowBox[{
+          "Import", "[", 
+           "\"\<https://raw.github.com/oscar6echo/Poker-Probabilities/master/\
+Tables/equityPreFlopMonteCarloTableLast.csv\>\"", "]"}], "]"}], "[", 
+         RowBox[{"[", "2", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{
+        "equityPreFlopMonteCarloLastDisplay", "[", "eqtyTable_", "]"}], ":=", 
+        
+        RowBox[{"Module", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"arrayTotal1", ",", "arrayTotal2", ",", 
+            RowBox[{"colorTheme", "=", "\"\<ThermometerColors\>\""}]}], "}"}],
+           ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"arrayTotal1", "=", 
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"eqtyTable", "[", 
+                RowBox[{"[", 
+                 RowBox[{"i", ",", "j", ",", "1"}], "]"}], "]"}], "+", 
+               RowBox[{"eqtyTable", "[", 
+                RowBox[{"[", 
+                 RowBox[{"i", ",", "j", ",", "2"}], "]"}], "]"}]}], ",", 
+              RowBox[{"{", 
+               RowBox[{"i", ",", 
+                RowBox[{"Length", "[", "eqtyTable", "]"}]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"j", ",", 
+                RowBox[{"Length", "[", 
+                 RowBox[{"eqtyTable", "[", 
+                  RowBox[{"[", "i", "]"}], "]"}], "]"}]}], "}"}]}], "]"}]}], 
+           ";", "\[IndentingNewLine]", 
+           RowBox[{"arrayTotal2", "=", 
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"1", "+", "j"}], ")"}], "*", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"eqtyTable", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"i", ",", "j", ",", "1"}], "]"}], "]"}], "+", 
+                 RowBox[{"eqtyTable", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"i", ",", "j", ",", "2"}], "]"}], "]"}]}], ")"}]}],
+               ",", 
+              RowBox[{"{", 
+               RowBox[{"i", ",", 
+                RowBox[{"Length", "[", "eqtyTable", "]"}]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"j", ",", 
+                RowBox[{"Length", "[", 
+                 RowBox[{"eqtyTable", "[", 
+                  RowBox[{"[", "i", "]"}], "]"}], "]"}]}], "}"}]}], "]"}]}], 
+           ";", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"ListPlot3D", "[", 
+              RowBox[{"arrayTotal1", ",", "\[IndentingNewLine]", 
+               RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"ColorFunction", "\[Rule]", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"ColorData", "[", "colorTheme", "]"}], "[", 
+                   RowBox[{"1.0", "-", "#1"}], "]"}], "&"}], ")"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"ImageSize", "\[Rule]", "600"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"Mesh", "\[Rule]", "Automatic"}]}], 
+              "\[IndentingNewLine]", "]"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"ListPlot3D", "[", 
+              RowBox[{"arrayTotal2", ",", "\[IndentingNewLine]", 
+               RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"ColorFunction", "\[Rule]", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"ColorData", "[", "colorTheme", "]"}], "[", 
+                   RowBox[{"1.0", "-", "#1"}], "]"}], "&"}], ")"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"ImageSize", "\[Rule]", "600"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"Mesh", "\[Rule]", "Automatic"}]}], 
+              "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", 
+            "}"}]}]}], "\[IndentingNewLine]", "]"}]}]}], 
+      "\[IndentingNewLine]", ")"}]}]}], "\[IndentingNewLine]", 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.556043564959766*^9, 3.556043575296727*^9}, {
+   3.556043647239613*^9, 3.5560436588537607`*^9}, {3.556043728541494*^9, 
+   3.556043728905465*^9}, {3.556043764859231*^9, 3.5560437695213346`*^9}, {
+   3.556043805884104*^9, 3.5560438293473177`*^9}, {3.556043868220834*^9, 
+   3.55604389311213*^9}, {3.556043946748569*^9, 3.556043946879829*^9}, {
+   3.556044019357317*^9, 3.556044024773241*^9}, {3.556044327796418*^9, 
+   3.5560443547745247`*^9}, {3.55604438655173*^9, 3.556044387999737*^9}, {
+   3.556046275350369*^9, 3.556046323145927*^9}, {3.5560464466839952`*^9, 
+   3.5560464555498857`*^9}, 3.556046495590398*^9, {3.556046681860256*^9, 
+   3.556046696289119*^9}, {3.5560468769367657`*^9, 3.5560468964643173`*^9}, {
+   3.556046937667419*^9, 3.5560469982008343`*^9}, {3.556047061981318*^9, 
+   3.5560470838704023`*^9}, {3.55604720880131*^9, 3.556047217739938*^9}, {
+   3.556104186057507*^9, 3.556104199952566*^9}, {3.556104576075287*^9, 
+   3.5561045973423967`*^9}, {3.5561046419018383`*^9, 3.556104694439344*^9}, {
+   3.556104780814831*^9, 3.556104815208392*^9}, {3.5561048566576757`*^9, 
+   3.55610486073787*^9}, {3.556104907531557*^9, 3.556104929408329*^9}, {
+   3.556105747961782*^9, 3.556105748589841*^9}, {3.556105963713193*^9, 
+   3.556106055428485*^9}, {3.556106130414617*^9, 3.556106221364991*^9}, {
+   3.556106347744195*^9, 3.5561064531004343`*^9}, {3.556106500708166*^9, 
+   3.556106501266141*^9}, {3.556106546613605*^9, 3.556106550579493*^9}, {
+   3.5561066057014427`*^9, 3.556106796735084*^9}, 3.5561068339113073`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Create CDF",
+ FontSize->14]], "Subsection",
+ CellFrame->{{0, 0}, {0, 0.5}},
+ CellChangeTimes->{{3.555692369900028*^9, 3.555692380130302*^9}, {
+   3.555692430844801*^9, 3.5556924449312153`*^9}, {3.5556975322898693`*^9, 
+   3.555697544343995*^9}, 3.55586019273348*^9, 3.555860291946311*^9, 
+   3.555860329556773*^9, 3.555860395307447*^9, 3.555861219815419*^9, {
+   3.5558625363000507`*^9, 3.55586254058667*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"nbToExportAsCDF", "=", 
+   RowBox[{"CreateDocument", "[", "\[IndentingNewLine]", 
+    RowBox[{"manipulateOutput", ",", "\[IndentingNewLine]", 
+     RowBox[{
+     "WindowTitle", "\[Rule]", 
+      "\"\<Monte Carlo Generated PreFlop Hand Equity Tables - 3D \
+Representation\>\""}], ",", "\[IndentingNewLine]", 
+     RowBox[{"WindowSize", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"All", ",", "All"}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"WindowMargins", "\[Rule]", "Automatic"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"WindowElements", "\[Rule]", 
+      RowBox[{"{", "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"WindowFrameElements", "\[Rule]", 
+      RowBox[{"{", "\"\<CloseBox\>\"", "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"ShowCellBracket", "\[Rule]", "False"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"CellMargins", "\[Rule]", "0"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Deployed", "\[Rule]", "True"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Editable", "\[Rule]", "False"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Saveable", "\[Rule]", "False"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Visible", "\[Rule]", "False"}]}], "\[IndentingNewLine]", 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"cdfInfo", "=", 
+  RowBox[{"CDFInformation", "[", "nbToExportAsCDF", "]"}]}]}], "Input",
+ CellChangeTimes->{{3.555694123453436*^9, 3.555694163556838*^9}, 
+   3.555697830463256*^9, 3.555697875062749*^9, {3.555697907350932*^9, 
+   3.555697921190097*^9}, 3.5558601927341843`*^9, 3.5558602919468203`*^9, 
+   3.555860329557281*^9, 3.555860395308362*^9, 3.555861219816496*^9, {
+   3.55586277105694*^9, 3.555862775751853*^9}, {3.555865388840107*^9, 
+   3.555865390487307*^9}, {3.555866112572465*^9, 3.555866112964573*^9}, {
+   3.556035407151464*^9, 3.556035444213889*^9}, 3.556057024522781*^9, {
+   3.556103944791716*^9, 3.556103972954976*^9}, {3.5561069827028713`*^9, 
+   3.556106988158111*^9}, {3.556108003808275*^9, 3.556108005183071*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Export CDF, CDF preview, NB to GitHub local repo",
+ FontSize->14]], "Subsection",
+ CellFrame->{{0, 0}, {0, 0.5}},
+ CellChangeTimes->{{3.555692369900028*^9, 3.555692380130302*^9}, {
+   3.555692430844801*^9, 3.5556924449312153`*^9}, {3.5556975322898693`*^9, 
+   3.555697544343995*^9}, {3.555698692266656*^9, 3.555698698674325*^9}, 
+   3.55586019273463*^9, 3.55586029194726*^9, 3.555860329557722*^9, 
+   3.555860395309059*^9, 3.5558612198172007`*^9, {3.555862546003208*^9, 
+   3.555862549555197*^9}, {3.5558626587253513`*^9, 3.555862668925728*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"SetOptions", "[", 
+     RowBox[{
+      RowBox[{"EvaluationNotebook", "[", "]"}], ",", 
+      RowBox[{"NotebookEventActions", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"\"\<WindowClose\>\"", "\[RuleDelayed]", 
+         RowBox[{"FrontEndExecute", "[", 
+          RowBox[{"FrontEndToken", "[", "\"\<DeleteGeneratedCells\>\"", "]"}],
+           "]"}]}], "}"}]}]}], "]"}], ";"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"NotebookInformation", "[", 
+     RowBox[{"SelectedNotebook", "[", "]"}], "]"}], "//", "Column"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Options", "[", 
+     RowBox[{"SelectedNotebook", "[", "]"}], "]"}], "//", "Column"}], 
+   "*)"}]}]], "Input",
+ CellChangeTimes->{{3.555700085084764*^9, 3.555700085088874*^9}, 
+   3.555700438198511*^9, 3.555860192734806*^9, 3.555860291947433*^9, 
+   3.5558603295578938`*^9, 3.555860395309334*^9, 3.555861219817484*^9, {
+   3.556035484588235*^9, 3.55603548951698*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"FrontEndTokenExecute", "[", "\"\<DeleteGeneratedCells\>\"", "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{3.5561079908771753`*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"name", "=", "\"\<preFlopEquityTable3D\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"repoDir", "=", 
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+     "$InitialDirectory", ",", "\"\<Dropbox\>\"", ",", "\"\<Archives\>\"", 
+      ",", "\"\<GitHub\>\"", ",", "\"\<Poker\>\""}], "}"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{"repoDir", ",", "\"\<CDF\>\"", ",", 
+       RowBox[{"name", "<>", "\"\<.cdf\>\""}]}], "}"}], "]"}], ",", 
+    "nbToExportAsCDF", ",", "\"\<CDF\>\""}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"NotebookClose", "[", "nbToExportAsCDF", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{}], "\[IndentingNewLine]", 
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"Export", "[", 
+    RowBox[{
+     RowBox[{"FileNameJoin", "[", 
+      RowBox[{"{", 
+       RowBox[{"repoDir", ",", "\"\<CDF-Preview\>\"", ",", 
+        RowBox[{"name", "<>", "\"\<.png\>\""}]}], "}"}], "]"}], ",", 
+     "manipulateOutput", ",", "\"\<PNG\>\""}], "]"}], ";"}], 
+  "*)"}], "\[IndentingNewLine]", 
+ RowBox[{}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SetOptions", "[", 
+   RowBox[{
+    RowBox[{"SelectedNotebook", "[", "]"}], ",", 
+    RowBox[{"PrivateNotebookOptions", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<FileOutlineCache\>\"", "\[Rule]", "False"}], "}"}]}]}], 
+   "]"}], ";", 
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{"repoDir", ",", "\"\<NB\>\"", ",", 
+       RowBox[{"name", "<>", "\"\<.nb\>\""}]}], "}"}], "]"}], ",", 
+    RowBox[{"EvaluationNotebook", "[", "]"}], ",", "\"\<NB\>\""}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SetOptions", "[", 
+   RowBox[{
+    RowBox[{"SelectedNotebook", "[", "]"}], ",", 
+    RowBox[{"PrivateNotebookOptions", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<FileOutlineCache\>\"", "\[Rule]", "Automatic"}], "}"}]}]}],
+    "]"}], ";"}]}], "Input",
+ CellChangeTimes->{
+  3.5558625781088457`*^9, {3.555862679725438*^9, 3.555862680582274*^9}, 
+   3.555862713160735*^9, {3.5558627502472067`*^9, 3.555862754359941*^9}, {
+   3.555862788705677*^9, 3.555862816912328*^9}, {3.555862892514326*^9, 
+   3.555862893056941*^9}, {3.5558660250375566`*^9, 3.555866028085747*^9}, {
+   3.555866132711671*^9, 3.55586615131142*^9}, {3.555870906989159*^9, 
+   3.555870916804551*^9}, {3.555950669455865*^9, 3.555950669870875*^9}, {
+   3.5559507729063597`*^9, 3.555950775519906*^9}, {3.556035524666976*^9, 
+   3.556035532289064*^9}, 3.5560362294385233`*^9, 3.5560363491947393`*^9, {
+   3.556036753429654*^9, 3.556036754667284*^9}, {3.556042945711144*^9, 
+   3.556042949423079*^9}, 3.556044098498137*^9, {3.556046993044366*^9, 
+   3.556046993185913*^9}, {3.556107004017638*^9, 3.556107038080669*^9}, 
+   3.5561079872731037`*^9, {3.5561243447026176`*^9, 3.556124360397684*^9}}]
+}, Open  ]]
+},
+WindowSize->{1083, 1199},
+WindowMargins->{{79, Automatic}, {Automatic, 36}},
+PrivateNotebookOptions->{"FileOutlineCache"->False},
+CellContext->Notebook,
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (October 5, \
+2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 302, 5, 70, "Subsection"],
+Cell[884, 29, 11724, 218, 70, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12645, 252, 433, 7, 70, "Subsection"],
+Cell[13081, 261, 2044, 36, 70, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15162, 302, 569, 8, 70, "Subsection"],
+Cell[15734, 312, 1063, 26, 70, "Input"],
+Cell[16800, 340, 165, 4, 70, "Input"],
+Cell[16968, 346, 3027, 73, 70, "Input"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,2864 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     98636,       2855]
+NotebookOptionsPosition[     97843,       2825]
+NotebookOutlinePosition[     98299,       2844]
+CellTagsIndexPosition[     98256,       2841]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ StyleBox["Poker hands for 5 cards",
+  FontSize->14,
+  FontWeight->"Bold"],
+ StyleBox["\n4 suits\t\tSpades, Hearts, Diamonds, Clubs\n13 faces\t2, 3, 4, \
+5, 6, 7, 8, 9, 10, J, Q, K, A",
+  FontSize->14]
+}], "Text",
+ CellFrame->{{0, 0}, {0, 2}},
+ CellChangeTimes->{{3.543257868797324*^9, 3.543257902547124*^9}, {
+  3.543259945717683*^9, 3.5432600580937033`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"nameHand", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{"\"\<\>\"", ",", 
+     RowBox[{"{", "10", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"nbHandsFive", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{"0", ",", 
+     RowBox[{"{", "10", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"nbHandsFormulaFive", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{"0", ",", 
+     RowBox[{"{", "10", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"binomialF", "[", 
+     RowBox[{"n_", ",", "k_"}], "]"}], ":=", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{
+      RowBox[{"TraditionalForm", "[", "n", "]"}], ",", 
+      RowBox[{"TraditionalForm", "[", "k", "]"}]}], "]"}]}], ";"}], "\n", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"i", "=", "1"}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"nameHand", "[", 
+      RowBox[{"[", "i", "]"}], "]"}], "=", "\"\<Royal Flush\>\""}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"nbHandsFive", "[", 
+      RowBox[{"[", "i", "]"}], "]"}], "=", 
+     RowBox[{"Binomial", "[", 
+      RowBox[{"4", ",", "1"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"nbHandsFormulaFive", "[", 
+      RowBox[{"[", "i", "]"}], "]"}], "=", 
+     RowBox[{
+      RowBox[{"binomialF", "[", 
+       RowBox[{"4", ",", "1"}], "]"}], " ", "//", "TraditionalForm"}]}], 
+    ";"}], "*)"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"i", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHand", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", "\"\<Straight Flush\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nbHandsFive", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", 
+   RowBox[{
+    RowBox[{"Binomial", "[", 
+     RowBox[{"10", ",", "1"}], "]"}], "*", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"4", ",", "1"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsFormulaFive", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", 
+    RowBox[{"TraditionalForm", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"binomialF", "[", 
+        RowBox[{"10", ",", "1"}], "]"}], "*", 
+       RowBox[{"binomialF", "[", 
+        RowBox[{"4", ",", "1"}], "]"}]}], "-", 
+      RowBox[{"binomialF", "[", 
+       RowBox[{"4", ",", "1"}], "]"}]}], "]"}]}], ";"}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"i", "=", "2"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHand", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", "\"\<Four of a Kink\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nbHandsFive", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", 
+   RowBox[{
+    RowBox[{"Binomial", "[", 
+     RowBox[{"13", ",", "1"}], "]"}], "*", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"12", ",", "1"}], "]"}], "*", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"4", ",", "1"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsFormulaFive", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", 
+    RowBox[{"TraditionalForm", "[", 
+     RowBox[{
+      RowBox[{"binomialF", "[", 
+       RowBox[{"13", ",", "1"}], "]"}], "*", 
+      RowBox[{"binomialF", "[", 
+       RowBox[{"12", ",", "1"}], "]"}], "*", 
+      RowBox[{"binomialF", "[", 
+       RowBox[{"4", ",", "1"}], "]"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{"i", "=", "3"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHand", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", "\"\<Full House\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nbHandsFive", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", 
+   RowBox[{
+    RowBox[{"Binomial", "[", 
+     RowBox[{"13", ",", "1"}], "]"}], "*", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"4", ",", "3"}], "]"}], "*", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"12", ",", "1"}], "]"}], "*", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"4", ",", "2"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsFormulaFive", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"binomialF", "[", 
+       RowBox[{"13", ",", "1"}], "]"}], "*", 
+      RowBox[{"binomialF", "[", 
+       RowBox[{"4", ",", "3"}], "]"}], "*", 
+      RowBox[{"binomialF", "[", 
+       RowBox[{"12", ",", "1"}], "]"}], "*", 
+      RowBox[{"binomialF", "[", 
+       RowBox[{"4", ",", "2"}], "]"}]}], " ", "//", "TraditionalForm"}]}], 
+   ";"}], "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"i", "=", "4"}], ";"}], " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHand", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", "\"\<Flush\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nbHandsFive", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Binomial", "[", 
+      RowBox[{"13", ",", "5"}], "]"}], "*", 
+     RowBox[{"Binomial", "[", 
+      RowBox[{"4", ",", "1"}], "]"}]}], "-", 
+    RowBox[{
+     RowBox[{"Binomial", "[", 
+      RowBox[{"10", ",", "1"}], "]"}], "*", 
+     RowBox[{"Binomial", "[", 
+      RowBox[{"4", ",", "1"}], "]"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsFormulaFive", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"binomialF", "[", 
+        RowBox[{"13", ",", "5"}], "]"}], "*", 
+       RowBox[{"binomialF", "[", 
+        RowBox[{"4", ",", "1"}], "]"}]}], "-", 
+      RowBox[{
+       RowBox[{"binomialF", "[", 
+        RowBox[{"10", ",", "1"}], "]"}], "*", 
+       RowBox[{"binomialF", "[", 
+        RowBox[{"4", ",", "1"}], "]"}]}]}], " ", "//", "TraditionalForm"}]}], 
+   ";"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"i", "=", "5"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHand", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", "\"\<Straight\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nbHandsFive", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Binomial", "[", 
+      RowBox[{"10", ",", "1"}], "]"}], "*", 
+     RowBox[{
+      RowBox[{"Binomial", "[", 
+       RowBox[{"4", ",", "1"}], "]"}], "^", "5"}]}], "-", 
+    RowBox[{
+     RowBox[{"Binomial", "[", 
+      RowBox[{"10", ",", "1"}], "]"}], "*", 
+     RowBox[{"Binomial", "[", 
+      RowBox[{"4", ",", "1"}], "]"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsFormulaFive", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"binomialF", "[", 
+        RowBox[{"10", ",", "1"}], "]"}], "*", 
+       RowBox[{
+        RowBox[{"binomialF", "[", 
+         RowBox[{"4", ",", "1"}], "]"}], "^", "5"}]}], "-", 
+      RowBox[{
+       RowBox[{"binomialF", "[", 
+        RowBox[{"10", ",", "1"}], "]"}], "*", 
+       RowBox[{"binomialF", "[", 
+        RowBox[{"4", ",", "1"}], "]"}]}]}], " ", "//", "TraditionalForm"}]}], 
+   ";"}], "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"i", "=", "6"}], ";"}], " "}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHand", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", "\"\<Three of a Kind\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nbHandsFive", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", 
+   RowBox[{
+    RowBox[{"Binomial", "[", 
+     RowBox[{"13", ",", "1"}], "]"}], "*", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"4", ",", "3"}], "]"}], "*", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"12", ",", "2"}], "]"}], "*", 
+    RowBox[{
+     RowBox[{"Binomial", "[", 
+      RowBox[{"4", ",", "1"}], "]"}], "^", "2"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsFormulaFive", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"binomialF", "[", 
+       RowBox[{"13", ",", "1"}], "]"}], "*", 
+      RowBox[{"binomialF", "[", 
+       RowBox[{"4", ",", "3"}], "]"}], "*", 
+      RowBox[{"binomialF", "[", 
+       RowBox[{"12", ",", "2"}], "]"}], "*", 
+      RowBox[{
+       RowBox[{"binomialF", "[", 
+        RowBox[{"4", ",", "1"}], "]"}], "^", "2"}]}], " ", "//", 
+     "TraditionalForm"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"i", "=", "7"}], ";"}], " "}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHand", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", "\"\<Two Pairs\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nbHandsFive", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", 
+   RowBox[{
+    RowBox[{"Binomial", "[", 
+     RowBox[{"13", ",", "2"}], "]"}], "*", 
+    RowBox[{
+     RowBox[{"Binomial", "[", 
+      RowBox[{"4", ",", "2"}], "]"}], "^", "2"}], "*", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"11", ",", "1"}], "]"}], "*", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"4", ",", "1"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsFormulaFive", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"binomialF", "[", 
+       RowBox[{"13", ",", "2"}], "]"}], "*", 
+      RowBox[{
+       RowBox[{"binomialF", "[", 
+        RowBox[{"4", ",", "2"}], "]"}], "^", "2"}], "*", 
+      RowBox[{"binomialF", "[", 
+       RowBox[{"11", ",", "1"}], "]"}], "*", 
+      RowBox[{"binomialF", "[", 
+       RowBox[{"4", ",", "1"}], "]"}]}], " ", "//", "TraditionalForm"}]}], 
+   ";"}], "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"i", "=", "8"}], ";"}], " "}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHand", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", "\"\<One Pair\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nbHandsFive", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", 
+   RowBox[{
+    RowBox[{"Binomial", "[", 
+     RowBox[{"13", ",", "1"}], "]"}], "*", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"4", ",", "2"}], "]"}], "*", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"12", ",", "3"}], "]"}], "*", 
+    RowBox[{
+     RowBox[{"Binomial", "[", 
+      RowBox[{"4", ",", "1"}], "]"}], "^", "3"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsFormulaFive", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"binomialF", "[", 
+       RowBox[{"13", ",", "1"}], "]"}], "*", 
+      RowBox[{"binomialF", "[", 
+       RowBox[{"4", ",", "2"}], "]"}], "*", 
+      RowBox[{"binomialF", "[", 
+       RowBox[{"12", ",", "3"}], "]"}], "*", 
+      RowBox[{
+       RowBox[{"binomialF", "[", 
+        RowBox[{"4", ",", "1"}], "]"}], "^", "3"}]}], " ", "//", 
+     "TraditionalForm"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"i", "=", "9"}], ";"}], " "}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHand", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", "\"\<High Card\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nbHandsFive", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"Binomial", "[", 
+       RowBox[{"13", ",", "5"}], "]"}], "-", "10"}], ")"}], "*", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Binomial", "[", 
+        RowBox[{"4", ",", "1"}], "]"}], "^", "5"}], "-", "4"}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsFormulaFive", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"binomialF", "[", 
+         RowBox[{"13", ",", "5"}], "]"}], "-", "10"}], ")"}], "*", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"binomialF", "[", 
+          RowBox[{"4", ",", "1"}], "]"}], "^", "5"}], "-", "4"}], ")"}]}], 
+     " ", "//", "TraditionalForm"}]}], ";"}], "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"i", "=", "10"}], ";"}], " "}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHand", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", "\"\<Total\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nbHandsFive", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", 
+   RowBox[{"Binomial", "[", 
+    RowBox[{"52", ",", "5"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsFormulaFive", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{"binomialF", "[", 
+      RowBox[{"52", ",", "5"}], "]"}], " ", "//", "TraditionalForm"}]}], 
+   ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<Total number of hands = \>\"", ",", 
+      RowBox[{"Total", "[", 
+       RowBox[{"Take", "[", 
+        RowBox[{"nbHandsFive", ",", 
+         RowBox[{"1", ";;", "10"}]}], "]"}], "]"}]}], "]"}], ";"}], "*)"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"pokerHandFive", "=", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"nameHand", "[", 
+         RowBox[{"[", "i", "]"}], "]"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"nbHandsFormulaFive", "[", 
+         RowBox[{"[", "i", "]"}], "]"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"NumberForm", "[", 
+         RowBox[{
+          RowBox[{"nbHandsFive", "[", 
+           RowBox[{"[", "i", "]"}], "]"}], ",", " ", 
+          RowBox[{"DigitBlock", "\[Rule]", "3"}]}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"nbHandsFive", "[", 
+          RowBox[{"[", "i", "]"}], "]"}], "/", 
+         RowBox[{"nbHandsFive", "[", 
+          RowBox[{"[", "10", "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+        RowBox[{"NumberForm", "[", 
+         RowBox[{
+          RowBox[{"N", "[", 
+           RowBox[{
+            RowBox[{"nbHandsFive", "[", 
+             RowBox[{"[", "10", "]"}], "]"}], "/", 
+            RowBox[{"nbHandsFive", "[", 
+             RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"10", ",", "3"}], "}"}], ",", 
+          RowBox[{"DigitBlock", "\[Rule]", "3"}], ",", " ", 
+          RowBox[{"ExponentFunction", "\[Rule]", 
+           RowBox[{"(", 
+            RowBox[{"Null", "&"}], ")"}]}]}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"NumberForm", "[", 
+         RowBox[{
+          RowBox[{"N", "[", 
+           RowBox[{"100", "*", 
+            RowBox[{
+             RowBox[{"nbHandsFive", "[", 
+              RowBox[{"[", "i", "]"}], "]"}], "/", 
+             RowBox[{"nbHandsFive", "[", 
+              RowBox[{"[", "10", "]"}], "]"}]}]}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"3", ",", "5"}], "}"}]}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"i", "<", "10"}], ",", 
+          RowBox[{"NumberForm", "[", 
+           RowBox[{
+            RowBox[{"100", "*", 
+             RowBox[{"N", "[", 
+              RowBox[{
+               RowBox[{"Total", "[", 
+                RowBox[{"Take", "[", 
+                 RowBox[{"nbHandsFive", ",", "i"}], "]"}], "]"}], "/", 
+               RowBox[{"nbHandsFive", "[", 
+                RowBox[{"[", "10", "]"}], "]"}]}], "]"}]}], ",", 
+            RowBox[{"{", 
+             RowBox[{"3", ",", "6"}], "}"}]}], "]"}], ",", "\"\<N/A\>\""}], 
+         "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "10"}], "}"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"title", "=", 
+    RowBox[{"Map", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Text", "@", 
+        RowBox[{"Style", "[", 
+         RowBox[{"#", ",", "Bold"}], "]"}]}], "&"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Hand\>\"", ",", "\"\<Nb Occurences\>\"", ",", 
+        "\"\<Nb Occurences\>\"", ",", "\"\<Proba\>\"", ",", 
+        "\"\<Odds (:1)\>\"", ",", "\"\<Proba (%)\>\"", ",", 
+        "\"\<Cumulative Proba (%)\>\""}], "}"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{"pokerHandFiveTable", "=", 
+   RowBox[{"TableForm", "[", 
+    RowBox[{
+     RowBox[{"Map", "[", 
+      RowBox[{"Text", ",", "pokerHandFive", ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"TableAlignments", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Left", ",", "Center"}], "}"}]}], ",", " ", 
+     RowBox[{"TableHeadings", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"None", ",", "title"}], "}"}]}]}], "\[IndentingNewLine]", 
+    "]"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"pokerHandFiveGrid", "=", 
+   RowBox[{"Grid", "[", 
+    RowBox[{
+     RowBox[{"Map", "[", 
+      RowBox[{"Text", ",", 
+       RowBox[{"Prepend", "[", 
+        RowBox[{"pokerHandFive", ",", "title"}], "]"}], ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Dividers", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"2", "\[Rule]", "Black"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"2", "\[Rule]", "Black"}], "}"}]}], "}"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Background", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"None", ",", 
+        RowBox[{"{", 
+         RowBox[{"{", 
+          RowBox[{"None", ",", "LightRed"}], "}"}], "}"}]}], "}"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Alignment", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Left", ",", "Center"}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Spacings", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"1.5", ",", "1.2"}], "}"}]}]}], "\[IndentingNewLine]", "]"}]}],
+   "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.543260126991353*^9, 3.5432601335033407`*^9}, {
+   3.543260178743511*^9, 3.5432602586490993`*^9}, {3.543260332250643*^9, 
+   3.543260360770474*^9}, {3.543260869645303*^9, 3.543260870213269*^9}, {
+   3.543261759389859*^9, 3.543261761645653*^9}, {3.54326184085458*^9, 
+   3.543261843966065*^9}, 3.543261956976138*^9, 3.54326429470652*^9, {
+   3.54326474186331*^9, 3.5432647428071947`*^9}, 3.543265373604341*^9, {
+   3.543519901601*^9, 3.543519907473259*^9}, 3.543519986545373*^9, {
+   3.543520214659441*^9, 3.543520229419407*^9}, {3.543520475325223*^9, 
+   3.543520476444601*^9}, {3.543521460626409*^9, 3.543521460963541*^9}, {
+   3.554651935062256*^9, 3.554651952939082*^9}, 3.554652025209296*^9, {
+   3.5546523798494253`*^9, 3.554652402579195*^9}, {3.554653000810177*^9, 
+   3.554653027740638*^9}, {3.5546535730069027`*^9, 3.5546535781085243`*^9}, {
+   3.554654092807987*^9, 3.554654097891859*^9}, {3.55465545691637*^9, 
+   3.554655495393044*^9}, 3.554656900766767*^9, {3.55465816060769*^9, 
+   3.5546581863930902`*^9}, {3.5546582705133944`*^9, 3.554658346128298*^9}, {
+   3.5546583781413527`*^9, 3.5546583836287947`*^9}, {3.5546584721246223`*^9, 
+   3.554658578511982*^9}, {3.554658645716877*^9, 3.5546586559602203`*^9}, {
+   3.554658875287519*^9, 3.554658893868421*^9}, {3.554658944963561*^9, 
+   3.554659208063706*^9}, {3.554659636317581*^9, 3.554659637180068*^9}}],
+
+Cell[BoxData["\t\t"], "Input",
+ CellChangeTimes->{{3.5546578675775547`*^9, 3.554657868981975*^9}}],
+
+Cell[TextData[{
+ StyleBox["Poker hands for 7 cards",
+  FontSize->14,
+  FontWeight->"Bold"],
+ StyleBox["\n4 suits\t\tSpades, Hearts, Diamonds, Clubs\n13 faces\t2, 3, 4, \
+5, 6, 7, 8, 9, 10, J, Q, K, A",
+  FontSize->14]
+}], "Text",
+ CellFrame->{{0, 0}, {0, 2}},
+ CellChangeTimes->{{3.543257868797324*^9, 3.543257902547124*^9}, {
+   3.543259945717683*^9, 3.5432600580937033`*^9}, 3.543265320161669*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"nameHand", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{"\"\<\>\"", ",", 
+     RowBox[{"{", "10", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"nameHandSplit", " ", "=", " ", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", "}"}], ",", 
+     RowBox[{"{", "10", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"nbHandsSevenSplit", " ", "=", " ", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", "}"}], ",", 
+     RowBox[{"{", "10", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"nbHandsSeven", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{"0", ",", 
+     RowBox[{"{", "10", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"nbHandsFormulaSeven", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{"0", ",", 
+     RowBox[{"{", "10", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"nbHandsFormulaSevenSplit", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", "}"}], ",", 
+     RowBox[{"{", "10", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"binomialF", "[", 
+     RowBox[{"n_", ",", "k_"}], "]"}], ":=", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{
+      RowBox[{"TraditionalForm", "[", "n", "]"}], ",", 
+      RowBox[{"TraditionalForm", "[", "k", "]"}]}], "]"}]}], ";"}], "\n", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"i", "=", "1"}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"nameHand", "[", 
+      RowBox[{"[", "i", "]"}], "]"}], "=", "\"\<Royal Flush\>\""}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"nbHandsSeven", "[", 
+      RowBox[{"[", "i", "]"}], "]"}], "=", 
+     RowBox[{
+      RowBox[{"Binomial", "[", 
+       RowBox[{"4", ",", "1"}], "]"}], "*", 
+      RowBox[{"Binomial", "[", 
+       RowBox[{"47", ",", "2"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"nbHandsFormulaSeven", "[", 
+      RowBox[{"[", "i", "]"}], "]"}], "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"binomialF", "[", 
+        RowBox[{"4", ",", "1"}], "]"}], "*", 
+       RowBox[{"binomialF", "[", 
+        RowBox[{"47", ",", "2"}], "]"}]}], " ", "//", "TraditionalForm"}]}], 
+    ";"}], "*)"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"i", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHand", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", "\"\<Straight Flush\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nbHandsSeven", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", 
+   RowBox[{
+    RowBox[{"Binomial", "[", 
+     RowBox[{"4", ",", "1"}], "]"}], "*", 
+    RowBox[{"(", 
+     RowBox[{"9", "*", 
+      RowBox[{"Binomial", "[", 
+       RowBox[{"46", ",", "2"}], "]"}]}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsFormulaSeven", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"binomialF", "[", 
+       RowBox[{"4", ",", "1"}], "]"}], "*", 
+      RowBox[{"(", 
+       RowBox[{"9", "*", 
+        RowBox[{"binomialF", "[", 
+         RowBox[{"46", ",", "2"}], "]"}]}], ")"}]}], " ", "//", 
+     "TraditionalForm"}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<Total number of Straight Flush =  \>\"", ",", 
+      RowBox[{
+       RowBox[{"nbHandsSeven", "[", 
+        RowBox[{"[", "1", "]"}], "]"}], "+", 
+       RowBox[{"nbHandsSeven", "[", 
+        RowBox[{"[", "2", "]"}], "]"}]}]}], "]"}], ";"}], "*)"}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"i", "=", "2"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHand", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", "\"\<Four of a Kind\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nbHandsSeven", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", 
+   RowBox[{
+    RowBox[{"Binomial", "[", 
+     RowBox[{"13", ",", "1"}], "]"}], "*", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"48", ",", "3"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsFormulaSeven", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"binomialF", "[", 
+       RowBox[{"13", ",", "1"}], "]"}], "*", 
+      RowBox[{"binomialF", "[", 
+       RowBox[{"48", ",", "3"}], "]"}]}], " ", "//", "TraditionalForm"}]}], 
+   ";"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"i", "=", "3"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHand", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", "\"\<Full House\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHandSplit", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{"\"\<\>\"", ",", 
+     RowBox[{"{", "3", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nbHandsSevenSplit", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{"0", ",", 
+     RowBox[{"{", "3", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsFormulaSevenSplit", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", 
+    RowBox[{"Table", "[", 
+     RowBox[{"\"\<\>\"", ",", 
+      RowBox[{"{", "3", "}"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHandSplit", "[", 
+    RowBox[{"[", 
+     RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+   "\"\<1 Triple, 1 Pair, 2 Kickers\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nbHandsSevenSplit", "[", 
+    RowBox[{"[", 
+     RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+   RowBox[{
+    RowBox[{"Binomial", "[", 
+     RowBox[{"13", ",", "1"}], "]"}], "*", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"4", ",", "3"}], "]"}], "*", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"12", ",", "1"}], "]"}], "*", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"4", ",", "2"}], "]"}], "*", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"11", ",", "2"}], "]"}], "*", 
+    RowBox[{
+     RowBox[{"Binomial", "[", 
+      RowBox[{"4", ",", "1"}], "]"}], "^", "2"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", "=", "2"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHandSplit", "[", 
+    RowBox[{"[", 
+     RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+   "\"\<1 Triple, 2 Pairs\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nbHandsSevenSplit", "[", 
+    RowBox[{"[", 
+     RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+   RowBox[{
+    RowBox[{"Binomial", "[", 
+     RowBox[{"13", ",", "1"}], "]"}], "*", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"4", ",", "3"}], "]"}], "*", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"12", ",", "2"}], "]"}], "*", 
+    RowBox[{
+     RowBox[{"Binomial", "[", 
+      RowBox[{"4", ",", "2"}], "]"}], "^", "2"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", "=", "3"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHandSplit", "[", 
+    RowBox[{"[", 
+     RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+   "\"\<2 Triples, 1 Kicker\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nbHandsSevenSplit", "[", 
+    RowBox[{"[", 
+     RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+   RowBox[{
+    RowBox[{"Binomial", "[", 
+     RowBox[{"13", ",", "2"}], "]"}], "*", 
+    RowBox[{
+     RowBox[{"Binomial", "[", 
+      RowBox[{"4", ",", "3"}], "]"}], "^", "2"}], "*", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"11", ",", "1"}], "]"}], "*", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"4", ",", "1"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsSeven", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", 
+    RowBox[{"Total", "[", 
+     RowBox[{"nbHandsSevenSplit", "[", 
+      RowBox[{"[", "i", "]"}], "]"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nbHandsFormulaSevenSplit", "[", 
+    RowBox[{"[", 
+     RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+   RowBox[{
+    RowBox[{"binomialF", "[", 
+     RowBox[{"13", ",", "1"}], "]"}], "*", 
+    RowBox[{"binomialF", "[", 
+     RowBox[{"4", ",", "3"}], "]"}], "*", 
+    RowBox[{"binomialF", "[", 
+     RowBox[{"12", ",", "1"}], "]"}], "*", 
+    RowBox[{"binomialF", "[", 
+     RowBox[{"4", ",", "2"}], "]"}], "*", 
+    RowBox[{"binomialF", "[", 
+     RowBox[{"11", ",", "2"}], "]"}], "*", 
+    RowBox[{
+     RowBox[{"binomialF", "[", 
+      RowBox[{"4", ",", "1"}], "]"}], "^", "2"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", "=", "2"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nbHandsFormulaSevenSplit", "[", 
+    RowBox[{"[", 
+     RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+   RowBox[{
+    RowBox[{"binomialF", "[", 
+     RowBox[{"13", ",", "1"}], "]"}], "*", 
+    RowBox[{"binomialF", "[", 
+     RowBox[{"4", ",", "3"}], "]"}], "*", 
+    RowBox[{"binomialF", "[", 
+     RowBox[{"12", ",", "2"}], "]"}], "*", 
+    RowBox[{
+     RowBox[{"binomialF", "[", 
+      RowBox[{"4", ",", "2"}], "]"}], "^", "2"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", "=", "3"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nbHandsFormulaSevenSplit", "[", 
+    RowBox[{"[", 
+     RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+   RowBox[{
+    RowBox[{"binomialF", "[", 
+     RowBox[{"13", ",", "2"}], "]"}], "*", 
+    RowBox[{
+     RowBox[{"binomialF", "[", 
+      RowBox[{"4", ",", "3"}], "]"}], "^", "2"}], "*", 
+    RowBox[{"binomialF", "[", 
+     RowBox[{"11", ",", "1"}], "]"}], "*", 
+    RowBox[{"binomialF", "[", 
+     RowBox[{"4", ",", "1"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsFormulaSeven", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{"Total", "[", 
+      RowBox[{"nbHandsFormulaSevenSplit", "[", 
+       RowBox[{"[", "i", "]"}], "]"}], "]"}], " ", "//", 
+     "TraditionalForm"}]}], ";"}], "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{"i", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHand", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", "\"\<Flush\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHandSplit", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{"\"\<\>\"", ",", 
+     RowBox[{"{", "3", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nbHandsSevenSplit", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{"0", ",", 
+     RowBox[{"{", "3", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsFormulaSevenSplit", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", 
+    RowBox[{"Table", "[", 
+     RowBox[{"\"\<\>\"", ",", 
+      RowBox[{"{", "3", "}"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHandSplit", "[", 
+    RowBox[{"[", 
+     RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+   "\"\<Seven cards in same suit\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nbHandsSevenSplit", "[", 
+    RowBox[{"[", 
+     RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+   RowBox[{
+    RowBox[{"Binomial", "[", 
+     RowBox[{"4", ",", "1"}], "]"}], "*", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"13", ",", "7"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", "=", "2"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHandSplit", "[", 
+    RowBox[{"[", 
+     RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+   "\"\<Six cards in same suit\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nbHandsSevenSplit", "[", 
+    RowBox[{"[", 
+     RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+   RowBox[{
+    RowBox[{"Binomial", "[", 
+     RowBox[{"4", ",", "1"}], "]"}], "*", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"13", ",", "6"}], "]"}], "*", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"39", ",", "1"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", "=", "3"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHandSplit", "[", 
+    RowBox[{"[", 
+     RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+   "\"\<Five cards in same suit\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nbHandsSevenSplit", "[", 
+    RowBox[{"[", 
+     RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+   RowBox[{
+    RowBox[{"Binomial", "[", 
+     RowBox[{"4", ",", "1"}], "]"}], "*", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"13", ",", "5"}], "]"}], "*", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"39", ",", "2"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsSeven", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{"Total", "[", 
+      RowBox[{"nbHandsSevenSplit", "[", 
+       RowBox[{"[", "i", "]"}], "]"}], "]"}], "-", 
+     RowBox[{"nbHandsSeven", "[", 
+      RowBox[{"[", "1", "]"}], "]"}], "-", 
+     RowBox[{"nbHandsSeven", "[", 
+      RowBox[{"[", "2", "]"}], "]"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nbHandsFormulaSevenSplit", "[", 
+    RowBox[{"[", 
+     RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+   RowBox[{
+    RowBox[{"binomialF", "[", 
+     RowBox[{"4", ",", "1"}], "]"}], "*", 
+    RowBox[{"binomialF", "[", 
+     RowBox[{"13", ",", "7"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", "=", "2"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nbHandsFormulaSevenSplit", "[", 
+    RowBox[{"[", 
+     RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+   RowBox[{
+    RowBox[{"binomialF", "[", 
+     RowBox[{"4", ",", "1"}], "]"}], "*", 
+    RowBox[{"binomialF", "[", 
+     RowBox[{"13", ",", "6"}], "]"}], "*", 
+    RowBox[{"binomialF", "[", 
+     RowBox[{"39", ",", "1"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", "=", "3"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nbHandsFormulaSevenSplit", "[", 
+    RowBox[{"[", 
+     RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+   RowBox[{
+    RowBox[{"binomialF", "[", 
+     RowBox[{"4", ",", "1"}], "]"}], "*", 
+    RowBox[{"binomialF", "[", 
+     RowBox[{"13", ",", "5"}], "]"}], "*", 
+    RowBox[{"binomialF", "[", 
+     RowBox[{"39", ",", "2"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsFormulaSeven", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Total", "[", 
+       RowBox[{"nbHandsFormulaSevenSplit", "[", 
+        RowBox[{"[", "i", "]"}], "]"}], "]"}], "-", 
+      RowBox[{"nbHandsSeven", "[", 
+       RowBox[{"[", "1", "]"}], "]"}], "-", 
+      RowBox[{"nbHandsSeven", "[", 
+       RowBox[{"[", "2", "]"}], "]"}]}], "//", "TraditionalForm"}]}], ";"}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"i", "=", "5"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHand", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", "\"\<Straight\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHandSplit", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{"\"\<\>\"", ",", 
+     RowBox[{"{", "4", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nbHandsSevenSplit", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{"0", ",", 
+     RowBox[{"{", "4", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsFormulaSevenSplit", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", 
+    RowBox[{"Table", "[", 
+     RowBox[{"\"\<\>\"", ",", 
+      RowBox[{"{", "4", "}"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHandSplit", "[", 
+    RowBox[{"[", 
+     RowBox[{"i", ",", "1"}], "]"}], "]"}], "=", "\"\<7 distinct faces\>\""}],
+   ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"straightSevenNbRanks", "=", 
+   RowBox[{
+    RowBox[{"9", "*", 
+     RowBox[{"Binomial", "[", 
+      RowBox[{"7", ",", "2"}], "]"}]}], "+", 
+    RowBox[{"1", "*", 
+     RowBox[{"Binomial", "[", 
+      RowBox[{"8", ",", "2"}], "]"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"straightSevenNbAllSuits", "=", 
+   RowBox[{
+    RowBox[{"Binomial", "[", 
+     RowBox[{"4", ",", "1"}], "]"}], "^", "7"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"straightSevenNbFlush", "=", 
+   RowBox[{
+    RowBox[{"Binomial", "[", 
+     RowBox[{"4", ",", "1"}], "]"}], "*", 
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      RowBox[{
+       RowBox[{"Binomial", "[", 
+        RowBox[{"7", ",", "6"}], "]"}], "*", 
+       RowBox[{"Binomial", "[", 
+        RowBox[{"3", ",", "1"}], "]"}]}], "+", 
+      RowBox[{
+       RowBox[{"Binomial", "[", 
+        RowBox[{"7", ",", "5"}], "]"}], "*", 
+       RowBox[{
+        RowBox[{"Binomial", "[", 
+         RowBox[{"3", ",", "1"}], "]"}], "^", "2"}]}]}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsSevenSplit", "[", 
+     RowBox[{"[", 
+      RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"straightSevenNbAllSuits", "-", "straightSevenNbFlush"}], ")"}],
+      "*", "straightSevenNbRanks"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", "=", "2"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHandSplit", "[", 
+    RowBox[{"[", 
+     RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", "\"\<6 distinct faces\>\""}],
+   ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"straightSixNbRanks", "=", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"9", "*", 
+      RowBox[{"Binomial", "[", 
+       RowBox[{"7", ",", "1"}], "]"}]}], "+", 
+     RowBox[{"1", "*", 
+      RowBox[{"Binomial", "[", 
+       RowBox[{"8", ",", "1"}], "]"}]}]}], ")"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"straightSixNbCombinPair", "=", 
+   RowBox[{
+    RowBox[{"Binomial", "[", 
+     RowBox[{"6", ",", "1"}], "]"}], "*", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"4", ",", "2"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"straightSixNbAllSuitsFiveNotPair", "=", 
+   RowBox[{
+    RowBox[{"Binomial", "[", 
+     RowBox[{"4", ",", "1"}], "]"}], "^", "5"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"straightSixNbSuitsCombinFlush", "=", 
+   RowBox[{
+    RowBox[{"Binomial", "[", 
+     RowBox[{"4", ",", "1"}], "]"}], "+", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"Binomial", "[", 
+       RowBox[{"5", ",", "4"}], "]"}], "*", 
+      RowBox[{"Binomial", "[", 
+       RowBox[{"2", ",", "1"}], "]"}], "*", 
+      RowBox[{"Binomial", "[", 
+       RowBox[{"3", ",", "1"}], "]"}]}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsSevenSplit", "[", 
+     RowBox[{"[", 
+      RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+      "straightSixNbAllSuitsFiveNotPair", "-", 
+       "straightSixNbSuitsCombinFlush"}], ")"}], "*", 
+     "straightSixNbCombinPair", "*", "straightSixNbRanks"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", "=", "3"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHandSplit", "[", 
+    RowBox[{"[", 
+     RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+   "\"\<5 distinct faces, 1 triple\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"straightFiveTripleNbRanks", "=", 
+   RowBox[{"Binomial", "[", 
+    RowBox[{"10", ",", "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"straightFiveTripleNbTriple", "=", 
+   RowBox[{
+    RowBox[{"Binomial", "[", 
+     RowBox[{"5", ",", "1"}], "]"}], "*", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"4", ",", "3"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"straightFiveTripleNbSuitsCombinNoFlush", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Binomial", "[", 
+      RowBox[{"4", ",", "1"}], "]"}], "^", "4"}], "-", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"3", ",", "1"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsSevenSplit", "[", 
+     RowBox[{"[", 
+      RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+    RowBox[{
+    "straightFiveTripleNbRanks", "*", "straightFiveTripleNbTriple", "*", 
+     "straightFiveTripleNbSuitsCombinNoFlush"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHandSplit", "[", 
+    RowBox[{"[", 
+     RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+   "\"\<5 distinct faces, 2 pairs\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"straightFiveTwoPairsNbRanks", "=", 
+   RowBox[{"Binomial", "[", 
+    RowBox[{"10", ",", "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"straightFiveTwoPairsNbTwoPairsFaces", "=", 
+   RowBox[{"Binomial", "[", 
+    RowBox[{"5", ",", "2"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"straightFiveTwoPairsNbTwoPairsSuitsNoFlush", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Binomial", "[", 
+      RowBox[{"4", ",", "2"}], "]"}], "*", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Binomial", "[", 
+         RowBox[{"4", ",", "1"}], "]"}], "^", "3"}], "-", "2"}], ")"}]}], "+", 
+    RowBox[{
+     RowBox[{"Binomial", "[", 
+      RowBox[{"4", ",", "2"}], "]"}], "*", 
+     RowBox[{
+      RowBox[{"Binomial", "[", 
+       RowBox[{"2", ",", "1"}], "]"}], "^", "2"}], "*", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Binomial", "[", 
+         RowBox[{"4", ",", "1"}], "]"}], "^", "3"}], "-", "1"}], ")"}]}], "+", 
+    RowBox[{
+     RowBox[{"Binomial", "[", 
+      RowBox[{"4", ",", "2"}], "]"}], "*", 
+     RowBox[{
+      RowBox[{"Binomial", "[", 
+       RowBox[{"4", ",", "1"}], "]"}], "^", "3"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsSevenSplit", "[", 
+     RowBox[{"[", 
+      RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+    RowBox[{
+    "straightFiveTwoPairsNbRanks", "*", "straightFiveTwoPairsNbTwoPairsFaces",
+      "*", "straightFiveTwoPairsNbTwoPairsSuitsNoFlush"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsSeven", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", 
+    RowBox[{"Total", "[", 
+     RowBox[{"nbHandsSevenSplit", "[", 
+      RowBox[{"[", "i", "]"}], "]"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"straightSevenNbRanksF", "=", 
+   RowBox[{
+    RowBox[{"9", "*", 
+     RowBox[{"binomialF", "[", 
+      RowBox[{"7", ",", "2"}], "]"}]}], "+", 
+    RowBox[{"1", "*", 
+     RowBox[{"binomialF", "[", 
+      RowBox[{"8", ",", "2"}], "]"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"straightSevenNbAllSuitsF", "=", 
+   RowBox[{
+    RowBox[{"binomialF", "[", 
+     RowBox[{"4", ",", "1"}], "]"}], "^", "7"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"straightSevenNbFlushF", "=", 
+   RowBox[{
+    RowBox[{"binomialF", "[", 
+     RowBox[{"4", ",", "1"}], "]"}], "*", 
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      RowBox[{
+       RowBox[{"binomialF", "[", 
+        RowBox[{"7", ",", "6"}], "]"}], "*", 
+       RowBox[{"binomialF", "[", 
+        RowBox[{"3", ",", "1"}], "]"}]}], "+", 
+      RowBox[{
+       RowBox[{"binomialF", "[", 
+        RowBox[{"7", ",", "5"}], "]"}], "*", 
+       RowBox[{
+        RowBox[{"binomialF", "[", 
+         RowBox[{"3", ",", "1"}], "]"}], "^", "2"}]}]}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsFormulaSevenSplit", "[", 
+     RowBox[{"[", 
+      RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"straightSevenNbAllSuitsF", "-", "straightSevenNbFlushF"}], 
+       ")"}], "*", "straightSevenNbRanksF"}], " ", "//", 
+     "TraditionalForm"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", "=", "2"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"straightSixNbRanksF", "=", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"9", "*", 
+      RowBox[{"binomialF", "[", 
+       RowBox[{"7", ",", "1"}], "]"}]}], "+", 
+     RowBox[{"1", "*", 
+      RowBox[{"binomialF", "[", 
+       RowBox[{"8", ",", "1"}], "]"}]}]}], ")"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"straightSixNbCombinPairF", "=", 
+   RowBox[{
+    RowBox[{"binomialF", "[", 
+     RowBox[{"6", ",", "1"}], "]"}], "*", 
+    RowBox[{"binomialF", "[", 
+     RowBox[{"4", ",", "2"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"straightSixNbAllSuitsFiveNotPairF", "=", 
+   RowBox[{
+    RowBox[{"binomialF", "[", 
+     RowBox[{"4", ",", "1"}], "]"}], "^", "5"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"straightSixNbSuitsCombinFlushF", "=", 
+   RowBox[{
+    RowBox[{"binomialF", "[", 
+     RowBox[{"4", ",", "1"}], "]"}], "+", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"binomialF", "[", 
+       RowBox[{"5", ",", "4"}], "]"}], "*", 
+      RowBox[{"binomialF", "[", 
+       RowBox[{"2", ",", "1"}], "]"}], "*", 
+      RowBox[{"binomialF", "[", 
+       RowBox[{"3", ",", "1"}], "]"}]}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsFormulaSevenSplit", "[", 
+     RowBox[{"[", 
+      RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+       "straightSixNbAllSuitsFiveNotPairF", "-", 
+        "straightSixNbSuitsCombinFlushF"}], ")"}], "*", 
+      "straightSixNbCombinPairF", "*", "straightSixNbRanksF"}], " ", "//", 
+     "TraditionalForm"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", "=", "3"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"straightFiveTripleNbRanksF", "=", 
+   RowBox[{"binomialF", "[", 
+    RowBox[{"10", ",", "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"straightFiveTripleNbTripleF", "=", 
+   RowBox[{
+    RowBox[{"binomialF", "[", 
+     RowBox[{"5", ",", "1"}], "]"}], "*", 
+    RowBox[{"binomialF", "[", 
+     RowBox[{"4", ",", "3"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"straightFiveTripleNbSuitsCombinNoFlushF", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"binomialF", "[", 
+      RowBox[{"4", ",", "1"}], "]"}], "^", "4"}], "-", 
+    RowBox[{"binomialF", "[", 
+     RowBox[{"3", ",", "1"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsFormulaSevenSplit", "[", 
+     RowBox[{"[", 
+      RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{
+     "straightFiveTripleNbRanksF", "*", "straightFiveTripleNbTripleF", "*", 
+      "straightFiveTripleNbSuitsCombinNoFlushF"}], " ", "//", 
+     "TraditionalForm"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"straightFiveTwoPairsNbRanksF", "=", 
+   RowBox[{"binomialF", "[", 
+    RowBox[{"10", ",", "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"straightFiveTwoPairsNbTwoPairsFacesF", "=", 
+   RowBox[{"binomialF", "[", 
+    RowBox[{"5", ",", "2"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"straightFiveTwoPairsNbTwoPairsSuitsNoFlushF", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"binomialF", "[", 
+      RowBox[{"4", ",", "2"}], "]"}], "*", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"binomialF", "[", 
+         RowBox[{"4", ",", "1"}], "]"}], "^", "3"}], "-", "2"}], ")"}]}], "+", 
+    RowBox[{
+     RowBox[{"binomialF", "[", 
+      RowBox[{"4", ",", "2"}], "]"}], "*", 
+     RowBox[{
+      RowBox[{"binomialF", "[", 
+       RowBox[{"2", ",", "1"}], "]"}], "^", "2"}], "*", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"binomialF", "[", 
+         RowBox[{"4", ",", "1"}], "]"}], "^", "3"}], "-", "1"}], ")"}]}], "+", 
+    RowBox[{
+     RowBox[{"binomialF", "[", 
+      RowBox[{"4", ",", "2"}], "]"}], "*", 
+     RowBox[{
+      RowBox[{"binomialF", "[", 
+       RowBox[{"4", ",", "1"}], "]"}], "^", "3"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsFormulaSevenSplit", "[", 
+     RowBox[{"[", 
+      RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{
+     "straightFiveTwoPairsNbRanksF", "*", 
+      "straightFiveTwoPairsNbTwoPairsFacesF", "*", 
+      "straightFiveTwoPairsNbTwoPairsSuitsNoFlushF"}], " ", "//", 
+     "TraditionalForm"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsFormulaSeven", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{"Total", "[", 
+      RowBox[{"nbHandsFormulaSevenSplit", "[", 
+       RowBox[{"[", "i", "]"}], "]"}], "]"}], " ", "//", 
+     "TraditionalForm"}]}], ";"}], "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{"i", "=", "6"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nameHand", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", "\"\<Three of a Kind\>\""}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"nbRanks", "=", 
+   RowBox[{
+    RowBox[{"Binomial", "[", 
+     RowBox[{"13", ",", "5"}], "]"}], "-", "10"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"nbCombinTriple", "=", 
+   RowBox[{
+    RowBox[{"Binomial", "[", 
+     RowBox[{"5", ",", "1"}], "]"}], "*", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"4", ",", "3"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"nbSuitsOthersNoFlush", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Binomial", "[", 
+      RowBox[{"4", ",", "1"}], "]"}], "^", "4"}], "-", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"3", ",", "1"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsSeven", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", 
+    RowBox[{"nbRanks", "*", "nbCombinTriple", "*", "nbSuitsOthersNoFlush"}]}],
+    ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"nbRanksF", "=", 
+   RowBox[{
+    RowBox[{"binomialF", "[", 
+     RowBox[{"13", ",", "5"}], "]"}], "-", "10"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"nbCombinTripleF", "=", 
+   RowBox[{
+    RowBox[{"binomialF", "[", 
+     RowBox[{"5", ",", "1"}], "]"}], "*", 
+    RowBox[{"binomialF", "[", 
+     RowBox[{"4", ",", "3"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"nbSuitsOthersNoFlushF", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"binomialF", "[", 
+      RowBox[{"4", ",", "1"}], "]"}], "^", "4"}], "-", 
+    RowBox[{"binomialF", "[", 
+     RowBox[{"3", ",", "1"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsFormulaSeven", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{
+     "nbRanksF", "*", "nbCombinTripleF", "*", "nbSuitsOthersNoFlushF"}], " ", 
+     "//", "TraditionalForm"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"i", "=", "7"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHand", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", "\"\<Two Pairs\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHandSplit", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{"\"\<\>\"", ",", 
+     RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nbHandsSevenSplit", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{"0", ",", 
+     RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsFormulaSevenSplit", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", 
+    RowBox[{"Table", "[", 
+     RowBox[{"\"\<\>\"", ",", 
+      RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHandSplit", "[", 
+    RowBox[{"[", 
+     RowBox[{"i", ",", "1"}], "]"}], "]"}], "=", 
+   "\"\<2 Pairs, 3 Kickers\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsSevenSplit", "[", 
+     RowBox[{"[", 
+      RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"Binomial", "[", 
+        RowBox[{"13", ",", "5"}], "]"}], "-", "10"}], ")"}], "*", 
+     RowBox[{"Binomial", "[", 
+      RowBox[{"5", ",", "2"}], "]"}], "*", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Binomial", "[", 
+         RowBox[{"4", ",", "2"}], "]"}], "*", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Binomial", "[", 
+            RowBox[{"4", ",", "1"}], "]"}], "^", "3"}], "-", "2"}], ")"}]}], 
+       "+", 
+       RowBox[{
+        RowBox[{"Binomial", "[", 
+         RowBox[{"4", ",", "2"}], "]"}], "*", 
+        RowBox[{
+         RowBox[{"Binomial", "[", 
+          RowBox[{"2", ",", "1"}], "]"}], "^", "2"}], "*", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Binomial", "[", 
+            RowBox[{"4", ",", "1"}], "]"}], "^", "3"}], "-", "1"}], ")"}]}], 
+       "+", 
+       RowBox[{
+        RowBox[{"Binomial", "[", 
+         RowBox[{"4", ",", "2"}], "]"}], "*", 
+        RowBox[{
+         RowBox[{"Binomial", "[", 
+          RowBox[{"4", ",", "1"}], "]"}], "^", "3"}]}]}], ")"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", "=", "2"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHandSplit", "[", 
+    RowBox[{"[", 
+     RowBox[{"i", ",", "2"}], "]"}], "]"}], "=", 
+   "\"\<3 Pairs, 1 Kicker\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsSevenSplit", "[", 
+     RowBox[{"[", 
+      RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{"Binomial", "[", 
+      RowBox[{"13", ",", "4"}], "]"}], "*", 
+     RowBox[{"Binomial", "[", 
+      RowBox[{"4", ",", "1"}], "]"}], "*", 
+     RowBox[{
+      RowBox[{"Binomial", "[", 
+       RowBox[{"4", ",", "2"}], "]"}], "^", "3"}], "*", 
+     RowBox[{"Binomial", "[", 
+      RowBox[{"4", ",", "1"}], "]"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsSeven", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", 
+    RowBox[{"Total", "[", 
+     RowBox[{"nbHandsSevenSplit", "[", 
+      RowBox[{"[", "i", "]"}], "]"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsFormulaSevenSplit", "[", 
+     RowBox[{"[", 
+      RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"binomialF", "[", 
+        RowBox[{"13", ",", "5"}], "]"}], "-", "10"}], ")"}], "*", 
+     RowBox[{"binomialF", "[", 
+      RowBox[{"5", ",", "2"}], "]"}], "*", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"binomialF", "[", 
+         RowBox[{"4", ",", "2"}], "]"}], "*", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"binomialF", "[", 
+            RowBox[{"4", ",", "1"}], "]"}], "^", "3"}], "-", "2"}], ")"}]}], 
+       "+", 
+       RowBox[{
+        RowBox[{"binomialF", "[", 
+         RowBox[{"4", ",", "2"}], "]"}], "*", 
+        RowBox[{
+         RowBox[{"binomialF", "[", 
+          RowBox[{"2", ",", "1"}], "]"}], "^", "2"}], "*", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"binomialF", "[", 
+            RowBox[{"4", ",", "1"}], "]"}], "^", "3"}], "-", "1"}], ")"}]}], 
+       "+", 
+       RowBox[{
+        RowBox[{"binomialF", "[", 
+         RowBox[{"4", ",", "2"}], "]"}], "*", 
+        RowBox[{
+         RowBox[{"binomialF", "[", 
+          RowBox[{"4", ",", "1"}], "]"}], "^", "3"}]}]}], ")"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", "=", "2"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsFormulaSevenSplit", "[", 
+     RowBox[{"[", 
+      RowBox[{"i", ",", "k"}], "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{"binomialF", "[", 
+      RowBox[{"13", ",", "4"}], "]"}], "*", 
+     RowBox[{"binomialF", "[", 
+      RowBox[{"4", ",", "1"}], "]"}], "*", 
+     RowBox[{
+      RowBox[{"binomialF", "[", 
+       RowBox[{"4", ",", "2"}], "]"}], "^", "3"}], "*", 
+     RowBox[{"binomialF", "[", 
+      RowBox[{"4", ",", "1"}], "]"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsFormulaSeven", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{"Total", "[", 
+      RowBox[{"nbHandsFormulaSevenSplit", "[", 
+       RowBox[{"[", "i", "]"}], "]"}], "]"}], " ", "//", 
+     "TraditionalForm"}]}], ";"}], "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{"i", "=", "8"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nameHand", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", "\"\<One Pair\>\""}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"onePairNbRankNoFlush", "=", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"Binomial", "[", 
+      RowBox[{"13", ",", "6"}], "]"}], "-", "9", "-", 
+     RowBox[{"8", "*", 
+      RowBox[{"Binomial", "[", 
+       RowBox[{"6", ",", "1"}], "]"}]}], "-", 
+     RowBox[{"2", "*", 
+      RowBox[{"Binomial", "[", 
+       RowBox[{"7", ",", "1"}], "]"}]}]}], ")"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"onePairNbPairs", "=", 
+   RowBox[{
+    RowBox[{"Binomial", "[", 
+     RowBox[{"6", ",", "1"}], "]"}], "*", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"4", ",", "2"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"onePairNbSuitsNoFlush", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Binomial", "[", 
+       RowBox[{"4", ",", "1"}], "]"}], "^", "5"}], "-", 
+     RowBox[{"(", 
+      RowBox[{"4", "+", 
+       RowBox[{"2", "*", 
+        RowBox[{"Binomial", "[", 
+         RowBox[{"5", ",", "4"}], "]"}], "*", 
+        RowBox[{"Binomial", "[", 
+         RowBox[{"3", ",", "1"}], "]"}]}]}], ")"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsSeven", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", 
+    RowBox[{
+    "onePairNbRankNoFlush", "*", "onePairNbPairs", "*", 
+     "onePairNbSuitsNoFlush"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"onePairNbRankNoFlushF", "=", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"binomialF", "[", 
+      RowBox[{"13", ",", "6"}], "]"}], "-", "9", "-", 
+     RowBox[{"8", "*", 
+      RowBox[{"binomialF", "[", 
+       RowBox[{"6", ",", "1"}], "]"}]}], "-", 
+     RowBox[{"2", "*", 
+      RowBox[{"binomialF", "[", 
+       RowBox[{"7", ",", "1"}], "]"}]}]}], ")"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"onePairNbPairsF", "=", 
+   RowBox[{
+    RowBox[{"binomialF", "[", 
+     RowBox[{"6", ",", "1"}], "]"}], "*", 
+    RowBox[{"binomialF", "[", 
+     RowBox[{"4", ",", "2"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"onePairNbSuitsNoFlushF", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"binomialF", "[", 
+       RowBox[{"4", ",", "1"}], "]"}], "^", "5"}], "-", 
+     RowBox[{"(", 
+      RowBox[{"4", "+", 
+       RowBox[{"2", "*", 
+        RowBox[{"binomialF", "[", 
+         RowBox[{"5", ",", "4"}], "]"}], "*", 
+        RowBox[{"binomialF", "[", 
+         RowBox[{"3", ",", "1"}], "]"}]}]}], ")"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsFormulaSeven", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{
+     "onePairNbRankNoFlushF", "*", "onePairNbPairsF", "*", 
+      "onePairNbSuitsNoFlushF"}], " ", "//", "TraditionalForm"}]}], ";"}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"i", "=", "9"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nameHand", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", "\"\<High Card\>\""}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"highCardPairNbRankNoFlush", "=", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"Binomial", "[", 
+      RowBox[{"13", ",", "7"}], "]"}], "-", "8", "-", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"7", "*", 
+        RowBox[{"Binomial", "[", 
+         RowBox[{"5", ",", "1"}], "]"}]}], "+", 
+       RowBox[{"2", "*", 
+        RowBox[{"Binomial", "[", 
+         RowBox[{"6", ",", "1"}], "]"}]}]}], ")"}], "-", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"8", "*", 
+        RowBox[{"Binomial", "[", 
+         RowBox[{"6", ",", "2"}], "]"}]}], "+", 
+       RowBox[{"2", "*", 
+        RowBox[{"Binomial", "[", 
+         RowBox[{"7", ",", "2"}], "]"}]}]}], ")"}]}], ")"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"highCardNbSuitsNoFlush", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Binomial", "[", 
+       RowBox[{"4", ",", "1"}], "]"}], "^", "7"}], "-", 
+     RowBox[{
+      RowBox[{"Binomial", "[", 
+       RowBox[{"4", ",", "1"}], "]"}], "*", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Binomial", "[", 
+          RowBox[{"7", ",", "5"}], "]"}], "*", 
+         RowBox[{
+          RowBox[{"Binomial", "[", 
+           RowBox[{"3", ",", "1"}], "]"}], "^", "2"}]}], "+", 
+        RowBox[{
+         RowBox[{"Binomial", "[", 
+          RowBox[{"7", ",", "6"}], "]"}], "*", 
+         RowBox[{"Binomial", "[", 
+          RowBox[{"3", ",", "1"}], "]"}]}], "+", 
+        RowBox[{"Binomial", "[", 
+         RowBox[{"7", ",", "7"}], "]"}]}], ")"}]}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsSeven", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", 
+    RowBox[{"highCardPairNbRankNoFlush", "*", "highCardNbSuitsNoFlush"}]}], 
+   ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"highCardPairNbRankNoFlushF", "=", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"binomialF", "[", 
+      RowBox[{"13", ",", "7"}], "]"}], "-", "8", "-", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"7", "*", 
+        RowBox[{"binomialF", "[", 
+         RowBox[{"5", ",", "1"}], "]"}]}], "+", 
+       RowBox[{"2", "*", 
+        RowBox[{"binomialF", "[", 
+         RowBox[{"6", ",", "1"}], "]"}]}]}], ")"}], "-", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"8", "*", 
+        RowBox[{"binomialF", "[", 
+         RowBox[{"6", ",", "2"}], "]"}]}], "+", 
+       RowBox[{"2", "*", 
+        RowBox[{"binomialF", "[", 
+         RowBox[{"7", ",", "2"}], "]"}]}]}], ")"}]}], ")"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"highCardNbSuitsNoFlushF", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"binomialF", "[", 
+       RowBox[{"4", ",", "1"}], "]"}], "^", "7"}], "-", 
+     RowBox[{
+      RowBox[{"binomialF", "[", 
+       RowBox[{"4", ",", "1"}], "]"}], "*", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"binomialF", "[", 
+          RowBox[{"7", ",", "5"}], "]"}], "*", 
+         RowBox[{
+          RowBox[{"binomialF", "[", 
+           RowBox[{"3", ",", "1"}], "]"}], "^", "2"}]}], "+", 
+        RowBox[{
+         RowBox[{"binomialF", "[", 
+          RowBox[{"7", ",", "6"}], "]"}], "*", 
+         RowBox[{"binomialF", "[", 
+          RowBox[{"3", ",", "1"}], "]"}]}], "+", 
+        RowBox[{"binomialF", "[", 
+         RowBox[{"7", ",", "7"}], "]"}]}], ")"}]}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsFormulaSeven", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{"highCardPairNbRankNoFlushF", "*", "highCardNbSuitsNoFlushF"}], 
+     " ", "//", "TraditionalForm"}]}], ";"}], "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"i", "=", "10"}], ";"}], " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nameHand", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", "\"\<Total\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nbHandsSeven", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], "=", 
+   RowBox[{"Binomial", "[", 
+    RowBox[{"52", ",", "7"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbHandsFormulaSeven", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{"binomialF", "[", 
+      RowBox[{"52", ",", "7"}], "]"}], "//", "TraditionalForm"}]}], ";"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"Print", "[", 
+    RowBox[{"\"\<Total number of hands = \>\"", ",", 
+     RowBox[{"Total", "[", 
+      RowBox[{"Take", "[", 
+       RowBox[{"nbHandsSeven", ",", 
+        RowBox[{"1", ";;", "10"}]}], "]"}], "]"}]}], "]"}], "*)"}], 
+  "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"pokerHandSeven", "=", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"nameHand", "[", 
+         RowBox[{"[", "i", "]"}], "]"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"NumberForm", "[", 
+         RowBox[{
+          RowBox[{"nbHandsSeven", "[", 
+           RowBox[{"[", "i", "]"}], "]"}], ",", " ", 
+          RowBox[{"DigitBlock", "\[Rule]", "3"}]}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"nbHandsSeven", "[", 
+          RowBox[{"[", "i", "]"}], "]"}], "/", 
+         RowBox[{"nbHandsSeven", "[", 
+          RowBox[{"[", "10", "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+        RowBox[{"NumberForm", "[", 
+         RowBox[{
+          RowBox[{"N", "[", 
+           RowBox[{
+            RowBox[{"nbHandsSeven", "[", 
+             RowBox[{"[", "10", "]"}], "]"}], "/", 
+            RowBox[{"nbHandsSeven", "[", 
+             RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"10", ",", "1"}], "}"}], ",", 
+          RowBox[{"DigitBlock", "\[Rule]", "3"}], ",", " ", 
+          RowBox[{"ExponentFunction", "\[Rule]", 
+           RowBox[{"(", 
+            RowBox[{"Null", " ", "&"}], ")"}]}]}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"NumberForm", "[", 
+         RowBox[{
+          RowBox[{"100", "*", 
+           RowBox[{"N", "[", 
+            RowBox[{
+             RowBox[{"nbHandsSeven", "[", 
+              RowBox[{"[", "i", "]"}], "]"}], "/", 
+             RowBox[{"nbHandsSeven", "[", 
+              RowBox[{"[", "10", "]"}], "]"}]}], "]"}]}], ",", 
+          RowBox[{"{", 
+           RowBox[{"3", ",", "4"}], "}"}]}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"i", "<", "10"}], ",", 
+          RowBox[{"NumberForm", "[", 
+           RowBox[{
+            RowBox[{"100", "*", 
+             RowBox[{"N", "[", 
+              RowBox[{
+               RowBox[{"Total", "[", 
+                RowBox[{"Take", "[", 
+                 RowBox[{"nbHandsSeven", ",", "i"}], "]"}], "]"}], "/", 
+               RowBox[{"nbHandsSeven", "[", 
+                RowBox[{"[", "10", "]"}], "]"}]}], "]"}]}], ",", 
+            RowBox[{"{", 
+             RowBox[{"3", ",", "4"}], "}"}]}], "]"}], ",", "\"\<N/A\>\""}], 
+         "]"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Length", "[", 
+            RowBox[{"nbHandsSevenSplit", "[", 
+             RowBox[{"[", "i", "]"}], "]"}], "]"}], "==", "0"}], ",", 
+          RowBox[{"nbHandsFormulaSeven", "[", 
+           RowBox[{"[", "i", "]"}], "]"}], ",", 
+          "\"\<See specific table\>\""}], "]"}]}], "}"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "10"}], "}"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"title", "=", 
+    RowBox[{"Map", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Text", "@", 
+        RowBox[{"Style", "[", 
+         RowBox[{"#", ",", "Bold"}], "]"}]}], "&"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Hand\>\"", ",", "\"\<Nb Occurences\>\"", ",", 
+        "\"\<Nb Occurences\>\"", ",", "\"\<Proba\>\"", ",", 
+        "\"\<Odds (:1)\>\"", ",", "\"\<Proba (%)\>\"", ",", 
+        "\"\<Cumulative Proba (%)\>\""}], "}"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"pokerHandSevenTable", "=", 
+   RowBox[{"TableForm", "[", 
+    RowBox[{
+     RowBox[{"Map", "[", 
+      RowBox[{"Text", ",", "pokerHandSeven", ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"TableAlignments", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Left", ",", "Top"}], "}"}]}], ",", " ", 
+     RowBox[{"TableHeadings", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"None", ",", "title"}], "}"}]}]}], "]"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"pokerHandSevenGrid", "=", 
+  RowBox[{"Grid", "[", 
+   RowBox[{
+    RowBox[{"Map", "[", 
+     RowBox[{"Text", ",", 
+      RowBox[{"Prepend", "[", 
+       RowBox[{"pokerHandSeven", ",", "title"}], "]"}], ",", 
+      RowBox[{"{", "2", "}"}]}], "]"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"Dividers", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"2", "\[Rule]", "Black"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"2", "\[Rule]", "Black"}], "}"}]}], "}"}]}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Background", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"None", ",", 
+       RowBox[{"{", 
+        RowBox[{"{", 
+         RowBox[{"None", ",", "LightRed"}], "}"}], "}"}]}], "}"}]}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Alignment", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"Left", ",", "Center"}], "}"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"Spacings", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"1.5", ",", "1.2"}], "}"}]}]}], "\[IndentingNewLine]", 
+   "]"}]}]}], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.543260126991353*^9, 3.5432601335033407`*^9}, {
+   3.543260178743511*^9, 3.5432602586490993`*^9}, {3.543260332250643*^9, 
+   3.543260360770474*^9}, {3.543260869645303*^9, 3.543260870213269*^9}, {
+   3.543261759389859*^9, 3.543261761645653*^9}, {3.54326184085458*^9, 
+   3.543261843966065*^9}, 3.543261956976138*^9, 3.54326429470652*^9, {
+   3.54326474186331*^9, 3.5432647428071947`*^9}, 3.543265373604341*^9, {
+   3.5432654130996103`*^9, 3.5432654149637403`*^9}, {3.543521407701151*^9, 
+   3.5435214535649567`*^9}, {3.543524422022637*^9, 3.543524436831546*^9}, {
+   3.5436077017374496`*^9, 3.543607718494042*^9}, {3.5436079878634644`*^9, 
+   3.543608009056636*^9}, 3.543608134881675*^9, {3.543610848593719*^9, 
+   3.543610849224579*^9}, 3.554652903719675*^9, {3.554652974502905*^9, 
+   3.554652990317181*^9}, {3.554653099717719*^9, 3.554653237392539*^9}, {
+   3.554653281676898*^9, 3.554653320948283*^9}, {3.5546533510601892`*^9, 
+   3.554653352568921*^9}, {3.554653387192383*^9, 3.554653403826807*^9}, {
+   3.554653484779994*^9, 3.5546535351931553`*^9}, {3.55465406291232*^9, 
+   3.554654068284238*^9}, 3.5546569769206667`*^9, {3.5546586916004477`*^9, 
+   3.554658829261011*^9}, {3.554659233834353*^9, 3.55465927509448*^9}, {
+   3.5546593105065804`*^9, 3.5546593714933233`*^9}, {3.554659625314268*^9, 
+   3.554659626071068*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"i", "=", "3"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"s", "=", 
+    RowBox[{"Length", "[", 
+     RowBox[{"nameHandSplit", "[", 
+      RowBox[{"[", "i", "]"}], "]"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"handFullHouse", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"k", "\[LessEqual]", "s"}], ",", 
+         RowBox[{"nameHandSplit", "[", 
+          RowBox[{"[", 
+           RowBox[{"i", ",", "k"}], "]"}], "]"}], ",", "\"\<Total\>\""}], 
+        "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"NumberForm", "[", 
+        RowBox[{
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"k", "\[LessEqual]", "s"}], ",", 
+           RowBox[{"nbHandsSevenSplit", "[", 
+            RowBox[{"[", 
+             RowBox[{"i", ",", "k"}], "]"}], "]"}], ",", " ", 
+           RowBox[{"Total", "[", 
+            RowBox[{"nbHandsSevenSplit", "[", 
+             RowBox[{"[", "i", "]"}], "]"}], "]"}]}], "]"}], ",", 
+         RowBox[{"DigitBlock", "\[Rule]", "3"}], ",", " ", 
+         RowBox[{"ExponentFunction", "\[Rule]", 
+          RowBox[{"(", 
+           RowBox[{"Null", " ", "&"}], ")"}]}]}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"k", "\[LessEqual]", "s"}], ",", 
+         RowBox[{"TraditionalForm", "[", 
+          RowBox[{"nbHandsFormulaSevenSplit", "[", 
+           RowBox[{"[", 
+            RowBox[{"i", ",", "k"}], "]"}], "]"}], "]"}], ",", "\"\<\>\""}], 
+        "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", 
+       RowBox[{"s", "+", "1"}]}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"handFullHouseTable", "=", 
+  RowBox[{"TableForm", "[", 
+   RowBox[{
+    RowBox[{"Map", "[", 
+     RowBox[{"Text", ",", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"{", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"k", "\[LessEqual]", "s"}], ",", 
+            RowBox[{"nameHandSplit", "[", 
+             RowBox[{"[", 
+              RowBox[{"i", ",", "k"}], "]"}], "]"}], ",", "\"\<Total\>\""}], 
+           "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"NumberForm", "[", 
+           RowBox[{
+            RowBox[{"If", "[", 
+             RowBox[{
+              RowBox[{"k", "\[LessEqual]", "s"}], ",", 
+              RowBox[{"nbHandsSevenSplit", "[", 
+               RowBox[{"[", 
+                RowBox[{"i", ",", "k"}], "]"}], "]"}], ",", " ", 
+              RowBox[{"Total", "[", 
+               RowBox[{"nbHandsSevenSplit", "[", 
+                RowBox[{"[", "i", "]"}], "]"}], "]"}]}], "]"}], ",", 
+            RowBox[{"DigitBlock", "\[Rule]", "3"}], ",", " ", 
+            RowBox[{"ExponentFunction", "\[Rule]", 
+             RowBox[{"(", 
+              RowBox[{"Null", " ", "&"}], ")"}]}]}], "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"k", "\[LessEqual]", "s"}], ",", 
+            RowBox[{"TraditionalForm", "[", 
+             RowBox[{"nbHandsFormulaSevenSplit", "[", 
+              RowBox[{"[", 
+               RowBox[{"i", ",", "k"}], "]"}], "]"}], "]"}], ",", 
+            "\"\<\>\""}], "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{"k", ",", 
+          RowBox[{"s", "+", "1"}]}], "}"}]}], "]"}], ",", 
+      RowBox[{"{", "2", "}"}]}], "]"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"TableAlignments", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"Left", ",", "Top"}], "}"}]}], ",", " ", 
+    RowBox[{"TableHeadings", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"None", ",", 
+       RowBox[{"Map", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Text", "@", 
+           RowBox[{"Style", "[", 
+            RowBox[{"#", ",", "Bold"}], "]"}]}], "&"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"nameHand", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", "\"\<Nb Occurences\>\"", 
+           ",", "\"\<Nb Occurences\>\""}], "}"}]}], "]"}]}], "}"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"handFullHouseGrid", "=", 
+   RowBox[{"Grid", "[", 
+    RowBox[{
+     RowBox[{"Map", "[", 
+      RowBox[{"Text", ",", 
+       RowBox[{"Prepend", "[", 
+        RowBox[{"handFullHouse", ",", 
+         RowBox[{"Map", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Text", "@", 
+             RowBox[{"Style", "[", 
+              RowBox[{"#", ",", "Bold"}], "]"}]}], "&"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"nameHand", "[", 
+              RowBox[{"[", "i", "]"}], "]"}], ",", "\"\<Nb Occurences\>\"", 
+             ",", "\"\<Nb Occurences\>\""}], "}"}]}], "]"}]}], "]"}], ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Dividers", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"2", "\[Rule]", "Black"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"2", "\[Rule]", "Black"}], "}"}]}], "}"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Background", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"None", ",", 
+        RowBox[{"{", 
+         RowBox[{"{", 
+          RowBox[{"None", ",", "LightRed"}], "}"}], "}"}]}], "}"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Alignment", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Left", ",", "Center"}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Spacings", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"1.5", ",", "1.2"}], "}"}]}]}], "\[IndentingNewLine]", "]"}]}],
+   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"i", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"s", "=", 
+   RowBox[{"Length", "[", 
+    RowBox[{"nameHandSplit", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"handFlush", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"k", "\[LessEqual]", "s"}], ",", 
+         RowBox[{"nameHandSplit", "[", 
+          RowBox[{"[", 
+           RowBox[{"i", ",", "k"}], "]"}], "]"}], ",", "\"\<Total\>\""}], 
+        "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"NumberForm", "[", 
+        RowBox[{
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"k", "\[LessEqual]", "s"}], ",", 
+           RowBox[{"nbHandsSevenSplit", "[", 
+            RowBox[{"[", 
+             RowBox[{"i", ",", "k"}], "]"}], "]"}], ",", " ", 
+           RowBox[{"Total", "[", 
+            RowBox[{"nbHandsSevenSplit", "[", 
+             RowBox[{"[", "i", "]"}], "]"}], "]"}]}], "]"}], ",", 
+         RowBox[{"DigitBlock", "\[Rule]", "3"}], ",", " ", 
+         RowBox[{"ExponentFunction", "\[Rule]", 
+          RowBox[{"(", 
+           RowBox[{"Null", " ", "&"}], ")"}]}]}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"k", "\[LessEqual]", "s"}], ",", 
+         RowBox[{"TraditionalForm", "[", 
+          RowBox[{"nbHandsFormulaSevenSplit", "[", 
+           RowBox[{"[", 
+            RowBox[{"i", ",", "k"}], "]"}], "]"}], "]"}], ",", "\"\<\>\""}], 
+        "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", 
+       RowBox[{"s", "+", "1"}]}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"handFlushTable", "=", 
+  RowBox[{"TableForm", "[", 
+   RowBox[{
+    RowBox[{"Map", "[", 
+     RowBox[{"Text", ",", "handFlush", ",", 
+      RowBox[{"{", "2", "}"}]}], "]"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"TableAlignments", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"Left", ",", "Top"}], "}"}]}], ",", " ", 
+    RowBox[{"TableHeadings", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"None", ",", 
+       RowBox[{"Map", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Text", "@", 
+           RowBox[{"Style", "[", 
+            RowBox[{"#", ",", "Bold"}], "]"}]}], "&"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"nameHand", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", "\"\<Nb Occurences\>\"", 
+           ",", "\"\<Nb Occurences\>\""}], "}"}]}], "]"}]}], "}"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"handFlushGrid", "=", 
+   RowBox[{"Grid", "[", 
+    RowBox[{
+     RowBox[{"Map", "[", 
+      RowBox[{"Text", ",", 
+       RowBox[{"Prepend", "[", 
+        RowBox[{"handFlush", ",", 
+         RowBox[{"Map", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Text", "@", 
+             RowBox[{"Style", "[", 
+              RowBox[{"#", ",", "Bold"}], "]"}]}], "&"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"nameHand", "[", 
+              RowBox[{"[", "i", "]"}], "]"}], ",", "\"\<Nb Occurences\>\"", 
+             ",", "\"\<Nb Occurences\>\""}], "}"}]}], "]"}]}], "]"}], ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Dividers", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"2", "\[Rule]", "Black"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"2", "\[Rule]", "Black"}], "}"}]}], "}"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Background", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"None", ",", 
+        RowBox[{"{", 
+         RowBox[{"{", 
+          RowBox[{"None", ",", "LightRed"}], "}"}], "}"}]}], "}"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Alignment", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Left", ",", "Center"}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Spacings", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"1.5", ",", "1.2"}], "}"}]}]}], "\[IndentingNewLine]", "]"}]}],
+   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"i", "=", "5"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"s", "=", 
+   RowBox[{"Length", "[", 
+    RowBox[{"nameHandSplit", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"handStraight", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"k", "\[LessEqual]", "s"}], ",", 
+         RowBox[{"nameHandSplit", "[", 
+          RowBox[{"[", 
+           RowBox[{"i", ",", "k"}], "]"}], "]"}], ",", "\"\<Total\>\""}], 
+        "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"NumberForm", "[", 
+        RowBox[{
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"k", "\[LessEqual]", "s"}], ",", 
+           RowBox[{"nbHandsSevenSplit", "[", 
+            RowBox[{"[", 
+             RowBox[{"i", ",", "k"}], "]"}], "]"}], ",", " ", 
+           RowBox[{"Total", "[", 
+            RowBox[{"nbHandsSevenSplit", "[", 
+             RowBox[{"[", "i", "]"}], "]"}], "]"}]}], "]"}], ",", 
+         RowBox[{"DigitBlock", "\[Rule]", "3"}], ",", " ", 
+         RowBox[{"ExponentFunction", "\[Rule]", 
+          RowBox[{"(", 
+           RowBox[{"Null", " ", "&"}], ")"}]}]}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"k", "\[LessEqual]", "s"}], ",", 
+         RowBox[{"TraditionalForm", "[", 
+          RowBox[{"nbHandsFormulaSevenSplit", "[", 
+           RowBox[{"[", 
+            RowBox[{"i", ",", "k"}], "]"}], "]"}], "]"}], ",", "\"\<\>\""}], 
+        "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", 
+       RowBox[{"s", "+", "1"}]}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"handStraightTable", "=", 
+  RowBox[{"TableForm", "[", 
+   RowBox[{
+    RowBox[{"Map", "[", 
+     RowBox[{"Text", ",", "handStraight", ",", 
+      RowBox[{"{", "2", "}"}]}], "]"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"TableAlignments", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"Left", ",", "Top"}], "}"}]}], ",", " ", 
+    RowBox[{"TableHeadings", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"None", ",", 
+       RowBox[{"Map", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Text", "@", 
+           RowBox[{"Style", "[", 
+            RowBox[{"#", ",", "Bold"}], "]"}]}], "&"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"nameHand", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", "\"\<Nb Occurences\>\"", 
+           ",", "\"\<Nb Occurences\>\""}], "}"}]}], "]"}]}], "}"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"handStraightGrid", "=", 
+   RowBox[{"Grid", "[", 
+    RowBox[{
+     RowBox[{"Map", "[", 
+      RowBox[{"Text", ",", 
+       RowBox[{"Prepend", "[", 
+        RowBox[{"handStraight", ",", 
+         RowBox[{"Map", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Text", "@", 
+             RowBox[{"Style", "[", 
+              RowBox[{"#", ",", "Bold"}], "]"}]}], "&"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"nameHand", "[", 
+              RowBox[{"[", "i", "]"}], "]"}], ",", "\"\<Nb Occurences\>\"", 
+             ",", "\"\<Nb Occurences\>\""}], "}"}]}], "]"}]}], "]"}], ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Dividers", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"2", "\[Rule]", "Black"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"2", "\[Rule]", "Black"}], "}"}]}], "}"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Background", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"None", ",", 
+        RowBox[{"{", 
+         RowBox[{"{", 
+          RowBox[{"None", ",", "LightRed"}], "}"}], "}"}]}], "}"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Alignment", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Left", ",", "Center"}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Spacings", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"1.5", ",", "1.2"}], "}"}]}]}], "\[IndentingNewLine]", "]"}]}],
+   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"i", "=", "7"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"s", "=", 
+   RowBox[{"Length", "[", 
+    RowBox[{"nameHandSplit", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"handTwoPair", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"k", "\[LessEqual]", "s"}], ",", 
+         RowBox[{"nameHandSplit", "[", 
+          RowBox[{"[", 
+           RowBox[{"i", ",", "k"}], "]"}], "]"}], ",", "\"\<Total\>\""}], 
+        "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"NumberForm", "[", 
+        RowBox[{
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"k", "\[LessEqual]", "s"}], ",", 
+           RowBox[{"nbHandsSevenSplit", "[", 
+            RowBox[{"[", 
+             RowBox[{"i", ",", "k"}], "]"}], "]"}], ",", " ", 
+           RowBox[{"Total", "[", 
+            RowBox[{"nbHandsSevenSplit", "[", 
+             RowBox[{"[", "i", "]"}], "]"}], "]"}]}], "]"}], ",", 
+         RowBox[{"DigitBlock", "\[Rule]", "3"}], ",", " ", 
+         RowBox[{"ExponentFunction", "\[Rule]", 
+          RowBox[{"(", 
+           RowBox[{"Null", " ", "&"}], ")"}]}]}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"k", "\[LessEqual]", "s"}], ",", 
+         RowBox[{"TraditionalForm", "[", 
+          RowBox[{"nbHandsFormulaSevenSplit", "[", 
+           RowBox[{"[", 
+            RowBox[{"i", ",", "k"}], "]"}], "]"}], "]"}], ",", "\"\<\>\""}], 
+        "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", 
+       RowBox[{"s", "+", "1"}]}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"handTableTwoPair", "=", 
+  RowBox[{"TableForm", "[", 
+   RowBox[{
+    RowBox[{"Map", "[", 
+     RowBox[{"Text", ",", "handTwoPair", ",", 
+      RowBox[{"{", "2", "}"}]}], "]"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"TableAlignments", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"Left", ",", "Top"}], "}"}]}], ",", 
+    RowBox[{"(*", 
+     RowBox[{
+      RowBox[{"TableSpacing", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"4", ",", "Automatic"}], "}"}]}], ","}], "*)"}], " ", 
+    RowBox[{"TableHeadings", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"None", ",", 
+       RowBox[{"Map", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Text", "@", 
+           RowBox[{"Style", "[", 
+            RowBox[{"#", ",", "Bold"}], "]"}]}], "&"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"nameHand", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", "\"\<Nb Occurences\>\"", 
+           ",", "\"\<Nb Occurences\>\""}], "}"}]}], "]"}]}], "}"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"handTwoPairGrid", "=", 
+  RowBox[{"Grid", "[", 
+   RowBox[{
+    RowBox[{"Map", "[", 
+     RowBox[{"Text", ",", 
+      RowBox[{"Prepend", "[", 
+       RowBox[{"handTwoPair", ",", 
+        RowBox[{"Map", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Text", "@", 
+            RowBox[{"Style", "[", 
+             RowBox[{"#", ",", "Bold"}], "]"}]}], "&"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"nameHand", "[", 
+             RowBox[{"[", "i", "]"}], "]"}], ",", "\"\<Nb Occurences\>\"", 
+            ",", "\"\<Nb Occurences\>\""}], "}"}]}], "]"}]}], "]"}], ",", 
+      RowBox[{"{", "2", "}"}]}], "]"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"Dividers", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"2", "\[Rule]", "Black"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"2", "\[Rule]", "Black"}], "}"}]}], "}"}]}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Background", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"None", ",", 
+       RowBox[{"{", 
+        RowBox[{"{", 
+         RowBox[{"None", ",", "LightRed"}], "}"}], "}"}]}], "}"}]}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Alignment", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"Left", ",", "Center"}], "}"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"Spacings", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"1.5", ",", "1.2"}], "}"}]}]}], "\[IndentingNewLine]", 
+   "]"}]}]}], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.5436070879977694`*^9, 3.543607140382534*^9}, {
+   3.543607312407094*^9, 3.543607318886446*^9}, {3.543607368638115*^9, 
+   3.543607373366722*^9}, {3.543607407783043*^9, 3.543607462919444*^9}, {
+   3.54360750051271*^9, 3.543607528847521*^9}, 3.5436075677044086`*^9, {
+   3.54360939197192*^9, 3.5436096910639973`*^9}, {3.54360974786794*^9, 
+   3.543609748392027*^9}, {3.54360978004136*^9, 3.543609847831736*^9}, {
+   3.5436099818499317`*^9, 3.543609982197179*^9}, {3.54361005622926*^9, 
+   3.543610113139894*^9}, {3.543610152698852*^9, 3.5436102367356052`*^9}, {
+   3.543610280317028*^9, 3.543610282766863*^9}, {3.5436103165734177`*^9, 
+   3.5436103832876377`*^9}, {3.5436104265291*^9, 3.543610483851219*^9}, {
+   3.543610524615892*^9, 3.543610630240789*^9}, {3.543610721683551*^9, 
+   3.543610723205389*^9}, {3.554653611475833*^9, 3.5546536588505707`*^9}, {
+   3.5546537158299217`*^9, 3.554653791993123*^9}, {3.554653850417664*^9, 
+   3.554653870103825*^9}, {3.554653917074284*^9, 3.554653921928666*^9}, {
+   3.5546539714104958`*^9, 3.554654050167707*^9}, {3.5546572546313343`*^9, 
+   3.554657289102211*^9}, {3.554659395623514*^9, 3.554659431183812*^9}, {
+   3.554659467752255*^9, 3.554659547385158*^9}, {3.5546595966262083`*^9, 
+   3.554659615384923*^9}, {3.554659648211186*^9, 3.5546596927433157`*^9}, {
+   3.5546597633613443`*^9, 3.554659837131098*^9}, {3.5546598759959793`*^9, 
+   3.554659893271146*^9}, {3.554659946203052*^9, 3.554659985047814*^9}, {
+   3.554660072348995*^9, 3.5546601573007307`*^9}, {3.554660196658897*^9, 
+   3.55466019910387*^9}, 3.554660247607389*^9, {3.554660345396474*^9, 
+   3.554660345836261*^9}, {3.5546604045965023`*^9, 3.554660433063443*^9}, {
+   3.55466047542636*^9, 3.554660571293178*^9}, {3.554660790000952*^9, 
+   3.5546607911730757`*^9}}],
+
+Cell[TextData[StyleBox["Export",
+ FontSize->14,
+ FontWeight->"Bold"]], "Text",
+ CellFrame->{{0, 0}, {0, 2}},
+ CellChangeTimes->{{3.543257868797324*^9, 3.543257902547124*^9}, {
+   3.543259945717683*^9, 3.5432600580937033`*^9}, 3.543265320161669*^9, {
+   3.55492039918044*^9, 3.5549204046124268`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"name", "=", "\"\<Proba\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"repoDir", "=", 
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+     "$InitialDirectory", ",", 
+      "\"\</Dropbox/Archives/GitHub/Poker-Probabilities\>\""}], "}"}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"SetDirectory", "[", 
+  RowBox[{"FileNameJoin", "[", 
+   RowBox[{"{", 
+    RowBox[{"repoDir", ",", "\"\<Pictures\>\""}], "}"}], "]"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"size", "=", "Automatic"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{"\"\<pokerHandFiveProba.png\>\"", ",", "pokerHandFiveGrid", ",", 
+    RowBox[{"ImageSize", "\[Rule]", "size"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+   "\"\<pokerHandSevenProba.png\>\"", ",", "pokerHandSevenGrid", ",", 
+    RowBox[{"ImageSize", "\[Rule]", "size"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{"\"\<handFullHouseProba.png\>\"", ",", "handFullHouseGrid", ",", 
+    RowBox[{"ImageSize", "\[Rule]", "size"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{"\"\<handFlushProba.png\>\"", ",", "handFlushGrid", ",", 
+    RowBox[{"ImageSize", "\[Rule]", "size"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{"\"\<handStraightProba.png\>\"", ",", "handStraightGrid", ",", 
+    RowBox[{"ImageSize", "\[Rule]", "size"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{"\"\<handTwoPairProba.png\>\"", ",", "handTwoPairGrid", ",", 
+    RowBox[{"ImageSize", "\[Rule]", "size"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", , "\[IndentingNewLine]", 
+ RowBox[{}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"FrontEndTokenExecute", "[", "\"\<DeleteGeneratedCells\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SetOptions", "[", 
+   RowBox[{
+    RowBox[{"SelectedNotebook", "[", "]"}], ",", 
+    RowBox[{"PrivateNotebookOptions", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<FileOutlineCache\>\"", "\[Rule]", "False"}], "}"}]}]}], 
+   "]"}], ";", 
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{"repoDir", ",", "\"\<NB\>\"", ",", 
+       RowBox[{"name", "<>", "\"\<.nb\>\""}]}], "}"}], "]"}], ",", 
+    RowBox[{"EvaluationNotebook", "[", "]"}], ",", "\"\<NB\>\""}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SetOptions", "[", 
+   RowBox[{
+    RowBox[{"SelectedNotebook", "[", "]"}], ",", 
+    RowBox[{"PrivateNotebookOptions", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<FileOutlineCache\>\"", "\[Rule]", "Automatic"}], "}"}]}]}],
+    "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.554657322626216*^9, 3.554657365098336*^9}, {
+  3.5546607153957043`*^9, 3.55466077979498*^9}, {3.5546610769423113`*^9, 
+  3.554661170221079*^9}, {3.554985499234652*^9, 3.5549855000163813`*^9}, {
+  3.555951121293689*^9, 3.555951230034835*^9}, {3.55595130574861*^9, 
+  3.5559513598292637`*^9}, {3.55595140329288*^9, 3.555951419260992*^9}, {
+  3.555951528715534*^9, 3.555951587753132*^9}, {3.5559516559025517`*^9, 
+  3.555951687193815*^9}, {3.555951761112986*^9, 3.5559518118348713`*^9}}],
+
+Cell[BoxData["\<\"/Users/oborderi/Dropbox/Archives/GitHub/Poker-Probabilities/\
+Pictures\"\>"], "Output",
+ CellChangeTimes->{3.555951824163493*^9}]
+}, Open  ]]
+},
+CellGrouping->Manual,
+WindowSize->{1099, 1123},
+WindowMargins->{{Automatic, 103}, {Automatic, 41}},
+PrivateNotebookOptions->{"FileOutlineCache"->False},
+CellContext->Notebook,
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (October 5, \
+2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 376, 10, 70, "Text"],
+Cell[936, 32, 19466, 566, 70, "Input",
+ InitializationCell->True],
+Cell[20405, 600, 98, 1, 70, "Input"],
+Cell[20506, 603, 399, 10, 70, "Text"],
+Cell[20908, 615, 52636, 1579, 70, "Input",
+ InitializationCell->True],
+Cell[73547, 2196, 20408, 526, 70, "Input",
+ InitializationCell->True],
+Cell[93958, 2724, 299, 6, 70, "Text"],
+Cell[CellGroupData[{
+Cell[94282, 2734, 3395, 84, 70, "Input"],
+Cell[97680, 2820, 147, 2, 70, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
