@@ -20,10 +20,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       835,         17]
-NotebookDataLength[      6863,        171]
-NotebookOptionsPosition[      7086,        159]
-NotebookOutlinePosition[      7630,        183]
-CellTagsIndexPosition[      7587,        180]
+NotebookDataLength[      6835,        171]
+NotebookOptionsPosition[      7058,        159]
+NotebookOutlinePosition[      7602,        183]
+CellTagsIndexPosition[      7559,        180]
 WindowTitle->One-To-One Equity Distribution for a 2 PreFlop Hands
 WindowFrame->Normal*)
 
@@ -133,10 +133,10 @@ Cell[BoxData[
           ImageSize -> 150, AspectRatio -> 
           1/3]]; $CellContext`preFlopHandMatrix = ToExpression[
          Import[
-         "https://raw.github.com/oscar6echo/Poker-Probabilities/master/Tables/\
+         "https://raw.github.com/oscar6echo/Poker/master/Tables/\
 preFlopHandMatrix.csv"]]; $CellContext`preFlopHandList = ToExpression[
          Import[
-         "https://raw.github.com/oscar6echo/Poker-Probabilities/master/Tables/\
+         "https://raw.github.com/oscar6echo/Poker/master/Tables/\
 preFlopHandList.csv"]]; $CellContext`faceChoice = {
         1 -> 2, 2 -> 3, 3 -> 4, 4 -> 5, 5 -> 6, 6 -> 7, 7 -> 8, 8 -> 9, 
          9 -> $CellContext`T, 10 -> $CellContext`J, 11 -> $CellContext`Q, 12 -> 
@@ -182,10 +182,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[1301, 31, 5781, 126, 930, InheritFromParent]
+Cell[1301, 31, 5753, 126, 930, InheritFromParent]
 }
 ]
 *)
 
 (* End of internal cache information *)
-(* NotebookSignature bxDZyuRj9uGtiBw8IxC4D#GN *)
+(* NotebookSignature 7upfbFI2xouykCgdQtQi7PC7 *)

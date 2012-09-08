@@ -20,10 +20,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       835,         17]
-NotebookDataLength[    451970,       7743]
-NotebookOptionsPosition[    452170,       7730]
-NotebookOutlinePosition[    452733,       7755]
-CellTagsIndexPosition[    452690,       7752]
+NotebookDataLength[    451934,       7742]
+NotebookOptionsPosition[    452134,       7729]
+NotebookOutlinePosition[    452697,       7754]
+CellTagsIndexPosition[    452654,       7751]
 WindowTitle->All Players Equity Calculator Assuming Knowledge of all PreFlop \
 Hands
 WindowFrame->Normal*)
@@ -44,11 +44,11 @@ Cell[BoxData[
          Bold]]], Manipulate`Dump`ThisIsNotAControl}, {{
        Hold[$CellContext`np$$], 6, "Number of Players"}, 2, 10, 1}}, 
     Typeset`size$$ = Automatic, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = False, $CellContext`np$1301$$ = 0}, 
+    Typeset`skipInitDone$$ = False, $CellContext`np$1898$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {$CellContext`np$$ = 6}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`np$$, $CellContext`np$1301$$, 0]}, 
+        Hold[$CellContext`np$$, $CellContext`np$1898$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -379,15 +379,14 @@ Rh7dPHLkAfyoQOw=
           ToExpression[
            Flatten[
             Import[
-            "https://raw.github.com/oscar6echo/Poker-Probabilities/master/\
-Tables/sparseRulesRankFlushSeven.csv"]]]]]; $CellContext`rankFaceSeven = 
-       Normal[
+            "https://raw.github.com/oscar6echo/Poker/master/Tables/\
+sparseRulesRankFlushSeven.csv"]]]]]; $CellContext`rankFaceSeven = Normal[
          SparseArray[
           ToExpression[
            Flatten[
             Import[
-            "https://raw.github.com/oscar6echo/Poker-Probabilities/master/\
-Tables/sparseRulesRankFaceSeven.csv"]]]]]; $CellContext`link = Install[
+            "https://raw.github.com/oscar6echo/Poker/master/Tables/\
+sparseRulesRankFaceSeven.csv"]]]]]; $CellContext`link = Install[
          FileNameJoin[{$InitialDirectory, "MathLinkExec", 
            "equityPreFlopHand"}]]; $CellContext`deckCardImagePad = {
          Image[CompressedData["
@@ -7754,10 +7753,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[1320, 32, 450846, 7696, 1192, InheritFromParent]
+Cell[1320, 32, 450810, 7695, 1192, InheritFromParent]
 }
 ]
 *)
 
 (* End of internal cache information *)
-(* NotebookSignature DvpZd2S3CajSBBK4eYuUZyjz *)
+(* NotebookSignature DwTenOmY0bojNCwu8speebi8 *)

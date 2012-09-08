@@ -20,10 +20,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       835,         17]
-NotebookDataLength[      6041,        139]
-NotebookOptionsPosition[      6246,        126]
-NotebookOutlinePosition[      6808,        151]
-CellTagsIndexPosition[      6765,        148]
+NotebookDataLength[      6027,        139]
+NotebookOptionsPosition[      6232,        126]
+NotebookOutlinePosition[      6794,        151]
+CellTagsIndexPosition[      6751,        148]
 WindowTitle->Monte Carlo Generated PreFlop Hand Equity Tables - 3D \
 Representation
 WindowFrame->Normal*)
@@ -87,8 +87,8 @@ equityPreFlopMonteCarloLast], 2]}, Center], "Specifications" :> {},
          "22o"}; $CellContext`equityPreFlopMonteCarloLast = Part[
          ToExpression[
           Import[
-          "https://raw.github.com/oscar6echo/Poker-Probabilities/master/\
-Tables/equityPreFlopMonteCarloTableLast.csv"]], 
+          "https://raw.github.com/oscar6echo/Poker/master/Tables/\
+equityPreFlopMonteCarloTableLast.csv"]], 
          2]; $CellContext`equityPreFlopMonteCarloLastDisplay[
          Pattern[$CellContext`eqtyTable, 
           Blank[]]] := 
@@ -150,10 +150,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[1319, 32, 4923, 92, 1130, InheritFromParent]
+Cell[1319, 32, 4909, 92, 1130, InheritFromParent]
 }
 ]
 *)
 
 (* End of internal cache information *)
-(* NotebookSignature yvDBNtEYafPePDwVru@h9oLy *)
+(* NotebookSignature Aup0qnLdxyjdRAwHVf2GfrsB *)

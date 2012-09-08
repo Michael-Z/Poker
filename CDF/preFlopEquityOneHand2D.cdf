@@ -20,10 +20,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       835,         17]
-NotebookDataLength[     11673,        260]
-NotebookOptionsPosition[     11894,        248]
-NotebookOutlinePosition[     12439,        272]
-CellTagsIndexPosition[     12396,        269]
+NotebookDataLength[     11658,        260]
+NotebookOptionsPosition[     11879,        248]
+NotebookOutlinePosition[     12424,        272]
+CellTagsIndexPosition[     12381,        269]
 WindowTitle->Monte Carlo Generated PreFlop Hand Equity & Hand Rank
 WindowFrame->Normal*)
 
@@ -54,13 +54,14 @@ Cell[BoxData[
        If[$CellContext`f1$$ != $CellContext`f2$$, $CellContext`suitChoice, \
 $CellContext`suitNoChoice]]}}, Typeset`size$$ = Automatic, Typeset`update$$ = 
     0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
-    False, $CellContext`f1$1011$$ = False, $CellContext`f2$1012$$ = False}, 
+    False, $CellContext`f1$42297$$ = False, $CellContext`f2$42298$$ = False}, 
+    
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`f1$$ = 7, $CellContext`f2$$ = 
         6, $CellContext`t$$ = "o"}, "ControllerVariables" :> {
-        Hold[$CellContext`f1$$, $CellContext`f1$1011$$, False], 
-        Hold[$CellContext`f2$$, $CellContext`f2$1012$$, False]}, 
+        Hold[$CellContext`f1$$, $CellContext`f1$42297$$, False], 
+        Hold[$CellContext`f2$$, $CellContext`f2$42298$$, False]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -189,9 +190,8 @@ $CellContext`suitNoChoice]]}},
        Part[
          ToExpression[
           Import[
-          "https://raw.github.com/oscar6echo/Poker-Probabilities/master/\
-Tables/equityPreFlopMonteCarloTableLast.csv"]], 
-         2]; $CellContext`toolTipFunction[
+          "https://raw.github.com/oscar6echo/Poker/master/Tables/\
+equityPreFlopMonteCarloTableLast.csv"]], 2]; $CellContext`toolTipFunction[
          Pattern[$CellContext`k, 
           Blank[]], 
          Pattern[$CellContext`vector, 
@@ -271,10 +271,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[1302, 31, 10588, 215, 892, InheritFromParent]
+Cell[1302, 31, 10573, 215, 892, InheritFromParent]
 }
 ]
 *)
 
 (* End of internal cache information *)
-(* NotebookSignature QwprcVQy03IyvCK3M87qFsYH *)
+(* NotebookSignature rwDMHtc6M5d3VC1TSPJLEQvS *)

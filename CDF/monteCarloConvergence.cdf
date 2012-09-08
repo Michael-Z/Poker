@@ -20,10 +20,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       835,         17]
-NotebookDataLength[      7382,        174]
-NotebookOptionsPosition[      7613,        162]
-NotebookOutlinePosition[      8149,        186]
-CellTagsIndexPosition[      8106,        183]
+NotebookDataLength[      7374,        174]
+NotebookOptionsPosition[      7605,        162]
+NotebookOutlinePosition[      8141,        186]
+CellTagsIndexPosition[      8098,        183]
 WindowTitle->Pre Flop Hand Equity Monte Carlo Convergence
 WindowFrame->Normal*)
 
@@ -55,16 +55,16 @@ Cell[BoxData[
 $CellContext`suitNoChoice]]}, {{
        Hold[$CellContext`np$$], 5, "Number of Opponents"}, 1, 9, 1}}, 
     Typeset`size$$ = Automatic, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = False, $CellContext`f1$2584$$ = 
-    False, $CellContext`f2$2585$$ = False, $CellContext`np$2586$$ = 0}, 
+    Typeset`skipInitDone$$ = False, $CellContext`f1$22895$$ = 
+    False, $CellContext`f2$22896$$ = False, $CellContext`np$22897$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`f1$$ = 7, $CellContext`f2$$ = 
         6, $CellContext`np$$ = 5, $CellContext`t$$ = "o"}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`f1$$, $CellContext`f1$2584$$, False], 
-        Hold[$CellContext`f2$$, $CellContext`f2$2585$$, False], 
-        Hold[$CellContext`np$$, $CellContext`np$2586$$, 0]}, 
+        Hold[$CellContext`f1$$, $CellContext`f1$22895$$, False], 
+        Hold[$CellContext`f2$$, $CellContext`f2$22896$$, False], 
+        Hold[$CellContext`np$$, $CellContext`np$22897$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -139,8 +139,8 @@ $CellContext`suitNoChoice]]}, {{$CellContext`np$$, 5, "Number of Opponents"},
          K -> 12, $CellContext`A -> 13}; $CellContext`suitChoice = {
         "s" -> "suited", "o" -> "off-suited"}; $CellContext`suitNoChoice = {
         "o" -> "off-suited"}; $CellContext`preFlopHandList = 
-       Import["https://raw.github.com/oscar6echo/Poker-Probabilities/master/\
-Tables/preFlopHandList.csv"]; $CellContext`equityPreFlopMonteCarloAll = 
+       Import["https://raw.github.com/oscar6echo/Poker/master/Tables/\
+preFlopHandList.csv"]; $CellContext`equityPreFlopMonteCarloAll = 
        Fold[Partition, 
          Flatten[
           Import[
@@ -185,10 +185,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[1293, 31, 6316, 129, 847, InheritFromParent]
+Cell[1293, 31, 6308, 129, 847, InheritFromParent]
 }
 ]
 *)
 
 (* End of internal cache information *)
-(* NotebookSignature 8vDA@lGOeIVahD1fi6k8ZuRj *)
+(* NotebookSignature JwTXhx6MRfd61BKYn8ja#uvP *)

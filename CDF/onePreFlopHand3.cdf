@@ -20,10 +20,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       835,         17]
-NotebookDataLength[     20437,        442]
-NotebookOptionsPosition[     20662,        430]
-NotebookOutlinePosition[     21203,        454]
-CellTagsIndexPosition[     21160,        451]
+NotebookDataLength[     20401,        442]
+NotebookOptionsPosition[     20626,        430]
+NotebookOutlinePosition[     21167,        454]
+CellTagsIndexPosition[     21124,        451]
 WindowTitle->Distribution of 5-card Hands For One PreFlop Hand
 WindowFrame->Normal*)
 
@@ -61,17 +61,17 @@ $CellContext`suitNoChoice]]}, {
        Hold[$CellContext`nh$$], 5, "Number of Hand Ranks displayed"}, 1, 30, 
       1}}, Typeset`size$$ = Automatic, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = 
-    False, $CellContext`f1$1152$$ = False, $CellContext`f2$1153$$ = 
-    False, $CellContext`hmin$1154$$ = 0, $CellContext`nh$1155$$ = 0}, 
+    False, $CellContext`f1$962$$ = False, $CellContext`f2$963$$ = 
+    False, $CellContext`hmin$964$$ = 0, $CellContext`nh$965$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`f1$$ = 7, $CellContext`f2$$ = 
         6, $CellContext`hmin$$ = 3501, $CellContext`nh$$ = 
         5, $CellContext`t$$ = "o"}, "ControllerVariables" :> {
-        Hold[$CellContext`f1$$, $CellContext`f1$1152$$, False], 
-        Hold[$CellContext`f2$$, $CellContext`f2$1153$$, False], 
-        Hold[$CellContext`hmin$$, $CellContext`hmin$1154$$, 0], 
-        Hold[$CellContext`nh$$, $CellContext`nh$1155$$, 0]}, 
+        Hold[$CellContext`f1$$, $CellContext`f1$962$$, False], 
+        Hold[$CellContext`f2$$, $CellContext`f2$963$$, False], 
+        Hold[$CellContext`hmin$$, $CellContext`hmin$964$$, 0], 
+        Hold[$CellContext`nh$$, $CellContext`nh$965$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -160,10 +160,10 @@ $CellContext`suitNoChoice]], ControlType -> SetterBar}, Delimiter,
         5863, 7140, 7296, 7452, 7462}; $CellContext`handRankLimit = {0, 1277, 
         4137, 4995, 5853, 5863, 7140, 7296, 7452, 
         7462}; $CellContext`allPreFlopHandRank = 
-       Import["https://raw.github.com/oscar6echo/Poker-Probabilities/master/\
-Tables/allPreFlopHandRank.csv"]; $CellContext`handFaceFiveSorted = 
-       Import["https://raw.github.com/oscar6echo/Poker-Probabilities/master/\
-Tables/handFaceFive.csv"]; $CellContext`tableTypeHand[
+       Import["https://raw.github.com/oscar6echo/Poker/master/Tables/\
+allPreFlopHandRank.csv"]; $CellContext`handFaceFiveSorted = 
+       Import["https://raw.github.com/oscar6echo/Poker/master/Tables/\
+handFaceFive.csv"]; $CellContext`tableTypeHand[
          Pattern[$CellContext`handRankBin, 
           Blank[]]] := 
        Module[{$CellContext`nbTypeHand, $CellContext`perCentTypeHand}, \
@@ -453,10 +453,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[1298, 31, 19360, 397, 526, InheritFromParent]
+Cell[1298, 31, 19324, 397, 526, InheritFromParent]
 }
 ]
 *)
 
 (* End of internal cache information *)
-(* NotebookSignature 2x08pBC47CgEjD1yUfn48ks1 *)
+(* NotebookSignature Uwp2rotgPNla#CwIZp9CnfWl *)

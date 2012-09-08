@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[    237829,       4298]
-NotebookOptionsPosition[    236847,       4262]
-NotebookOutlinePosition[    237279,       4280]
-CellTagsIndexPosition[    237236,       4277]
+NotebookDataLength[    237869,       4299]
+NotebookOptionsPosition[    236887,       4263]
+NotebookOutlinePosition[    237319,       4281]
+CellTagsIndexPosition[    237276,       4278]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -276,8 +276,8 @@ Cell[BoxData[
        RowBox[{"handFaceFive", "=", 
         RowBox[{
         "Import", "[", 
-         "\"\<https://raw.github.com/oscar6echo/Poker-Probabilities/master/\
-Tables/handFaceFive.csv\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
+         "\"\<https://raw.github.com/oscar6echo/Poker/master/Tables/\
+handFaceFive.csv\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
        RowBox[{"deckCardImage", "=", 
         RowBox[{"{", 
          RowBox[{
@@ -4009,7 +4009,8 @@ IOCMttj/A3B/HBc=
    3.5558653210508347`*^9}, {3.5558654907862864`*^9, 3.555865491481812*^9}, {
    3.555865609916526*^9, 3.5558656175724382`*^9}, {3.555866320876107*^9, 
    3.555866326289734*^9}, {3.555950408377302*^9, 3.555950410262772*^9}, {
-   3.556031929127962*^9, 3.556031931859064*^9}}]
+   3.556031929127962*^9, 3.556031931859064*^9}, {3.5561299865723257`*^9, 
+   3.5561299866970997`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -4281,24 +4282,24 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[579, 22, 302, 5, 70, "Subsection"],
-Cell[884, 29, 225458, 3982, 70, "Input"]
+Cell[884, 29, 225498, 3983, 70, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[226379, 4016, 433, 7, 70, "Subsection"],
-Cell[226815, 4025, 921, 25, 70, "Input"],
-Cell[227739, 4052, 1795, 32, 70, "Input"]
+Cell[226419, 4017, 433, 7, 70, "Subsection"],
+Cell[226855, 4026, 921, 25, 70, "Input"],
+Cell[227779, 4053, 1795, 32, 70, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[229571, 4089, 569, 8, 70, "Subsection"],
-Cell[230143, 4099, 652, 14, 70, "Input"],
-Cell[230798, 4115, 163, 4, 70, "Input"],
-Cell[230964, 4121, 2720, 68, 70, "Input"]
+Cell[229611, 4090, 569, 8, 70, "Subsection"],
+Cell[230183, 4100, 652, 14, 70, "Input"],
+Cell[230838, 4116, 163, 4, 70, "Input"],
+Cell[231004, 4122, 2720, 68, 70, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[233721, 4194, 450, 7, 70, "Subsection"],
-Cell[234174, 4203, 1595, 35, 70, "Input"],
-Cell[235772, 4240, 573, 10, 70, "Input"],
-Cell[236348, 4252, 483, 7, 70, "Input"]
+Cell[233761, 4195, 450, 7, 70, "Subsection"],
+Cell[234214, 4204, 1595, 35, 70, "Input"],
+Cell[235812, 4241, 573, 10, 70, "Input"],
+Cell[236388, 4253, 483, 7, 70, "Input"]
 }, Open  ]]
 }
 ]

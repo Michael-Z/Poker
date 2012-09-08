@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     52463,       1204]
-NotebookOptionsPosition[     51733,       1175]
-NotebookOutlinePosition[     52167,       1193]
-CellTagsIndexPosition[     52124,       1190]
+NotebookDataLength[     55808,       1266]
+NotebookOptionsPosition[     55077,       1237]
+NotebookOutlinePosition[     55511,       1255]
+CellTagsIndexPosition[     55468,       1252]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -124,14 +124,42 @@ PreFlop Hand - The Raw Data\>\"", ",", "Larger", ",", "Bold"}], "]"}]}], ",",
      RowBox[{
       RowBox[{"{", 
        RowBox[{"f1", ",", "7", ",", "\"\<First face\>\""}], "}"}], ",", 
-      "faceChoice", ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"1", "\[Rule]", "2"}], ",", 
+        RowBox[{"2", "\[Rule]", "3"}], ",", 
+        RowBox[{"3", "\[Rule]", "4"}], ",", 
+        RowBox[{"4", "\[Rule]", "5"}], ",", 
+        RowBox[{"5", "\[Rule]", "6"}], ",", 
+        RowBox[{"6", "\[Rule]", "7"}], ",", 
+        RowBox[{"7", "\[Rule]", "8"}], ",", 
+        RowBox[{"8", "\[Rule]", "9"}], ",", 
+        RowBox[{"9", "\[Rule]", "T"}], ",", 
+        RowBox[{"10", "\[Rule]", "J"}], ",", 
+        RowBox[{"11", "\[Rule]", "Q"}], ",", 
+        RowBox[{"12", "\[Rule]", "K"}], ",", 
+        RowBox[{"13", "\[Rule]", "A"}]}], "}"}], ",", 
       RowBox[{"ControlType", "\[Rule]", "SetterBar"}]}], "}"}], ",", 
     "\[IndentingNewLine]", 
     RowBox[{"{", 
      RowBox[{
       RowBox[{"{", 
        RowBox[{"f2", ",", "6", ",", "\"\<Second face\>\""}], "}"}], ",", 
-      "faceChoice", ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"1", "\[Rule]", "2"}], ",", 
+        RowBox[{"2", "\[Rule]", "3"}], ",", 
+        RowBox[{"3", "\[Rule]", "4"}], ",", 
+        RowBox[{"4", "\[Rule]", "5"}], ",", 
+        RowBox[{"5", "\[Rule]", "6"}], ",", 
+        RowBox[{"6", "\[Rule]", "7"}], ",", 
+        RowBox[{"7", "\[Rule]", "8"}], ",", 
+        RowBox[{"8", "\[Rule]", "9"}], ",", 
+        RowBox[{"9", "\[Rule]", "T"}], ",", 
+        RowBox[{"10", "\[Rule]", "J"}], ",", 
+        RowBox[{"11", "\[Rule]", "Q"}], ",", 
+        RowBox[{"12", "\[Rule]", "K"}], ",", 
+        RowBox[{"13", "\[Rule]", "A"}]}], "}"}], ",", 
       RowBox[{"ControlType", "\[Rule]", "SetterBar"}]}], "}"}], ",", 
     "\[IndentingNewLine]", 
     RowBox[{"{", 
@@ -153,14 +181,36 @@ PreFlop Hand - The Raw Data\>\"", ",", "Larger", ",", "Bold"}], "]"}]}], ",",
      RowBox[{
       RowBox[{"{", 
        RowBox[{"hmin", ",", "1", ",", "\"\<Lowest Hand Type displayed\>\""}], 
-       "}"}], ",", "nameHandChoice", ",", 
+       "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"1", "\[Rule]", "\"\<High Card\>\""}], ",", 
+        RowBox[{"2", "\[Rule]", "\"\<One Pair\>\""}], ",", 
+        RowBox[{"3", "\[Rule]", "\"\<Two Pairs\>\""}], ",", 
+        RowBox[{"4", "\[Rule]", "\"\<Three of a kind\>\""}], ",", 
+        RowBox[{"5", "\[Rule]", "\"\<Straight\>\""}], ",", 
+        RowBox[{"6", "\[Rule]", "\"\<Flush\>\""}], ",", 
+        RowBox[{"7", "\[Rule]", "\"\<Full House\>\""}], ",", 
+        RowBox[{"8", "\[Rule]", "\"\<Four of a kind\>\""}], ",", 
+        RowBox[{"9", "\[Rule]", "\"\<Straight Flush\>\""}]}], "}"}], ",", 
       RowBox[{"ControlType", "\[Rule]", "SetterBar"}]}], "}"}], ",", 
     "\[IndentingNewLine]", 
     RowBox[{"{", 
      RowBox[{
       RowBox[{"{", 
        RowBox[{"hmax", ",", "9", ",", "\"\<Highest Hand Type displayed\>\""}],
-        "}"}], ",", "nameHandChoice", ",", 
+        "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"1", "\[Rule]", "\"\<High Card\>\""}], ",", 
+        RowBox[{"2", "\[Rule]", "\"\<One Pair\>\""}], ",", 
+        RowBox[{"3", "\[Rule]", "\"\<Two Pairs\>\""}], ",", 
+        RowBox[{"4", "\[Rule]", "\"\<Three of a kind\>\""}], ",", 
+        RowBox[{"5", "\[Rule]", "\"\<Straight\>\""}], ",", 
+        RowBox[{"6", "\[Rule]", "\"\<Flush\>\""}], ",", 
+        RowBox[{"7", "\[Rule]", "\"\<Full House\>\""}], ",", 
+        RowBox[{"8", "\[Rule]", "\"\<Four of a kind\>\""}], ",", 
+        RowBox[{"9", "\[Rule]", "\"\<Straight Flush\>\""}]}], "}"}], ",", 
       RowBox[{"ControlType", "\[Rule]", "SetterBar"}]}], "}"}], ",", 
     "\[IndentingNewLine]", 
     RowBox[{"{", 
@@ -205,6 +255,143 @@ PreFlop Hand - The Raw Data\>\"", ",", "Larger", ",", "Bold"}], "]"}]}], ",",
     RowBox[{"Initialization", "\[RuleDelayed]", 
      RowBox[{"(", "\[IndentingNewLine]", 
       RowBox[{
+       RowBox[{"face", "=", 
+        RowBox[{"{", 
+         RowBox[{
+         "2", ",", "3", ",", "4", ",", "5", ",", "6", ",", "7", ",", "8", ",",
+           "9", ",", "T", ",", "J", ",", "Q", ",", "K", ",", "A"}], "}"}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"faceChoice", "=", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"1", "\[Rule]", "2"}], ",", 
+          RowBox[{"2", "\[Rule]", "3"}], ",", 
+          RowBox[{"3", "\[Rule]", "4"}], ",", 
+          RowBox[{"4", "\[Rule]", "5"}], ",", 
+          RowBox[{"5", "\[Rule]", "6"}], ",", 
+          RowBox[{"6", "\[Rule]", "7"}], ",", 
+          RowBox[{"7", "\[Rule]", "8"}], ",", 
+          RowBox[{"8", "\[Rule]", "9"}], ",", 
+          RowBox[{"9", "\[Rule]", "T"}], ",", 
+          RowBox[{"10", "\[Rule]", "J"}], ",", 
+          RowBox[{"11", "\[Rule]", "Q"}], ",", 
+          RowBox[{"12", "\[Rule]", "K"}], ",", 
+          RowBox[{"13", "\[Rule]", "A"}]}], "}"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"faceChoiceRev", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"face", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], "->", "i"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", 
+            RowBox[{"Length", "[", "face", "]"}]}], "}"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"suitChoice", "=", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"\"\<s\>\"", "\[Rule]", "\"\<suited\>\""}], ",", 
+          RowBox[{"\"\<o\>\"", "\[Rule]", "\"\<off-suited\>\""}]}], "}"}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"suitNoChoice", "=", 
+        RowBox[{"{", 
+         RowBox[{"\"\<o\>\"", "\[Rule]", "\"\<off-suited\>\""}], "}"}]}], ";",
+        "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"allPreFlopHand", " ", "=", " ", 
+        RowBox[{"Flatten", "[", 
+         RowBox[{
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"If", "[", 
+             RowBox[{
+              RowBox[{"f1", ">", "f2"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"deckCardNo", "[", 
+                 RowBox[{"f1", ",", "4"}], "]"}], ",", 
+                RowBox[{"deckCardNo", "[", 
+                 RowBox[{"f2", ",", "4"}], "]"}]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"deckCardNo", "[", 
+                 RowBox[{"f1", ",", "4"}], "]"}], ",", 
+                RowBox[{"deckCardNo", "[", 
+                 RowBox[{"f2", ",", "3"}], "]"}]}], "}"}]}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"f1", ",", "13", ",", "1", ",", 
+              RowBox[{"-", "1"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"f2", ",", "13", ",", "1", ",", 
+              RowBox[{"-", "1"}]}], "}"}]}], "]"}], ",", "1"}], "]"}]}], ";", 
+       
+       RowBox[{"nameHand", "=", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<Total\>\"", ",", "\"\<High Card\>\"", ",", "\"\<One Pair\>\"", 
+          ",", "\"\<Two Pairs\>\"", ",", "\"\<Three of a kind\>\"", ",", 
+          "\"\<Straight\>\"", ",", "\"\<Flush\>\"", ",", "\"\<Full House\>\"",
+           ",", "\"\<Four of a kind\>\"", ",", "\"\<Straight Flush\>\""}], 
+         "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"nameHandChoice", "=", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"1", "\[Rule]", "\"\<High Card\>\""}], ",", 
+          RowBox[{"2", "\[Rule]", "\"\<One Pair\>\""}], ",", 
+          RowBox[{"3", "\[Rule]", "\"\<Two Pairs\>\""}], ",", 
+          RowBox[{"4", "\[Rule]", "\"\<Three of a kind\>\""}], ",", 
+          RowBox[{"5", "\[Rule]", "\"\<Straight\>\""}], ",", 
+          RowBox[{"6", "\[Rule]", "\"\<Flush\>\""}], ",", 
+          RowBox[{"7", "\[Rule]", "\"\<Full House\>\""}], ",", 
+          RowBox[{"8", "\[Rule]", "\"\<Four of a kind\>\""}], ",", 
+          RowBox[{"9", "\[Rule]", "\"\<Straight Flush\>\""}]}], "}"}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"nbDistinctHand", "=", 
+        RowBox[{"{", 
+         RowBox[{
+         "7462", ",", "1277", ",", "2860", ",", "858", ",", "858", ",", "10", 
+          ",", "1277", ",", "156", ",", "156", ",", "10"}], "}"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"cumulUpNbDistinctHand", "=", 
+        RowBox[{"{", 
+         RowBox[{
+         "1277", ",", "4137", ",", "4995", ",", "5853", ",", "5863", ",", 
+          "7140", ",", "7296", ",", "7452", ",", "7462"}], "}"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"handRankLimit", "=", 
+        RowBox[{"{", 
+         RowBox[{
+         "0", ",", "1277", ",", "4137", ",", "4995", ",", "5853", ",", "5863",
+           ",", "7140", ",", "7296", ",", "7452", ",", "7462"}], "}"}]}], ";",
+        "\[IndentingNewLine]", 
+       RowBox[{"allPreFlopHandRank", "=", 
+        RowBox[{
+        "Import", "[", 
+         "\"\<https://raw.github.com/oscar6echo/Poker/master/Tables/\
+allPreFlopHandRank.csv\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"handFaceFiveSorted", "=", 
+        RowBox[{
+        "Import", "[", 
+         "\"\<https://raw.github.com/oscar6echo/Poker/master/Tables/\
+handFaceFive.csv\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"faceEq", "=", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"1", "\[Rule]", "2"}], ",", 
+          RowBox[{"2", "\[Rule]", "3"}], ",", 
+          RowBox[{"3", "\[Rule]", "4"}], ",", 
+          RowBox[{"4", "\[Rule]", "5"}], ",", 
+          RowBox[{"5", "\[Rule]", "6"}], ",", 
+          RowBox[{"6", "\[Rule]", "7"}], ",", 
+          RowBox[{"7", "\[Rule]", "8"}], ",", 
+          RowBox[{"8", "\[Rule]", "9"}], ",", 
+          RowBox[{"9", "\[Rule]", "T"}], ",", 
+          RowBox[{"10", "\[Rule]", "J"}], ",", 
+          RowBox[{"11", "\[Rule]", "Q"}], ",", 
+          RowBox[{"12", "\[Rule]", "K"}], ",", 
+          RowBox[{"13", "\[Rule]", "A"}]}], "}"}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
        RowBox[{
         RowBox[{"tableTypeHand", "[", "handRankBin_", "]"}], ":=", 
         RowBox[{"Module", "[", 
@@ -761,48 +948,7 @@ PreFlop Hand - The Raw Data\>\"", ",", "Larger", ",", "Bold"}], "]"}]}], ",",
                    "\"\<Hand Faces\>\"", ",", "\"\<Hand Type\>\""}], 
                   "}"}]}]}], "}"}]}]}], "]"}]}]}], "\[IndentingNewLine]", 
          "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-       RowBox[{"faceChoice", "=", 
-        RowBox[{"Table", "[", 
-         RowBox[{
-          RowBox[{"i", "\[Rule]", 
-           RowBox[{"face", "[", 
-            RowBox[{"[", "i", "]"}], "]"}]}], ",", 
-          RowBox[{"{", 
-           RowBox[{"i", ",", 
-            RowBox[{"Length", "[", "face", "]"}]}], "}"}]}], "]"}]}], ";", 
        "\[IndentingNewLine]", 
-       RowBox[{"faceChoiceRev", "=", 
-        RowBox[{"Table", "[", 
-         RowBox[{
-          RowBox[{
-           RowBox[{"face", "[", 
-            RowBox[{"[", "i", "]"}], "]"}], "->", "i"}], ",", 
-          RowBox[{"{", 
-           RowBox[{"i", ",", 
-            RowBox[{"Length", "[", "face", "]"}]}], "}"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"suitChoice", "=", 
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"\"\<s\>\"", "\[Rule]", "\"\<suited\>\""}], ",", 
-          RowBox[{"\"\<o\>\"", "\[Rule]", "\"\<off-suited\>\""}]}], "}"}]}], 
-       ";", "\[IndentingNewLine]", 
-       RowBox[{"suitNoChoice", "=", 
-        RowBox[{"{", 
-         RowBox[{"\"\<o\>\"", "\[Rule]", "\"\<off-suited\>\""}], "}"}]}], ";",
-        "\[IndentingNewLine]", 
-       RowBox[{"nameHandChoice", "=", 
-        RowBox[{"Table", "[", 
-         RowBox[{
-          RowBox[{"i", "->", 
-           RowBox[{
-            RowBox[{"nameHand", "[", 
-             RowBox[{"[", 
-              RowBox[{"2", ";;"}], "]"}], "]"}], "[", 
-            RowBox[{"[", "i", "]"}], "]"}]}], ",", 
-          RowBox[{"{", 
-           RowBox[{"i", ",", "9"}], "}"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", "\[IndentingNewLine]", 
        RowBox[{
         RowBox[{"convert", "[", "pfh_", "]"}], ":=", 
         RowBox[{"Module", "[", 
@@ -864,12 +1010,6 @@ PreFlop Hand - The Raw Data\>\"", ",", "Larger", ",", "Bold"}], "]"}]}], ",",
              RowBox[{"Position", "[", 
               RowBox[{"allPreFlopHand", ",", "pfh1"}], "]"}]}]}]}]}], 
          "\[IndentingNewLine]", "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"face", "=", 
-        RowBox[{"{", 
-         RowBox[{
-         "2", ",", "3", ",", "4", ",", "5", ",", "6", ",", "7", ",", "8", ",",
-           "9", ",", "T", ",", "J", ",", "Q", ",", "K", ",", "A"}], "}"}]}], 
-       ";", "\[IndentingNewLine]", 
        RowBox[{
         RowBox[{"deckCardNo", "[", 
          RowBox[{"deckCardFace_", ",", " ", "deckCardSuit_"}], "]"}], ":=", 
@@ -878,89 +1018,9 @@ PreFlop Hand - The Raw Data\>\"", ",", "Larger", ",", "Bold"}], "]"}]}], ",",
           RowBox[{"(", 
            RowBox[{"deckCardFace", "-", "1"}], ")"}]}], "+", 
          RowBox[{"(", 
-          RowBox[{"deckCardSuit", "-", "1"}], ")"}]}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"allPreFlopHand", " ", "=", " ", 
-        RowBox[{"Flatten", "[", 
-         RowBox[{
-          RowBox[{"Table", "[", 
-           RowBox[{
-            RowBox[{"If", "[", 
-             RowBox[{
-              RowBox[{"f1", ">", "f2"}], ",", 
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{"deckCardNo", "[", 
-                 RowBox[{"f1", ",", "4"}], "]"}], ",", 
-                RowBox[{"deckCardNo", "[", 
-                 RowBox[{"f2", ",", "4"}], "]"}]}], "}"}], ",", 
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{"deckCardNo", "[", 
-                 RowBox[{"f1", ",", "4"}], "]"}], ",", 
-                RowBox[{"deckCardNo", "[", 
-                 RowBox[{"f2", ",", "3"}], "]"}]}], "}"}]}], "]"}], ",", 
-            RowBox[{"{", 
-             RowBox[{"f1", ",", "13", ",", "1", ",", 
-              RowBox[{"-", "1"}]}], "}"}], ",", 
-            RowBox[{"{", 
-             RowBox[{"f2", ",", "13", ",", "1", ",", 
-              RowBox[{"-", "1"}]}], "}"}]}], "]"}], ",", "1"}], "]"}]}], ";", 
-       
-       RowBox[{"nameHand", "=", 
-        RowBox[{"{", 
-         RowBox[{
-         "\"\<Total\>\"", ",", "\"\<High Card\>\"", ",", "\"\<One Pair\>\"", 
-          ",", "\"\<Two Pairs\>\"", ",", "\"\<Three of a kind\>\"", ",", 
-          "\"\<Straight\>\"", ",", "\"\<Flush\>\"", ",", "\"\<Full House\>\"",
-           ",", "\"\<Four of a kind\>\"", ",", "\"\<Straight Flush\>\""}], 
-         "}"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"nbDistinctHand", "=", 
-        RowBox[{"{", 
-         RowBox[{
-         "7462", ",", "1277", ",", "2860", ",", "858", ",", "858", ",", "10", 
-          ",", "1277", ",", "156", ",", "156", ",", "10"}], "}"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"cumulUpNbDistinctHand", "=", 
-        RowBox[{"{", 
-         RowBox[{
-         "1277", ",", "4137", ",", "4995", ",", "5853", ",", "5863", ",", 
-          "7140", ",", "7296", ",", "7452", ",", "7462"}], "}"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"handRankLimit", "=", 
-        RowBox[{"{", 
-         RowBox[{
-         "0", ",", "1277", ",", "4137", ",", "4995", ",", "5853", ",", "5863",
-           ",", "7140", ",", "7296", ",", "7452", ",", "7462"}], "}"}]}], ";",
-        "\[IndentingNewLine]", 
-       RowBox[{"allPreFlopHandRank", "=", 
-        RowBox[{
-        "Import", "[", 
-         "\"\<https://raw.github.com/oscar6echo/Poker-Probabilities/master/\
-Tables/allPreFlopHandRank.csv\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"handFaceFiveSorted", "=", 
-        RowBox[{
-        "Import", "[", 
-         "\"\<https://raw.github.com/oscar6echo/Poker-Probabilities/master/\
-Tables/handFaceFive.csv\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"faceEq", "=", 
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"1", "\[Rule]", "2"}], ",", 
-          RowBox[{"2", "\[Rule]", "3"}], ",", 
-          RowBox[{"3", "\[Rule]", "4"}], ",", 
-          RowBox[{"4", "\[Rule]", "5"}], ",", 
-          RowBox[{"5", "\[Rule]", "6"}], ",", 
-          RowBox[{"6", "\[Rule]", "7"}], ",", 
-          RowBox[{"7", "\[Rule]", "8"}], ",", 
-          RowBox[{"8", "\[Rule]", "9"}], ",", 
-          RowBox[{"9", "\[Rule]", "T"}], ",", 
-          RowBox[{"10", "\[Rule]", "J"}], ",", 
-          RowBox[{"11", "\[Rule]", "Q"}], ",", 
-          RowBox[{"12", "\[Rule]", "K"}], ",", 
-          RowBox[{"13", "\[Rule]", "A"}]}], "}"}]}], ";"}], 
-      "\[IndentingNewLine]", ")"}]}]}], "\[IndentingNewLine]", 
-   "]"}]}]], "Input",
+          RowBox[{"deckCardSuit", "-", "1"}], ")"}]}]}], ";"}], 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", ")"}]}]}], 
+   "\[IndentingNewLine]", "]"}]}]], "Input",
  CellChangeTimes->{
   3.551367750126402*^9, 3.551367863512809*^9, {3.5513679049456253`*^9, 
    3.551367906823159*^9}, {3.551368309595365*^9, 3.551368336323443*^9}, {
@@ -1003,7 +1063,9 @@ Tables/handFaceFive.csv\>\"", "]"}]}], ";", "\[IndentingNewLine]",
    3.556034549128983*^9}, {3.5560347134427843`*^9, 3.556034727767939*^9}, 
    3.556034982215996*^9, {3.5560352843659563`*^9, 3.556035286442936*^9}, {
    3.556035562339571*^9, 3.5560355669009657`*^9}, 3.556036050813424*^9, 
-   3.556036146596156*^9}]
+   3.556036146596156*^9, {3.556132130975659*^9, 3.556132133330961*^9}, {
+   3.556132230552534*^9, 3.5561323311500807`*^9}, {3.556132549441289*^9, 
+   3.5561325512065907`*^9}, {3.55613260114957*^9, 3.5561326557248774`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1173,7 +1235,7 @@ Cell[BoxData[{
    3.556125306037204*^9, 3.556125311566265*^9}}]
 }, Open  ]]
 },
-WindowSize->{1075, 1163},
+WindowSize->{1419, 1155},
 WindowMargins->{{100, Automatic}, {Automatic, 40}},
 PrivateNotebookOptions->{"FileOutlineCache"->False},
 CellContext->Notebook,
@@ -1194,17 +1256,17 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[579, 22, 302, 5, 70, "Subsection"],
-Cell[884, 29, 43882, 976, 70, "Input"]
+Cell[884, 29, 47226, 1038, 70, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[44803, 1010, 433, 7, 70, "Subsection"],
-Cell[45239, 1019, 1859, 34, 70, "Input"]
+Cell[48147, 1072, 433, 7, 70, "Subsection"],
+Cell[48583, 1081, 1859, 34, 70, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[47135, 1058, 569, 8, 70, "Subsection"],
-Cell[47707, 1068, 1063, 26, 70, "Input"],
-Cell[48773, 1096, 163, 4, 70, "Input"],
-Cell[48939, 1102, 2778, 70, 70, "Input"]
+Cell[50479, 1120, 569, 8, 70, "Subsection"],
+Cell[51051, 1130, 1063, 26, 70, "Input"],
+Cell[52117, 1158, 163, 4, 70, "Input"],
+Cell[52283, 1164, 2778, 70, 70, "Input"]
 }, Open  ]]
 }
 ]

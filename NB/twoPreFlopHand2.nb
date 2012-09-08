@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     22569,        549]
-NotebookOptionsPosition[     21845,        520]
-NotebookOutlinePosition[     22279,        538]
-CellTagsIndexPosition[     22236,        535]
+NotebookDataLength[     22591,        549]
+NotebookOptionsPosition[     21867,        520]
+NotebookOutlinePosition[     22301,        538]
+CellTagsIndexPosition[     22258,        535]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -271,14 +271,14 @@ Cell[BoxData[
         RowBox[{"ToExpression", "[", 
          RowBox[{
          "Import", "[", 
-          "\"\<https://raw.github.com/oscar6echo/Poker-Probabilities/master/\
-Tables/preFlopHandMatrix.csv\>\"", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          "\"\<https://raw.github.com/oscar6echo/Poker/master/Tables/\
+preFlopHandMatrix.csv\>\"", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
        RowBox[{"preFlopHandList", "=", 
         RowBox[{"ToExpression", "[", 
          RowBox[{
          "Import", "[", 
-          "\"\<https://raw.github.com/oscar6echo/Poker-Probabilities/master/\
-Tables/preFlopHandList.csv\>\"", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          "\"\<https://raw.github.com/oscar6echo/Poker/master/Tables/\
+preFlopHandList.csv\>\"", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
        RowBox[{"faceChoice", "=", 
         RowBox[{"{", 
          RowBox[{
@@ -346,7 +346,7 @@ Tables/preFlopHandList.csv\>\"", "]"}], "]"}]}], ";", "\[IndentingNewLine]",
    3.5560443547745247`*^9}, {3.55604438655173*^9, 3.556044387999737*^9}, {
    3.556046275350369*^9, 3.556046323145927*^9}, {3.5560464466839952`*^9, 
    3.5560464555498857`*^9}, 3.556046495590398*^9, {3.556046681860256*^9, 
-   3.556046696289119*^9}}]
+   3.556046696289119*^9}, {3.5561333615394363`*^9, 3.5561333635445766`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -539,17 +539,17 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[579, 22, 302, 5, 70, "Subsection"],
-Cell[884, 29, 13847, 319, 70, "Input"]
+Cell[884, 29, 13869, 319, 70, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[14768, 353, 433, 7, 70, "Subsection"],
-Cell[15204, 362, 1884, 34, 70, "Input"]
+Cell[14790, 353, 433, 7, 70, "Subsection"],
+Cell[15226, 362, 1884, 34, 70, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[17125, 401, 569, 8, 70, "Subsection"],
-Cell[17697, 411, 1063, 26, 70, "Input"],
-Cell[18763, 439, 163, 4, 70, "Input"],
-Cell[18929, 445, 2900, 72, 70, "Input"]
+Cell[17147, 401, 569, 8, 70, "Subsection"],
+Cell[17719, 411, 1063, 26, 70, "Input"],
+Cell[18785, 439, 163, 4, 70, "Input"],
+Cell[18951, 445, 2900, 72, 70, "Input"]
 }, Open  ]]
 }
 ]

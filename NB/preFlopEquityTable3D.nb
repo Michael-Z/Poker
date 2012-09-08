@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     20734,        451]
-NotebookOptionsPosition[     20011,        422]
-NotebookOutlinePosition[     20444,        440]
-CellTagsIndexPosition[     20401,        437]
+NotebookDataLength[     20791,        453]
+NotebookOptionsPosition[     20047,        423]
+NotebookOutlinePosition[     20501,        442]
+CellTagsIndexPosition[     20458,        439]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -133,8 +133,8 @@ Cell[BoxData[
          RowBox[{"ToExpression", "[", 
           RowBox[{
           "Import", "[", 
-           "\"\<https://raw.github.com/oscar6echo/Poker-Probabilities/master/\
-Tables/equityPreFlopMonteCarloTableLast.csv\>\"", "]"}], "]"}], "[", 
+           "\"\<https://raw.github.com/oscar6echo/Poker/master/Tables/\
+equityPreFlopMonteCarloTableLast.csv\>\"", "]"}], "]"}], "[", 
          RowBox[{"[", "2", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
        RowBox[{
         RowBox[{
@@ -245,7 +245,8 @@ Tables/equityPreFlopMonteCarloTableLast.csv\>\"", "]"}], "]"}], "[",
    3.556106055428485*^9}, {3.556106130414617*^9, 3.556106221364991*^9}, {
    3.556106347744195*^9, 3.5561064531004343`*^9}, {3.556106500708166*^9, 
    3.556106501266141*^9}, {3.556106546613605*^9, 3.556106550579493*^9}, {
-   3.5561066057014427`*^9, 3.556106796735084*^9}, 3.5561068339113073`*^9}]
+   3.5561066057014427`*^9, 3.556106796735084*^9}, 3.5561068339113073`*^9, {
+   3.556133796581462*^9, 3.556133796729656*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -420,8 +421,9 @@ Cell[BoxData[{
    3.5561079872731037`*^9, {3.5561243447026176`*^9, 3.556124360397684*^9}}]
 }, Open  ]]
 },
-WindowSize->{1083, 1199},
-WindowMargins->{{79, Automatic}, {Automatic, 36}},
+Evaluator->"Kernel2",
+WindowSize->{925, 1230},
+WindowMargins->{{48, Automatic}, {Automatic, 35}},
 PrivateNotebookOptions->{"FileOutlineCache"->False},
 CellContext->Notebook,
 FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (October 5, \
@@ -441,17 +443,17 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[579, 22, 302, 5, 70, "Subsection"],
-Cell[884, 29, 11724, 218, 70, "Input"]
+Cell[884, 29, 11760, 219, 70, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[12645, 252, 433, 7, 70, "Subsection"],
-Cell[13081, 261, 2044, 36, 70, "Input"]
+Cell[12681, 253, 433, 7, 70, "Subsection"],
+Cell[13117, 262, 2044, 36, 70, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[15162, 302, 569, 8, 70, "Subsection"],
-Cell[15734, 312, 1063, 26, 70, "Input"],
-Cell[16800, 340, 165, 4, 70, "Input"],
-Cell[16968, 346, 3027, 73, 70, "Input"]
+Cell[15198, 303, 569, 8, 70, "Subsection"],
+Cell[15770, 313, 1063, 26, 70, "Input"],
+Cell[16836, 341, 165, 4, 70, "Input"],
+Cell[17004, 347, 3027, 73, 70, "Input"]
 }, Open  ]]
 }
 ]

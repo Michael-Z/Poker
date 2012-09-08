@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     50685,       1165]
-NotebookOptionsPosition[     49957,       1136]
-NotebookOutlinePosition[     50391,       1154]
-CellTagsIndexPosition[     50348,       1151]
+NotebookDataLength[     51969,       1194]
+NotebookOptionsPosition[     51240,       1165]
+NotebookOutlinePosition[     51674,       1183]
+CellTagsIndexPosition[     51631,       1180]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -113,14 +113,42 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", 
        RowBox[{"f1", ",", "7", ",", "\"\<First face\>\""}], "}"}], ",", 
-      "faceChoice", ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"1", "\[Rule]", "2"}], ",", 
+        RowBox[{"2", "\[Rule]", "3"}], ",", 
+        RowBox[{"3", "\[Rule]", "4"}], ",", 
+        RowBox[{"4", "\[Rule]", "5"}], ",", 
+        RowBox[{"5", "\[Rule]", "6"}], ",", 
+        RowBox[{"6", "\[Rule]", "7"}], ",", 
+        RowBox[{"7", "\[Rule]", "8"}], ",", 
+        RowBox[{"8", "\[Rule]", "9"}], ",", 
+        RowBox[{"9", "\[Rule]", "T"}], ",", 
+        RowBox[{"10", "\[Rule]", "J"}], ",", 
+        RowBox[{"11", "\[Rule]", "Q"}], ",", 
+        RowBox[{"12", "\[Rule]", "K"}], ",", 
+        RowBox[{"13", "\[Rule]", "A"}]}], "}"}], ",", 
       RowBox[{"ControlType", "\[Rule]", "SetterBar"}]}], "}"}], ",", 
     "\[IndentingNewLine]", 
     RowBox[{"{", 
      RowBox[{
       RowBox[{"{", 
        RowBox[{"f2", ",", "6", ",", "\"\<Second face\>\""}], "}"}], ",", 
-      "faceChoice", ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"1", "\[Rule]", "2"}], ",", 
+        RowBox[{"2", "\[Rule]", "3"}], ",", 
+        RowBox[{"3", "\[Rule]", "4"}], ",", 
+        RowBox[{"4", "\[Rule]", "5"}], ",", 
+        RowBox[{"5", "\[Rule]", "6"}], ",", 
+        RowBox[{"6", "\[Rule]", "7"}], ",", 
+        RowBox[{"7", "\[Rule]", "8"}], ",", 
+        RowBox[{"8", "\[Rule]", "9"}], ",", 
+        RowBox[{"9", "\[Rule]", "T"}], ",", 
+        RowBox[{"10", "\[Rule]", "J"}], ",", 
+        RowBox[{"11", "\[Rule]", "Q"}], ",", 
+        RowBox[{"12", "\[Rule]", "K"}], ",", 
+        RowBox[{"13", "\[Rule]", "A"}]}], "}"}], ",", 
       RowBox[{"ControlType", "\[Rule]", "SetterBar"}]}], "}"}], ",", 
     "\[IndentingNewLine]", 
     RowBox[{"{", 
@@ -251,13 +279,13 @@ Cell[BoxData[
        RowBox[{"allPreFlopHandRank", "=", 
         RowBox[{
         "Import", "[", 
-         "\"\<https://raw.github.com/oscar6echo/Poker-Probabilities/master/\
-Tables/allPreFlopHandRank.csv\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
+         "\"\<https://raw.github.com/oscar6echo/Poker/master/Tables/\
+allPreFlopHandRank.csv\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
        RowBox[{"handFaceFiveSorted", "=", 
         RowBox[{
         "Import", "[", 
-         "\"\<https://raw.github.com/oscar6echo/Poker-Probabilities/master/\
-Tables/handFaceFive.csv\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
+         "\"\<https://raw.github.com/oscar6echo/Poker/master/Tables/\
+handFaceFive.csv\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
        "\[IndentingNewLine]", 
        RowBox[{
         RowBox[{"tableTypeHand", "[", "handRankBin_", "]"}], ":=", 
@@ -963,7 +991,8 @@ Tables/handFaceFive.csv\>\"", "]"}]}], ";", "\[IndentingNewLine]",
    3.556035562339571*^9, 3.5560355669009657`*^9}, 3.556036050813424*^9, 
    3.556036146596156*^9, {3.556036783456759*^9, 3.5560368048455963`*^9}, {
    3.556045159815756*^9, 3.556045173852976*^9}, {3.556045205286542*^9, 
-   3.556045215714299*^9}}]
+   3.556045215714299*^9}, {3.556132801484239*^9, 3.556132803081707*^9}, {
+   3.55613286572296*^9, 3.556132867380538*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1134,7 +1163,7 @@ Cell[BoxData[{
    3.5561251105160303`*^9}}]
 }, Open  ]]
 },
-WindowSize->{1075, 1163},
+WindowSize->{1208, 1162},
 WindowMargins->{{100, Automatic}, {Automatic, 40}},
 PrivateNotebookOptions->{"FileOutlineCache"->False},
 CellContext->Notebook,
@@ -1155,17 +1184,17 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[579, 22, 302, 5, 70, "Subsection"],
-Cell[884, 29, 42055, 936, 70, "Input"]
+Cell[884, 29, 43338, 965, 70, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[42976, 970, 433, 7, 70, "Subsection"],
-Cell[43412, 979, 1859, 34, 70, "Input"]
+Cell[44259, 999, 433, 7, 70, "Subsection"],
+Cell[44695, 1008, 1859, 34, 70, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[45308, 1018, 569, 8, 70, "Subsection"],
-Cell[45880, 1028, 1063, 26, 70, "Input"],
-Cell[46946, 1056, 163, 4, 70, "Input"],
-Cell[47112, 1062, 2829, 71, 70, "Input"]
+Cell[46591, 1047, 569, 8, 70, "Subsection"],
+Cell[47163, 1057, 1063, 26, 70, "Input"],
+Cell[48229, 1085, 163, 4, 70, "Input"],
+Cell[48395, 1091, 2829, 71, 70, "Input"]
 }, Open  ]]
 }
 ]

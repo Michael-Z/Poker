@@ -20,10 +20,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       835,         17]
-NotebookDataLength[      6915,        170]
-NotebookOptionsPosition[      7138,        158]
-NotebookOutlinePosition[      7682,        182]
-CellTagsIndexPosition[      7639,        179]
+NotebookDataLength[      6931,        171]
+NotebookOptionsPosition[      7154,        159]
+NotebookOutlinePosition[      7698,        183]
+CellTagsIndexPosition[      7655,        180]
 WindowTitle->One-To-One Equity Distribution for a 2 PreFlop Hands
 WindowFrame->Normal*)
 
@@ -51,16 +51,17 @@ Cell[BoxData[
        K, 13 -> $CellContext`A}}, {{
        Hold[$CellContext`t$$], "o", "Type"}, 
       Dynamic[
-       If[$CellContext`f1$$ != $CellContext`f2$$, $CellContext`suitChoice, \
-$CellContext`suitNoChoice]]}}, Typeset`size$$ = Automatic, Typeset`update$$ = 
-    0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
-    False, $CellContext`f1$1317$$ = False, $CellContext`f2$1318$$ = False}, 
+       If[$CellContext`f1$$ != $CellContext`f2$$, {
+        "s" -> "suited", "o" -> "off-suited"}, {"o" -> "off-suited"}]]}}, 
+    Typeset`size$$ = Automatic, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = False, $CellContext`f1$1796$$ = 
+    False, $CellContext`f2$1797$$ = False}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`f1$$ = 7, $CellContext`f2$$ = 
         6, $CellContext`t$$ = "o"}, "ControllerVariables" :> {
-        Hold[$CellContext`f1$$, $CellContext`f1$1317$$, False], 
-        Hold[$CellContext`f2$$, $CellContext`f2$1318$$, False]}, 
+        Hold[$CellContext`f1$$, $CellContext`f1$1796$$, False], 
+        Hold[$CellContext`f2$$, $CellContext`f2$1797$$, False]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -105,13 +106,13 @@ $CellContext`vector$]], {$CellContext`k,
           K, 13 -> $CellContext`A}}, {{$CellContext`t$$, "o", "Type"}, 
          Dynamic[
           
-          If[$CellContext`f1$$ != $CellContext`f2$$, $CellContext`suitChoice, \
-$CellContext`suitNoChoice]]}}, 
+          If[$CellContext`f1$$ != $CellContext`f2$$, {
+           "s" -> "suited", "o" -> "off-suited"}, {"o" -> "off-suited"}]]}}, 
       "Options" :> {
        ControlPlacement -> Top, ControlType -> SetterBar, 
         ContentSize -> {600, 400}, SynchronousInitialization -> False}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{614., {261., 267.}},
+     ImageSizeCache->{614., {267., 273.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -124,10 +125,10 @@ $CellContext`suitNoChoice]]}},
          K -> 12, $CellContext`A -> 13}; $CellContext`preFlopHandMatrix = 
        ToExpression[
          Import[
-         "https://raw.github.com/oscar6echo/Poker-Probabilities/master/Tables/\
+         "https://raw.github.com/oscar6echo/Poker/master/Tables/\
 preFlopHandMatrix.csv"]]; $CellContext`preFlopHandList = 
-       Import["https://raw.github.com/oscar6echo/Poker-Probabilities/master/\
-Tables/preFlopHandList.csv"]; $CellContext`toolTipFunction[
+       Import["https://raw.github.com/oscar6echo/Poker/master/Tables/\
+preFlopHandList.csv"]; $CellContext`toolTipFunction[
          Pattern[$CellContext`i, 
           Blank[]], 
          Pattern[$CellContext`vector, 
@@ -181,10 +182,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[1301, 31, 5833, 125, 530, InheritFromParent]
+Cell[1301, 31, 5849, 126, 542, InheritFromParent]
 }
 ]
 *)
 
 (* End of internal cache information *)
-(* NotebookSignature rwpyr#TmDFiIrAwLZEfd2SaZ *)
+(* NotebookSignature tuTzvJKw#NOFnDw@Cff9Babd *)

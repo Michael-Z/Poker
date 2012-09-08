@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[    549821,      10059]
-NotebookOptionsPosition[    549063,      10029]
-NotebookOutlinePosition[    549517,      10048]
-CellTagsIndexPosition[    549474,      10045]
+NotebookDataLength[    549861,      10060]
+NotebookOptionsPosition[    549081,      10029]
+NotebookOutlinePosition[    549557,      10049]
+CellTagsIndexPosition[    549514,      10046]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -999,8 +999,8 @@ least one preFlop hand is not determined\>\""}], ",", "\[IndentingNewLine]",
            RowBox[{"Flatten", "@", 
             RowBox[{
             "Import", "[", 
-             "\"\<https://raw.github.com/oscar6echo/Poker-Probabilities/\
-master/Tables/sparseRulesRankFlushSeven.csv\>\"", "]"}]}]}]}]}]}], ";", 
+             "\"\<https://raw.github.com/oscar6echo/Poker/master/Tables/\
+sparseRulesRankFlushSeven.csv\>\"", "]"}]}]}]}]}]}], ";", 
        "\[IndentingNewLine]", 
        RowBox[{"rankFaceSeven", "=", 
         RowBox[{"Normal", "@", 
@@ -1009,8 +1009,8 @@ master/Tables/sparseRulesRankFlushSeven.csv\>\"", "]"}]}]}]}]}]}], ";",
            RowBox[{"Flatten", "@", 
             RowBox[{
             "Import", "[", 
-             "\"\<https://raw.github.com/oscar6echo/Poker-Probabilities/\
-master/Tables/sparseRulesRankFaceSeven.csv\>\"", "]"}]}]}]}]}]}], ";", 
+             "\"\<https://raw.github.com/oscar6echo/Poker/master/Tables/\
+sparseRulesRankFaceSeven.csv\>\"", "]"}]}]}]}]}]}], ";", 
        "\[IndentingNewLine]", 
        RowBox[{"link", "=", 
         RowBox[{"Install", "[", 
@@ -9848,7 +9848,7 @@ at least one preFlop hand is not determined\>\""}], ";",
    3.556120277526495*^9, 3.556120280449567*^9}, {3.556120313653122*^9, 
    3.556120316340508*^9}, {3.5561203873196373`*^9, 3.5561203886070633`*^9}, {
    3.556121174119892*^9, 3.5561212248544693`*^9}, {3.5561240137679033`*^9, 
-   3.556124020353397*^9}}]
+   3.556124020353397*^9}, {3.556135071898481*^9, 3.556135075189528*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -10027,6 +10027,7 @@ Cell[BoxData[{
    3.5561241074366083`*^9, 3.556124138699641*^9}}]
 }, Open  ]]
 },
+Evaluator->"Kernel2",
 WindowSize->{1083, 1199},
 WindowMargins->{{79, Automatic}, {Automatic, 36}},
 PrivateNotebookOptions->{"FileOutlineCache"->False},
@@ -10049,17 +10050,17 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[579, 22, 302, 5, 70, "Subsection"],
-Cell[884, 29, 540538, 9821, 70, "Input"]
+Cell[884, 29, 540556, 9821, 70, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[541459, 9855, 433, 7, 70, "Subsection"],
-Cell[541895, 9864, 2150, 38, 70, "Input"]
+Cell[541477, 9855, 433, 7, 70, "Subsection"],
+Cell[541913, 9864, 2150, 38, 70, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[544082, 9907, 569, 8, 70, "Subsection"],
-Cell[544654, 9917, 1063, 26, 70, "Input"],
-Cell[545720, 9945, 163, 4, 70, "Input"],
-Cell[545886, 9951, 3161, 75, 70, "Input"]
+Cell[544100, 9907, 569, 8, 70, "Subsection"],
+Cell[544672, 9917, 1063, 26, 70, "Input"],
+Cell[545738, 9945, 163, 4, 70, "Input"],
+Cell[545904, 9951, 3161, 75, 70, "Input"]
 }, Open  ]]
 }
 ]

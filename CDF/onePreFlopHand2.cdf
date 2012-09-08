@@ -20,10 +20,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       835,         17]
-NotebookDataLength[     23488,        498]
-NotebookOptionsPosition[     23712,        486]
-NotebookOutlinePosition[     24253,        510]
-CellTagsIndexPosition[     24210,        507]
+NotebookDataLength[     23557,        497]
+NotebookOptionsPosition[     23781,        485]
+NotebookOutlinePosition[     24322,        509]
+CellTagsIndexPosition[     24279,        506]
 WindowTitle->Distribution of 5-card Hands For One PreFlop Hand
 WindowFrame->Normal*)
 
@@ -82,11 +82,11 @@ $CellContext`suitNoChoice]]}, {
        Hold[$CellContext`nbHighRank$$], 3, 
        "Number of Highest ranked Pre Flop Hands"}, 1, 10, 1}}, 
     Typeset`size$$ = Automatic, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = False, $CellContext`f1$1515$$ = 
-    False, $CellContext`f2$1516$$ = False, $CellContext`hmin$1517$$ = 
-    False, $CellContext`hmax$1518$$ = False, $CellContext`xmin$1519$$ = 
-    0, $CellContext`xmax$1520$$ = 0, $CellContext`ymax$1521$$ = 
-    0, $CellContext`nbHighRank$1522$$ = 0}, 
+    Typeset`skipInitDone$$ = False, $CellContext`f1$1124$$ = 
+    False, $CellContext`f2$1125$$ = False, $CellContext`hmin$1126$$ = 
+    False, $CellContext`hmax$1127$$ = False, $CellContext`xmin$1128$$ = 
+    0, $CellContext`xmax$1129$$ = 0, $CellContext`ymax$1130$$ = 
+    0, $CellContext`nbHighRank$1131$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`f1$$ = 7, $CellContext`f2$$ = 
@@ -94,14 +94,14 @@ $CellContext`suitNoChoice]]}, {
         1, $CellContext`nbHighRank$$ = 3, $CellContext`t$$ = 
         "o", $CellContext`xmax$$ = 7462, $CellContext`xmin$$ = 
         1, $CellContext`ymax$$ = 10000}, "ControllerVariables" :> {
-        Hold[$CellContext`f1$$, $CellContext`f1$1515$$, False], 
-        Hold[$CellContext`f2$$, $CellContext`f2$1516$$, False], 
-        Hold[$CellContext`hmin$$, $CellContext`hmin$1517$$, False], 
-        Hold[$CellContext`hmax$$, $CellContext`hmax$1518$$, False], 
-        Hold[$CellContext`xmin$$, $CellContext`xmin$1519$$, 0], 
-        Hold[$CellContext`xmax$$, $CellContext`xmax$1520$$, 0], 
-        Hold[$CellContext`ymax$$, $CellContext`ymax$1521$$, 0], 
-        Hold[$CellContext`nbHighRank$$, $CellContext`nbHighRank$1522$$, 0]}, 
+        Hold[$CellContext`f1$$, $CellContext`f1$1124$$, False], 
+        Hold[$CellContext`f2$$, $CellContext`f2$1125$$, False], 
+        Hold[$CellContext`hmin$$, $CellContext`hmin$1126$$, False], 
+        Hold[$CellContext`hmax$$, $CellContext`hmax$1127$$, False], 
+        Hold[$CellContext`xmin$$, $CellContext`xmin$1128$$, 0], 
+        Hold[$CellContext`xmax$$, $CellContext`xmax$1129$$, 0], 
+        Hold[$CellContext`ymax$$, $CellContext`ymax$1130$$, 0], 
+        Hold[$CellContext`nbHighRank$$, $CellContext`nbHighRank$1131$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -186,7 +186,45 @@ $CellContext`suitNoChoice]], ControlType -> SetterBar}, Delimiter,
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
-    Initialization:>(($CellContext`tableTypeHand[
+    Initialization:>(($CellContext`face = {
+        2, 3, 4, 5, 6, 7, 8, 
+         9, $CellContext`T, $CellContext`J, $CellContext`Q, 
+         K, $CellContext`A}; $CellContext`faceChoice = {
+        1 -> 2, 2 -> 3, 3 -> 4, 4 -> 5, 5 -> 6, 6 -> 7, 7 -> 8, 8 -> 9, 
+         9 -> $CellContext`T, 10 -> $CellContext`J, 11 -> $CellContext`Q, 12 -> 
+         K, 13 -> $CellContext`A}; $CellContext`faceChoiceRev = 
+       Table[Part[$CellContext`face, $CellContext`i] -> $CellContext`i, \
+{$CellContext`i, 
+          Length[$CellContext`face]}]; $CellContext`suitChoice = {
+        "s" -> "suited", "o" -> "off-suited"}; $CellContext`suitNoChoice = {
+        "o" -> "off-suited"}; $CellContext`allPreFlopHand = Flatten[
+         Table[
+          If[$CellContext`f1$$ > $CellContext`f2$$, {
+            $CellContext`deckCardNo[$CellContext`f1$$, 4], 
+            $CellContext`deckCardNo[$CellContext`f2$$, 4]}, {
+            $CellContext`deckCardNo[$CellContext`f1$$, 4], 
+            $CellContext`deckCardNo[$CellContext`f2$$, 
+             3]}], {$CellContext`f1$$, 13, 1, -1}, {$CellContext`f2$$, 13, 
+           1, -1}], 1]; $CellContext`nameHand = {
+        "Total", "High Card", "One Pair", "Two Pairs", "Three of a kind", 
+         "Straight", "Flush", "Full House", "Four of a kind", 
+         "Straight Flush"}; $CellContext`nameHandChoice = {
+        1 -> "High Card", 2 -> "One Pair", 3 -> "Two Pairs", 4 -> 
+         "Three of a kind", 5 -> "Straight", 6 -> "Flush", 7 -> "Full House", 
+         8 -> "Four of a kind", 9 -> 
+         "Straight Flush"}; $CellContext`nbDistinctHand = {7462, 1277, 2860, 
+        858, 858, 10, 1277, 156, 156, 
+        10}; $CellContext`cumulUpNbDistinctHand = {1277, 4137, 4995, 5853, 
+        5863, 7140, 7296, 7452, 7462}; $CellContext`handRankLimit = {0, 1277, 
+        4137, 4995, 5853, 5863, 7140, 7296, 7452, 
+        7462}; $CellContext`allPreFlopHandRank = 
+       Import["https://raw.github.com/oscar6echo/Poker/master/Tables/\
+allPreFlopHandRank.csv"]; $CellContext`handFaceFiveSorted = 
+       Import["https://raw.github.com/oscar6echo/Poker/master/Tables/\
+handFaceFive.csv"]; $CellContext`faceEq = {
+        1 -> 2, 2 -> 3, 3 -> 4, 4 -> 5, 5 -> 6, 6 -> 7, 7 -> 8, 8 -> 9, 
+         9 -> $CellContext`T, 10 -> $CellContext`J, 11 -> $CellContext`Q, 12 -> 
+         K, 13 -> $CellContext`A}; $CellContext`tableTypeHand[
          Pattern[$CellContext`handRankBin, 
           Blank[]]] := 
        Module[{$CellContext`nbTypeHand, $CellContext`perCentTypeHand}, \
@@ -276,7 +314,6 @@ $CellContext`nbAllHand = Total[$CellContext`nbHand, 2]; $CellContext`dataRect =
             ColorData[
             "DarkBands"][($CellContext`i - 1)/8], {$CellContext`i, 
              9}]; $CellContext`colorList = Table[
-            
             Part[$CellContext`color, $CellContext`i], {$CellContext`i, 
              9}]; $CellContext`tooltipLabel[
             Pattern[$CellContext`v, 
@@ -410,19 +447,7 @@ $CellContext`faceEq]],
          TableForm[$CellContext`table, TableHeadings -> {Automatic, 
              Map[
              Text, {"Hand Rank", "Nb Hands", "Hand Faces", 
-               "Hand Type"}]}]]; $CellContext`faceChoice = 
-       Table[$CellContext`i -> 
-         Part[$CellContext`face, $CellContext`i], {$CellContext`i, 
-          Length[$CellContext`face]}]; $CellContext`faceChoiceRev = 
-       Table[Part[$CellContext`face, $CellContext`i] -> $CellContext`i, \
-{$CellContext`i, 
-          Length[$CellContext`face]}]; $CellContext`suitChoice = {
-        "s" -> "suited", "o" -> "off-suited"}; $CellContext`suitNoChoice = {
-        "o" -> "off-suited"}; $CellContext`nameHandChoice = 
-       Table[$CellContext`i -> Part[
-           Part[$CellContext`nameHand, 
-            Span[2, All]], $CellContext`i], {$CellContext`i, 
-          9}]; $CellContext`convert[
+               "Hand Type"}]}]]; $CellContext`convert[
          Pattern[$CellContext`pfh, 
           Blank[]]] := 
        Module[{$CellContext`f1, $CellContext`f2, $CellContext`t, \
@@ -444,39 +469,13 @@ $CellContext`f2; $CellContext`min = $CellContext`f1]; $CellContext`t =
            First[
             
             Position[$CellContext`allPreFlopHand, $CellContext`pfh1]]]]; \
-$CellContext`face = {
-        2, 3, 4, 5, 6, 7, 8, 
-         9, $CellContext`T, $CellContext`J, $CellContext`Q, 
-         K, $CellContext`A}; $CellContext`deckCardNo[
+$CellContext`deckCardNo[
          Pattern[$CellContext`deckCardFace, 
           Blank[]], 
          Pattern[$CellContext`deckCardSuit, 
           Blank[]]] := 
        1 + 4 ($CellContext`deckCardFace - 1) + ($CellContext`deckCardSuit - 
-         1); $CellContext`allPreFlopHand = Flatten[
-         Table[
-          If[$CellContext`f1$$ > $CellContext`f2$$, {
-            $CellContext`deckCardNo[$CellContext`f1$$, 4], 
-            $CellContext`deckCardNo[$CellContext`f2$$, 4]}, {
-            $CellContext`deckCardNo[$CellContext`f1$$, 4], 
-            $CellContext`deckCardNo[$CellContext`f2$$, 
-             3]}], {$CellContext`f1$$, 13, 1, -1}, {$CellContext`f2$$, 13, 
-           1, -1}], 1]; $CellContext`nameHand = {
-        "Total", "High Card", "One Pair", "Two Pairs", "Three of a kind", 
-         "Straight", "Flush", "Full House", "Four of a kind", 
-         "Straight Flush"}; $CellContext`nbDistinctHand = {7462, 1277, 2860, 
-        858, 858, 10, 1277, 156, 156, 
-        10}; $CellContext`cumulUpNbDistinctHand = {1277, 4137, 4995, 5853, 
-        5863, 7140, 7296, 7452, 7462}; $CellContext`handRankLimit = {0, 1277, 
-        4137, 4995, 5853, 5863, 7140, 7296, 7452, 
-        7462}; $CellContext`allPreFlopHandRank = 
-       Import["https://raw.github.com/oscar6echo/Poker-Probabilities/master/\
-Tables/allPreFlopHandRank.csv"]; $CellContext`handFaceFiveSorted = 
-       Import["https://raw.github.com/oscar6echo/Poker-Probabilities/master/\
-Tables/handFaceFive.csv"]; $CellContext`faceEq = {
-        1 -> 2, 2 -> 3, 3 -> 4, 4 -> 5, 5 -> 6, 6 -> 7, 7 -> 8, 8 -> 9, 
-         9 -> $CellContext`T, 10 -> $CellContext`J, 11 -> $CellContext`Q, 12 -> 
-         K, 13 -> $CellContext`A}; Null); Typeset`initDone$$ = True),
+         1); Null); Typeset`initDone$$ = True),
     SynchronousInitialization->False,
     UnsavedVariables:>{Typeset`initDone$$},
     UntrackedVariables:>{Typeset`size$$}], "Manipulate",
@@ -509,10 +508,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[1298, 31, 22410, 453, 1162, InheritFromParent]
+Cell[1298, 31, 22479, 452, 1162, InheritFromParent]
 }
 ]
 *)
 
 (* End of internal cache information *)
-(* NotebookSignature 8x0TQwRD9qbOECgzmXqecax0 *)
+(* NotebookSignature Qx0m0ZmLRe#uBB1uhEJR8xkv *)

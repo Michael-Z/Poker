@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     18105,        441]
-NotebookOptionsPosition[     17382,        412]
-NotebookOutlinePosition[     17816,        430]
-CellTagsIndexPosition[     17773,        427]
+NotebookDataLength[     18141,        442]
+NotebookOptionsPosition[     17418,        413]
+NotebookOutlinePosition[     17852,        431]
+CellTagsIndexPosition[     17809,        428]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -195,8 +195,8 @@ Cell[BoxData[
        RowBox[{"preFlopHandList", "=", 
         RowBox[{
         "Import", "[", 
-         "\"\<https://raw.github.com/oscar6echo/Poker-Probabilities/master/\
-Tables/preFlopHandList.csv\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
+         "\"\<https://raw.github.com/oscar6echo/Poker/master/Tables/\
+preFlopHandList.csv\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
        RowBox[{"equityPreFlopMonteCarloAll", "=", 
         RowBox[{"Fold", "[", 
          RowBox[{"Partition", ",", 
@@ -236,7 +236,8 @@ equityPreFlopMonteCarloAllFlat.csv\>\"", "]"}]}], ",",
    3.556054705265811*^9, 3.556054714840185*^9}, {3.5560553462630157`*^9, 
    3.5560553480615797`*^9}, {3.556055475507708*^9, 3.556055503804162*^9}, {
    3.556055665269785*^9, 3.5560556683874073`*^9}, 3.556055822152555*^9, 
-   3.556055866679412*^9, 3.556056310771861*^9}]
+   3.556055866679412*^9, 3.556056310771861*^9, {3.556130105150671*^9, 
+   3.556130105554511*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -431,17 +432,17 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[579, 22, 302, 5, 70, "Subsection"],
-Cell[884, 29, 9258, 209, 70, "Input"]
+Cell[884, 29, 9294, 210, 70, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10179, 243, 433, 7, 70, "Subsection"],
-Cell[10615, 252, 1906, 35, 70, "Input"]
+Cell[10215, 244, 433, 7, 70, "Subsection"],
+Cell[10651, 253, 1906, 35, 70, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[12558, 292, 569, 8, 70, "Subsection"],
-Cell[13130, 302, 1063, 26, 70, "Input"],
-Cell[14196, 330, 165, 4, 70, "Input"],
-Cell[14364, 336, 3002, 73, 70, "Input"]
+Cell[12594, 293, 569, 8, 70, "Subsection"],
+Cell[13166, 303, 1063, 26, 70, "Input"],
+Cell[14232, 331, 165, 4, 70, "Input"],
+Cell[14400, 337, 3002, 73, 70, "Input"]
 }, Open  ]]
 }
 ]

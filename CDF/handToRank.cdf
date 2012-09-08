@@ -20,10 +20,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       835,         17]
-NotebookDataLength[    227806,       3901]
-NotebookOptionsPosition[    228056,       3889]
-NotebookOutlinePosition[    228570,       3913]
-CellTagsIndexPosition[    228527,       3910]
+NotebookDataLength[    227784,       3900]
+NotebookOptionsPosition[    228034,       3888]
+NotebookOutlinePosition[    228548,       3912]
+CellTagsIndexPosition[    228505,       3909]
 WindowTitle->Five Card Hand To Rank
 WindowFrame->Normal*)
 
@@ -264,9 +264,8 @@ $CellContext`tableStatusLocal}]; $CellContext`handNameDet1[
           ToExpression[
            Flatten[
             Import[
-            "https://raw.github.com/oscar6echo/Poker-Probabilities/master/\
-Tables/sparseRulesRankFaceFive.csv"]]]]]; $CellContext`rankFlushFive = 
-       Normal[
+            "https://raw.github.com/oscar6echo/Poker/master/Tables/\
+sparseRulesRankFaceFive.csv"]]]]]; $CellContext`rankFlushFive = Normal[
          SparseArray[
           ToExpression[
            Flatten[
@@ -3912,10 +3911,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[1271, 31, 226781, 3856, 667, InheritFromParent]
+Cell[1271, 31, 226759, 3855, 667, InheritFromParent]
 }
 ]
 *)
 
 (* End of internal cache information *)
-(* NotebookSignature gxplg0ngf#6f5BwFyexoNwvs *)
+(* NotebookSignature luTvndLKs0oX4DwJn9ab@F68 *)

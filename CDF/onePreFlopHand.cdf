@@ -20,10 +20,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       835,         17]
-NotebookDataLength[     20603,        450]
-NotebookOptionsPosition[     20827,        438]
-NotebookOutlinePosition[     21368,        462]
-CellTagsIndexPosition[     21325,        459]
+NotebookDataLength[     20358,        443]
+NotebookOptionsPosition[     20582,        431]
+NotebookOutlinePosition[     21123,        455]
+CellTagsIndexPosition[     21080,        452]
 WindowTitle->Distribution of 5-card Hands For One PreFlop Hand
 WindowFrame->Normal*)
 
@@ -61,18 +61,18 @@ $CellContext`suitNoChoice]]}, {
        Hold[$CellContext`nbHandRankBucket$$], 20, 
        "Number of Hand Rank Buckets"}, 10, 400, 10}}, Typeset`size$$ = 
     Automatic, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = False, $CellContext`f1$1716$$ = 
-    False, $CellContext`f2$1717$$ = 
-    False, $CellContext`nbHandRankBucket$1718$$ = 0}, 
+    Typeset`skipInitDone$$ = False, $CellContext`f1$1105$$ = 
+    False, $CellContext`f2$1106$$ = 
+    False, $CellContext`nbHandRankBucket$1107$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`f1$$ = 7, $CellContext`f2$$ = 
         6, $CellContext`nbHandRankBucket$$ = 20, $CellContext`t$$ = "o"}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`f1$$, $CellContext`f1$1716$$, False], 
-        Hold[$CellContext`f2$$, $CellContext`f2$1717$$, False], 
+        Hold[$CellContext`f1$$, $CellContext`f1$1105$$, False], 
+        Hold[$CellContext`f2$$, $CellContext`f2$1106$$, False], 
         Hold[$CellContext`nbHandRankBucket$$, \
-$CellContext`nbHandRankBucket$1718$$, 0]}, 
+$CellContext`nbHandRankBucket$1107$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -132,13 +132,44 @@ $CellContext`suitNoChoice]], ControlType -> SetterBar}, Delimiter,
           "Number of Hand Rank Buckets"}, 10, 400, 10, Appearance -> 
          "Labeled"}}, 
       "Options" :> {
-       ControlPlacement -> Top, ContentSize -> {800, 850}, 
-        SynchronousInitialization -> False}, "DefaultOptions" :> {}],
+       SynchronousInitialization -> False, ControlPlacement -> Top, 
+        ContentSize -> {800, 850}}, "DefaultOptions" :> {}],
      ImageSizeCache->{814., {521., 526.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
-    Initialization:>(($CellContext`tableTypeHand[
+    Initialization:>(($CellContext`faceEq = {
+        1 -> 2, 2 -> 3, 3 -> 4, 4 -> 5, 5 -> 6, 6 -> 7, 7 -> 8, 8 -> 9, 
+         9 -> $CellContext`T, 10 -> $CellContext`J, 11 -> $CellContext`Q, 12 -> 
+         K, 13 -> $CellContext`A}; $CellContext`faceChoice = {
+        1 -> 2, 2 -> 3, 3 -> 4, 4 -> 5, 5 -> 6, 6 -> 7, 7 -> 8, 8 -> 9, 
+         9 -> $CellContext`T, 10 -> $CellContext`J, 11 -> $CellContext`Q, 12 -> 
+         K, 13 -> $CellContext`A}; $CellContext`faceChoiceRev = {
+        2 -> 1, 3 -> 2, 4 -> 3, 5 -> 4, 6 -> 5, 7 -> 6, 8 -> 7, 9 -> 
+         8, $CellContext`T -> 9, $CellContext`J -> 10, $CellContext`Q -> 11, 
+         K -> 12, $CellContext`A -> 13}; $CellContext`suitChoice = {
+        "s" -> "suited", "o" -> "off-suited"}; $CellContext`suitNoChoice = {
+        "o" -> "off-suited"}; $CellContext`allPreFlopHand = Flatten[
+         Table[
+          If[$CellContext`f1$$ > $CellContext`f2$$, {
+            $CellContext`deckCardNo[$CellContext`f1$$, 4], 
+            $CellContext`deckCardNo[$CellContext`f2$$, 4]}, {
+            $CellContext`deckCardNo[$CellContext`f1$$, 4], 
+            $CellContext`deckCardNo[$CellContext`f2$$, 
+             3]}], {$CellContext`f1$$, 13, 1, -1}, {$CellContext`f2$$, 13, 
+           1, -1}], 1]; $CellContext`nameHand = {
+        "Total", "High Card", "One Pair", "Two Pairs", "Three of a kind", 
+         "Straight", "Flush", "Full House", "Four of a kind", 
+         "Straight Flush"}; $CellContext`nbDistinctHand = {7462, 1277, 2860, 
+        858, 858, 10, 1277, 156, 156, 
+        10}; $CellContext`cumulUpNbDistinctHand = {1277, 4137, 4995, 5853, 
+        5863, 7140, 7296, 7452, 7462}; $CellContext`handRankLimit = {0, 1277, 
+        4137, 4995, 5853, 5863, 7140, 7296, 7452, 
+        7462}; $CellContext`allPreFlopHandRank = 
+       Import["https://raw.github.com/oscar6echo/Poker/master/Tables/\
+allPreFlopHandRank.csv"]; $CellContext`handFaceFiveSorted = 
+       Import["https://raw.github.com/oscar6echo/Poker/master/Tables/\
+handFaceFive.csv"]; $CellContext`tableTypeHand[
          Pattern[$CellContext`handRankBin, 
           Blank[]]] := 
        Module[{$CellContext`nbTypeHand, $CellContext`perCentTypeHand}, \
@@ -362,19 +393,7 @@ $CellContext`faceEq]],
          TableForm[$CellContext`table, TableHeadings -> {Automatic, 
              Map[
              Text, {"Hand Rank", "Nb Hands", "Hand Faces", 
-               "Hand Type"}]}]]; $CellContext`faceChoice = 
-       Table[$CellContext`i -> 
-         Part[$CellContext`face, $CellContext`i], {$CellContext`i, 
-          Length[$CellContext`face]}]; $CellContext`faceChoiceRev = 
-       Table[Part[$CellContext`face, $CellContext`i] -> $CellContext`i, \
-{$CellContext`i, 
-          Length[$CellContext`face]}]; $CellContext`suitChoice = {
-        "s" -> "suited", "o" -> "off-suited"}; $CellContext`suitNoChoice = {
-        "o" -> "off-suited"}; $CellContext`nameHandChoice = 
-       Table[$CellContext`i -> Part[
-           Part[$CellContext`nameHand, 
-            Span[2, All]], $CellContext`i], {$CellContext`i, 
-          9}]; $CellContext`convert[
+               "Hand Type"}]}]]; $CellContext`convert[
          Pattern[$CellContext`pfh, 
           Blank[]]] := 
        Module[{$CellContext`f1, $CellContext`f2, $CellContext`t, \
@@ -396,39 +415,13 @@ $CellContext`f2; $CellContext`min = $CellContext`f1]; $CellContext`t =
            First[
             
             Position[$CellContext`allPreFlopHand, $CellContext`pfh1]]]]; \
-$CellContext`face = {
-        2, 3, 4, 5, 6, 7, 8, 
-         9, $CellContext`T, $CellContext`J, $CellContext`Q, 
-         K, $CellContext`A}; $CellContext`deckCardNo[
+$CellContext`deckCardNo[
          Pattern[$CellContext`deckCardFace, 
           Blank[]], 
          Pattern[$CellContext`deckCardSuit, 
           Blank[]]] := 
        1 + 4 ($CellContext`deckCardFace - 1) + ($CellContext`deckCardSuit - 
-         1); $CellContext`allPreFlopHand = Flatten[
-         Table[
-          If[$CellContext`f1$$ > $CellContext`f2$$, {
-            $CellContext`deckCardNo[$CellContext`f1$$, 4], 
-            $CellContext`deckCardNo[$CellContext`f2$$, 4]}, {
-            $CellContext`deckCardNo[$CellContext`f1$$, 4], 
-            $CellContext`deckCardNo[$CellContext`f2$$, 
-             3]}], {$CellContext`f1$$, 13, 1, -1}, {$CellContext`f2$$, 13, 
-           1, -1}], 1]; $CellContext`nameHand = {
-        "Total", "High Card", "One Pair", "Two Pairs", "Three of a kind", 
-         "Straight", "Flush", "Full House", "Four of a kind", 
-         "Straight Flush"}; $CellContext`nbDistinctHand = {7462, 1277, 2860, 
-        858, 858, 10, 1277, 156, 156, 
-        10}; $CellContext`cumulUpNbDistinctHand = {1277, 4137, 4995, 5853, 
-        5863, 7140, 7296, 7452, 7462}; $CellContext`handRankLimit = {0, 1277, 
-        4137, 4995, 5853, 5863, 7140, 7296, 7452, 
-        7462}; $CellContext`allPreFlopHandRank = 
-       Import["https://raw.github.com/oscar6echo/Poker-Probabilities/master/\
-Tables/allPreFlopHandRank.csv"]; $CellContext`handFaceFiveSorted = 
-       Import["https://raw.github.com/oscar6echo/Poker-Probabilities/master/\
-Tables/handFaceFive.csv"]; $CellContext`faceEq = {
-        1 -> 2, 2 -> 3, 3 -> 4, 4 -> 5, 5 -> 6, 6 -> 7, 7 -> 8, 8 -> 9, 
-         9 -> $CellContext`T, 10 -> $CellContext`J, 11 -> $CellContext`Q, 12 -> 
-         K, 13 -> $CellContext`A}; Null); Typeset`initDone$$ = True),
+         1); Null); Typeset`initDone$$ = True),
     SynchronousInitialization->False,
     UnsavedVariables:>{Typeset`initDone$$},
     UntrackedVariables:>{Typeset`size$$}], "Manipulate",
@@ -461,10 +454,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[1298, 31, 19525, 405, 1049, InheritFromParent]
+Cell[1298, 31, 19280, 398, 1049, InheritFromParent]
 }
 ]
 *)
 
 (* End of internal cache information *)
-(* NotebookSignature Lxp3NOQRDApw#DKSfK85BvVm *)
+(* NotebookSignature jv0ga0NoyiWoqD1n5LEX83gf *)

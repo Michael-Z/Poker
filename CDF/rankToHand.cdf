@@ -20,10 +20,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       835,         17]
-NotebookDataLength[    202069,       3444]
-NotebookOptionsPosition[    202319,       3432]
-NotebookOutlinePosition[    202833,       3456]
-CellTagsIndexPosition[    202790,       3453]
+NotebookDataLength[    202059,       3444]
+NotebookOptionsPosition[    202309,       3432]
+NotebookOutlinePosition[    202823,       3456]
+CellTagsIndexPosition[    202780,       3453]
 WindowTitle->Five Card Hand To Rank
 WindowFrame->Normal*)
 
@@ -40,11 +40,11 @@ Cell[BoxData[
        Text[
         Style["Hand Rank", 11, Bold]]}, 1, 7462, 1}}, Typeset`size$$ = {
     248., {44.84375, 50.15625}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = False, $CellContext`r$904$$ = 0}, 
+    Typeset`skipInitDone$$ = False, $CellContext`r$19009$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {$CellContext`r$$ = 7462}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`r$$, $CellContext`r$904$$, 0]}, 
+        Hold[$CellContext`r$$, $CellContext`r$19009$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -145,8 +145,8 @@ $CellContext`f =
          "Straight", "Flush", "Full House", "Four of a kind", 
          "Straight Flush"}; $CellContext`cumulUpNbDistinctHand = {1277, 4137, 
         4995, 5853, 5863, 7140, 7296, 7452, 7462}; $CellContext`handFaceFive = 
-       Import["https://raw.github.com/oscar6echo/Poker-Probabilities/master/\
-Tables/handFaceFive.csv"]; $CellContext`deckCardImage = {
+       Import["https://raw.github.com/oscar6echo/Poker/master/Tables/\
+handFaceFive.csv"]; $CellContext`deckCardImage = {
          Image[CompressedData["
 1:eJztm3tQU1cexyEgFROeSQgJUhZ5KCAgDeHhoDyKuq1QH4CtzxldBJ3VbSvt
 WjvTXWdbsU7tdmg7uy2o3VnlFSFFiLDgA9lV0AgVJBICK+VtfMzwUPff755z
@@ -3455,10 +3455,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[1271, 31, 201044, 3399, 215, InheritFromParent]
+Cell[1271, 31, 201034, 3399, 215, InheritFromParent]
 }
 ]
 *)
 
 (* End of internal cache information *)
-(* NotebookSignature SwTr0D4uDAojpD11wrcpFGBr *)
+(* NotebookSignature 2u0U2rvUHFilQCwIlbYyBIym *)
