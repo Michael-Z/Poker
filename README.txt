@@ -1,4 +1,4 @@
-This repo contains all the files used and pointed to by oscar6echo.blog.fr in the various poker posts, ie
+This repo contains all the files used and pointed to by http://oscar6echo.blogspot.fr/ in the various poker posts, ie
 	CDFs: you need the CDF player (http://www.wolfram.com/cdf-player/) to view them
 	CDF preview images
 	Mathematica notebooks (NB) used to create the CDFs
