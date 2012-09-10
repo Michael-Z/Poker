@@ -20,10 +20,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       835,         17]
-NotebookDataLength[    227784,       3900]
-NotebookOptionsPosition[    228034,       3888]
-NotebookOutlinePosition[    228548,       3912]
-CellTagsIndexPosition[    228505,       3909]
+NotebookDataLength[    227810,       3900]
+NotebookOptionsPosition[    228060,       3888]
+NotebookOutlinePosition[    228574,       3912]
+CellTagsIndexPosition[    228531,       3909]
 WindowTitle->Five Card Hand To Rank
 WindowFrame->Normal*)
 
@@ -222,8 +222,8 @@ $CellContext`deckAvail, $CellContext`randomSample}, $CellContext`deckAvail =
 $CellContext`tableStatusLocal}]; $CellContext`handNameDet1[
          Pattern[$CellContext`r, 
           Blank[]]] := Module[{}, 
-         Which[$CellContext`r <= Part[$CellContext`cumulUpNbDistinctHand, 1], 
-          
+         Which[$CellContext`r == 0, " ", $CellContext`r <= 
+          Part[$CellContext`cumulUpNbDistinctHand, 1], 
           Part[$CellContext`nameHand, 2], $CellContext`r <= 
           Part[$CellContext`cumulUpNbDistinctHand, 2], 
           Part[$CellContext`nameHand, 3], $CellContext`r <= 
@@ -3911,10 +3911,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[1271, 31, 226759, 3855, 667, InheritFromParent]
+Cell[1271, 31, 226785, 3855, 667, InheritFromParent]
 }
 ]
 *)
 
 (* End of internal cache information *)
-(* NotebookSignature luTvndLKs0oX4DwJn9ab@F68 *)
+(* NotebookSignature Lv0MVTyxA#jGfCwrv0N9RhWs *)
