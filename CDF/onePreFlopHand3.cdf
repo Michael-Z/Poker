@@ -20,10 +20,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       835,         17]
-NotebookDataLength[     20401,        442]
-NotebookOptionsPosition[     20626,        430]
-NotebookOutlinePosition[     21167,        454]
-CellTagsIndexPosition[     21124,        451]
+NotebookDataLength[     20323,        441]
+NotebookOptionsPosition[     20548,        429]
+NotebookOutlinePosition[     21089,        453]
+CellTagsIndexPosition[     21046,        450]
 WindowTitle->Distribution of 5-card Hands For One PreFlop Hand
 WindowFrame->Normal*)
 
@@ -51,8 +51,8 @@ Cell[BoxData[
        K, 13 -> $CellContext`A}}, {{
        Hold[$CellContext`t$$], "o", "Type"}, 
       Dynamic[
-       If[$CellContext`f1$$ != $CellContext`f2$$, $CellContext`suitChoice, \
-$CellContext`suitNoChoice]]}, {
+       If[$CellContext`f1$$ != $CellContext`f2$$, {
+        "s" -> "suited", "o" -> "off-suited"}, {"o" -> "off-suited"}]]}, {
       Hold[
        Style["Selection of Hand Ranks", 11, Bold]], 
       Manipulate`Dump`ThisIsNotAControl}, {{
@@ -61,17 +61,17 @@ $CellContext`suitNoChoice]]}, {
        Hold[$CellContext`nh$$], 5, "Number of Hand Ranks displayed"}, 1, 30, 
       1}}, Typeset`size$$ = Automatic, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = 
-    False, $CellContext`f1$962$$ = False, $CellContext`f2$963$$ = 
-    False, $CellContext`hmin$964$$ = 0, $CellContext`nh$965$$ = 0}, 
+    False, $CellContext`f1$2627$$ = False, $CellContext`f2$2628$$ = 
+    False, $CellContext`hmin$2629$$ = 0, $CellContext`nh$2630$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`f1$$ = 7, $CellContext`f2$$ = 
         6, $CellContext`hmin$$ = 3501, $CellContext`nh$$ = 
         5, $CellContext`t$$ = "o"}, "ControllerVariables" :> {
-        Hold[$CellContext`f1$$, $CellContext`f1$962$$, False], 
-        Hold[$CellContext`f2$$, $CellContext`f2$963$$, False], 
-        Hold[$CellContext`hmin$$, $CellContext`hmin$964$$, 0], 
-        Hold[$CellContext`nh$$, $CellContext`nh$965$$, 0]}, 
+        Hold[$CellContext`f1$$, $CellContext`f1$2627$$, False], 
+        Hold[$CellContext`f2$$, $CellContext`f2$2628$$, False], 
+        Hold[$CellContext`hmin$$, $CellContext`hmin$2629$$, 0], 
+        Hold[$CellContext`nh$$, $CellContext`nh$2630$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -115,8 +115,9 @@ $CellContext`t$$}]]; $CellContext`handRankPoint$ = Table[{$CellContext`i,
          SetterBar}, {{$CellContext`t$$, "o", "Type"}, 
          Dynamic[
           
-          If[$CellContext`f1$$ != $CellContext`f2$$, $CellContext`suitChoice, \
-$CellContext`suitNoChoice]], ControlType -> SetterBar}, Delimiter, 
+          If[$CellContext`f1$$ != $CellContext`f2$$, {
+           "s" -> "suited", "o" -> "off-suited"}, {"o" -> "off-suited"}]], 
+         ControlType -> SetterBar}, Delimiter, 
         Style[
         "Selection of Hand Ranks", 11, 
          Bold], {{$CellContext`hmin$$, 3501, "Lowest Hand Rank displayed"}, 1,
@@ -393,9 +394,7 @@ $CellContext`faceEq]],
           Length[$CellContext`face]}]; $CellContext`faceChoiceRev = 
        Table[Part[$CellContext`face, $CellContext`i] -> $CellContext`i, \
 {$CellContext`i, 
-          Length[$CellContext`face]}]; $CellContext`suitChoice = {
-        "s" -> "suited", "o" -> "off-suited"}; $CellContext`suitNoChoice = {
-        "o" -> "off-suited"}; $CellContext`nameHandChoice = 
+          Length[$CellContext`face]}]; $CellContext`nameHandChoice = 
        Table[$CellContext`i -> Part[
            Part[$CellContext`nameHand, 
             Span[2, All]], $CellContext`i], {$CellContext`i, 
@@ -453,10 +452,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[1298, 31, 19324, 397, 526, InheritFromParent]
+Cell[1298, 31, 19246, 396, 526, InheritFromParent]
 }
 ]
 *)
 
 (* End of internal cache information *)
-(* NotebookSignature Uwp2rotgPNla#CwIZp9CnfWl *)
+(* NotebookSignature 9uDpedgk4ePc1Bg6r2szE8Qs *)

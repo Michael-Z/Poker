@@ -20,10 +20,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       835,         17]
-NotebookDataLength[     23557,        497]
-NotebookOptionsPosition[     23781,        485]
-NotebookOutlinePosition[     24322,        509]
-CellTagsIndexPosition[     24279,        506]
+NotebookDataLength[     23496,        498]
+NotebookOptionsPosition[     23720,        486]
+NotebookOutlinePosition[     24261,        510]
+CellTagsIndexPosition[     24218,        507]
 WindowTitle->Distribution of 5-card Hands For One PreFlop Hand
 WindowFrame->Normal*)
 
@@ -54,8 +54,8 @@ Cell[BoxData[
        K, 13 -> $CellContext`A}}, {{
        Hold[$CellContext`t$$], "o", "Type"}, 
       Dynamic[
-       If[$CellContext`f1$$ != $CellContext`f2$$, $CellContext`suitChoice, \
-$CellContext`suitNoChoice]]}, {
+       If[$CellContext`f1$$ != $CellContext`f2$$, {
+        "s" -> "suited", "o" -> "off-suited"}, {"o" -> "off-suited"}]]}, {
       Hold[
        Text[
         Style[
@@ -82,11 +82,11 @@ $CellContext`suitNoChoice]]}, {
        Hold[$CellContext`nbHighRank$$], 3, 
        "Number of Highest ranked Pre Flop Hands"}, 1, 10, 1}}, 
     Typeset`size$$ = Automatic, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = False, $CellContext`f1$1124$$ = 
-    False, $CellContext`f2$1125$$ = False, $CellContext`hmin$1126$$ = 
-    False, $CellContext`hmax$1127$$ = False, $CellContext`xmin$1128$$ = 
-    0, $CellContext`xmax$1129$$ = 0, $CellContext`ymax$1130$$ = 
-    0, $CellContext`nbHighRank$1131$$ = 0}, 
+    Typeset`skipInitDone$$ = False, $CellContext`f1$2738$$ = 
+    False, $CellContext`f2$2739$$ = False, $CellContext`hmin$2740$$ = 
+    False, $CellContext`hmax$2741$$ = False, $CellContext`xmin$2742$$ = 
+    0, $CellContext`xmax$2743$$ = 0, $CellContext`ymax$2744$$ = 
+    0, $CellContext`nbHighRank$2745$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`f1$$ = 7, $CellContext`f2$$ = 
@@ -94,14 +94,14 @@ $CellContext`suitNoChoice]]}, {
         1, $CellContext`nbHighRank$$ = 3, $CellContext`t$$ = 
         "o", $CellContext`xmax$$ = 7462, $CellContext`xmin$$ = 
         1, $CellContext`ymax$$ = 10000}, "ControllerVariables" :> {
-        Hold[$CellContext`f1$$, $CellContext`f1$1124$$, False], 
-        Hold[$CellContext`f2$$, $CellContext`f2$1125$$, False], 
-        Hold[$CellContext`hmin$$, $CellContext`hmin$1126$$, False], 
-        Hold[$CellContext`hmax$$, $CellContext`hmax$1127$$, False], 
-        Hold[$CellContext`xmin$$, $CellContext`xmin$1128$$, 0], 
-        Hold[$CellContext`xmax$$, $CellContext`xmax$1129$$, 0], 
-        Hold[$CellContext`ymax$$, $CellContext`ymax$1130$$, 0], 
-        Hold[$CellContext`nbHighRank$$, $CellContext`nbHighRank$1131$$, 0]}, 
+        Hold[$CellContext`f1$$, $CellContext`f1$2738$$, False], 
+        Hold[$CellContext`f2$$, $CellContext`f2$2739$$, False], 
+        Hold[$CellContext`hmin$$, $CellContext`hmin$2740$$, False], 
+        Hold[$CellContext`hmax$$, $CellContext`hmax$2741$$, False], 
+        Hold[$CellContext`xmin$$, $CellContext`xmin$2742$$, 0], 
+        Hold[$CellContext`xmax$$, $CellContext`xmax$2743$$, 0], 
+        Hold[$CellContext`ymax$$, $CellContext`ymax$2744$$, 0], 
+        Hold[$CellContext`nbHighRank$$, $CellContext`nbHighRank$2745$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -155,8 +155,9 @@ $CellContext`nbHighRank$$]}, Center]]], "Specifications" :> {
          SetterBar}, {{$CellContext`t$$, "o", "Type"}, 
          Dynamic[
           
-          If[$CellContext`f1$$ != $CellContext`f2$$, $CellContext`suitChoice, \
-$CellContext`suitNoChoice]], ControlType -> SetterBar}, Delimiter, 
+          If[$CellContext`f1$$ != $CellContext`f2$$, {
+           "s" -> "suited", "o" -> "off-suited"}, {"o" -> "off-suited"}]], 
+         ControlType -> SetterBar}, Delimiter, 
         Text[
          Style[
          "Probability Distribution of Hand Ranks Display Paramters", 11, 
@@ -195,9 +196,7 @@ $CellContext`suitNoChoice]], ControlType -> SetterBar}, Delimiter,
          K, 13 -> $CellContext`A}; $CellContext`faceChoiceRev = 
        Table[Part[$CellContext`face, $CellContext`i] -> $CellContext`i, \
 {$CellContext`i, 
-          Length[$CellContext`face]}]; $CellContext`suitChoice = {
-        "s" -> "suited", "o" -> "off-suited"}; $CellContext`suitNoChoice = {
-        "o" -> "off-suited"}; $CellContext`allPreFlopHand = Flatten[
+          Length[$CellContext`face]}]; $CellContext`allPreFlopHand = Flatten[
          Table[
           If[$CellContext`f1$$ > $CellContext`f2$$, {
             $CellContext`deckCardNo[$CellContext`f1$$, 4], 
@@ -269,7 +268,8 @@ $CellContext`nbTypeHand = Table[
 $CellContext`handRankBin, $CellContext`nbHand, $CellContext`nbAllHand, \
 $CellContext`dataRect, $CellContext`color, $CellContext`colorList, \
 $CellContext`tooltipLabel}, $CellContext`width = 
-          Round[7462/$CellContext`nbHandRankBucket]; \
+          Round[
+           7462/$CellContext`nbHandRankBucket]; \
 $CellContext`handRankLimitBucket = Table[
             DeleteDuplicates[
              Append[
@@ -314,6 +314,7 @@ $CellContext`nbAllHand = Total[$CellContext`nbHand, 2]; $CellContext`dataRect =
             ColorData[
             "DarkBands"][($CellContext`i - 1)/8], {$CellContext`i, 
              9}]; $CellContext`colorList = Table[
+            
             Part[$CellContext`color, $CellContext`i], {$CellContext`i, 
              9}]; $CellContext`tooltipLabel[
             Pattern[$CellContext`v, 
@@ -508,10 +509,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[1298, 31, 22479, 452, 1162, InheritFromParent]
+Cell[1298, 31, 22418, 453, 1162, InheritFromParent]
 }
 ]
 *)
 
 (* End of internal cache information *)
-(* NotebookSignature Qx0m0ZmLRe#uBB1uhEJR8xkv *)
+(* NotebookSignature #uTqG3Yf5GbkZC1edNixWGJ4 *)

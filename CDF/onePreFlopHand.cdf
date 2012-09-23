@@ -20,10 +20,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       835,         17]
-NotebookDataLength[     20358,        443]
-NotebookOptionsPosition[     20582,        431]
-NotebookOutlinePosition[     21123,        455]
-CellTagsIndexPosition[     21080,        452]
+NotebookDataLength[     20407,        444]
+NotebookOptionsPosition[     20631,        432]
+NotebookOutlinePosition[     21172,        456]
+CellTagsIndexPosition[     21129,        453]
 WindowTitle->Distribution of 5-card Hands For One PreFlop Hand
 WindowFrame->Normal*)
 
@@ -51,8 +51,8 @@ Cell[BoxData[
        K, 13 -> $CellContext`A}}, {{
        Hold[$CellContext`t$$], "o", "Type"}, 
       Dynamic[
-       If[$CellContext`f1$$ != $CellContext`f2$$, $CellContext`suitChoice, \
-$CellContext`suitNoChoice]]}, {
+       If[$CellContext`f1$$ != $CellContext`f2$$, {
+        "s" -> "suited", "o" -> "off-suited"}, {"o" -> "off-suited"}]]}, {
       Hold[
        Text[
         Style[
@@ -61,18 +61,18 @@ $CellContext`suitNoChoice]]}, {
        Hold[$CellContext`nbHandRankBucket$$], 20, 
        "Number of Hand Rank Buckets"}, 10, 400, 10}}, Typeset`size$$ = 
     Automatic, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = False, $CellContext`f1$1105$$ = 
-    False, $CellContext`f2$1106$$ = 
-    False, $CellContext`nbHandRankBucket$1107$$ = 0}, 
+    Typeset`skipInitDone$$ = False, $CellContext`f1$1882$$ = 
+    False, $CellContext`f2$1883$$ = 
+    False, $CellContext`nbHandRankBucket$1884$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`f1$$ = 7, $CellContext`f2$$ = 
         6, $CellContext`nbHandRankBucket$$ = 20, $CellContext`t$$ = "o"}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`f1$$, $CellContext`f1$1105$$, False], 
-        Hold[$CellContext`f2$$, $CellContext`f2$1106$$, False], 
+        Hold[$CellContext`f1$$, $CellContext`f1$1882$$, False], 
+        Hold[$CellContext`f2$$, $CellContext`f2$1883$$, False], 
         Hold[$CellContext`nbHandRankBucket$$, \
-$CellContext`nbHandRankBucket$1107$$, 0]}, 
+$CellContext`nbHandRankBucket$1884$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -123,8 +123,9 @@ $CellContext`nbHandRankBucket$$]}, Center]]], "Specifications" :> {
          SetterBar}, {{$CellContext`t$$, "o", "Type"}, 
          Dynamic[
           
-          If[$CellContext`f1$$ != $CellContext`f2$$, $CellContext`suitChoice, \
-$CellContext`suitNoChoice]], ControlType -> SetterBar}, Delimiter, 
+          If[$CellContext`f1$$ != $CellContext`f2$$, {
+           "s" -> "suited", "o" -> "off-suited"}, {"o" -> "off-suited"}]], 
+         ControlType -> SetterBar}, Delimiter, 
         Text[
          Style[
          "Probability Distribution (by buckets) of Hand Ranks", 11, 
@@ -454,10 +455,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[1298, 31, 19280, 398, 1049, InheritFromParent]
+Cell[1298, 31, 19329, 399, 1049, InheritFromParent]
 }
 ]
 *)
 
 (* End of internal cache information *)
-(* NotebookSignature jv0ga0NoyiWoqD1n5LEX83gf *)
+(* NotebookSignature Cv0fpaYxCipVdCK@4CUJ6f6x *)

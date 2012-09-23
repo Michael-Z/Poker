@@ -20,10 +20,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       835,         17]
-NotebookDataLength[     34783,        733]
-NotebookOptionsPosition[     35004,        721]
-NotebookOutlinePosition[     35548,        745]
-CellTagsIndexPosition[     35505,        742]
+NotebookDataLength[     34655,        732]
+NotebookOptionsPosition[     34876,        720]
+NotebookOutlinePosition[     35420,        744]
+CellTagsIndexPosition[     35377,        741]
 WindowTitle->One-To-One Equity Distribution for a 2 PreFlop Hands
 WindowFrame->Normal*)
 
@@ -71,18 +71,18 @@ Cell[BoxData[
        If[$CellContext`f3$$ != $CellContext`f4$$, {
         "s" -> "suited", "o" -> "off-suited"}, {"o" -> "off-suited"}]]}}, 
     Typeset`size$$ = Automatic, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = False, $CellContext`f1$46739$$ = 
-    False, $CellContext`f2$46740$$ = False, $CellContext`f3$46741$$ = 
-    False, $CellContext`f4$46742$$ = False}, 
+    Typeset`skipInitDone$$ = False, $CellContext`f1$5318$$ = 
+    False, $CellContext`f2$5319$$ = False, $CellContext`f3$5320$$ = 
+    False, $CellContext`f4$5321$$ = False}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`f1$$ = 1, $CellContext`f2$$ = 
         1, $CellContext`f3$$ = 1, $CellContext`f4$$ = 1, $CellContext`t1$$ = 
         "o", $CellContext`t2$$ = "o"}, "ControllerVariables" :> {
-        Hold[$CellContext`f1$$, $CellContext`f1$46739$$, False], 
-        Hold[$CellContext`f2$$, $CellContext`f2$46740$$, False], 
-        Hold[$CellContext`f3$$, $CellContext`f3$46741$$, False], 
-        Hold[$CellContext`f4$$, $CellContext`f4$46742$$, False]}, 
+        Hold[$CellContext`f1$$, $CellContext`f1$5318$$, False], 
+        Hold[$CellContext`f2$$, $CellContext`f2$5319$$, False], 
+        Hold[$CellContext`f3$$, $CellContext`f3$5320$$, False], 
+        Hold[$CellContext`f4$$, $CellContext`f4$5321$$, False]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -535,9 +535,7 @@ $CellContext`face = ($CellContext`face = {
           Length[$CellContext`face]}]; $CellContext`faceChoiceRev = 
        Table[Part[$CellContext`face, $CellContext`i] -> $CellContext`i, \
 {$CellContext`i, 
-          Length[$CellContext`face]}]; $CellContext`suitChoice = {
-        "s" -> "suited", "o" -> "off-suited"}; $CellContext`suitNoChoice = {
-        "o" -> "off-suited"}; $CellContext`order[
+          Length[$CellContext`face]}]; $CellContext`order[
          Pattern[$CellContext`preFlop2HandTarget, 
           Blank[]]] := Module[{$CellContext`hf1 = Take[
             Part[$CellContext`preFlop2HandTarget, 1], 2], $CellContext`hf2 = 
@@ -553,6 +551,7 @@ $CellContext`face = ($CellContext`face = {
              Append[
               Reverse[
                Sort[$CellContext`hf2]], 
+              
               Part[$CellContext`preFlop2HandTarget, 2, 
                3]]}]]]; $CellContext`extract[
          Pattern[$CellContext`preFlop2HandTarget, 
@@ -744,10 +743,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[1301, 31, 33699, 688, 1109, InheritFromParent]
+Cell[1301, 31, 33571, 687, 1109, InheritFromParent]
 }
 ]
 *)
 
 (* End of internal cache information *)
-(* NotebookSignature 2vpGAqKYJ1o0wCKKv8Mrv2LB *)
+(* NotebookSignature owDcedK@fpIYNDwsphWZFNxk *)

@@ -54,14 +54,14 @@ Cell[BoxData[
        If[$CellContext`f1$$ != $CellContext`f2$$, {
         "s" -> "suited", "o" -> "off-suited"}, {"o" -> "off-suited"}]]}}, 
     Typeset`size$$ = Automatic, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = False, $CellContext`f1$1796$$ = 
-    False, $CellContext`f2$1797$$ = False}, 
+    Typeset`skipInitDone$$ = False, $CellContext`f1$6329$$ = 
+    False, $CellContext`f2$6330$$ = False}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`f1$$ = 7, $CellContext`f2$$ = 
         6, $CellContext`t$$ = "o"}, "ControllerVariables" :> {
-        Hold[$CellContext`f1$$, $CellContext`f1$1796$$, False], 
-        Hold[$CellContext`f2$$, $CellContext`f2$1797$$, False]}, 
+        Hold[$CellContext`f1$$, $CellContext`f1$6329$$, False], 
+        Hold[$CellContext`f2$$, $CellContext`f2$6330$$, False]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -188,4 +188,4 @@ Cell[1301, 31, 5849, 126, 542, InheritFromParent]
 *)
 
 (* End of internal cache information *)
-(* NotebookSignature tuTzvJKw#NOFnDw@Cff9Babd *)
+(* NotebookSignature Bw0Dn7JQHgVknA12wPSwMC4R *)

@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     51969,       1194]
-NotebookOptionsPosition[     51240,       1165]
-NotebookOutlinePosition[     51674,       1183]
-CellTagsIndexPosition[     51631,       1180]
+NotebookDataLength[     51850,       1192]
+NotebookOptionsPosition[     51121,       1163]
+NotebookOutlinePosition[     51555,       1181]
+CellTagsIndexPosition[     51512,       1178]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -157,7 +157,14 @@ Cell[BoxData[
        RowBox[{"t", ",", "\"\<o\>\"", ",", "\"\<Type\>\""}], "}"}], ",", 
       RowBox[{"If", "[", 
        RowBox[{
-        RowBox[{"f1", "!=", "f2"}], ",", "suitChoice", ",", "suitNoChoice"}], 
+        RowBox[{"f1", "!=", "f2"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"\"\<s\>\"", "\[Rule]", "\"\<suited\>\""}], ",", 
+          RowBox[{"\"\<o\>\"", "\[Rule]", "\"\<off-suited\>\""}]}], "}"}], 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{"\"\<o\>\"", "\[Rule]", "\"\<off-suited\>\""}], "}"}]}], 
        "]"}], ",", 
       RowBox[{"ControlType", "\[Rule]", "SetterBar"}]}], "}"}], ",", 
     "\[IndentingNewLine]", "Delimiter", ",", "\[IndentingNewLine]", 
@@ -863,16 +870,6 @@ handFaceFive.csv\>\"", "]"}]}], ";", "\[IndentingNewLine]",
            RowBox[{"i", ",", 
             RowBox[{"Length", "[", "face", "]"}]}], "}"}]}], "]"}]}], ";", 
        "\[IndentingNewLine]", 
-       RowBox[{"suitChoice", "=", 
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"\"\<s\>\"", "\[Rule]", "\"\<suited\>\""}], ",", 
-          RowBox[{"\"\<o\>\"", "\[Rule]", "\"\<off-suited\>\""}]}], "}"}]}], 
-       ";", "\[IndentingNewLine]", 
-       RowBox[{"suitNoChoice", "=", 
-        RowBox[{"{", 
-         RowBox[{"\"\<o\>\"", "\[Rule]", "\"\<off-suited\>\""}], "}"}]}], ";",
-        "\[IndentingNewLine]", 
        RowBox[{"nameHandChoice", "=", 
         RowBox[{"Table", "[", 
          RowBox[{
@@ -992,7 +989,8 @@ handFaceFive.csv\>\"", "]"}]}], ";", "\[IndentingNewLine]",
    3.556036146596156*^9, {3.556036783456759*^9, 3.5560368048455963`*^9}, {
    3.556045159815756*^9, 3.556045173852976*^9}, {3.556045205286542*^9, 
    3.556045215714299*^9}, {3.556132801484239*^9, 3.556132803081707*^9}, {
-   3.55613286572296*^9, 3.556132867380538*^9}}]
+   3.55613286572296*^9, 3.556132867380538*^9}, {3.557415910805974*^9, 
+   3.557415944541326*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1184,17 +1182,17 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[579, 22, 302, 5, 70, "Subsection"],
-Cell[884, 29, 43338, 965, 70, "Input"]
+Cell[884, 29, 43219, 963, 70, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[44259, 999, 433, 7, 70, "Subsection"],
-Cell[44695, 1008, 1859, 34, 70, "Input"]
+Cell[44140, 997, 433, 7, 70, "Subsection"],
+Cell[44576, 1006, 1859, 34, 70, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[46591, 1047, 569, 8, 70, "Subsection"],
-Cell[47163, 1057, 1063, 26, 70, "Input"],
-Cell[48229, 1085, 163, 4, 70, "Input"],
-Cell[48395, 1091, 2829, 71, 70, "Input"]
+Cell[46472, 1045, 569, 8, 70, "Subsection"],
+Cell[47044, 1055, 1063, 26, 70, "Input"],
+Cell[48110, 1083, 163, 4, 70, "Input"],
+Cell[48276, 1089, 2829, 71, 70, "Input"]
 }, Open  ]]
 }
 ]
