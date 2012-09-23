@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     83282,       1847]
-NotebookOptionsPosition[     82551,       1818]
-NotebookOutlinePosition[     82985,       1836]
-CellTagsIndexPosition[     82942,       1833]
+NotebookDataLength[     83345,       1849]
+NotebookOptionsPosition[     82614,       1820]
+NotebookOutlinePosition[     83048,       1838]
+CellTagsIndexPosition[     83005,       1835]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1386,12 +1386,13 @@ suited/offsuited = \>\"", ",", "len"}], "]"}], ";"}], "*)"}],
             RowBox[{"Row", "[", 
              RowBox[{"{", 
               RowBox[{"\"\<Preflop Hand A \>\"", ",", " ", 
-               RowBox[{"h1", "/.", 
-                RowBox[{"Join", "[", 
-                 RowBox[{"{", 
-                  RowBox[{"faceChoice", ",", "suitChoice"}], "}"}], "]"}]}], 
-               ",", "\"\< has more/less/the same equity than/as Preflop Hand \
-B \>\"", ",", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                 RowBox[{"Row", "[", " ", 
+                  RowBox[{"h1", "/.", "faceChoice"}], "]"}], ",", "Bold", ",",
+                  "Red"}], "]"}], ",", 
+               "\"\< has more/less/the same equity than/as Preflop Hand B \
+\>\"", ",", 
                RowBox[{"Style", "[", 
                 RowBox[{
                  RowBox[{"Row", "[", " ", 
@@ -1644,7 +1645,8 @@ Hands\>\"", ",", "Larger", ",", "Bold"}], "]"}]}], ",",
    3.556042730446508*^9, 3.556042774921623*^9}, {3.556042816836522*^9, 
    3.5560428290078697`*^9}, {3.556132990434887*^9, 3.556132994443214*^9}, {
    3.556133069730652*^9, 3.55613307097263*^9}, {3.5561331270044117`*^9, 
-   3.556133128350157*^9}, {3.556133207423565*^9, 3.556133221193577*^9}}]
+   3.556133128350157*^9}, {3.556133207423565*^9, 3.556133221193577*^9}, 
+   3.557392728711794*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1837,17 +1839,17 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[579, 22, 302, 5, 70, "Subsection"],
-Cell[884, 29, 74526, 1617, 70, "Input"]
+Cell[884, 29, 74589, 1619, 70, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[75447, 1651, 433, 7, 70, "Subsection"],
-Cell[75883, 1660, 1938, 35, 70, "Input"]
+Cell[75510, 1653, 433, 7, 70, "Subsection"],
+Cell[75946, 1662, 1938, 35, 70, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[77858, 1700, 569, 8, 70, "Subsection"],
-Cell[78430, 1710, 1063, 26, 70, "Input"],
-Cell[79496, 1738, 163, 4, 70, "Input"],
-Cell[79662, 1744, 2873, 71, 70, "Input"]
+Cell[77921, 1702, 569, 8, 70, "Subsection"],
+Cell[78493, 1712, 1063, 26, 70, "Input"],
+Cell[79559, 1740, 163, 4, 70, "Input"],
+Cell[79725, 1746, 2873, 71, 70, "Input"]
 }, Open  ]]
 }
 ]
