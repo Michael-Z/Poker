@@ -20,10 +20,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       835,         17]
-NotebookDataLength[      7374,        174]
-NotebookOptionsPosition[      7605,        162]
-NotebookOutlinePosition[      8141,        186]
-CellTagsIndexPosition[      8098,        183]
+NotebookDataLength[      7068,        170]
+NotebookOptionsPosition[      7299,        158]
+NotebookOutlinePosition[      7835,        182]
+CellTagsIndexPosition[      7792,        179]
 WindowTitle->Pre Flop Hand Equity Monte Carlo Convergence
 WindowFrame->Normal*)
 
@@ -51,20 +51,20 @@ Cell[BoxData[
        K, 13 -> $CellContext`A}}, {{
        Hold[$CellContext`t$$], "o", "Type"}, 
       Dynamic[
-       If[$CellContext`f1$$ != $CellContext`f2$$, $CellContext`suitChoice, \
-$CellContext`suitNoChoice]]}, {{
+       If[$CellContext`f1$$ != $CellContext`f2$$, {
+        "s" -> "suited", "o" -> "off-suited"}, {"o" -> "off-suited"}]]}, {{
        Hold[$CellContext`np$$], 5, "Number of Opponents"}, 1, 9, 1}}, 
     Typeset`size$$ = Automatic, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = False, $CellContext`f1$22895$$ = 
-    False, $CellContext`f2$22896$$ = False, $CellContext`np$22897$$ = 0}, 
+    Typeset`skipInitDone$$ = False, $CellContext`f1$1028$$ = 
+    False, $CellContext`f2$1029$$ = False, $CellContext`np$1030$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`f1$$ = 7, $CellContext`f2$$ = 
         6, $CellContext`np$$ = 5, $CellContext`t$$ = "o"}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`f1$$, $CellContext`f1$22895$$, False], 
-        Hold[$CellContext`f2$$, $CellContext`f2$22896$$, False], 
-        Hold[$CellContext`np$$, $CellContext`np$22897$$, 0]}, 
+        Hold[$CellContext`f1$$, $CellContext`f1$1028$$, False], 
+        Hold[$CellContext`f2$$, $CellContext`f2$1029$$, False], 
+        Hold[$CellContext`np$$, $CellContext`np$1030$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -119,9 +119,10 @@ $CellContext`extractWin$ =
           K, 13 -> $CellContext`A}}, {{$CellContext`t$$, "o", "Type"}, 
          Dynamic[
           
-          If[$CellContext`f1$$ != $CellContext`f2$$, $CellContext`suitChoice, \
-$CellContext`suitNoChoice]]}, {{$CellContext`np$$, 5, "Number of Opponents"}, 
-         1, 9, 1}}, 
+          If[$CellContext`f1$$ != $CellContext`f2$$, {
+           "s" -> "suited", "o" -> "off-suited"}, {
+           "o" -> "off-suited"}]]}, {{$CellContext`np$$, 5, 
+          "Number of Opponents"}, 1, 9, 1}}, 
       "Options" :> {
        ControlPlacement -> Top, ControlType -> SetterBar, 
         ContentSize -> {650, 680}, SynchronousInitialization -> False}, 
@@ -130,15 +131,10 @@ $CellContext`suitNoChoice]]}, {{$CellContext`np$$, 5, "Number of Opponents"},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
-    Initialization:>(($CellContext`faceChoice = {
-        1 -> 2, 2 -> 3, 3 -> 4, 4 -> 5, 5 -> 6, 6 -> 7, 7 -> 8, 8 -> 9, 
-         9 -> $CellContext`T, 10 -> $CellContext`J, 11 -> $CellContext`Q, 12 -> 
-         K, 13 -> $CellContext`A}; $CellContext`faceChoiceRev = {
+    Initialization:>(($CellContext`faceChoiceRev = {
         2 -> 1, 3 -> 2, 4 -> 3, 5 -> 4, 6 -> 5, 7 -> 6, 8 -> 7, 9 -> 
          8, $CellContext`T -> 9, $CellContext`J -> 10, $CellContext`Q -> 11, 
-         K -> 12, $CellContext`A -> 13}; $CellContext`suitChoice = {
-        "s" -> "suited", "o" -> "off-suited"}; $CellContext`suitNoChoice = {
-        "o" -> "off-suited"}; $CellContext`preFlopHandList = 
+         K -> 12, $CellContext`A -> 13}; $CellContext`preFlopHandList = 
        Import["https://raw.github.com/oscar6echo/Poker/master/Tables/\
 preFlopHandList.csv"]; $CellContext`equityPreFlopMonteCarloAll = 
        Fold[Partition, 
@@ -185,10 +181,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[1293, 31, 6308, 129, 847, InheritFromParent]
+Cell[1293, 31, 6002, 125, 847, InheritFromParent]
 }
 ]
 *)
 
 (* End of internal cache information *)
-(* NotebookSignature JwTXhx6MRfd61BKYn8ja#uvP *)
+(* NotebookSignature Kv0#exmVRj5RNDwzKmn67Pog *)

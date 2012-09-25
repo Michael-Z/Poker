@@ -20,10 +20,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       835,         17]
-NotebookDataLength[     11658,        260]
-NotebookOptionsPosition[     11879,        248]
-NotebookOutlinePosition[     12424,        272]
-CellTagsIndexPosition[     12381,        269]
+NotebookDataLength[     11566,        258]
+NotebookOptionsPosition[     11787,        246]
+NotebookOutlinePosition[     12332,        270]
+CellTagsIndexPosition[     12289,        267]
 WindowTitle->Monte Carlo Generated PreFlop Hand Equity & Hand Rank
 WindowFrame->Normal*)
 
@@ -51,17 +51,17 @@ Cell[BoxData[
        K, 13 -> $CellContext`A}}, {{
        Hold[$CellContext`t$$], "o", "Type"}, 
       Dynamic[
-       If[$CellContext`f1$$ != $CellContext`f2$$, $CellContext`suitChoice, \
-$CellContext`suitNoChoice]]}}, Typeset`size$$ = Automatic, Typeset`update$$ = 
-    0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
-    False, $CellContext`f1$42297$$ = False, $CellContext`f2$42298$$ = False}, 
-    
+       If[$CellContext`f1$$ != $CellContext`f2$$, {
+        "s" -> "suited", "o" -> "off-suited"}, {"o" -> "off-suited"}]]}}, 
+    Typeset`size$$ = Automatic, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = False, $CellContext`f1$166348$$ = 
+    False, $CellContext`f2$166349$$ = False}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`f1$$ = 7, $CellContext`f2$$ = 
         6, $CellContext`t$$ = "o"}, "ControllerVariables" :> {
-        Hold[$CellContext`f1$$, $CellContext`f1$42297$$, False], 
-        Hold[$CellContext`f2$$, $CellContext`f2$42298$$, False]}, 
+        Hold[$CellContext`f1$$, $CellContext`f1$166348$$, False], 
+        Hold[$CellContext`f2$$, $CellContext`f2$166349$$, False]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -152,8 +152,8 @@ $CellContext`eqAll2$]], {$CellContext`k,
           K, 13 -> $CellContext`A}}, {{$CellContext`t$$, "o", "Type"}, 
          Dynamic[
           
-          If[$CellContext`f1$$ != $CellContext`f2$$, $CellContext`suitChoice, \
-$CellContext`suitNoChoice]]}}, 
+          If[$CellContext`f1$$ != $CellContext`f2$$, {
+           "s" -> "suited", "o" -> "off-suited"}, {"o" -> "off-suited"}]]}}, 
       "Options" :> {
        ControlPlacement -> Top, ControlType -> SetterBar, 
         ContentSize -> {600, 750}, SynchronousInitialization -> False}, 
@@ -184,9 +184,7 @@ $CellContext`suitNoChoice]]}},
          "22o"}; $CellContext`faceChoice = {
         1 -> 2, 2 -> 3, 3 -> 4, 4 -> 5, 5 -> 6, 6 -> 7, 7 -> 8, 8 -> 9, 
          9 -> $CellContext`T, 10 -> $CellContext`J, 11 -> $CellContext`Q, 12 -> 
-         K, 13 -> $CellContext`A}; $CellContext`suitChoice = {
-        "s" -> "suited", "o" -> "off-suited"}; $CellContext`suitNoChoice = {
-        "o" -> "off-suited"}; $CellContext`equityPreFlopMonteCarloLast = 
+         K, 13 -> $CellContext`A}; $CellContext`equityPreFlopMonteCarloLast = 
        Part[
          ToExpression[
           Import[
@@ -271,10 +269,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[1302, 31, 10573, 215, 892, InheritFromParent]
+Cell[1302, 31, 10481, 213, 892, InheritFromParent]
 }
 ]
 *)
 
 (* End of internal cache information *)
-(* NotebookSignature rwDMHtc6M5d3VC1TSPJLEQvS *)
+(* NotebookSignature puDYJGYszl9DxBK5uCYQYzzH *)

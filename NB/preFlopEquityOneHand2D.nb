@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     33211,        745]
-NotebookOptionsPosition[     32488,        716]
-NotebookOutlinePosition[     32921,        734]
-CellTagsIndexPosition[     32878,        731]
+NotebookDataLength[     33118,        743]
+NotebookOptionsPosition[     32395,        714]
+NotebookOutlinePosition[     32828,        732]
+CellTagsIndexPosition[     32785,        729]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -292,7 +292,14 @@ Cell[BoxData[
        RowBox[{"t", ",", "\"\<o\>\"", ",", "\"\<Type\>\""}], "}"}], ",", 
       RowBox[{"If", "[", 
        RowBox[{
-        RowBox[{"f1", "!=", "f2"}], ",", "suitChoice", ",", "suitNoChoice"}], 
+        RowBox[{"f1", "!=", "f2"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"\"\<s\>\"", "\[Rule]", "\"\<suited\>\""}], ",", 
+          RowBox[{"\"\<o\>\"", "\[Rule]", "\"\<off-suited\>\""}]}], "}"}], 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{"\"\<o\>\"", "\[Rule]", "\"\<off-suited\>\""}], "}"}]}], 
        "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
     RowBox[{"ControlPlacement", "\[Rule]", "Top"}], ",", 
     "\[IndentingNewLine]", 
@@ -383,16 +390,6 @@ Cell[BoxData[
           RowBox[{"12", "\[Rule]", "K"}], ",", 
           RowBox[{"13", "\[Rule]", "A"}]}], "}"}]}], ";", 
        "\[IndentingNewLine]", 
-       RowBox[{"suitChoice", "=", 
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"\"\<s\>\"", "\[Rule]", "\"\<suited\>\""}], ",", 
-          RowBox[{"\"\<o\>\"", "\[Rule]", "\"\<off-suited\>\""}]}], "}"}]}], 
-       ";", "\[IndentingNewLine]", 
-       RowBox[{"suitNoChoice", "=", 
-        RowBox[{"{", 
-         RowBox[{"\"\<o\>\"", "\[Rule]", "\"\<off-suited\>\""}], "}"}]}], ";",
-        "\[IndentingNewLine]", 
        RowBox[{"equityPreFlopMonteCarloLast", "=", 
         RowBox[{
          RowBox[{"ToExpression", "[", 
@@ -538,7 +535,8 @@ equityPreFlopMonteCarloTableLast.csv\>\"", "]"}], "]"}], "[",
    3.5561066057014427`*^9, 3.556106796735084*^9}, 3.5561068339113073`*^9, {
    3.5561074616384773`*^9, 3.556107491468978*^9}, {3.5561075274807167`*^9, 
    3.556107635577248*^9}, {3.5561347910872087`*^9, 3.556134791244917*^9}, {
-   3.556134822354904*^9, 3.55613482377207*^9}}]
+   3.556134822354904*^9, 3.55613482377207*^9}, {3.5575206349262342`*^9, 
+   3.5575206423089647`*^9}, 3.557520673948172*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -735,17 +733,17 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[579, 22, 302, 5, 70, "Subsection"],
-Cell[884, 29, 24164, 511, 70, "Input"]
+Cell[884, 29, 24071, 509, 70, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[25085, 545, 433, 7, 70, "Subsection"],
-Cell[25521, 554, 2035, 36, 70, "Input"]
+Cell[24992, 543, 433, 7, 70, "Subsection"],
+Cell[25428, 552, 2035, 36, 70, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[27593, 595, 569, 8, 70, "Subsection"],
-Cell[28165, 605, 1063, 26, 70, "Input"],
-Cell[29231, 633, 163, 4, 70, "Input"],
-Cell[29397, 639, 3075, 74, 70, "Input"]
+Cell[27500, 593, 569, 8, 70, "Subsection"],
+Cell[28072, 603, 1063, 26, 70, "Input"],
+Cell[29138, 631, 163, 4, 70, "Input"],
+Cell[29304, 637, 3075, 74, 70, "Input"]
 }, Open  ]]
 }
 ]
