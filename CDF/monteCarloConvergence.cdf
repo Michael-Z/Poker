@@ -20,10 +20,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       835,         17]
-NotebookDataLength[      7068,        170]
-NotebookOptionsPosition[      7299,        158]
-NotebookOutlinePosition[      7835,        182]
-CellTagsIndexPosition[      7792,        179]
+NotebookDataLength[      7082,        170]
+NotebookOptionsPosition[      7313,        158]
+NotebookOutlinePosition[      7849,        182]
+CellTagsIndexPosition[      7806,        179]
 WindowTitle->Pre Flop Hand Equity Monte Carlo Convergence
 WindowFrame->Normal*)
 
@@ -55,16 +55,16 @@ Cell[BoxData[
         "s" -> "suited", "o" -> "off-suited"}, {"o" -> "off-suited"}]]}, {{
        Hold[$CellContext`np$$], 5, "Number of Opponents"}, 1, 9, 1}}, 
     Typeset`size$$ = Automatic, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = False, $CellContext`f1$1028$$ = 
-    False, $CellContext`f2$1029$$ = False, $CellContext`np$1030$$ = 0}, 
+    Typeset`skipInitDone$$ = False, $CellContext`f1$167498$$ = 
+    False, $CellContext`f2$167499$$ = False, $CellContext`np$167500$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`f1$$ = 7, $CellContext`f2$$ = 
         6, $CellContext`np$$ = 5, $CellContext`t$$ = "o"}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`f1$$, $CellContext`f1$1028$$, False], 
-        Hold[$CellContext`f2$$, $CellContext`f2$1029$$, False], 
-        Hold[$CellContext`np$$, $CellContext`np$1030$$, 0]}, 
+        Hold[$CellContext`f1$$, $CellContext`f1$167498$$, False], 
+        Hold[$CellContext`f2$$, $CellContext`f2$167499$$, False], 
+        Hold[$CellContext`np$$, $CellContext`np$167500$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -90,8 +90,8 @@ $CellContext`extractWin$ =
             All, $CellContext`i$, $CellContext`np$$, 2]; Column[{
             Text[
              Style[
-             "Monte Carlo Convergence of a PreFlop Hand Equity (Win)", Larger,
-               Bold]], "\n", 
+             "Monte Carlo Convergence of a PreFlop Hand Equity (Wins)", 
+              Larger, Bold]], "\n", 
             ListPlot[
             100 $CellContext`extractWin$, ImageSize -> 600, 
              AxesLabel -> {
@@ -99,8 +99,8 @@ $CellContext`extractWin$ =
                "PreFlop Hand Equity (Wins) in %"}], "\n\n", 
             Text[
              Style[
-             "Monte Carlo Convergence of a PreFlop Hand Equity (Win)", Larger,
-               Bold]], "\n", 
+             "Monte Carlo Convergence of a PreFlop Hand Equity (Ties)", 
+              Larger, Bold]], "\n", 
             ListPlot[
             100 $CellContext`extractTie$, ImageSize -> 600, 
              AxesLabel -> {
@@ -181,10 +181,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[1293, 31, 6002, 125, 847, InheritFromParent]
+Cell[1293, 31, 6016, 125, 847, InheritFromParent]
 }
 ]
 *)
 
 (* End of internal cache information *)
-(* NotebookSignature Kv0#exmVRj5RNDwzKmn67Pog *)
+(* NotebookSignature BwTGDpEWw@0TrD1ZZVZIs#DQ *)

@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     18567,        453]
-NotebookOptionsPosition[     17845,        424]
-NotebookOutlinePosition[     18278,        442]
-CellTagsIndexPosition[     18235,        439]
+NotebookDataLength[     18643,        454]
+NotebookOptionsPosition[     17921,        425]
+NotebookOutlinePosition[     18354,        443]
+CellTagsIndexPosition[     18311,        440]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -74,9 +74,9 @@ Cell[BoxData[
              RowBox[{"Text", "@", 
               RowBox[{"Style", "[", 
                RowBox[{
-               "\"\<Monte Carlo Convergence of a PreFlop Hand Equity \
-(Win)\>\"", ",", "Larger", ",", "Bold"}], "]"}]}], ",", 
-             "\[IndentingNewLine]", "\"\<\\n\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<Monte Carlo Convergence of a PreFlop Hand Equity (Wins)\>\
+\"", ",", "Larger", ",", "Bold"}], "]"}]}], ",", "\[IndentingNewLine]", 
+             "\"\<\\n\>\"", ",", "\[IndentingNewLine]", 
              RowBox[{"ListPlot", "[", 
               RowBox[{
                RowBox[{"100", "*", "extractWin"}], ",", "\[IndentingNewLine]", 
@@ -92,9 +92,9 @@ Cell[BoxData[
              RowBox[{"Text", "@", 
               RowBox[{"Style", "[", 
                RowBox[{
-               "\"\<Monte Carlo Convergence of a PreFlop Hand Equity \
-(Win)\>\"", ",", "Larger", ",", "Bold"}], "]"}]}], ",", 
-             "\[IndentingNewLine]", "\"\<\\n\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<Monte Carlo Convergence of a PreFlop Hand Equity (Ties)\>\
+\"", ",", "Larger", ",", "Bold"}], "]"}]}], ",", "\[IndentingNewLine]", 
+             "\"\<\\n\>\"", ",", "\[IndentingNewLine]", 
              RowBox[{"ListPlot", "[", 
               RowBox[{
                RowBox[{"100", "*", "extractTie"}], ",", "\[IndentingNewLine]", 
@@ -248,7 +248,8 @@ equityPreFlopMonteCarloAllFlat.csv\>\"", "]"}]}], ",",
    3.556055665269785*^9, 3.5560556683874073`*^9}, 3.556055822152555*^9, 
    3.556055866679412*^9, 3.556056310771861*^9, {3.556130105150671*^9, 
    3.556130105554511*^9}, {3.5575109479023657`*^9, 3.5575109730856047`*^9}, {
-   3.5575110043338137`*^9, 3.557511009545734*^9}}]
+   3.5575110043338137`*^9, 3.557511009545734*^9}, {3.557521296521306*^9, 
+   3.557521297019525*^9}, 3.5575215681900597`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -443,17 +444,17 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[579, 22, 302, 5, 70, "Subsection"],
-Cell[884, 29, 9721, 221, 70, "Input"]
+Cell[884, 29, 9797, 222, 70, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10642, 255, 433, 7, 70, "Subsection"],
-Cell[11078, 264, 1906, 35, 70, "Input"]
+Cell[10718, 256, 433, 7, 70, "Subsection"],
+Cell[11154, 265, 1906, 35, 70, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[13021, 304, 569, 8, 70, "Subsection"],
-Cell[13593, 314, 1063, 26, 70, "Input"],
-Cell[14659, 342, 165, 4, 70, "Input"],
-Cell[14827, 348, 3002, 73, 70, "Input"]
+Cell[13097, 305, 569, 8, 70, "Subsection"],
+Cell[13669, 315, 1063, 26, 70, "Input"],
+Cell[14735, 343, 165, 4, 70, "Input"],
+Cell[14903, 349, 3002, 73, 70, "Input"]
 }, Open  ]]
 }
 ]
