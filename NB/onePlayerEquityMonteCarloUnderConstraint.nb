@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[    584828,      10671]
-NotebookOptionsPosition[    584040,      10640]
-NotebookOutlinePosition[    584517,      10660]
-CellTagsIndexPosition[    584474,      10657]
+NotebookDataLength[    585730,      10689]
+NotebookOptionsPosition[    584964,      10659]
+NotebookOutlinePosition[    585419,      10678]
+CellTagsIndexPosition[    585376,      10675]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -551,12 +551,24 @@ Cell[BoxData[
              RowBox[{"displayHandType", ",", 
               RowBox[{"Grid", "[", "\[IndentingNewLine]", 
                RowBox[{
-                RowBox[{"Transpose", "[", 
-                 RowBox[{"Map", "[", 
-                  RowBox[{"Text", ",", 
-                   RowBox[{"{", 
-                    RowBox[{"catName", ",", "catCard"}], "}"}], ",", 
-                   RowBox[{"{", "2", "}"}]}], "]"}], "]"}], ",", 
+                RowBox[{"Map", "[", 
+                 RowBox[{"Text", ",", 
+                  RowBox[{"Prepend", "[", 
+                   RowBox[{
+                    RowBox[{"Transpose", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    "catName", ",", "catCard", ",", " ", "nbHandInCategory"}],
+                     "}"}], "]"}], ",", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{"#", ",", "Bold"}], "]"}], "&"}], "/@", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    "\"\<Category\>\"", ",", " ", "\"\<PreFlop Hands\>\"", 
+                    ",", "\"\<Nb of hands\>\""}], "}"}]}]}], "]"}], ",", 
+                  RowBox[{"{", "2", "}"}]}], "]"}], ",", 
                 "\[IndentingNewLine]", 
                 RowBox[{"Frame", "\[Rule]", "All"}], ",", 
                 "\[IndentingNewLine]", 
@@ -9074,6 +9086,10 @@ BoCzN4Y=
           "strong", ",", "smallPair", ",", "potentialFlush", ",", 
           "suitedConnected", ",", "other"}], "}"}]}], ";", 
        "\[IndentingNewLine]", 
+       RowBox[{"nbHandInCategory", "=", 
+        RowBox[{"Map", "[", 
+         RowBox[{"Length", ",", "possiblePreFlopHand"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
        RowBox[{
         RowBox[{"selectPreFlopHand", "[", 
          RowBox[{
@@ -10455,7 +10471,10 @@ defined\>\""}], ";", "\[IndentingNewLine]",
    3.556213534558588*^9}, {3.5562136630000563`*^9, 3.5562136854343557`*^9}, {
    3.556213762684029*^9, 3.5562137633537683`*^9}, {3.556213799782254*^9, 
    3.556213978207535*^9}, {3.556214016957213*^9, 3.556214017541676*^9}, {
-   3.556214055039503*^9, 3.556214125548952*^9}}]
+   3.556214055039503*^9, 3.556214125548952*^9}, {3.55768754925945*^9, 
+   3.557687572545162*^9}, {3.557687615774275*^9, 3.557687636305478*^9}, {
+   3.557687764404285*^9, 3.557687777162545*^9}, {3.5576878087047243`*^9, 
+   3.5576878110470963`*^9}, 3.5576880549271917`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -10638,7 +10657,6 @@ Cell[BoxData[{
    3.556204406143214*^9}, {3.556204631545272*^9, 3.5562046363279467`*^9}}]
 }, Open  ]]
 },
-Evaluator->"Kernel2",
 WindowSize->{1278, 1181},
 WindowMargins->{{Automatic, 529}, {Automatic, 15}},
 PrivateNotebookOptions->{"FileOutlineCache"->False},
@@ -10661,17 +10679,17 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[579, 22, 302, 5, 70, "Subsection"],
-Cell[884, 29, 575150, 10428, 70, "Input"]
+Cell[884, 29, 576074, 10447, 70, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[576071, 10462, 433, 7, 70, "Subsection"],
-Cell[576507, 10471, 2257, 39, 70, "Input"]
+Cell[576995, 10481, 433, 7, 70, "Subsection"],
+Cell[577431, 10490, 2257, 39, 70, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[578801, 10515, 569, 8, 70, "Subsection"],
-Cell[579373, 10525, 1063, 26, 70, "Input"],
-Cell[580439, 10553, 163, 4, 70, "Input"],
-Cell[580605, 10559, 3419, 78, 70, "Input"]
+Cell[579725, 10534, 569, 8, 70, "Subsection"],
+Cell[580297, 10544, 1063, 26, 70, "Input"],
+Cell[581363, 10572, 163, 4, 70, "Input"],
+Cell[581529, 10578, 3419, 78, 70, "Input"]
 }, Open  ]]
 }
 ]

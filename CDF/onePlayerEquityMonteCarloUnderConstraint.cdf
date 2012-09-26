@@ -20,10 +20,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       835,         17]
-NotebookDataLength[    454879,       7791]
-NotebookOptionsPosition[    455068,       7778]
-NotebookOutlinePosition[    455642,       7803]
-CellTagsIndexPosition[    455599,       7800]
+NotebookDataLength[    455171,       7800]
+NotebookOptionsPosition[    455360,       7787]
+NotebookOutlinePosition[    455934,       7812]
+CellTagsIndexPosition[    455891,       7809]
 WindowTitle->One Player Equity Calculator (Monte Carlo) Assuming Opponents \
 PreFlop Hands Type
 WindowFrame->Normal*)
@@ -47,15 +47,15 @@ type\n", 11, Bold]]], Manipulate`Dump`ThisIsNotAControl}, {{
        Hold[$CellContext`displayHandType$$], False, 
        "Display Hand Type Details"}, {False, True}}}, Typeset`size$$ = 
     Automatic, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = False, $CellContext`nbOpp$3661$$ = 
-    0, $CellContext`displayHandType$3662$$ = False}, 
+    Typeset`skipInitDone$$ = False, $CellContext`nbOpp$2861$$ = 
+    0, $CellContext`displayHandType$2862$$ = False}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`displayHandType$$ = 
         False, $CellContext`nbOpp$$ = 9}, "ControllerVariables" :> {
-        Hold[$CellContext`nbOpp$$, $CellContext`nbOpp$3661$$, 0], 
+        Hold[$CellContext`nbOpp$$, $CellContext`nbOpp$2861$$, 0], 
         Hold[$CellContext`displayHandType$$, \
-$CellContext`displayHandType$3662$$, False]}, 
+$CellContext`displayHandType$2862$$, False]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -246,9 +246,15 @@ $CellContext`catNameChoice]}]], {$CellContext`p, $CellContext`nbOpp$$}]],
            SpanFromLeft}, {
            If[$CellContext`displayHandType$$, 
             Grid[
-             Transpose[
-              Map[Text, {$CellContext`catName, $CellContext`catCard}, {2}]], 
-             Frame -> All, Alignment -> Left, 
+             Map[Text, 
+              Prepend[
+               
+               Transpose[{$CellContext`catName, $CellContext`catCard, \
+$CellContext`nbHandInCategory}], 
+               Map[
+               Style[#, Bold]& , {
+                "Category", "PreFlop Hands", "Nb of hands"}]], {2}], Frame -> 
+             All, Alignment -> Left, 
              Background -> {None, {{None, LightRed}}}], ""], SpanFromLeft}}, 
          Frame -> False]], "Specifications" :> {
         Text[
@@ -7337,6 +7343,8 @@ $CellContext`possiblePreFlopHand = {$CellContext`preFlopHandNoConstraint, \
 $CellContext`premium, $CellContext`highPair, $CellContext`strong, \
 $CellContext`smallPair, $CellContext`potentialFlush, \
 $CellContext`suitedConnected, $CellContext`other}; \
+$CellContext`nbHandInCategory = 
+       Map[Length, $CellContext`possiblePreFlopHand]; \
 $CellContext`selectPreFlopHand[
          Pattern[$CellContext`playerStatus, 
           Blank[]], 
@@ -7713,7 +7721,8 @@ $CellContext`deckAvail, $CellContext`randomSample},
          If[$CellContext`deckSelectLocal != 0, 
            Part[$CellContext`deckStatusLocal, $CellContext`deckSelectLocal] = 
             1; $CellContext`deckSelectLocal = 0]; 
-         If[Part[$CellContext`tableStatusLocal, 5] != 0, 
+         If[
+          Part[$CellContext`tableStatusLocal, 5] != 0, 
            Part[$CellContext`deckStatusLocal, 
               Part[$CellContext`tableStatusLocal, 5]] = 1; 
            Part[$CellContext`tableStatusLocal, 5] = 
@@ -7802,10 +7811,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[1331, 32, 453733, 7744, 1215, InheritFromParent]
+Cell[1331, 32, 454025, 7753, 1215, InheritFromParent]
 }
 ]
 *)
 
 (* End of internal cache information *)
-(* NotebookSignature WvpRB5FChH8BjBwIS02tec4O *)
+(* NotebookSignature VvDG38kOeFtmgCKpau22K6Ni *)
