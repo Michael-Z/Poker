@@ -1,0 +1,843 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     29884,        834]
+NotebookOptionsPosition[     29013,        800]
+NotebookOutlinePosition[     29369,        816]
+CellTagsIndexPosition[     29326,        813]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"p", "=", "2"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(", GridBox[{
+     {
+      RowBox[{"52", "-", 
+       RowBox[{"2", 
+        RowBox[{"(", 
+         RowBox[{"NbOpp", "+", "1"}], ")"}]}]}]},
+     {"5"}
+    }], ")"}], 
+  RowBox[{
+   UnderoverscriptBox["\[Product]", 
+    RowBox[{"i", "=", "1"}], "NbOpp"], 
+   RowBox[{"(", GridBox[{
+      {
+       RowBox[{"52", "-", 
+        RowBox[{"2", "i"}]}]},
+      {"2"}
+     }], ")"}]}]}]}], "Input",
+ CellChangeTimes->{{3.557503806534997*^9, 3.5575039083170547`*^9}, {
+  3.5575039399177732`*^9, 3.557503964310594*^9}, {3.557504686776157*^9, 
+  3.55750473321213*^9}, {3.557506548559114*^9, 3.557506554796721*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"-", "2"}], ")"}], "NbOpp"], " ", 
+     RowBox[{"(", 
+      RowBox[{"52", "-", 
+       RowBox[{"2", " ", 
+        RowBox[{"(", 
+         RowBox[{"1", "+", "NbOpp"}], ")"}]}]}], ")"}], " ", 
+     RowBox[{"Pochhammer", "[", 
+      RowBox[{
+       RowBox[{"-", "25"}], ",", "NbOpp"}], "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"5", " ", 
+     SuperscriptBox["2", "NbOpp"]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.557503920378121*^9, 3.5575039646124496`*^9}, 
+   3.557504734615211*^9, 3.557506557428664*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"p", "=", "6"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"t", "=", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Binomial", "[", 
+     RowBox[{
+      RowBox[{"52", "-", 
+       RowBox[{"2", "i"}]}], ",", "2"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "p"}], "}"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"r", "=", 
+  RowBox[{"Times", "@@", "t"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ScientificForm", "[", 
+  RowBox[{
+   RowBox[{"N", "[", "r", "]"}], ",", "3"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.557503986194406*^9, 3.557504043342342*^9}, {
+  3.557504080319825*^9, 3.5575041143351*^9}, {3.557504150631513*^9, 
+  3.557504179231235*^9}, {3.5575042113284817`*^9, 3.557504220904285*^9}, {
+  3.5575042670570107`*^9, 3.5575042691528177`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1225", ",", "1128", ",", "1035", ",", "946", ",", "861", ",", "780"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.557504022525404*^9, 3.55750404397624*^9}, {
+   3.55750408170574*^9, 3.557504114816329*^9}, 3.5575041800352287`*^9, {
+   3.557504211960191*^9, 3.557504221385747*^9}, 3.557504269940578*^9}],
+
+Cell[BoxData["908603548692840000"], "Output",
+ CellChangeTimes->{{3.557504022525404*^9, 3.55750404397624*^9}, {
+   3.55750408170574*^9, 3.557504114816329*^9}, 3.5575041800352287`*^9, {
+   3.557504211960191*^9, 3.557504221385747*^9}, 3.557504269942737*^9}],
+
+Cell[BoxData[
+ TagBox[
+  InterpretationBox[
+   RowBox[{"\<\"9.09\"\>", "\[Times]", 
+    SuperscriptBox["10", "\<\"17\"\>"]}],
+   9.0860354869284*^17,
+   AutoDelete->True],
+  ScientificForm[#, 3]& ]], "Output",
+ CellChangeTimes->{{3.557504022525404*^9, 3.55750404397624*^9}, {
+   3.55750408170574*^9, 3.557504114816329*^9}, 3.5575041800352287`*^9, {
+   3.557504211960191*^9, 3.557504221385747*^9}, 3.557504269944517*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"nbcombin", "[", "opp_", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"t", ",", "tm"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"t", "=", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"Binomial", "[", 
+          RowBox[{
+           RowBox[{"52", "-", 
+            RowBox[{"2", "i"}]}], ",", "2"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", "opp"}], "}"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"tm", "=", 
+       RowBox[{"Times", "@@", "t"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"tm", "*", 
+       RowBox[{"Binomial", "[", 
+        RowBox[{
+         RowBox[{"52", "-", 
+          RowBox[{"2", 
+           RowBox[{"(", 
+            RowBox[{"opp", "+", "1"}], ")"}]}]}], ",", "5"}], "]"}]}]}]}], 
+    "\[IndentingNewLine]", "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.557504291956956*^9, 3.557504294503693*^9}, {
+  3.557504333050403*^9, 3.5575044049782057`*^9}, {3.557504453407548*^9, 
+  3.557504565781816*^9}, {3.5575064870461817`*^9, 3.5575064984127617`*^9}, {
+  3.557507962826295*^9, 3.557507967610299*^9}, {3.55750805313109*^9, 
+  3.557508061858766*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"t", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"nbcombin", "[", "k", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", "9"}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Column", "[", "t", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Column", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"ScientificForm", "[", 
+      RowBox[{
+       RowBox[{"N", "[", "#", "]"}], ",", "4"}], "]"}], ")"}], "&"}], "/@", 
+   "t"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ttime", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"N", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"t", "[", 
+         RowBox[{"[", "k", "]"}], "]"}], "/", "3000000000"}], "/", "3600"}], 
+      "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", "9"}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Column", "[", "ttime", "]"}]}], "Input",
+ CellChangeTimes->{{3.557504413354773*^9, 3.557504461953887*^9}, {
+   3.557504582227171*^9, 3.557504661299656*^9}, 3.5575065122605352`*^9, {
+   3.5575068124305267`*^9, 3.557506937657277*^9}, {3.557506975889742*^9, 
+   3.5575070386813993`*^9}, {3.5575078795716267`*^9, 3.557507881169073*^9}, {
+   3.557508012618746*^9, 3.557508013059513*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"2097572400"},
+    {"1894107877200"},
+    {"1553168459304000"},
+    {"1150897828344264000"},
+    {"766497953677279824000"},
+    {"456066282437981495280000"},
+    {"240802997127254229507840000"},
+    {"111973393664173216721145600000"},
+    {"45461197827654325988785113600000"}
+   },
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Column"]], "Output",
+ CellChangeTimes->{{3.5575044749728928`*^9, 3.5575045080655622`*^9}, 
+   3.557504568395854*^9, {3.557504632448513*^9, 3.557504661956272*^9}, {
+   3.5575065047183332`*^9, 3.557506512625731*^9}, 3.557506828778517*^9, {
+   3.5575068913552923`*^9, 3.557506938684214*^9}, {3.557506983136747*^9, 
+   3.557507010774826*^9}, 3.557507040988955*^9, 3.55750788236187*^9, 
+   3.55750797122987*^9, 3.557508013913492*^9, 3.557508066046568*^9, 
+   3.557508099498735*^9, 3.557508144126555*^9}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     TagBox[
+      InterpretationBox[
+       RowBox[{"\<\"2.098\"\>", "\[Times]", 
+        SuperscriptBox["10", "\<\"9\"\>"]}],
+       2.0975724*^9,
+       AutoDelete->True],
+      ScientificForm[#, 4]& ]},
+    {
+     TagBox[
+      InterpretationBox[
+       RowBox[{"\<\"1.894\"\>", "\[Times]", 
+        SuperscriptBox["10", "\<\"12\"\>"]}],
+       1.8941078772*^12,
+       AutoDelete->True],
+      ScientificForm[#, 4]& ]},
+    {
+     TagBox[
+      InterpretationBox[
+       RowBox[{"\<\"1.553\"\>", "\[Times]", 
+        SuperscriptBox["10", "\<\"15\"\>"]}],
+       1.553168459304*^15,
+       AutoDelete->True],
+      ScientificForm[#, 4]& ]},
+    {
+     TagBox[
+      InterpretationBox[
+       RowBox[{"\<\"1.151\"\>", "\[Times]", 
+        SuperscriptBox["10", "\<\"18\"\>"]}],
+       1.150897828344264*^18,
+       AutoDelete->True],
+      ScientificForm[#, 4]& ]},
+    {
+     TagBox[
+      InterpretationBox[
+       RowBox[{"\<\"7.665\"\>", "\[Times]", 
+        SuperscriptBox["10", "\<\"20\"\>"]}],
+       7.664979536772799*^20,
+       AutoDelete->True],
+      ScientificForm[#, 4]& ]},
+    {
+     TagBox[
+      InterpretationBox[
+       RowBox[{"\<\"4.561\"\>", "\[Times]", 
+        SuperscriptBox["10", "\<\"23\"\>"]}],
+       4.560662824379815*^23,
+       AutoDelete->True],
+      ScientificForm[#, 4]& ]},
+    {
+     TagBox[
+      InterpretationBox[
+       RowBox[{"\<\"2.408\"\>", "\[Times]", 
+        SuperscriptBox["10", "\<\"26\"\>"]}],
+       2.4080299712725422`*^26,
+       AutoDelete->True],
+      ScientificForm[#, 4]& ]},
+    {
+     TagBox[
+      InterpretationBox[
+       RowBox[{"\<\"1.12\"\>", "\[Times]", 
+        SuperscriptBox["10", "\<\"29\"\>"]}],
+       1.1197339366417323`*^29,
+       AutoDelete->True],
+      ScientificForm[#, 4]& ]},
+    {
+     TagBox[
+      InterpretationBox[
+       RowBox[{"\<\"4.546\"\>", "\[Times]", 
+        SuperscriptBox["10", "\<\"31\"\>"]}],
+       4.546119782765432*^31,
+       AutoDelete->True],
+      ScientificForm[#, 4]& ]}
+   },
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Column"]], "Output",
+ CellChangeTimes->{{3.5575044749728928`*^9, 3.5575045080655622`*^9}, 
+   3.557504568395854*^9, {3.557504632448513*^9, 3.557504661956272*^9}, {
+   3.5575065047183332`*^9, 3.557506512625731*^9}, 3.557506828778517*^9, {
+   3.5575068913552923`*^9, 3.557506938684214*^9}, {3.557506983136747*^9, 
+   3.557507010774826*^9}, 3.557507040988955*^9, 3.55750788236187*^9, 
+   3.55750797122987*^9, 3.557508013913492*^9, 3.557508066046568*^9, 
+   3.557508099498735*^9, 3.5575081441301737`*^9}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"0.00019421966666666667`"},
+    {"0.175380359`"},
+    {"143.81189438`"},
+    {"106564.61373558`"},
+    {"7.097203274789628`*^7"},
+    {"4.222835948499828`*^10"},
+    {"2.2296573808079094`*^13"},
+    {"1.036790682075678`*^16"},
+    {"4.209370169227252`*^18"}
+   },
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Column"]], "Output",
+ CellChangeTimes->{{3.5575044749728928`*^9, 3.5575045080655622`*^9}, 
+   3.557504568395854*^9, {3.557504632448513*^9, 3.557504661956272*^9}, {
+   3.5575065047183332`*^9, 3.557506512625731*^9}, 3.557506828778517*^9, {
+   3.5575068913552923`*^9, 3.557506938684214*^9}, {3.557506983136747*^9, 
+   3.557507010774826*^9}, 3.557507040988955*^9, 3.55750788236187*^9, 
+   3.55750797122987*^9, 3.557508013913492*^9, 3.557508066046568*^9, 
+   3.557508099498735*^9, 3.557508144132052*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"t", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"nbcombin", "[", "k", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", "9"}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ttime", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"t", "[", 
+       RowBox[{"[", "1", "]"}], "]"}], "/", "300000000."}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"t", "[", 
+        RowBox[{"[", "2", "]"}], "]"}], "/", "300000000."}], "/", "3600"}], 
+     ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"t", "[", 
+         RowBox[{"[", "3", "]"}], "]"}], "/", "300000000."}], "/", "3600"}], 
+      "/", "24"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"t", "[", 
+          RowBox[{"[", "4", "]"}], "]"}], "/", "300000000."}], "/", "3600"}], 
+       "/", "24"}], "/", "365"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"t", "[", 
+           RowBox[{"[", "5", "]"}], "]"}], "/", "300000000."}], "/", "3600"}],
+         "/", "24"}], "/", "365"}], "/", "1000"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"t", "[", 
+            RowBox[{"[", "6", "]"}], "]"}], "/", "300000000."}], "/", 
+          "3600"}], "/", "24"}], "/", "365"}], "/", "1000"}], "/", "1000"}], 
+     ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"t", "[", 
+             RowBox[{"[", "7", "]"}], "]"}], "/", "300000000."}], "/", 
+           "3600"}], "/", "24"}], "/", "365"}], "/", "1000"}], "/", "1000"}], 
+      "/", "1000"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"t", "[", 
+              RowBox[{"[", "8", "]"}], "]"}], "/", "300000000."}], "/", 
+            "3600"}], "/", "24"}], "/", "365"}], "/", "1000"}], "/", "1000"}],
+        "/", "1000"}], "/", "1000"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"t", "[", 
+               RowBox[{"[", "9", "]"}], "]"}], "/", "300000000."}], "/", 
+             "3600"}], "/", "24"}], "/", "365"}], "/", "1000"}], "/", 
+         "1000"}], "/", "1000"}], "/", "1000"}], "/", "1000"}]}], 
+    "\[IndentingNewLine]", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"tunit", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+    "\"\<seconds\>\"", ",", "\[IndentingNewLine]", "\"\<hours\>\"", ",", 
+     "\[IndentingNewLine]", "\"\<days\>\"", ",", "\[IndentingNewLine]", 
+     "\"\<years\>\"", ",", "\[IndentingNewLine]", "\"\<thousand years\>\"", 
+     ",", "\[IndentingNewLine]", "\"\<million years\>\"", ",", 
+     "\[IndentingNewLine]", "\"\<billion years\>\"", ",", 
+     "\[IndentingNewLine]", "\"\<thousand billion years\>\"", ",", 
+     "\[IndentingNewLine]", "\"\<million billion years\>\"", ","}], 
+    "\[IndentingNewLine]", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"fullTable", "=", 
+   RowBox[{"Prepend", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Table", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Text", "/@", 
+        RowBox[{"{", "\[IndentingNewLine]", 
+         RowBox[{"k", ",", "\[IndentingNewLine]", 
+          RowBox[{"t", "[", 
+           RowBox[{"[", "k", "]"}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"ScientificForm", "[", 
+           RowBox[{
+            RowBox[{"N", "[", 
+             RowBox[{"t", "[", 
+              RowBox[{"[", "k", "]"}], "]"}], "]"}], ",", "4"}], "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Row", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"NumberForm", "[", 
+              RowBox[{
+               RowBox[{"ttime", "[", 
+                RowBox[{"[", "k", "]"}], "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"4", ",", "2"}], "}"}]}], "]"}], ",", "\"\< \>\"", 
+             ",", 
+             RowBox[{"tunit", "[", 
+              RowBox[{"[", "k", "]"}], "]"}]}], "}"}], "]"}]}], 
+         "\[IndentingNewLine]", "}"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"k", ",", "9"}], "}"}]}], "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Text", "/@", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Nb of Opponents\>\"", ",", "\"\<N\>\"", ",", " ", "\"\<N\>\"", 
+        ",", " ", "\"\<Time with a 300m hands per sec. hand evaluator\>\""}], 
+       "}"}]}]}], "\[IndentingNewLine]", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Grid", "[", 
+  RowBox[{"fullTable", ",", "\[IndentingNewLine]", 
+   RowBox[{"Alignment", "\[Rule]", "Right"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"Spacings", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "0.25"}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"Dividers", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"2", "\[Rule]", "Black"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2", "\[Rule]", "Black"}], "}"}]}], "}"}]}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Background", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"None", ",", 
+      RowBox[{"{", 
+       RowBox[{"{", 
+        RowBox[{"None", ",", "LightRed"}], "}"}], "}"}]}], "}"}]}]}], 
+  "\[IndentingNewLine]", "]"}]}], "Input",
+ CellChangeTimes->{{3.557507318764076*^9, 3.557507439742206*^9}, {
+  3.557507492181484*^9, 3.557507550680149*^9}, {3.557507595911784*^9, 
+  3.557507640936768*^9}, {3.557507672419115*^9, 3.557507672825199*^9}, {
+  3.557508195635481*^9, 3.557508599252749*^9}, {3.557508643806284*^9, 
+  3.557508921545761*^9}, {3.557509025549117*^9, 3.5575091004580173`*^9}, {
+  3.557509131538376*^9, 3.557509202572062*^9}, {3.5575095569223948`*^9, 
+  3.557509562227251*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     InterpretationBox[Cell[BoxData["\<\"Nb of Opponents\"\>"], "Text", "TR"],
+      
+      Text["Nb of Opponents"]], 
+     InterpretationBox[Cell[BoxData["\<\"N\"\>"], "Text", "TR"],
+      Text["N"]], 
+     InterpretationBox[Cell[BoxData["\<\"N\"\>"], "Text", "TR"],
+      Text["N"]], 
+     InterpretationBox[Cell[
+      BoxData["\<\"Time with a 300m hands per sec. hand evaluator\"\>"], 
+       "Text", "TR"],
+      Text["Time with a 300m hands per sec. hand evaluator"]]},
+    {
+     InterpretationBox[Cell[BoxData["1"], "Text", "TR"],
+      Text[1]], 
+     InterpretationBox[Cell[BoxData["2097572400"], "Text", "TR"],
+      Text[2097572400]], 
+     InterpretationBox[Cell[BoxData[
+       TagBox[
+        InterpretationBox[
+         RowBox[{"\<\"2.098\"\>", "\[Times]", 
+          SuperscriptBox["10", "\<\"9\"\>"]}],
+         2.0975724*^9,
+         AutoDelete->True],
+        ScientificForm[#, 4]& ]], "Text", "TR"],
+      Text[
+       ScientificForm[2.0975724*^9, 4]]], 
+     InterpretationBox[Cell[BoxData[
+       TemplateBox[{TagBox[
+          InterpretationBox[
+          "\"6.99\"", 6.9919080000000005`, AutoDelete -> True], 
+          NumberForm[#, {4, 2}]& ],"\" \"","\"seconds\""},
+        "Row",
+        DisplayFunction->(
+         RowBox[{#, "\[InvisibleSpace]", #2, "\[InvisibleSpace]", #3}]& ),
+        InterpretationFunction->(RowBox[{"Row", "[", 
+           RowBox[{"{", 
+             RowBox[{#, ",", #2, ",", #3}], "}"}], "]"}]& )]], "Text", "TR"],
+      Text[
+       Row[{
+         NumberForm[6.9919080000000005`, {4, 2}], " ", "seconds"}]]]},
+    {
+     InterpretationBox[Cell[BoxData["2"], "Text", "TR"],
+      Text[2]], 
+     InterpretationBox[Cell[BoxData["1894107877200"], "Text", "TR"],
+      Text[1894107877200]], 
+     InterpretationBox[Cell[BoxData[
+       TagBox[
+        InterpretationBox[
+         RowBox[{"\<\"1.894\"\>", "\[Times]", 
+          SuperscriptBox["10", "\<\"12\"\>"]}],
+         1.8941078772*^12,
+         AutoDelete->True],
+        ScientificForm[#, 4]& ]], "Text", "TR"],
+      Text[
+       ScientificForm[1.8941078772*^12, 4]]], 
+     InterpretationBox[Cell[BoxData[
+       TemplateBox[{TagBox[
+          InterpretationBox["\"1.75\"", 1.75380359, AutoDelete -> True], 
+          NumberForm[#, {4, 2}]& ],"\" \"","\"hours\""},
+        "Row",
+        DisplayFunction->(
+         RowBox[{#, "\[InvisibleSpace]", #2, "\[InvisibleSpace]", #3}]& ),
+        InterpretationFunction->(RowBox[{"Row", "[", 
+           RowBox[{"{", 
+             RowBox[{#, ",", #2, ",", #3}], "}"}], "]"}]& )]], "Text", "TR"],
+      Text[
+       Row[{
+         NumberForm[1.75380359, {4, 2}], " ", "hours"}]]]},
+    {
+     InterpretationBox[Cell[BoxData["3"], "Text", "TR"],
+      Text[3]], 
+     InterpretationBox[Cell[BoxData["1553168459304000"], "Text", "TR"],
+      Text[1553168459304000]], 
+     InterpretationBox[Cell[BoxData[
+       TagBox[
+        InterpretationBox[
+         RowBox[{"\<\"1.553\"\>", "\[Times]", 
+          SuperscriptBox["10", "\<\"15\"\>"]}],
+         1.553168459304*^15,
+         AutoDelete->True],
+        ScientificForm[#, 4]& ]], "Text", "TR"],
+      Text[
+       ScientificForm[1.553168459304*^15, 4]]], 
+     InterpretationBox[Cell[BoxData[
+       TemplateBox[{TagBox[
+          InterpretationBox[
+          "\"59.92\"", 59.921622658333334`, AutoDelete -> True], 
+          NumberForm[#, {4, 2}]& ],"\" \"","\"days\""},
+        "Row",
+        DisplayFunction->(
+         RowBox[{#, "\[InvisibleSpace]", #2, "\[InvisibleSpace]", #3}]& ),
+        InterpretationFunction->(RowBox[{"Row", "[", 
+           RowBox[{"{", 
+             RowBox[{#, ",", #2, ",", #3}], "}"}], "]"}]& )]], "Text", "TR"],
+      Text[
+       Row[{
+         NumberForm[59.921622658333334`, {4, 2}], " ", "days"}]]]},
+    {
+     InterpretationBox[Cell[BoxData["4"], "Text", "TR"],
+      Text[4]], 
+     InterpretationBox[Cell[BoxData["1150897828344264000"], "Text", "TR"],
+      Text[1150897828344264000]], 
+     InterpretationBox[Cell[BoxData[
+       TagBox[
+        InterpretationBox[
+         RowBox[{"\<\"1.151\"\>", "\[Times]", 
+          SuperscriptBox["10", "\<\"18\"\>"]}],
+         1.150897828344264*^18,
+         AutoDelete->True],
+        ScientificForm[#, 4]& ]], "Text", "TR"],
+      Text[
+       ScientificForm[1.150897828344264*^18, 4]]], 
+     InterpretationBox[Cell[BoxData[
+       TemplateBox[{TagBox[
+          InterpretationBox[
+          "\"121.60\"", 121.6491024378767, AutoDelete -> True], 
+          NumberForm[#, {4, 2}]& ],"\" \"","\"years\""},
+        "Row",
+        DisplayFunction->(
+         RowBox[{#, "\[InvisibleSpace]", #2, "\[InvisibleSpace]", #3}]& ),
+        InterpretationFunction->(RowBox[{"Row", "[", 
+           RowBox[{"{", 
+             RowBox[{#, ",", #2, ",", #3}], "}"}], "]"}]& )]], "Text", "TR"],
+      Text[
+       Row[{
+         NumberForm[121.6491024378767, {4, 2}], " ", "years"}]]]},
+    {
+     InterpretationBox[Cell[BoxData["5"], "Text", "TR"],
+      Text[5]], 
+     InterpretationBox[Cell[BoxData["766497953677279824000"], "Text", "TR"],
+      Text[766497953677279824000]], 
+     InterpretationBox[Cell[BoxData[
+       TagBox[
+        InterpretationBox[
+         RowBox[{"\<\"7.665\"\>", "\[Times]", 
+          SuperscriptBox["10", "\<\"20\"\>"]}],
+         7.664979536772799*^20,
+         AutoDelete->True],
+        ScientificForm[#, 4]& ]], "Text", "TR"],
+      Text[
+       ScientificForm[7.664979536772799*^20, 4]]], 
+     InterpretationBox[Cell[BoxData[
+       TemplateBox[{TagBox[
+          InterpretationBox[
+          "\"81.02\"", 81.01830222362588, AutoDelete -> True], 
+          NumberForm[#, {4, 2}]& ],"\" \"","\"thousand years\""},
+        "Row",
+        DisplayFunction->(
+         RowBox[{#, "\[InvisibleSpace]", #2, "\[InvisibleSpace]", #3}]& ),
+        InterpretationFunction->(RowBox[{"Row", "[", 
+           RowBox[{"{", 
+             RowBox[{#, ",", #2, ",", #3}], "}"}], "]"}]& )]], "Text", "TR"],
+      Text[
+       Row[{
+         NumberForm[81.01830222362588, {4, 2}], " ", "thousand years"}]]]},
+    {
+     InterpretationBox[Cell[BoxData["6"], "Text", "TR"],
+      Text[6]], 
+     InterpretationBox[Cell[BoxData["456066282437981495280000"], "Text", "TR"],
+      Text[456066282437981495280000]], 
+     InterpretationBox[Cell[BoxData[
+       TagBox[
+        InterpretationBox[
+         RowBox[{"\<\"4.561\"\>", "\[Times]", 
+          SuperscriptBox["10", "\<\"23\"\>"]}],
+         4.560662824379815*^23,
+         AutoDelete->True],
+        ScientificForm[#, 4]& ]], "Text", "TR"],
+      Text[
+       ScientificForm[4.560662824379815*^23, 4]]], 
+     InterpretationBox[Cell[BoxData[
+       TemplateBox[{TagBox[
+          InterpretationBox[
+          "\"48.21\"", 48.20588982305741, AutoDelete -> True], 
+          NumberForm[#, {4, 2}]& ],"\" \"","\"million years\""},
+        "Row",
+        DisplayFunction->(
+         RowBox[{#, "\[InvisibleSpace]", #2, "\[InvisibleSpace]", #3}]& ),
+        InterpretationFunction->(RowBox[{"Row", "[", 
+           RowBox[{"{", 
+             RowBox[{#, ",", #2, ",", #3}], "}"}], "]"}]& )]], "Text", "TR"],
+      Text[
+       Row[{
+         NumberForm[48.20588982305741, {4, 2}], " ", "million years"}]]]},
+    {
+     InterpretationBox[Cell[BoxData["7"], "Text", "TR"],
+      Text[7]], 
+     InterpretationBox[Cell[BoxData[
+      "240802997127254229507840000"], "Text", "TR"],
+      Text[240802997127254229507840000]], 
+     InterpretationBox[Cell[BoxData[
+       TagBox[
+        InterpretationBox[
+         RowBox[{"\<\"2.408\"\>", "\[Times]", 
+          SuperscriptBox["10", "\<\"26\"\>"]}],
+         2.4080299712725422`*^26,
+         AutoDelete->True],
+        ScientificForm[#, 4]& ]], "Text", "TR"],
+      Text[
+       ScientificForm[2.4080299712725422`*^26, 4]]], 
+     InterpretationBox[Cell[BoxData[
+       TemplateBox[{TagBox[
+          InterpretationBox[
+          "\"25.45\"", 25.452709826574313`, AutoDelete -> True], 
+          NumberForm[#, {4, 2}]& ],"\" \"","\"billion years\""},
+        "Row",
+        DisplayFunction->(
+         RowBox[{#, "\[InvisibleSpace]", #2, "\[InvisibleSpace]", #3}]& ),
+        InterpretationFunction->(RowBox[{"Row", "[", 
+           RowBox[{"{", 
+             RowBox[{#, ",", #2, ",", #3}], "}"}], "]"}]& )]], "Text", "TR"],
+      Text[
+       Row[{
+         NumberForm[25.452709826574313`, {4, 2}], " ", "billion years"}]]]},
+    {
+     InterpretationBox[Cell[BoxData["8"], "Text", "TR"],
+      Text[8]], 
+     InterpretationBox[Cell[BoxData[
+      "111973393664173216721145600000"], "Text", "TR"],
+      Text[111973393664173216721145600000]], 
+     InterpretationBox[Cell[BoxData[
+       TagBox[
+        InterpretationBox[
+         RowBox[{"\<\"1.12\"\>", "\[Times]", 
+          SuperscriptBox["10", "\<\"29\"\>"]}],
+         1.1197339366417323`*^29,
+         AutoDelete->True],
+        ScientificForm[#, 4]& ]], "Text", "TR"],
+      Text[
+       ScientificForm[1.1197339366417323`*^29, 4]]], 
+     InterpretationBox[Cell[BoxData[
+       TemplateBox[{TagBox[
+          InterpretationBox[
+          "\"11.84\"", 11.835510069357055`, AutoDelete -> True], 
+          NumberForm[#, {4, 2}]& ],"\" \"","\"thousand billion years\""},
+        "Row",
+        DisplayFunction->(
+         RowBox[{#, "\[InvisibleSpace]", #2, "\[InvisibleSpace]", #3}]& ),
+        InterpretationFunction->(RowBox[{"Row", "[", 
+           RowBox[{"{", 
+             RowBox[{#, ",", #2, ",", #3}], "}"}], "]"}]& )]], "Text", "TR"],
+      Text[
+       Row[{
+         NumberForm[11.835510069357055`, {4, 2}], " ", 
+         "thousand billion years"}]]]},
+    {
+     InterpretationBox[Cell[BoxData["9"], "Text", "TR"],
+      Text[9]], 
+     InterpretationBox[Cell[BoxData[
+      "45461197827654325988785113600000"], "Text", "TR"],
+      Text[45461197827654325988785113600000]], 
+     InterpretationBox[Cell[BoxData[
+       TagBox[
+        InterpretationBox[
+         RowBox[{"\<\"4.546\"\>", "\[Times]", 
+          SuperscriptBox["10", "\<\"31\"\>"]}],
+         4.546119782765432*^31,
+         AutoDelete->True],
+        ScientificForm[#, 4]& ]], "Text", "TR"],
+      Text[
+       ScientificForm[4.546119782765432*^31, 4]]], 
+     InterpretationBox[Cell[BoxData[
+       TemplateBox[{TagBox[
+          InterpretationBox[
+          "\"4.81\"", 4.8052170881589635`, AutoDelete -> True], 
+          NumberForm[#, {4, 2}]& ],"\" \"","\"million billion years\""},
+        "Row",
+        DisplayFunction->(
+         RowBox[{#, "\[InvisibleSpace]", #2, "\[InvisibleSpace]", #3}]& ),
+        InterpretationFunction->(RowBox[{"Row", "[", 
+           RowBox[{"{", 
+             RowBox[{#, ",", #2, ",", #3}], "}"}], "]"}]& )]], "Text", "TR"],
+      Text[
+       Row[{
+         NumberForm[4.8052170881589635`, {4, 2}], " ", 
+         "million billion years"}]]]}
+   },
+   AutoDelete->False,
+   GridBoxAlignment->{"Columns" -> {{Right}}},
+   GridBoxBackground->{"Columns" -> {{None}}, "Rows" -> {{None, 
+        RGBColor[1, 0.85, 0.85]}}},
+   GridBoxDividers->{
+    "ColumnsIndexed" -> {2 -> GrayLevel[0]}, 
+     "RowsIndexed" -> {2 -> GrayLevel[0]}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+   GridBoxSpacings->{"Columns" -> {{1}}, "Rows" -> {{0.25}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{
+  3.557507570150985*^9, {3.557507612065123*^9, 3.5575076432275267`*^9}, 
+   3.5575076737567368`*^9, 3.5575081495729437`*^9, 3.5575082228646603`*^9, {
+   3.55750827442339*^9, 3.557508303112914*^9}, {3.557508336567622*^9, 
+   3.557508353627195*^9}, {3.557508390666265*^9, 3.557508566674348*^9}, 
+   3.557508601185858*^9, {3.5575086735444813`*^9, 3.557508699198338*^9}, {
+   3.557508798077474*^9, 3.557508857259653*^9}, {3.5575088973750553`*^9, 
+   3.557508921811002*^9}, {3.557509027096755*^9, 3.557509101972748*^9}, {
+   3.557509133831616*^9, 3.55750920312728*^9}, {3.557509557507785*^9, 
+   3.557509562544689*^9}}]
+}, Open  ]]
+},
+WindowSize->{1032, 890},
+WindowMargins->{{Automatic, 22}, {Automatic, 12}},
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (October 5, \
+2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 706, 23, 75, "Input"],
+Cell[1288, 47, 649, 20, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1974, 72, 801, 20, 73, "Input"],
+Cell[2778, 94, 344, 7, 27, "Output"],
+Cell[3125, 103, 255, 3, 27, "Output"],
+Cell[3383, 108, 419, 10, 42, "Output"]
+}, Open  ]],
+Cell[3817, 121, 1245, 33, 88, "Input"],
+Cell[CellGroupData[{
+Cell[5087, 158, 1272, 34, 88, "Input"],
+Cell[6362, 194, 942, 21, 157, "Output"],
+Cell[7307, 217, 2654, 84, 183, "Output"],
+Cell[9964, 303, 924, 21, 171, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10925, 329, 6246, 167, 598, "Input"],
+Cell[17174, 498, 11823, 299, 193, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
